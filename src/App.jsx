@@ -1,14 +1,7 @@
-import "./App.css";
+import { Routing } from "./routes/Routing";
 
 function App() {
-  return (
-    <>
-      <h1>
-        Hola, bienvenidos a Casa de Campo La Capilla! En Castilla, Provincia de
-        Buenos Aires
-      </h1>
-    </>
-  );
+  return <Routing />;
 }
 
 export default App;
