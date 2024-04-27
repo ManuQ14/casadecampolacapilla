@@ -16,14 +16,14 @@ export const Header = () => {
   return (
     <>
     <nav>
-        <button /* onClick={handleButtonToInicio} */>
+        <div /* onClick={handleButtonToInicio} */>
             Inicio
-        </button>
-        <button>
+        </div>
+        <div>
             Nosotros
-        </button>
-        <button>Nuestra Historia</button>
-        <button>El Camping</button>
+        </div>
+        <div>Nuestra Historia</div>
+        <div>El Camping</div>
         <Link to="/contacto">Reserva</Link>
 
     </nav>
