@@ -1,8 +1,8 @@
 /* import { useEffect } from 'react'; */
 import {Link} from 'react-router-dom';
 
-import styles from '../styles/home.module.scss';
-import atardecerUno from '../../../assets/images/1.jpg';
+/* import styles from '../styles/home.module.scss';
+import atardecerUno from '../../../assets/images/1.jpg'; */
 
 
 export const Header = () => {
@@ -27,9 +27,9 @@ export const Header = () => {
         <Link to="/contacto">Reserva</Link>
 
     </nav>
-    <div className={styles.carrouselHeader}>
-        <img src={atardecerUno} alt="Imagen de castilllla" className={styles.imagen} />
-    </div>
+    <header>
+
+    </header>
     </>
   )
 }
