@@ -7,16 +7,12 @@ import atardecerUno from '../../../assets/images/1.jpg'; */
 
 export const Header = () => {
 
- /*    const handleButtonToInicio = ()=>{
-        useEffect(()=>{
-            window(0,0)
-        },[])
-    } */
+ 
 
   return (
     <>
     <nav>
-        <div /* onClick={handleButtonToInicio} */>
+        <div >
             Inicio
         </div>
         <div>
