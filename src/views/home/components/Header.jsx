@@ -20,7 +20,7 @@ export const Header = () => {
         </div>
         <div>Nuestra Historia</div>
         <div>El Camping</div>
-        <Link to="/contacto">Reserva</Link>
+        <Link to="/contacto">Reserva tu lugar</Link>
 
     </nav>
     <header>
