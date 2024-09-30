@@ -96,3 +96,37 @@ h3 {
 }
 
 //Fin header
+
+
+//Inicio sección camping
+.campingContainer{
+
+  height: 500px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.campingTextContainer{
+  display: flex;
+  flex-flow: column;
+  width: 40%; 
+}
+
+.h2Camping{
+  font-family: $bookman;
+  font-size: 30px;
+  color: $naranja-oficial;
+  text-align: center;
+}
+
+.textCamping{
+  font-family: $lato;
+  font-size: 18px;
+  text-align: center;
+}
+
+.campingImage{
+  width: 550px;
+}

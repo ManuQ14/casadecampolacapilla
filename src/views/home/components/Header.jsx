@@ -10,7 +10,7 @@ export const Header = () => {
       
       <header className={styles.header}>
       <div className={styles.coverHeader}>
-       <h1>Casa de Campo La Capilla</h1>
+       <h1>Casa de campo La Capilla</h1>
        <h3>Experiencia de acampe rural, vivila...</h3>
        <Link to="/contacto" className={styles.reserveButton}>Reservar</Link>
         </div>

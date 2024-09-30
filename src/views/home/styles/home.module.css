@@ -97,4 +97,35 @@ h3 {
 .reserveButton:hover {
   transform: scale(110%);
   background-color: #a7826f;
+}
+
+.campingContainer {
+  height: 500px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.campingTextContainer {
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+}
+
+.h2Camping {
+  font-family: Bookman;
+  font-size: 30px;
+  color: #d34600;
+  text-align: center;
+}
+
+.textCamping {
+  font-family: Lato;
+  font-size: 18px;
+  text-align: center;
+}
+
+.campingImage {
+  width: 550px;
 }/*# sourceMappingURL=home.module.css.map */

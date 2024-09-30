@@ -1,1 +1,41 @@
-/*# sourceMappingURL=error.module.css.map */
+@import url(../../../styles/_variables.scss);
+@font-face {
+  font-family: Bookman;
+  src: url(../styles/fonts/BOOKOSB.TTF) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lato;
+  src: url(../styles/fonts/Lato-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.errorContainer {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 97vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 130px;
+  font-size: 60px;
+  color: #d34600;
+  font-family: Bookman;
+  margin-bottom: 50px;
+}
+
+.buttonToHome {
+  font-family: Lato;
+  color: white;
+  font-size: 30px;
+  background-color: #d34600;
+  border-radius: 6px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  align-content: center;
+}/*# sourceMappingURL=error.module.css.map */
