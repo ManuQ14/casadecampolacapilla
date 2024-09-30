@@ -1,3 +1,98 @@
-header {
-    background-color: red;
+@import url(../../../styles/_variables.scss);
+@import "../../../styles/variables";
+
+//Nav
+.navBar {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 130px;
+  font-family: $lato;
+  font-size: 24px;
 }
+
+.logoContainer {
+  width: 600px;
+}
+
+.navContainer {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: $gris-oficial;
+}
+
+.active {
+  color: $naranja-oficial;
+  font-weight: bold;
+  text-decoration: none;
+}
+//Fin Nav
+
+//Header
+header {
+  background-image: url(../../../assets/images/2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 70%;
+  width: 100%;
+  height: 440px;
+}
+
+.coverHeader {
+  background-color: rgba(0, 0, 0, 0.418);
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: $bookman;
+  color: white;
+  font-size: 60px;
+  //margin: auto;
+}
+
+h3 {
+  font-family: $bookman;
+  color: white;
+  font-size: 24px;
+  
+}
+
+.reserveButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: $naranja-oficial;
+  color: white;
+  font-family: $lato;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 50px;
+  border: none;
+  transition: all 300ms;
+  text-align: center;
+}
+
+.reserveButton:hover{
+  transform: scale(110%);
+  background-color: $naranja-secundario;
+}
+
+//Fin header

@@ -1,3 +1,9 @@
+import { NavBar } from "../home/components/NavBar";
+
+
 export const Contact = () => {
-  return <div>Contact</div>;
+  return (
+  
+    <NavBar/>
+  )
 };

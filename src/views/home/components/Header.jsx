@@ -1,31 +1,21 @@
-/* import { useEffect } from 'react'; */
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
+import { NavBar } from "./NavBar";
 
-/* import styles from '../styles/home.module.scss';
-import atardecerUno from '../../../assets/images/1.jpg'; */
-
+import styles from "../styles/home.module.scss";
 
 export const Header = () => {
-
- 
-
   return (
     <>
-    <nav>
-        <div >
-            Inicio
+      <NavBar />
+      
+      <header className={styles.header}>
+      <div className={styles.coverHeader}>
+       <h1>Casa de Campo La Capilla</h1>
+       <h3>Experiencia de acampe rural, vivila...</h3>
+       <Link to="/contacto" className={styles.reserveButton}>Reservar</Link>
         </div>
-        <div>
-            Nosotros
-        </div>
-        <div>Nuestra Historia</div>
-        <div>El Camping</div>
-        <Link to="/contacto">Reserva tu lugar</Link>
-
-    </nav>
-    <header>
-
-    </header>
+      </header>
+      
     </>
-  )
-}
+  );
+};
