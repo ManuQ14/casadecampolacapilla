@@ -2,6 +2,8 @@
 
 export const Services = () => {
   return (
-    <div>Services</div>
+    <div>
+      
+    </div>
   )
 }
