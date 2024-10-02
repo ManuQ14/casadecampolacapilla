@@ -10,3 +10,11 @@ body {
 
 }
 
+footer{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-family: Lato;
+}

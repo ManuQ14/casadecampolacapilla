@@ -49,7 +49,6 @@ header {
 
 .coverHeader {
   background-color: rgba(0, 0, 0, 0.418);
-
   height: 100%;
   width: 100%;
   display: flex;
@@ -62,17 +61,15 @@ h1 {
   font-family: $bookman;
   color: white;
   font-size: 60px;
-  //margin: auto;
 }
 
 h3 {
-  font-family: $bookman;
+  font-family: $lato;
   color: white;
-  font-size: 24px;
-  
+  font-size: 22px;
 }
 
-.reserveButton{
+.reserveButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,17 +87,15 @@ h3 {
   text-align: center;
 }
 
-.reserveButton:hover{
+.reserveButton:hover {
   transform: scale(110%);
   background-color: $naranja-secundario;
 }
 
 //Fin header
 
-
 //Inicio sección camping
-.campingContainer{
-
+.sectionContainer {
   height: 500px;
   display: flex;
   flex-flow: row;
@@ -108,25 +103,90 @@ h3 {
   justify-content: space-around;
 }
 
-.campingTextContainer{
+.campingTextContainer {
   display: flex;
   flex-flow: column;
-  width: 40%; 
+  width: 40%;
 }
 
-.h2Camping{
+.h2 {
   font-family: $bookman;
   font-size: 30px;
   color: $naranja-oficial;
   text-align: center;
 }
 
-.textCamping{
+.textCamping {
   font-family: $lato;
   font-size: 18px;
   text-align: center;
 }
 
-.campingImage{
+.campingImage {
   width: 550px;
+}
+
+//Fin sección el camping
+
+//Inicio sección Servicios y Opiniones
+.sectionContainerCenter {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 500px;
+}
+
+.blockContainer {
+  display: flex;
+  flex-flow: column;
+
+  width: 1000px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.iconBlockContainer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: $lato;
+}
+
+.buttonConoceMas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #d34600;
+  color: white;
+  font-family: $lato;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  transition: all 300ms;
+  text-align: center;
+}
+
+//Inicio sección Cómo llegar
+.mapaBox {
+  width: 600px;
+  height: 400px;
+}
+
+.infoUbicationBox {
+  width: 40%;
+  height: 300px;
+}
+
+.titleUbication {
+  font-family: $bookman;
+  font-size: 30px;
+  color: $naranja-oficial;
+  text-align: start;
 }

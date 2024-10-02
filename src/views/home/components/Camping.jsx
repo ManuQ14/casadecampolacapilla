@@ -3,9 +3,9 @@ import imageCamping from "../../../assets/images/3.jpg";
 
 export const Camping = () => {
   return (
-    <div className={styles.campingContainer}>
+    <div className={styles.sectionContainer}>
       <div className={styles.campingTextContainer}>
-        <h2 className={styles.h2Camping}>El Camping</h2>
+        <h2 className={styles.h2}>El Camping</h2>
         <div className={styles.textCamping}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
           rerum saepe molestias quasi consectetur quidem quia incidunt

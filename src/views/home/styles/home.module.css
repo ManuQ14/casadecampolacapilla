@@ -49,9 +49,9 @@ header {
   background-image: url(../../../assets/images/2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 70%;
+  background-position-y: 65%;
   width: 100%;
-  height: 440px;
+  height: 650px;
 }
 
 .coverHeader {
@@ -71,9 +71,9 @@ h1 {
 }
 
 h3 {
-  font-family: Bookman;
+  font-family: Lato;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .reserveButton {
@@ -99,7 +99,7 @@ h3 {
   background-color: #a7826f;
 }
 
-.campingContainer {
+.sectionContainer {
   height: 500px;
   display: flex;
   flex-flow: row;
@@ -113,7 +113,7 @@ h3 {
   width: 40%;
 }
 
-.h2Camping {
+.h2 {
   font-family: Bookman;
   font-size: 30px;
   color: #d34600;
@@ -128,4 +128,64 @@ h3 {
 
 .campingImage {
   width: 550px;
+}
+
+.sectionContainerCenter {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 500px;
+}
+
+.blockContainer {
+  display: flex;
+  flex-flow: column;
+  width: 1000px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.iconBlockContainer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Lato;
+}
+
+.buttonConoceMas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #d34600;
+  color: white;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  transition: all 300ms;
+  text-align: center;
+}
+
+.mapaBox {
+  width: 600px;
+  height: 400px;
+}
+
+.infoUbicationBox {
+  width: 40%;
+  height: 300px;
+}
+
+.titleUbication {
+  font-family: Bookman;
+  font-size: 30px;
+  color: #d34600;
+  text-align: start;
 }/*# sourceMappingURL=home.module.css.map */

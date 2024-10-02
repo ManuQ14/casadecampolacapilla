@@ -1,0 +1,57 @@
+@import url(../../../styles/_variables.scss);
+@font-face {
+  font-family: Bookman;
+  src: url(../styles/fonts/BOOKOSB.TTF) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lato;
+  src: url(../styles/fonts/Lato-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.headerHistory {
+  background-image: url(../../../assets/images/5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.historySectionContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 800px;
+}
+
+.historyFragmentContainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.historyText {
+  width: 40%;
+  font-family: Lato;
+  font-size: 16px;
+}
+
+.historyImage {
+  width: 550px;
+}
+
+.historyFragmentContainerInverted {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=history.module.css.map */
