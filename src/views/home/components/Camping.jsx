@@ -7,10 +7,11 @@ export const Camping = () => {
       <div className={styles.campingTextContainer}>
         <h2 className={styles.h2}>El Camping</h2>
         <div className={styles.textCamping}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
-          rerum saepe molestias quasi consectetur quidem quia incidunt
-          voluptatem perspiciatis similique, ipsa, at consequuntur. Aut sequi
-          impedit consequuntur libero maiores molestiae?1
+          Casa de Campo La Capilla es un espacio para disfrutar la tranquilidad
+          y los sonidos de la vida de campo. Es una conexión con la naturaleza
+          rural donde tratamos que no te falte nada. Ofrecemos servicio de
+          acampe para vivir una experiencia campestre, con el mejor servicio de
+          atención personalizada.
         </div>
       </div>
       <img

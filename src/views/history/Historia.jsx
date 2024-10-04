@@ -7,12 +7,12 @@ import { Notas } from "./components/Notas.jsx";
 
 export const Historia = () => {
   return (
-    <div>
+    <>
       <NavBar />
       <Header />
       <History />
       <Pueblo />
       <Notas />
-    </div>
+    </>
   );
 };
