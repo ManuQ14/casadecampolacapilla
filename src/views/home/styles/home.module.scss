@@ -190,3 +190,26 @@ h3 {
   color: $naranja-oficial;
   text-align: start;
 }
+
+@media (max-width: 412px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .header {
+    width: 412px;
+    height: 333px;
+  }
+
+  /* .coverHeader{
+  width: 100%;
+} */
+
+  h1 {
+    font-size: 24px;
+  }
+}
