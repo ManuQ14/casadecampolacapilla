@@ -3,19 +3,29 @@ import styles from "../styles/home.module.scss";
 
 const opiniones = [
   {
-    nombre: "Camila",
+    nombre: "Natalia Edith",
     texto:
       "La atención de Naty y Nico es muy cordial. Me enamoré de este lugar, es tranquilo y limpio. Es acampe rural, las noches se disfrutan por la paz que hay. Lo super recomiendo, ideal para meditar, llevar el telescopio, para desenchufar con un libro o simplemente contemplando el atardecer. Lo vuelvo a elegir",
   },
   {
-    nombre: "Manuel",
+    nombre: "Norma Benitez",
     texto:
-      "Un lugar espectacular para desconectarse del mundo. Las vistas son increíbles y la tranquilidad se siente en cada rincón...",
+      "Un camping para descansar, totalmente tranquilo y con buena gente. Con muy buena atención y amabilidad",
   },
   {
-    nombre: "Susana",
+    nombre: "Agustina Ramirez",
     texto:
-      "La paz de este lugar es incomparable. Ideal para relajarse, leer y disfrutar del entorno natural.",
+      "Excelente experiencia! Todas las comodidades! Agua caliente, alquiler de carpas, colchones y frazadas, parrillas y espacios de fuego, venta de comidas, luz y alargues con zapatilla! Y lo mejor de todo, la calidad humana que transmite su familia al lugar del camping para que lo disfrutes a pleno!",
+  },
+  {
+    nombre: "Alan B.",
+    texto:
+      "Excelente lugar!!! Encontrás lo que buscás: Paz, tranquilidad, hospitalidad, calidez y sobre todo una gran historia de Niko y Naty junto a su hermosa hija (dueños) de cómo llegaron al lugar. Hay parrilla, fogones, mesas, 24hs de agua caliente. Hay una pequeña proveeduría. Se puede pedir menú del día. Hay una carta variada de comida casera. Productos regionales, alquilan carpa, wifi. Todo perfecto!!!",
+  },
+  {
+    nombre: "Lucas G.",
+    texto:
+      "Excelente lugar para acampar, descansar o simplemente pasar el día. Cuenta con proveeduría, baños con agua caliente, lugares para acampar cómodamente y piletas para los días de calor. La atención fue super cálida y amable. Lo recomiendo 100% para descansar y desconectar de todo sin otros ruidos que no sean los de la naturaleza",
   },
 ];
 
