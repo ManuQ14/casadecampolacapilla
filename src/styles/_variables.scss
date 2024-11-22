@@ -2,12 +2,13 @@
 
 $naranja-oficial: #d34600;
 $naranja-secundario: #a7826f;
+$marron-secundario: #7b4e37;
 $gris-oficial: #4b4a4a;
 
 //Fonts imports
 @font-face {
   font-family: Bookman;
-  src: url(../styles/fonts/BOOKOSB.TTF) format("truetype");
+  src: url(./fonts/BOOKOSB.TTF) format("truetype");
 
   font-style: normal;
   font-weight: bold;
@@ -15,7 +16,7 @@ $gris-oficial: #4b4a4a;
 
 @font-face {
   font-family: Lato;
-  src: url(../styles/fonts/Lato-Regular.ttf) format("truetype");
+  src: url(./fonts/Lato-Regular.ttf) format("truetype");
 
   font-style: normal;
   font-weight: normal;

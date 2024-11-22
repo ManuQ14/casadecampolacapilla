@@ -67,6 +67,7 @@ h3 {
   font-family: $lato;
   color: white;
   font-size: 22px;
+  font-weight: normal;
 }
 
 .reserveButton {
@@ -81,7 +82,6 @@ h3 {
   font-family: $lato;
   font-weight: bold;
   font-size: 16px;
-  margin-top: 50px;
   border: none;
   transition: all 300ms;
   text-align: center;
@@ -191,11 +191,22 @@ h3 {
   text-align: start;
 }
 
+.boxMobileContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  height: 295px;
+  justify-content: space-between;
+}
+
+//comienzo mobile
 @media (max-width: 412px) {
   body {
     overflow-x: hidden !important;
   }
 
+  //Header
   .navBar {
     display: none;
   }
@@ -205,11 +216,129 @@ h3 {
     height: 333px;
   }
 
-  /* .coverHeader{
-  width: 100%;
-} */
+  .boxMobileContainer {
+    display: flex;
+    width: 371px;
+    height: 143px;
+  }
+
+  .titlesContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+  }
 
   h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .h2Servicios {
+    font-family: $bookman;
     font-size: 24px;
+    color: $marron-secundario;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .reserveButton {
+    width: 328px;
+    height: 43px;
+    font-size: 16px;
+    font-family: $lato;
+    font-weight: normal;
+  }
+
+  //El camping
+  .sectionContainer {
+    margin: auto;
+    flex-flow: column;
+    width: 380px;
+    height: 673px;
+  }
+
+  .campingTextContainer {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .textCamping {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .campingImage {
+    width: 412px;
+    height: 326px;
+  }
+
+  //Servicios
+  .serviceSection {
+    background-color: #fbe8db;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 912px;
+  }
+
+  .containerTitle {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 116px;
+    height: 35px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  .lineSubrayer {
+    width: 51px;
+  }
+
+  .servicesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 380px;
+    justify-content: space-between;
+  }
+
+  .contenedorServicio {
+    width: 186px;
+    height: 120px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .iconClass {
+    width: 70px;
+    height: 70px;
+  }
+
+  .descripcionServicio {
+    font-size: 14px;
+    font-family: $lato;
+    color: $gris-oficial;
+    font-weight: 600;
+    text-align: center;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
   }
 }
