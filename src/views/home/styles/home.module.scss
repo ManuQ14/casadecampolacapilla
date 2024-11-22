@@ -246,6 +246,15 @@ h3 {
     margin-bottom: 5px;
   }
 
+  .h2Opiniones {
+    width: 360px;
+    height: 64px;
+    font-family: $bookman;
+    text-align: center;
+    color: $naranja-oficial;
+    font-size: 24px;
+  }
+
   .reserveButton {
     width: 328px;
     height: 43px;
@@ -289,7 +298,8 @@ h3 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    height: 912px;
+    justify-content: space-between;
+    height: 973px;
   }
 
   .containerTitle {
@@ -315,12 +325,12 @@ h3 {
 
   .contenedorServicio {
     width: 186px;
-    height: 120px;
+    height: 130px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .iconClass {
@@ -339,6 +349,96 @@ h3 {
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: flex-start;
+  }
+
+  .buttonConoceMas {
+    width: 328px;
+    height: 43px;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    background-color: transparent;
+    color: $naranja-oficial;
+    border: 2px solid $naranja-oficial;
+    border-radius: 10px;
+  }
+
+  //Opiniones
+
+  .sectionOpiniones {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 316px;
+  }
+
+  .h2Opiniones {
+    margin-top: 24px;
+  }
+
+  .sliderContainer {
+    position: relative;
+    max-width: 412px;
+    overflow: hidden;
+    touch-action: pan-x; /* Permite arrastrar horizontalmente */
+    width: 380px;
+    height: 136px;
+    margin-bottom: 56px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+    will-change: transform; /* Mejora el rendimiento */
+    width: 380px;
+    height: 136px;
+  }
+
+  .slide {
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del contenedor */
+    text-align: center;
+    width: 380px;
+    height: 136px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .itemIconContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px;
+  }
+
+  .nameOpinion {
+    font-family: $lato;
+    font-size: 20px;
+    color: $gris-oficial;
+    align-items: center;
+    display: flex;
     justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .opinion {
+    width: 360px;
+    height: 96px;
+    font-size: 14px;
+    color: $gris-oficial;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    font-family: $lato;
   }
 }
