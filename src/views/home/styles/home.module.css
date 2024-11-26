@@ -1,13 +1,14 @@
+@charset "UTF-8";
 @import url(../../../styles/_variables.scss);
 @font-face {
   font-family: Bookman;
-  src: url(../styles/fonts/BOOKOSB.TTF) format("truetype");
+  src: url(./fonts/BOOKOSB.TTF) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
   font-family: Lato;
-  src: url(../styles/fonts/Lato-Regular.ttf) format("truetype");
+  src: url(./fonts/Lato-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -74,6 +75,7 @@ h3 {
   font-family: Lato;
   color: white;
   font-size: 22px;
+  font-weight: normal;
 }
 
 .reserveButton {
@@ -88,7 +90,6 @@ h3 {
   font-family: Lato;
   font-weight: bold;
   font-size: 16px;
-  margin-top: 50px;
   border: none;
   transition: all 300ms;
   text-align: center;
@@ -190,6 +191,15 @@ h3 {
   text-align: start;
 }
 
+.boxMobileContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  height: 295px;
+  justify-content: space-between;
+}
+
 @media (max-width: 412px) {
   body {
     overflow-x: hidden !important;
@@ -201,10 +211,229 @@ h3 {
     width: 412px;
     height: 333px;
   }
-  /* .coverHeader{
-    width: 100%;
-  } */
+  .boxMobileContainer {
+    display: flex;
+    width: 371px;
+    height: 143px;
+  }
+  .titlesContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+  }
   h1 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .h2Servicios {
+    font-family: Bookman;
     font-size: 24px;
+    color: #7b4e37;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .h2Opiniones {
+    width: 360px;
+    height: 64px;
+    font-family: Bookman;
+    text-align: center;
+    color: #d34600;
+    font-size: 24px;
+  }
+  .reserveButton {
+    width: 328px;
+    height: 43px;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: normal;
+  }
+  .sectionContainer {
+    margin: auto;
+    flex-flow: column;
+    width: 380px;
+    height: 673px;
+  }
+  .campingTextContainer {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .textCamping {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .campingImage {
+    width: 412px;
+    height: 326px;
+  }
+  .serviceSection {
+    background-color: #fbe8db;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 973px;
+  }
+  .containerTitle {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+  .lineSubrayer {
+    width: 51px;
+  }
+  .servicesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 380px;
+    justify-content: space-between;
+  }
+  .contenedorServicio {
+    width: 186px;
+    height: 130px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .iconClass {
+    width: 70px;
+    height: 70px;
+  }
+  .descripcionServicio {
+    font-size: 14px;
+    font-family: Lato;
+    color: #4b4a4a;
+    font-weight: 600;
+    text-align: center;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .buttonConoceMas {
+    width: 328px;
+    height: 43px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    background-color: transparent;
+    color: #d34600;
+    border: 2px solid #d34600;
+    border-radius: 10px;
+  }
+  .sectionOpiniones {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 316px;
+  }
+  .h2Opiniones {
+    margin-top: 24px;
+  }
+  .sliderContainer {
+    position: relative;
+    max-width: 412px;
+    overflow: hidden;
+    touch-action: pan-x; /* Permite arrastrar horizontalmente */
+    width: 380px;
+    height: 136px;
+    margin-bottom: 56px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+    will-change: transform; /* Mejora el rendimiento */
+    width: 380px;
+    height: 136px;
+  }
+  .slide {
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del contenedor */
+    text-align: center;
+    width: 380px;
+    height: 136px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .itemIconContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto 10px;
+  }
+  .nameOpinion {
+    font-family: Lato;
+    font-size: 20px;
+    color: #4b4a4a;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .opinion {
+    width: 360px;
+    height: 96px;
+    font-size: 14px;
+    color: #4b4a4a;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    font-family: Lato;
+  }
+  .sectionUbication {
+    width: 100%;
+    height: 550px;
+    background-color: #fbe8db;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .boxUbicationContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 155px;
+    text-align: center;
+  }
+  .ubicationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Lato;
+    font-size: 14px;
+    color: #4b4a4a;
+  }
+  .mapaBox {
+    width: 380px;
+    height: 271px;
   }
 }/*# sourceMappingURL=home.module.css.map */
