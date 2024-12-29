@@ -33,9 +33,8 @@ export const Ubication = () => {
         </div>
         <div className={styles.ubicationContainer}>
           <img src={mobileIcon} alt="icono de celular" />
-          <p>
-            +54 9 11-5856-7591
-          </p>
+          <a href="+54 9 11-5856-7591" />        
+          
         </div>
       </div>
 
