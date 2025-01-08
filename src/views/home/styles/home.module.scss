@@ -13,7 +13,6 @@
   }
 
   .header {
-    
     height: 420px;
   }
 
@@ -28,7 +27,7 @@
 
   .boxMobileContainer {
     display: flex;
-    width: 20.5rem;
+    width: 22.5rem;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -48,7 +47,7 @@
 
     /* mobile/BK H2 */
     font-family: $bookman;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
     line-height: 2rem; /* 133.333% */
@@ -62,7 +61,7 @@
 
     /* mobile/H3 */
     font-family: $lato;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     //font-weight: 700;
     line-height: 1.5rem; /* 150% */
@@ -77,7 +76,7 @@
     gap: 0.625rem;
     align-self: stretch;
     border-radius: 0.625rem;
-    background: var(--Primario-principal, #d34600);
+    background: $naranja-oficial;
     color: var(--White, #fff);
     text-align: center;
     font-family: Lato;
