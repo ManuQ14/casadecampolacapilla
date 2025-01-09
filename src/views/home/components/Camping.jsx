@@ -8,7 +8,7 @@ import chevronRight from "../../../assets/icons/chevronRigth.svg";
 
 export const Camping = () => {
   return (
-    <div className={styles.campingSection}>
+    <div className={styles.campingSection} id="camping">
       <div className={styles.campingTextContainer}>
         <div className={styles.containerTitle}>
           <h2 className={styles.subtitle1}>El Camping</h2>

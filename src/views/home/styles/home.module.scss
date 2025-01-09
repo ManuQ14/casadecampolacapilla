@@ -3,12 +3,31 @@
 
 //comienzo mobile
 @media (max-width: 767px) {
-  body {
+ /*  body {
     overflow-x: hidden !important;
-  }
+  } */
 
   //Header
   .navBar {
+    display: none;
+  }
+
+  //Menú hamburguesa + comportamiento
+  .burguerMenu {
+    width: 100%;
+    height: 917px;
+    opacity: 0.96;
+    background: $naranja-terciario;
+    opacity: 0.96;
+    transition: all 300ms;
+  }
+
+  .no-scroll {
+    overflow: hidden !important;
+
+  }
+
+  .hidden {
     display: none;
   }
 
@@ -16,14 +35,27 @@
     height: 420px;
   }
 
-  .coverHeader {
+  .containerIcon {
+    height: 24px;
     width: 100%;
-    height: 100%;
-    background: rgba(30, 30, 30, 0.5);
     display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    position: absolute;
+    margin-top: 16px;
+  }
+
+  .coverHeader {
+    display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
-    z-index: 1111;
+    height: 100%;
+    background: rgb(30, 30, 30, 0.5);
+  }
+
+  .openMenu {
+    margin-right: 16px;
   }
 
   .videoPortada {

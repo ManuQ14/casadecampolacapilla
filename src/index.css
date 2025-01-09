@@ -8,6 +8,10 @@ body {
 
 }
 
+.no-scroll{
+  overflow: hidden !important;
+}
+
 footer {
   display: flex;
   flex-flow: column;

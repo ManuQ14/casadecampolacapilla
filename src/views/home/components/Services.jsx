@@ -18,7 +18,7 @@ import mesas from "../../../assets/icons/Mesas.svg";
 
 export const Services = () => {
   return (
-    <div className={styles.serviceSection}>
+    <div className={styles.serviceSection} id="servicios">
       <div className={styles.containerTitle}>
         <h2 className={styles.h2Servicios}>Servicios</h2>
         <img
