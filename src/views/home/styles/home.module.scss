@@ -3,32 +3,44 @@
 
 //comienzo mobile
 @media (max-width: 767px) {
- /*  body {
-    overflow-x: hidden !important;
-  } */
-
   //Header
   .navBar {
     display: none;
   }
 
   //Menú hamburguesa + comportamiento
-  .burguerMenu {
+  /*     .burguerMenu {
     width: 100%;
     height: 917px;
     opacity: 0.96;
     background: $naranja-terciario;
-    opacity: 0.96;
+    opacity: 0.5;
     transition: all 300ms;
+  } */
+
+  .burguerMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba($naranja-terciario, 0.6);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: right 300ms ease-in-out; 
+    opacity: 1;
+    will-change: right;
+  }
+
+  .burguerMenu.open {
+    right: 0;
   }
 
   .no-scroll {
     overflow: hidden !important;
-
-  }
-
-  .hidden {
-    display: none;
   }
 
   .header {
@@ -122,17 +134,12 @@
     background: $naranja-oficial;
     color: var(--White, #fff);
     text-align: center;
-    font-family: Lato;
+    font-family: $lato;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-decoration: none;
-    transition: all 300ms;
-  }
-
-  .reserveButton:hover {
-    transform: scale(105%);
   }
 
   //Fin header

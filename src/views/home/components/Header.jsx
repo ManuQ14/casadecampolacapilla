@@ -35,7 +35,7 @@ export const Header = () => {
       <NavBar />
       <header className={styles.header}>
         {isMenuOpen && (
-          <div className={styles.burguerMenu}>
+          <div className={`${styles.burguerMenu} ${isMenuOpen ? styles.open : ''}`}> {/* Added conditional class for open state */}
             <img
               src={closeMenu}
               alt="Cerrar menú"
@@ -47,7 +47,7 @@ export const Header = () => {
                 <Link onClick={() => handleScrollToSection("camping")}>
                   El Camping
                 </Link>
-                <Link> Nuestra historia </Link> {/* Este no cierra el menú */}
+                <Link> Nuestra historia </Link> {/* This one doesn't close the menu */}
                 <Link onClick={() => handleScrollToSection("servicios")}>
                   Servicios
                 </Link>
@@ -58,8 +58,7 @@ export const Header = () => {
                   Cómo llegar
                 </Link>
               </div>
-              <Link to="/contacto">Reservar</Link>{" "}
-              {/* Este no cierra el menú */}
+              <Link to="/contacto">Reservar</Link> {/* This one doesn't close the menu */}
               <div className={styles.boxIdconMedia}>
                 <Link to="https://instagram.com" target="_blank">
                   Instagram
