@@ -33,7 +33,8 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.96);
+    background-color: #fff4ed;
+    opacity: 96%;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -74,7 +75,8 @@
     font-weight: 600;
     line-height: 40px; /* 166.667% */
   }
-  a:visited, a:link {
+  a:visited,
+  a:link {
     text-decoration: none;
     color: #d34600;
   }
