@@ -1,232 +1,140 @@
+// Importaciones
 @import url(../../../styles/_variables.scss);
 @import "../../../styles/variables";
 
-//comienzo mobile
+// Estilos mobile
 @media (max-width: 767px) {
-  //Header
+  .header {
+    display: none;
+  }
+
   .navBar {
     display: none;
   }
 
-  //Menú hamburguesa + comportamiento
-  /*     .burguerMenu {
-    width: 100%;
-    height: 917px;
-    opacity: 0.96;
-    background: $naranja-terciario;
-    opacity: 0.5;
-    transition: all 300ms;
-  } */
-
-  .burguerMenu {
+  // Manejo de menú hamburguesa
+  .burgerMenu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba($naranja-terciario, 0.6);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    transition: right 300ms ease-in-out; 
-    opacity: 1;
-    will-change: right;
+    background: rgba(255, 255, 255, 0.96);
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
   }
 
-  .burguerMenu.open {
+  .menuOpen {
     right: 0;
   }
 
-  .no-scroll {
-    overflow: hidden !important;
-  }
-
-  .header {
-    height: 420px;
-  }
-
-  .containerIcon {
-    height: 24px;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: flex-end;
+  .closeMenu {
     position: absolute;
-    margin-top: 16px;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px; // Ajusta la altura del header
   }
 
   .coverHeader {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 100%;
     height: 100%;
-    background: rgb(30, 30, 30, 0.5);
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5); // Fondo negro con opacidad al 50%
   }
 
-  .openMenu {
-    margin-right: 16px;
-  }
-
-  .videoPortada {
+  .videoCamping {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 420px;
-    object-fit: cover; // Hace que el video ocupe todo el espacio sin perder proporción
-    z-index: -1; // Asegura que el video esté detrás del contenido
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 
-  .boxMobileContainer {
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
     display: flex;
-    width: 22.5rem;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    gap: 2rem;
-  }
-
-  .titlesContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    align-self: stretch;
+    justify-content: space-between;
   }
 
   h1 {
-    color: var(--Secundario-light, #fbe8db);
+    color: $naranja-terciario;
     font-feature-settings: "liga" off, "clig" off;
-
-    /* mobile/BK H2 */
     font-family: $bookman;
-    font-size: 1.6rem;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 2rem; /* 133.333% */
-    letter-spacing: 0.00938rem;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.15px;
   }
 
   h3 {
-    color: var(--Secundario-light, #fbe8db);
+    color: $naranja-terciario;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-
-    /* mobile/H3 */
-    font-family: $lato;
-    font-size: 18px;
+    font-family: $lato-bold;
+    font-size: 16px;
     font-style: normal;
-    //font-weight: 700;
-    line-height: 1.5rem; /* 150% */
-    letter-spacing: 0.00625rem;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
   }
 
   .reserveButton {
     display: flex;
-    padding: 0.75rem 1.25rem;
+    padding: 12px 20px;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: 10px;
     align-self: stretch;
-    border-radius: 0.625rem;
+    border-radius: 10px;
     background: $naranja-oficial;
+    text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
     font-family: $lato;
-    font-size: 1rem;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
-    text-decoration: none;
   }
 
-  //Fin header
-
-  //El camping
-
-  .campingSection {
-    height: 810px;
-    width: 100vw;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .campingTextContainer {
-    width: 23.75rem;
-
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-    color: $gris-oficial;
-    text-align: center;
-    font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0.00625rem;
-    margin-bottom: 40px;
-    margin-top: 60px;
-  }
-
-  .containerTitle {
-    width: 10rem;
-    height: 37px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  .subtitle1 {
-    color: $naranja-oficial;
-    font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 2rem;
-    letter-spacing: 0.00938rem;
-  }
-
-  .textCamping {
-    margin-bottom: 24px;
-  }
-
-  .linkContainer {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    height: 24px;
-  }
-
-  .buttonToOurHistory {
-    width: 15rem;
-    height: 20px;
-    flex-shrink: 0;
-    color: $naranja-oficial;
-    text-align: center;
-    font-feature-settings: "liga" off, "clig" off;
-
-    text-decoration: none;
-    font-family: $lato;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1rem; /* 100% */
-    letter-spacing: 0.025rem;
-  }
-
-  .chevronRight {
-    width: 20px;
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150; // Asegúrate de que el ícono de menú sea visible
+    cursor: pointer;
   }
 }

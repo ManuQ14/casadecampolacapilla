@@ -12,428 +12,126 @@
   font-style: normal;
   font-weight: normal;
 }
-.navBar {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 130px;
-  font-family: Lato;
-  font-size: 24px;
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf) format("truetype");
 }
-
-.logoContainer {
-  width: 600px;
-}
-
-.navContainer {
-  display: flex;
-  flex-flow: row;
-  width: 100%;
-  justify-content: space-evenly;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: #4b4a4a;
-}
-
-.active {
-  color: #d34600;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-header {
-  background-image: url(../../../assets/images/2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 65%;
-  width: 100%;
-  height: 650px;
-}
-
-.coverHeader {
-  background-color: rgba(0, 0, 0, 0.418);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  font-family: Bookman;
-  color: white;
-  font-size: 60px;
-}
-
-h3 {
-  font-family: Lato;
-  color: white;
-  font-size: 22px;
-  font-weight: normal;
-}
-
-.reserveButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 50px;
-  border-radius: 6px;
-  background-color: #d34600;
-  color: white;
-  font-family: Lato;
-  font-weight: bold;
-  font-size: 16px;
-  border: none;
-  transition: all 300ms;
-  text-align: center;
-}
-
-.reserveButton:hover {
-  transform: scale(110%);
-  background-color: #a7826f;
-}
-
-.sectionContainer {
-  height: 500px;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.campingTextContainer {
-  display: flex;
-  flex-flow: column;
-  width: 40%;
-}
-
-.h2 {
-  font-family: Bookman;
-  font-size: 30px;
-  color: #d34600;
-  text-align: center;
-}
-
-.textCamping {
-  font-family: Lato;
-  font-size: 18px;
-  text-align: center;
-}
-
-.campingImage {
-  width: 550px;
-}
-
-.sectionContainerCenter {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  height: 500px;
-}
-
-.blockContainer {
-  display: flex;
-  flex-flow: column;
-  width: 1000px;
-  height: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.iconBlockContainer {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-evenly;
-  font-family: Lato;
-}
-
-.buttonConoceMas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 40px;
-  border-radius: 6px;
-  background-color: #d34600;
-  color: white;
-  font-family: Lato;
-  font-weight: bold;
-  font-size: 16px;
-  border: none;
-  transition: all 300ms;
-  text-align: center;
-}
-
-.mapaBox {
-  width: 600px;
-  height: 400px;
-}
-
-.infoUbicationBox {
-  width: 40%;
-  height: 300px;
-}
-
-.titleUbication {
-  font-family: Bookman;
-  font-size: 30px;
-  color: #d34600;
-  text-align: start;
-}
-
-.boxMobileContainer {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  width: 100%;
-  height: 295px;
-  justify-content: space-between;
-}
-
-@media (max-width: 412px) {
-  body {
-    overflow-x: hidden !important;
+@media (max-width: 767px) {
+  .header {
+    display: none;
   }
   .navBar {
     display: none;
   }
-  .header {
-    width: 412px;
-    height: 333px;
-  }
-  .boxMobileContainer {
-    display: flex;
-    width: 371px;
-    height: 143px;
-  }
-  .titlesContainer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 65px;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  h3 {
-    font-size: 16px;
-  }
-  .h2Servicios {
-    font-family: Bookman;
-    font-size: 24px;
-    color: #7b4e37;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .h2Opiniones {
-    width: 360px;
-    height: 64px;
-    font-family: Bookman;
-    text-align: center;
-    color: #d34600;
-    font-size: 24px;
-  }
-  .reserveButton {
-    width: 328px;
-    height: 43px;
-    font-size: 16px;
-    font-family: Lato;
-    font-weight: normal;
-  }
-  .sectionContainer {
-    margin: auto;
-    flex-flow: column;
-    width: 380px;
-    height: 673px;
-  }
-  .campingTextContainer {
+  .burgerMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
     width: 100%;
-    margin-top: 24px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.96);
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
   }
-  .h2 {
-    font-size: 24px;
-    margin-bottom: 16px;
+  .menuOpen {
+    right: 0;
   }
-  .textCamping {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 12px;
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
   }
-  .campingImage {
-    width: 412px;
-    height: 326px;
-  }
-  .serviceSection {
-    background-color: #fbe8db;
+  .menuItems {
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 973px;
+    flex-direction: column;
+    padding: 2rem;
   }
-  .containerTitle {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 100%;
-    height: 35px;
-    margin-top: 24px;
-    margin-bottom: 30px;
-  }
-  .lineSubrayer {
-    width: 51px;
-  }
-  .servicesContainer {
-    display: flex;
-    flex-flow: row wrap;
-    width: 380px;
-    justify-content: space-between;
-  }
-  .contenedorServicio {
-    width: 186px;
-    height: 130px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  .iconClass {
-    width: 70px;
-    height: 70px;
-  }
-  .descripcionServicio {
-    font-size: 14px;
-    font-family: Lato;
-    color: #4b4a4a;
-    font-weight: 600;
-    text-align: center;
-    height: 50px;
-    text-align: center;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .buttonConoceMas {
-    width: 328px;
-    height: 43px;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    background-color: transparent;
-    color: #d34600;
-    border: 2px solid #d34600;
-    border-radius: 10px;
-  }
-  .sectionOpiniones {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 316px;
-  }
-  .h2Opiniones {
-    margin-top: 24px;
-  }
-  .sliderContainer {
-    position: relative;
-    max-width: 412px;
+  .no-scroll {
     overflow: hidden;
-    touch-action: pan-x; /* Permite arrastrar horizontalmente */
-    width: 380px;
-    height: 136px;
-    margin-bottom: 56px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
   }
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transición suave */
-    will-change: transform; /* Mejora el rendimiento */
-    width: 380px;
-    height: 136px;
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
   }
-  .slide {
-    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del contenedor */
-    text-align: center;
-    width: 380px;
-    height: 136px;
-    box-sizing: border-box;
-    align-items: center;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .itemIconContainer {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+  .videoCamping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    margin: 0 auto 10px;
+    z-index: -1;
   }
-  .nameOpinion {
-    font-family: Lato;
-    font-size: 20px;
-    color: #4b4a4a;
-    align-items: center;
+  .contentHeader {
+    width: 328px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
     display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    color: #fff4ed;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.15px;
+  }
+  h3 {
+    color: #fff4ed;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: LatoBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
     justify-content: center;
-    margin-bottom: 8px;
-  }
-  .opinion {
-    width: 360px;
-    height: 96px;
-    font-size: 14px;
-    color: #4b4a4a;
-    line-height: 16px;
     align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #d34600;
+    text-decoration: none;
+    color: var(--White, #fff);
     text-align: center;
     font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
-  .sectionUbication {
-    width: 100%;
-    height: 550px;
-    background-color: #fbe8db;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .boxUbicationContainer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 380px;
-    height: 155px;
-    text-align: center;
-  }
-  .ubicationContainer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    font-family: Lato;
-    font-size: 14px;
-    color: #4b4a4a;
-  }
-  .mapaBox {
-    width: 380px;
-    height: 271px;
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=home.module.css.map */

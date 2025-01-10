@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { NavBar } from "./NavBar";
 
 import styles from "../styles/home.module.scss";
 
@@ -12,101 +11,90 @@ import closeMenu from "../../../assets/icons/closeMenu.svg";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleOpenMenu = () => {
-    setIsMenuOpen(true);
-    document.body.classList.add("no-scroll");
-  };
-
-  const handleCloseMenu = () => {
-    setIsMenuOpen(false);
-    document.body.classList.remove("no-scroll");
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
   const handleScrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      handleCloseMenu(); // Cierra el menú después de hacer scroll
+      setIsMenuOpen(false);
+      document.body.classList.remove("no-scroll");
     }
   };
 
   return (
     <>
-      <NavBar />
+      {/** Header Desktop */}
       <header className={styles.header}>
-        {isMenuOpen && (
-          <div className={`${styles.burguerMenu} ${isMenuOpen ? styles.open : ''}`}> {/* Added conditional class for open state */}
-            <img
-              src={closeMenu}
-              alt="Cerrar menú"
-              className={styles.closeMenu}
-              onClick={handleCloseMenu}
-            />
-            <div className={styles.itemsMenuContainer}>
-              <div className={styles.linksContainer}>
-                <Link onClick={() => handleScrollToSection("camping")}>
-                  El Camping
-                </Link>
-                <Link> Nuestra historia </Link> {/* This one doesn't close the menu */}
-                <Link onClick={() => handleScrollToSection("servicios")}>
-                  Servicios
-                </Link>
-                <Link onClick={() => handleScrollToSection("tarifas")}>
-                  Tarifas
-                </Link>
-                <Link onClick={() => handleScrollToSection("como-llegar")}>
-                  Cómo llegar
-                </Link>
-              </div>
-              <Link to="/contacto">Reservar</Link> {/* This one doesn't close the menu */}
-              <div className={styles.boxIdconMedia}>
-                <Link to="https://instagram.com" target="_blank">
-                  Instagram
-                </Link>
-                <Link to="https://youtube.com" target="_blank">
-                  YouTube
-                </Link>
-                <Link to="https://tiktok.com" target="_blank">
-                  TikTok
-                </Link>
-                <Link to="https://facebook.com" target="_blank">
-                  Facebook
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
+        <nav className={styles.navBar}></nav>
+      </header>
 
-        <div className={styles.containerIcon}>
-          <img
-            src={openMenu}
-            alt="Abrir menú"
-            className={styles.openMenu}
-            onClick={handleOpenMenu}
-          />
-        </div>
+      {/** Header Mobile */}
+      <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
           <video
+            src={videoCamping}
             autoPlay
             loop
             muted
             playsInline
-            className={styles.videoPortada}
+            className={styles.videoCamping}
           >
-            <source src={videoCamping} type="video/mp4" />
+            <source src={videoCamping} type="video/mp4"/>
           </video>
 
-          <div className={styles.boxMobileContainer}>
-            <div className={styles.titlesContainer}>
-              <h1>Casa de Campo La Capilla</h1>
-              <h3>Experiencia de acampe rural, vivila...</h3>
-            </div>
+          <div className={styles.contentHeader}>
+
+            <h1>Casa de Campo La Capilla</h1>
+            <h3>Experiencia de acampe rural, vivila...</h3>
             <Link to="/contacto" className={styles.reserveButton}>
               Reservar
             </Link>
           </div>
         </div>
-      </header>
+
+        <img
+          src={openMenu}
+          alt="Abrir menú hamburguesa"
+          onClick={toggleMenu}
+          aria-label="Abrir menú hamburguesa"
+        />
+        {/*Menu hamburguesa */}
+        <div
+          className={`${styles.burgerMenu} ${
+            isMenuOpen ? styles.menuOpen : ""
+          }`}
+        >
+          <img
+            src={closeMenu}
+            alt="Cerrar menú"
+            className={styles.closeMenu}
+            onClick={toggleMenu}
+            aria-label="Cerrar menú"
+          />
+          <nav className={styles.menuItems}>
+            <Link to="/" onClick={() => handleScrollToSection("camping")}>
+              El Camping
+            </Link>
+            <Link to="/" onClick={() => handleScrollToSection("services")}>
+              Servicios
+            </Link>
+            <Link to="/" onClick={() => handleScrollToSection("tarifas")}>
+              Tarifas
+            </Link>
+            <Link to="/" onClick={() => handleScrollToSection("location")}>
+              Cómo Llegar
+            </Link>
+            <Link to="/contacto" className={styles.reserveButton}>
+              Reservar
+            </Link>
+          </nav>
+        </div>
+        {/**Fin menu hamburguesa */}
+      </div>
     </>
   );
 };

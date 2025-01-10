@@ -11,6 +11,10 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+}
 .errorContainer {
   display: flex;
   flex-flow: column;

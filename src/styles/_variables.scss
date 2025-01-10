@@ -24,5 +24,11 @@ $pastel: #fbe8db;
   font-weight: normal;
 }
 
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+}
+
 $bookman: Bookman;
 $lato: Lato;
+$lato-bold: LatoBold;
