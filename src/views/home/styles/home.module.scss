@@ -14,12 +14,16 @@
 
   // Manejo de menú hamburguesa
   .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 96%);
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -39,9 +43,39 @@
   .menuItems {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 328px;
+    height: 406px;
+    //background: gray;
+    margin-top: 108px;
   }
 
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 265px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 166.667% */
+  }
+
+  a:visited, a:link{
+    text-decoration: none;
+    color: $naranja-oficial;
+  }
+  
+  
   .no-scroll {
     overflow: hidden;
   }
@@ -123,7 +157,7 @@
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: $lato;
+    font-family: $lato-bold;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
