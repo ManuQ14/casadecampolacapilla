@@ -23,8 +23,8 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: $naranja-terciario;
-    opacity: 96%;
+    background-color: #fff3edf8;
+
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -49,7 +49,6 @@
     gap: 16px;
     width: 328px;
     height: 406px;
-    //background: gray;
     margin-top: 108px;
   }
 
@@ -58,7 +57,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 170px;
     height: 265px;
     color: $naranja-oficial;
     text-align: center;
@@ -79,6 +78,19 @@
 
   .no-scroll {
     overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 210px;
+    height: 35px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 35px;
+    height: 35px;
   }
 
   // Header Mobile
@@ -171,5 +183,91 @@
     right: 15px;
     z-index: 150; // Asegúrate de que el ícono de menú sea visible
     cursor: pointer;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Inicio sección Camping
+  .campingSection {
+    width: 100vw;
+    height: 800px;
+    //background-color: gray;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .subtitleContainer {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+ 
+
+  .campingTextContainer {
+    width: 380px;
+    height: 375px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .campingText {
+    color: $gris-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+
+  .conoceMasContainer {
+    width: 257px;
+    height: 24px;
+    display: flex;
+    flex-flow: row;
+  }
+
+  .conoceMasText {
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.4px;
+  }
+
+  .chrevronRight {
+    width: 24px;
+    height: 24px;
+  }
+
+  .carrouselCamping {
   }
 }

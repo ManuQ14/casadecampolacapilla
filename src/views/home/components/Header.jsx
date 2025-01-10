@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/home.module.scss";
@@ -87,22 +86,24 @@ export const Header = () => {
           />
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
-              <Link to="/" onClick={() => handleScrollToSection("camping")}>
+              <div onClick={() => handleScrollToSection("camping")}>
                 El Camping
-              </Link>
-              <Link to="/" onClick={() => handleScrollToSection("services")}>
-                Servicios
-              </Link>
-              <Link to="/" onClick={() => handleScrollToSection("tarifas")}>
-                Tarifas
-              </Link>
-              <Link to="/" onClick={() => handleScrollToSection("location")}>
-                Cómo Llegar
-              </Link>
-
-              <div onClick={handleToReserve} className={styles.reserveButton}>
-                Reservar
               </div>
+              <div onClick={() => handleScrollToSection("nuestra-historia")}>
+                Nuestra historia
+              </div>
+              <div onClick={() => handleScrollToSection("services")}>
+                Servicios
+              </div>
+              <div onClick={() => handleScrollToSection("tarifas")}>
+                Tarifas
+              </div>
+              <div onClick={() => handleScrollToSection("location")}>
+                Cómo Llegar
+              </div>
+            </div>
+            <div onClick={handleToReserve} className={styles.reserveButton}>
+              Reservar
             </div>
             <div className={styles.mediaIconContainer}>
               <a
@@ -110,28 +111,44 @@ export const Header = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={instagramIcon} alt="Instagram icon" />
+                <img
+                  src={instagramIcon}
+                  alt="Instagram icon"
+                  className={styles.iconMedia}
+                />
               </a>
               <a
                 href="https://www.youtube.com/user/nikolunapra"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={youtubeIcon} alt="Youtube icon" />
+                <img
+                  src={youtubeIcon}
+                  alt="Youtube icon"
+                  className={styles.iconMedia}
+                />
               </a>
               <a
                 href="https://www.tiktok.com/@casadecampolacapilla"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={tikTokIcon} alt="Tik Tok Icon" />
+                <img
+                  src={tikTokIcon}
+                  alt="Tik Tok Icon"
+                  className={styles.iconMedia}
+                />
               </a>
               <a
                 href="https://www.facebook.com/casadecampolacapilla"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={facebookIcon} alt="Facebook Icon" />
+                <img
+                  src={facebookIcon}
+                  alt="Facebook Icon"
+                  className={styles.iconMedia}
+                />
               </a>
             </div>
           </nav>
