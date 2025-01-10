@@ -221,8 +221,6 @@
     letter-spacing: 0.15px;
   }
 
- 
-
   .campingTextContainer {
     width: 380px;
     height: 375px;
@@ -268,6 +266,43 @@
     height: 24px;
   }
 
+  //Carrousel
   .carrouselCamping {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+
+  .carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carouselTrack img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .carouselIndicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background: rgba(255, 255, 255, 1);
   }
 }
