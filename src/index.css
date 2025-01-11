@@ -5,10 +5,9 @@
 
 body {
   overflow-x: hidden !important;
-
 }
 
-.no-scroll{
+.no-scroll {
   overflow: hidden !important;
 }
 

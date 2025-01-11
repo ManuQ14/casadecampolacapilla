@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/home.module.scss";
 import line from "../../../assets/icons/subray.svg";
 
-import foto1 from "../../../assets/images/gallery/1.jpg";
+import foto1 from "../../../assets/images/gallery/9.jpg";
 import foto2 from "../../../assets/images/gallery/2.jpg";
 import foto3 from "../../../assets/images/gallery/3.jpg";
 import foto4 from "../../../assets/images/gallery/4.jpg";
@@ -61,29 +61,14 @@ export const Gallery = () => {
 
   return (
     <div className={styles.gallerySection}>
-      <div className={styles.subtitleContainer}>
-        <h2 className={styles.h2}>Galería</h2>
-        <img src={line} alt="linea subrayadora" />
-      </div>
-      <div className={styles.gallery}>
-        {fotosGaleria.map((foto, index) => (
-          <img
-            key={index}
-            src={foto}
-            alt={`Imagen ${index + 1}`}
-            className={styles.galleryImage}
-            onClick={() => openModal(index)}
-          />
-        ))}
-      </div>
       {isModalOpen && (
-        <div className={`${styles.modalOverlay}`}>
+        <div className={`${styles.modalOverlay}`} id="modalGaleria">
           <div
             className={`${styles.modalContent} ${
               fadeTransition ? styles.fadeIn : ""
             }`}
             onClick={(e) => e.stopPropagation()}
-          >
+           id="modalContent">
             {fotosGaleria.map((foto, index) => (
               <img
                 key={index}
@@ -103,6 +88,22 @@ export const Gallery = () => {
           </div>
         </div>
       )}
+      <div className={styles.subtitleContainer}>
+        <h2 className={styles.h2}>Galería</h2>
+        <img src={line} alt="linea subrayadora" />
+      </div>
+      <div className={styles.gallery}>
+        {fotosGaleria.map((foto, index) => (
+          <img
+            key={index}
+            src={foto}
+            alt={`Imagen ${index + 1}`}
+            className={styles.galleryImage}
+            onClick={() => openModal(index)}
+          />
+        ))}
+      </div>
+      
       <div className={styles.goToGalleryContainer} onClick={handleGoToGallery}>
         <div className={styles.goToGallery}>Ver galería</div>
       </div>

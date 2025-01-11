@@ -542,7 +542,9 @@
   .modalContent {
     position: relative;
     width: 100vw;
-    height: 508px;
+    //height: 508px;
+    height: 480px;
+    //height: auto;
     background-color: white;
     display: flex;
     flex-flow: column;
@@ -567,22 +569,18 @@
 
   .fotoAbierta {
     width: 90%;
-    height: 360px;
+    max-height: 390px;
+    height: auto;
     margin-top: 24px;
     transition: opacity 0.3s ease;
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-
+    border-radius: 5px;
     &.active {
       opacity: 1;
     }
   }
-
-  /*   .closeButton {
-    top: 10px;
-    right: 10px;
-  } */
 
   .closeButton {
     width: 288px;
@@ -597,7 +595,7 @@
     font-weight: 700;
     line-height: normal;
     position: relative;
-    top: 80%;
+    top: 85%;
   }
 
   .goToGalleryContainer {

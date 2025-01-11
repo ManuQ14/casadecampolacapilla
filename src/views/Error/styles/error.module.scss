@@ -1,34 +1,32 @@
 @import url(../../../styles/_variables.scss);
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
-
-.errorContainer{
-    display: flex;
-    flex-flow: column;
-    width: 100vw;
-    height: 97vh;
-    align-items: center;
-    justify-content: center;
-
+.errorContainer {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 97vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-
-.title{
-margin-top: 130px;   
-font-size: 60px;
-color: $naranja-oficial;
-font-family: $bookman;
-margin-bottom: 50px;
+.title {
+  margin-top: 130px;
+  font-size: 60px;
+  color: $naranja-oficial;
+  font-family: $bookman;
+  margin-bottom: 50px;
 }
 
-.buttonToHome{
-    font-family: $lato;
-    color: white;
-    font-size: 30px;
-    background-color: $naranja-oficial;
-    border-radius: 6px;
-    width: 400px;
-    height: 50px;
-    text-align: center;
-    align-content: center;
+.buttonToHome {
+  font-family: $lato;
+  color: white;
+  font-size: 30px;
+  background-color: $naranja-oficial;
+  border-radius: 6px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  align-content: center;
 }
