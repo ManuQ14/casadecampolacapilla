@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 
 import styles from "../styles/home.module.scss";
 
@@ -27,7 +27,7 @@ export const Camping = () => {
   };
 
   const startCarousel = () => {
-    intervalRef.current = setInterval(nextSlide, 3000); // Asigna el intervalo a la referencia
+    intervalRef.current = setInterval(nextSlide, 5000); // Asigna el intervalo a la referencia
   };
 
   const stopCarousel = () => {
@@ -40,11 +40,6 @@ export const Camping = () => {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosCarrousel.length);
   };
-
-  useEffect(() => {
-    startCarousel(); // Inicia el intervalo
-    return () => stopCarousel(); // Limpia el intervalo al desmontar el componente
-  });
 
   const handleDotClick = (index) => {
     stopCarousel(); // Detiene el carrusel al hacer clic
