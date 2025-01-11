@@ -92,7 +92,7 @@ export const Header = () => {
               <div onClick={() => handleScrollToSection("nuestra-historia")}>
                 Nuestra historia
               </div>
-              <div onClick={() => handleScrollToSection("services")}>
+              <div onClick={() => handleScrollToSection("servicios")}>
                 Servicios
               </div>
               <div onClick={() => handleScrollToSection("tarifas")}>

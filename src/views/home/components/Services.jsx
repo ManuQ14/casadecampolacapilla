@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import styles from "../styles/home.module.scss";
 
-import line from "../../../assets/icons/subrayServices.svg";
+import line from "../../../assets/icons/lineServices.svg";
 
 //Imports de iconos de servicios
 import ducha from "../../../assets/icons/Duchas.svg";
@@ -19,84 +19,67 @@ import mesas from "../../../assets/icons/Mesas.svg";
 export const Services = () => {
   return (
     <div className={styles.serviceSection} id="servicios">
-      <div className={styles.containerTitle}>
-        <h2 className={styles.h2Servicios}>Servicios</h2>
-        <img
-          src={line}
-          alt="linea subrayadora"
-          className={styles.lineSubrayer}
-        />
-      </div>
-
-      <div className={styles.servicesContainer}>
-        <div className={styles.contenedorServicio}>
+      <div className={styles.coverServices}>
+        <div className={styles.subtitleContainerServices}>
+          <h2 className={styles.h2Servicios}>Servicios</h2>
           <img
-            src={ducha}
-            alt="icono ducha caliente"
-            className={styles.iconClass}
+            src={line}
+            alt="linea subrayadora de subtitulo"
+            className={styles.lineServicios}
           />
-          <p className={styles.descripcionServicio}>
-            Baños con ducha y agua caliente las 24hs
-          </p>
         </div>
+        <div className={styles.iconServiciesContainer}>
 
-        <div className={styles.contenedorServicio}>
-          <img src={wifi} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>Wifi en todo el predio</p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={proveeduria} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Proveeduría a costos de almacén. Bebidas, snacks y comestibles
-            regionales
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={carpas} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Alquiler de carpas, colchones y frazadas
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={tomacorrientes} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Tomacorrientes e iluminación
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={asador} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Asador y fogonero. Se incluyen accesorios como discos de arado,
-            estaca a la cruz, espeto, etc...
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={pileta} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            En temporada de verano hay piletas
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={comidas} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Preparación de comidas, desayunos y bebidas
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={juegos} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>
-            Juegos para niños. Hamacas, calesitas, casita de juegos y rodados
-          </p>
-        </div>
-        <div className={styles.contenedorServicio}>
-          <img src={mesas} alt="" className={styles.iconClass} />
-          <p className={styles.descripcionServicio}>Mesas al aire libre</p>
+          <div className={styles.serviceContainer}>
+            <img src={ducha} alt="Duchas" width={40} height={54} />
+            <span>Baños con ducha y agua caliente las 24hs</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={wifi} alt="" />
+            <span>Wifi en todo el predio</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={proveeduria} alt="" />
+            <span>
+              Proveeduría a costos de almacén. Bebidas, snacks y comestibles
+              regionales
+            </span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={carpas} alt="" />
+            <span>Alquiler de carpas, colchones y frazadas</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={tomacorrientes} alt="" />
+            <span>Tomacorrientes e iluminación</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={asador} alt="" />
+            <span>
+              Asador y fogonero. Se incluyen accesorios como discos de arado,
+              estaca a la cruz, espeto, etc...
+            </span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={pileta} alt="" />
+            <span>Piletas en temporada de verano</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={comidas} alt="" />
+            <span>Preparación de comidas, desayunos y bebidas</span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={juegos} alt="" />
+            <span>
+              Juegos para niños. Hamacas, calesitas, casita de juegos y rodados
+            </span>
+          </div>
+          <div className={styles.serviceContainer}>
+            <img src={mesas} alt="" />
+            <span>Mesas al aire libre</span>
+          </div>
         </div>
       </div>
-
-      <Link to="/el-camping" className={styles.buttonConoceMas}>
-        Conocé más
-      </Link>
     </div>
   );
 };

@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+//import { useState, useRef } from "react";
 import styles from "../styles/home.module.scss";
 
-const opiniones = [
+/* const opiniones = [
   {
     nombre: "Natalia Edith",
     texto:
@@ -27,10 +27,10 @@ const opiniones = [
     texto:
       "Excelente lugar para acampar, descansar o simplemente pasar el día. Cuenta con proveeduría, baños con agua caliente, lugares para acampar cómodamente y piletas para los días de calor. La atención fue super cálida y amable. Lo recomiendo 100% para descansar y desconectar de todo sin otros ruidos que no sean los de la naturaleza",
   },
-];
+]; */
 
 export const Opinions = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+ /*  const [currentIndex, setCurrentIndex] = useState(0);
   const [dragStartX, setDragStartX] = useState(0);
   const [dragEndX, setDragEndX] = useState(0);
   const sliderRef = useRef(null);
@@ -65,10 +65,10 @@ export const Opinions = () => {
     const moveX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
     setDragEndX(moveX);
   };
-
+ */
   return (
     <div className={styles.sectionOpiniones}>
-      <h2 className={styles.h2Opiniones}>Opiniones de nuestros acampantes</h2>
+    {/*   <h2 className={styles.h2Opiniones}>Opiniones de nuestros acampantes</h2>
       <div
         className={styles.sliderContainer}
         ref={sliderRef}
@@ -93,7 +93,7 @@ export const Opinions = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

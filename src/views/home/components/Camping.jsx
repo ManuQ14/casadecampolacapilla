@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
-//import { useRef, useState, useEffect } from "react";
-
-
+import { useState, useEffect, useRef } from "react";
 
 import styles from "../styles/home.module.scss";
 
 import line from "../../../assets/icons/subrayServices.svg";
 import chevronRight from "../../../assets/icons/chevronRigth.svg";
-/* 
+
 //Import de fotos de carrousel
 import foto1 from "../../../assets/images/1.jpg";
 import foto2 from "../../../assets/images/2.jpg";
@@ -15,15 +13,67 @@ import foto3 from "../../../assets/images/3.jpg";
 import foto4 from "../../../assets/images/4.jpg";
 import foto5 from "../../../assets/images/5.jpg";
 
-const fotosCarrousel = [foto1, foto2, foto3, foto4, foto5]; */
+const fotosCarrousel = [foto1, foto2, foto3, foto4, foto5];
 
 export const Camping = () => {
   const navigate = useNavigate();
+  const intervalRef = useRef(null); // useRef para manejar el intervalo sin perder la referencia
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startX, setStartX] = useState(null);
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
   };
 
+  const startCarousel = () => {
+    intervalRef.current = setInterval(nextSlide, 3000); // Asigna el intervalo a la referencia
+  };
+
+  const stopCarousel = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); // Limpia el intervalo
+      intervalRef.current = null;
+    }
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosCarrousel.length);
+  };
+
+  useEffect(() => {
+    startCarousel(); // Inicia el intervalo
+    return () => stopCarousel(); // Limpia el intervalo al desmontar el componente
+  });
+
+  const handleDotClick = (index) => {
+    stopCarousel(); // Detiene el carrusel al hacer clic
+    setCurrentIndex(index);
+    startCarousel(); // Reinicia el intervalo después de interactuar
+  };
+
+  const handleTouchStart = (e) => {
+    stopCarousel(); // Detiene el carrusel cuando empieza el touch
+    setStartX(e.touches[0].clientX); // Guarda la posición inicial
+  };
+
+  const handleTouchEnd = (e) => {
+    if (startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const difference = endX - startX;
+
+    if (difference > 50) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? fotosCarrousel.length - 1 : prevIndex - 1
+      );
+    } else if (difference < -50) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === fotosCarrousel.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+    setStartX(null);
+    startCarousel(); // Reinicia el intervalo después del touch
+  };
 
   return (
     <div className={styles.campingSection} id="camping">
@@ -59,8 +109,36 @@ export const Camping = () => {
           />
         </div>
       </div>
-      <div className={styles.carrouselCamping}>
-        
+
+      {/**Inicio carrousel */}
+      <div
+        className={styles.carrouselCamping}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className={styles.imageWrapper}>
+          {fotosCarrousel.map((foto, index) => (
+            <img
+              key={index}
+              src={foto}
+              alt={`Imagen ${index + 1}`}
+              className={`${styles.image} ${
+                currentIndex === index ? styles.active : ""
+              }`}
+            />
+          ))}
+        </div>
+        <div className={styles.dots}>
+          {fotosCarrousel.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.dot} ${
+                currentIndex === index ? styles.activeDot : ""
+              }`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

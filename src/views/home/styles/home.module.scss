@@ -189,12 +189,12 @@
   //Inicio sección Camping
   .campingSection {
     width: 100vw;
-    height: 800px;
-    //background-color: gray;
+    height: 850px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 56px;
   }
 
   .subtitleContainer {
@@ -223,11 +223,12 @@
 
   .campingTextContainer {
     width: 380px;
-    height: 375px;
+    height: 380px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 35px;
   }
 
   .campingText {
@@ -240,6 +241,7 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
+    margin-bottom: 20px;
   }
 
   .conoceMasContainer {
@@ -247,9 +249,14 @@
     height: 24px;
     display: flex;
     flex-flow: row;
+    justify-content: space-between;
   }
 
   .conoceMasText {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 20px;
     color: $naranja-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -267,30 +274,142 @@
   }
 
   //Carrousel
-  .carrouselCamping {
-    width: 100%;
-    position: relative;
 
-    .slick-dots {
-      bottom: 10px; // Ubicación de los puntos
-      li {
-        margin: 0 5px;
-        button {
-          &::before {
-            font-size: 12px;
-            color: #fff;
-          }
+  .carrouselCamping {
+    position: relative;
+    width: 100%;
+    height: 310px; // Asegúrate de definir la altura que necesitas
+    overflow: hidden; // Mantén esto para evitar desbordamiento lateral no deseado
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      height: 100%; // Asegúrate de usar el 100% de la altura del contenedor principal
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; // Respeta la proporción del contenedor padre
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        cursor: pointer;
+
+        &.activeDot {
+          background-color: #787878;
         }
       }
     }
+    //Fin El Camping
+  }
+  //Inicio Servicios
+  .serviceSection {
+    width: 100vw;
+    height: 810px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(../../../assets/images/backgroundServices.jpg);
+    background-position: center;
   }
 
-  .carrouselImage {
+  .coverServices {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+      0deg,
+      rgba(41, 46, 33, 0.69) 0%,
+      rgba(41, 46, 33, 0.69) 50%
+    );
+  }
+
+  .subtitleContainerServices {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease; /* Desvanecimiento suave */
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .h2Servicios {
+    color: #f5b498;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .iconServiciesContainer {
+    display: flex;
+    width: 380px;
+    height: 702px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 8px;
+    flex-wrap: wrap;
+  }
+
+  .serviceContainer {
+    display: flex;
+    width: 186px;
+    height: 164px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    height: 124px;
+  }
+
+  span {
+    //text-align: center;
+    color: $naranja-terciario;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    height: 64px;
+    /* mobile/body bold */
+    font-family: $lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+    width: 186px;
+    align-self: stretch;
   }
 }

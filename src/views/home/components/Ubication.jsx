@@ -1,14 +1,14 @@
 import styles from "../styles/home.module.scss";
 
-import line from "../../../assets/icons/subrayServices.svg";
+/* import line from "../../../assets/icons/subrayServices.svg";
 import mailIcon from "../../../assets/icons/mailIcon.svg";
 import mapsIcon from "../../../assets/icons/mapsIcon.svg";
-import mobileIcon from "../../../assets/icons/mobileIcon.svg";
+import mobileIcon from "../../../assets/icons/mobileIcon.svg"; */
 
 export const Ubication = () => {
   return (
     <div className={styles.sectionUbication} id="como-llegar">
-      <div className={styles.containerTitle}>
+     {/*  <div className={styles.containerTitle}>
         <h2 className={styles.h2Servicios}>Nos encontrás en:</h2>
         <img
           src={line}
@@ -36,7 +36,7 @@ export const Ubication = () => {
           <a href="+54 9 11-5856-7591" />        
           
         </div>
-      </div>
+      </div> */}
 
     {/*   <iframe
         className={styles.mapaBox}
