@@ -268,41 +268,29 @@
 
   //Carrousel
   .carrouselCamping {
+    width: 100%;
     position: relative;
-    overflow: hidden;
+
+    .slick-dots {
+      bottom: 10px; // Ubicación de los puntos
+      li {
+        margin: 0 5px;
+        button {
+          &::before {
+            font-size: 12px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .carrouselImage {
     width: 100%;
     height: auto;
-  }
-
-  .carouselTrack {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carouselTrack img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .carouselIndicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-  }
-
-  .dot.active {
-    background: rgba(255, 255, 255, 1);
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease; /* Desvanecimiento suave */
   }
 }

@@ -247,37 +247,25 @@
     height: 24px;
   }
   .carrouselCamping {
+    width: 100%;
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
   }
-  .carouselTrack {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  .carouselTrack img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .carouselIndicators {
-    position: absolute;
+  .carrouselCamping .slick-dots {
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
   }
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
+  .carrouselCamping .slick-dots li {
+    margin: 0 5px;
   }
-  .dot.active {
-    background: rgb(255, 255, 255);
+  .carrouselCamping .slick-dots li button::before {
+    font-size: 12px;
+    color: #fff;
+  }
+  .carrouselImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease; /* Desvanecimiento suave */
   }
 }/*# sourceMappingURL=home.module.css.map */
