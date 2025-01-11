@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 
 import styles from "../styles/home.module.scss";
 
-import line from "../../../assets/icons/subrayServices.svg";
+import line from "../../../assets/icons/subray.svg";
 import chevronRight from "../../../assets/icons/chevronRigth.svg";
 
 //Import de fotos de carrousel
