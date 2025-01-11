@@ -503,11 +503,11 @@
   //Inicio section Galería
   .gallerySection {
     width: 100vw;
-    height: 680px;
+    height: 760px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: $naranja-terciario;
     margin-top: 56px;
   }
@@ -516,23 +516,23 @@
     display: flex;
     flex-flow: row wrap;
     width: 380px;
-    height: 584px;
-    align-items: center;
+    height: 595px;
+    align-items: flex-start;
     justify-content: space-between;
+    transition: all 300ms;
   }
 
   .modalOverlay {
     position: fixed;
     width: 100vw;
-    height: 508px;
-
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
     top: 0;
     left: 0;
-    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,42 +541,48 @@
 
   .modalContent {
     position: relative;
-    max-width: 100%;
-    max-height: 80%;
+    width: 100vw;
+    height: 508px;
+    background-color: white;
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .galleryImage {
     width: 186px !important;
     height: 140px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    transition: opacity 0.5s ease-in-out;
   }
 
-  .galleryImage:hover {
-    transform: scale(1.05);
+  .fadeIn {
+    transform: scale(1);
+    opacity: 1;
   }
 
   .fotoAbierta {
-    width: 90vw;
-  }
-
-  .prevButton,
-  .nextButton {
+    width: 90%;
+    height: 360px;
+    margin-top: 24px;
+    transition: opacity 0.3s ease;
     position: absolute;
-    background: none;
-    border: none;
-    color: $naranja-oficial;
-    font-size: 2rem;
-    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
-  .closeButton {
+  /*   .closeButton {
     top: 10px;
     right: 10px;
-  }
+  } */
 
   .closeButton {
     width: 288px;
@@ -585,22 +591,38 @@
     color: $naranja-oficial;
     text-align: center;
     font-size: 16px;
-margin-top: 24px;
+    margin-top: 24px;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    position: relative;
+    top: 80%;
   }
 
-  .prevButton {
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+  .goToGalleryContainer {
+    height: 43px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
-  .nextButton {
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+  .goToGallery {
+    width: 380px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: $naranja-oficial;
+    font-family: $lato;
+    border: 2px solid $naranja-oficial;
+    border-radius: 10px;
   }
 }
