@@ -498,20 +498,109 @@
     height: 309px;
     margin-top: 56px;
   }
-//Fin sectión MKT
+  //Fin sectión MKT
 
+  //Inicio section Galería
+  .gallerySection {
+    width: 100vw;
+    height: 680px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $naranja-terciario;
+    margin-top: 56px;
+  }
 
-//Inicio section Galería
-.gallerySection{
-  width: 100vw;
-  height: 771px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $naranja-terciario;
-  margin-top: 56px;
-}
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    width: 380px;
+    height: 584px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  .modalOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 508px;
 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modalContent {
+    position: relative;
+    max-width: 100%;
+    max-height: 80%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .galleryImage {
+    width: 186px !important;
+    height: 140px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .galleryImage:hover {
+    transform: scale(1.05);
+  }
+
+  .fotoAbierta {
+    width: 90vw;
+  }
+
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    background: none;
+    border: none;
+    color: $naranja-oficial;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+  }
+
+  .closeButton {
+    width: 288px;
+    height: 19px;
+    font-family: $lato;
+    color: $naranja-oficial;
+    text-align: center;
+    font-size: 16px;
+margin-top: 24px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .prevButton {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nextButton {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
