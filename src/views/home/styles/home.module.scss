@@ -510,6 +510,7 @@
     justify-content: flex-start;
     background-color: $naranja-terciario;
     margin-top: 56px;
+    margin-bottom: 40px;
   }
 
   .gallery {
@@ -622,5 +623,187 @@
     font-family: $lato;
     border: 2px solid $naranja-oficial;
     border-radius: 10px;
+  }
+  //Fin galería
+
+  //Inicio Tarifario
+  .tarifaSection {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tarifasContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    height: 360px;
+    justify-content: space-between;
+  }
+
+  .boxTarifaDia {
+    width: 380px;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 5px;
+    background: $naranja-terciario;
+  }
+
+  //Caja de ayuda para contener 2 elementos alineados de precio
+  .helpBox {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 238px;
+  }
+
+  .itemTarifaDia {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    width: 46%;
+    margin-left: 8px;
+    margin-bottom: 2px;
+  }
+
+  .descripcionTarifa {
+    width: 193px;
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+  }
+
+  .precioTarifa {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-right: 8px;
+  }
+
+  .boxTarifaPernocte {
+    width: 380px;
+    height: 140px;
+    background-color: $naranja-terciario;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .itemTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .helpBoxPernocte {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+
+  .tarifa {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .descripcionTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+
+  .precioTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+
+  .aclaracionPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+  }
+
+  .boxTarifaDiaFinde {
+    width: 380px;
+    height: 56px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 5px;
+    background: $naranja-terciario;
+  }
+
+  .referenciaPrecio {
+    width: 380px;
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
   }
 }
