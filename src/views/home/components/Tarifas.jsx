@@ -1,7 +1,7 @@
 import styles from "../styles/home.module.scss";
 import line from "../../../assets/icons/subray.svg";
 
-import { tilde } from "../../../assets/icons/tilde.svg";
+import  tilde from "../../../assets/icons/tilde.svg";
 
 export const Tarifas = () => {
   return (
