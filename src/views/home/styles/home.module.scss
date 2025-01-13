@@ -626,8 +626,6 @@
   }
   //Fin galería
 
-
-
   //Inicio Tarifario
   .tarifaSection {
     width: 100vw;
@@ -635,7 +633,6 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    
   }
 
   .tarifasContainer {
@@ -888,6 +885,43 @@
     font-weight: 700;
     line-height: normal;
   }
-
   //fin seccion tarifa
+
+  //Inicio sección Opiniones
+
+  .sectionOpiniones {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .subtitleContainerOpiniones {
+    width: 380px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+
+  .slider {
+    color: var(--Dark, #4b4a4a);
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+
+    /* mobile/body reg */
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+  }
 }

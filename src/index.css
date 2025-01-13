@@ -20,4 +20,6 @@ footer {
   justify-content: center;
   height: 200px;
   font-family: Lato;
+  background-color: #D34600;
+  color: white;
 }

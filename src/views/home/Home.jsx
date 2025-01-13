@@ -5,7 +5,7 @@ import * as Mkt from "./components/Mkt";
 import { Gallery } from "./components/Gallery";
 import { Tarifas } from "./components/Tarifas";
 import { Llegar } from "../comoLlegar/Llegar";
-//import { Opinions } from "./components/Opinions";
+import { Opinions } from "./components/Opinions";
 
 //import { Ubication } from "./components/Ubication";
 
@@ -19,6 +19,7 @@ export const Home = () => {
       <Gallery />
       <Tarifas />
       <Llegar />
+      <Opinions/>
     </>
   );
 };

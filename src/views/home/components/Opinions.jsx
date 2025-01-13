@@ -1,5 +1,7 @@
-//import { useState, useRef } from "react";
+//import { useState, useRef, useEffect } from "react";
 import styles from "../styles/home.module.scss";
+
+import line from "../../../assets/icons/subray.svg";
 
 /* const opiniones = [
   {
@@ -30,7 +32,37 @@ import styles from "../styles/home.module.scss";
 ]; */
 
 export const Opinions = () => {
- /*  const [currentIndex, setCurrentIndex] = useState(0);
+/*   const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    //const placeId = "ChIJa9a-wxhUuZURWP9hFWNy2Wc"; // Debes obtener el place_id de tu camping
+    //const apiKey = "AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0"; // Tu clave API
+
+    fetch(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJa9a-wxhUuZURWP9hFWNy2Wc&key=AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.result && data.result.reviews) {
+          const sortedReviews = data.result.reviews.sort((a, b) => {
+            return new Date(b.time * 1000) - new Date(a.time * 1000);
+          });
+
+          // Seleccionar las primeras 5 reseñas
+          setReviews(sortedReviews.slice(0, 5));
+        }
+      })
+      .catch((error) => {
+        console.error("Error al obtener las reseñas:", error);
+      });
+  }, []); */
+
+  /*   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragStartX, setDragStartX] = useState(0);
   const [dragEndX, setDragEndX] = useState(0);
   const sliderRef = useRef(null);
@@ -64,12 +96,34 @@ export const Opinions = () => {
   const handleDragMove = (e) => {
     const moveX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
     setDragEndX(moveX);
-  };
- */
+  }; */
+
   return (
     <div className={styles.sectionOpiniones}>
-    {/*   <h2 className={styles.h2Opiniones}>Opiniones de nuestros acampantes</h2>
-      <div
+      <div className={styles.subtitleContainerOpiniones}>
+        <h2 className={styles.h2}>Lo que dicen nuestros visitantes</h2>
+        <img
+          src={line}
+          alt="linea subrayadora de subtitulo"
+          className={styles.line}
+        />
+      </div>
+
+      {/* {reviews && reviews.length > 0 ? (
+        reviews.map((review, index) => (
+          <div key={index}>
+            <p>
+              <strong>{review.author_name}</strong> ({review.rating} estrellas)
+            </p>
+            <p>{review.text}</p>
+          </div>
+        ))
+      ) : (
+        <p>Cargando reseñas...</p>
+      )} */}
+
+
+      {/* <div
         className={styles.sliderContainer}
         ref={sliderRef}
         onMouseDown={handleDragStart}

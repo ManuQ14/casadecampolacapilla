@@ -26,11 +26,10 @@ export const Llegar = () => {
         <img src={tren} alt="Icono de tren" className={styles.iconTransporte} />
 
         <p className={styles.descripciónLlegar}>
-          Si elegís venir en tren, tomás el ramal{" "}
-          <b>San Martín Retiro - Junín</b> y te bajás en la estación Castilla.
-          Solo tenés que avisarnos o mandarnos tu pasaje con anticipación, y
-          nosotros te pasamos a buscar por la estación . El servicio está
-          incluido y estamos a sólo 1.000 metros
+          Si venís en tren, toma el ramal <b>San Martín Retiro - Junín</b> y
+          baja en la estación Castilla, nosotros te pasamos a buscar por la
+          estación y te llevamos al predio sin cargo, solo avísanos con
+          anticipación.
         </p>
         <p className={styles.descripciónLlegar}>
           <br />
@@ -47,11 +46,9 @@ export const Llegar = () => {
           <br />
         </p>
         <p className={styles.descripciónLlegar}>
-          Es importante tener en cuenta que el tren tiene un{" "}
-          <b>único horario</b> por día. Llega a Castilla a las 21:53 y el
-          regreso es a las 3:30 am. Por eso, lo que solemos hacer es que podés
-          quedarte en el predio hasta las 3 am, y desde allí te llevamos hasta
-          la estación.
+          El tren tiene un <b>único horario por día </b>, llega a Castilla a las
+          21:53 y sale a las 3:30 am. Podés quedarte en el predio hasta las 3 am
+          y nosotros te llevamos a la estación.
         </p>
 
         <Link
@@ -67,12 +64,12 @@ export const Llegar = () => {
       <div className={styles.autoBoxContainer}>
         <img src={auto} alt="Icono auto" className={styles.iconTransporte} />
         <p className={styles.descripciónLlegar}>
-          Desde Buenos Aires, tomás la Ruta 7 y hacés 142 km hasta Carmen de
-          Areco. Ahí doblás a la izquierda para agarrar la Ruta 51. Después de
-          20 km, volvés a doblar a la izquierda hacia la Ruta 43. Manejás 8 km
-          más y te vas a encontrar con la entrada a Castilla; ahí girás a la
-          derecha para tomar la Ruta Provincial 42. A solo 1.000 metros te
-          esperamos en nuestra Casa de Campo.
+          Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta Carmen de
+          Areco. Ahí, girá a la izquierda por la Ruta 51. Luego de 20 km, doblá
+          nuevamente a la izquierda para tomar la Ruta 43. Manejás 8 km más y te
+          vas a encontrar con la entrada a Castilla; ahí girás a la derecha para
+          tomar la Ruta Provincial 42. A solo 1.000 metros te esperamos en
+          nuestra Casa de Campo.
         </p>
       </div>
       <img src={mapa} alt="" width={380} />
