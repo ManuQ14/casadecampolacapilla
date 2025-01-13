@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../../../styles/_variables.scss);
 @font-face {
   font-family: Bookman;
@@ -15,26 +16,125 @@
   font-family: LatoBold;
   src: url(./fonts/Lato-Bold.ttf) format("truetype");
 }
-.subtitleContainer {
-  width: 100%;
-  height: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
-  margin-top: 16px;
-  margin-bottom: 32px;
-}
-
-.h2 {
-  color: #d34600;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Bookman;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 32px;
-  letter-spacing: 0.15px;
+@media (max-width: 767px) {
+  .llegarSection {
+    width: 100vw;
+    height: 1360px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff4ed;
+  }
+  .subtitleContainerLlegar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+  .h2 {
+    color: #d34600;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+  .trenBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 315px;
+    width: 380px;
+  }
+  .iconTransporte {
+    width: 46px;
+    height: 55px;
+  }
+  .boxText {
+    width: 208px;
+    width: 100%;
+  }
+  .descripciónLlegar {
+    font-family: Lato;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    color: #4b4a4a;
+  }
+  .linkCompraPasaje {
+    text-decoration: underline !important;
+  }
+  .linkTarifasTren {
+    color: #d34600;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.4px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  .chrevronRight {
+    margin-top: 3px;
+  }
+  .autoBoxContainer {
+    width: 380px;
+    height: 174px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 216px;
+    margin-bottom: 16px;
+  }
+  .itemInfoContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .itemInfoContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .descriptionInfo {
+    color: #4b4a4a;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+  }
 }/*# sourceMappingURL=llegar.module.css.map */

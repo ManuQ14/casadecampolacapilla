@@ -5,7 +5,11 @@
 @media (max-width: 767px) {
   .llegarSection {
     width: 100vw;
-    height: 1130px;
+    height: 1360px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
     background-color: $naranja-terciario;
   }
 
@@ -32,5 +36,106 @@
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
+  }
+
+  .trenBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 315px;
+    width: 380px;
+  }
+
+  .iconTransporte {
+    width: 46px;
+    height: 55px;
+  }
+
+  .boxText {
+    width: 208px;
+    width: 100%;
+  }
+
+  .descripciónLlegar {
+    font-family: $lato;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    color: $gris-oficial;
+  }
+
+  .linkCompraPasaje {
+    text-decoration: underline !important;
+  }
+
+  .linkTarifasTren {
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.4px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  .chrevronRight {
+    margin-top: 3px;
+  }
+
+  .autoBoxContainer {
+    width: 380px;
+    height: 174px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .infoBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 216px;
+    margin-bottom: 16px;
+  }
+
+  .itemInfoContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .itemInfoContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .descriptionInfo {
+    color: $gris-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
   }
 }
