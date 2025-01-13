@@ -1,12 +1,20 @@
+import { useNavigate } from "react-router-dom";
+
 import styles from "../styles/home.module.scss";
 import line from "../../../assets/icons/subray.svg";
 
-import  tilde from "../../../assets/icons/tilde.svg";
+import tilde from "../../../assets/icons/tilde.svg";
 
 export const Tarifas = () => {
+  const navigate = useNavigate();
+
+  const handleToReserve = () => {
+    navigate("/contacto");
+  };
+
   return (
-    <div className={styles.tarifasSection} id="tarifas">
-      <div className={styles.subtitleContainer}>
+    <div className={styles.tarifaSection} id="tarifas">
+      <div className={styles.subtitleContainerTarifa}>
         <h2 className={styles.h2}>Tarifas</h2>
         <img src={line} alt="linea subrayadora" />
       </div>
@@ -91,18 +99,26 @@ export const Tarifas = () => {
       <div className={styles.boxBeneficiosTarifas}>
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
-          <div className={styles.beneficio}></div>
+          <div className={styles.beneficio}>No se cobra carpa</div>
         </div>
         {/**Beneficio 1 */}
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
-          <div className={styles.beneficio}></div>
+          <div className={styles.beneficio}>
+            Estacionamiento en la entrada del predio
+          </div>
         </div>
         {/**Beneficio 1 */}
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
-          <div className={styles.beneficio}></div>
+          <div className={styles.beneficio}>
+            Todas las opciones incluyen el uso de los servicios que ofrece el
+            camping
+          </div>
         </div>
+      </div>
+      <div onClick={handleToReserve} className={styles.reserveButtonTarifa}>
+        Reservar
       </div>
     </div>
   );

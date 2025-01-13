@@ -1,0 +1,36 @@
+// Importaciones
+@import url(../../../styles/_variables.scss);
+@import "../../../styles/variables";
+
+@media (max-width: 767px) {
+  .llegarSection {
+    width: 100vw;
+    height: 1130px;
+    background-color: $naranja-terciario;
+  }
+
+  //Inicio sección Como llegar
+  .subtitleContainerLlegar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+}
