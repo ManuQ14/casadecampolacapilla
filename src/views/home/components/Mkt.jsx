@@ -27,8 +27,8 @@ export const Mkt = () => {
           </h2>
           <img src={lineGray} alt="linea subrayadora" />
           <p className={styles.astroExplication}>
-            Lo que la convierte en el lugar perfecto para hacer astrofotografía
-            y disfrutar de las estrellas.
+            Lo que la convierte en el lugar perfecto para hacer{" "}
+            <b>astrofotografía</b> {" "}y disfrutar de las estrellas.
           </p>
         </div>
         <img

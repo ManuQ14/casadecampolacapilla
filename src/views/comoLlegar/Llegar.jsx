@@ -78,7 +78,11 @@ export const Llegar = () => {
       <img src={mapa} alt="" width={380} />
       <div className={styles.infoBoxContainer}>
         <div className={styles.itemInfoContainer}>
-          <img src={locationIcon} alt="Icono de Locación" className={styles.iconInfo} />
+          <img
+            src={locationIcon}
+            alt="Icono de Locación"
+            className={styles.iconInfo}
+          />
           <p className={styles.descriptionInfo}>
             Acceso camino a Rawson, Calle 100, RP 42 entre Calles 11 y 13, B6616
             Castilla, Provincia de Buenos Aires
@@ -87,11 +91,15 @@ export const Llegar = () => {
         <div className={styles.itemInfoContainerDos}>
           <img src={mailIcon} alt="Icono de mail" className={styles.iconInfo} />
           <p className={styles.descriptionInfo}>
-            casadecampolacapilla@gmail.com
+            Casadecampolacapilla@gmail.com
           </p>
         </div>
         <div className={styles.itemInfoContainerDos}>
-          <img src={phoneIcon} alt="Icono de telefono" className={styles.iconInfo} />
+          <img
+            src={phoneIcon}
+            alt="Icono de telefono"
+            className={styles.iconInfo}
+          />
           <p className={styles.descriptionInfo}>11 5856-7591</p>
         </div>
       </div>
