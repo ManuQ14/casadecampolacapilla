@@ -1,4 +1,4 @@
-//import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/home.module.scss";
 
 import line from "../../../assets/icons/subray.svg";
@@ -32,35 +32,39 @@ import line from "../../../assets/icons/subray.svg";
 ]; */
 
 export const Opinions = () => {
-/*   const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  const cloudRunUrl = `https://southamerica-west1-kinetic-road-447715-s7.cloudfunctions.net/fetch-google-maps-data`; // Reemplaza con tu URL
 
   useEffect(() => {
-    //const placeId = "ChIJa9a-wxhUuZURWP9hFWNy2Wc"; // Debes obtener el place_id de tu camping
-    //const apiKey = "AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0"; // Tu clave API
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch(cloudRunUrl);
+        if (!response.ok) throw new Error("Error fetching data");
+        const data = await response.json();
 
-    fetch(
-      `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJa9a-wxhUuZURWP9hFWNy2Wc&key=AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
         if (data.result && data.result.reviews) {
-          const sortedReviews = data.result.reviews.sort((a, b) => {
-            return new Date(b.time * 1000) - new Date(a.time * 1000);
-          });
-
-          // Seleccionar las primeras 5 reseñas
-          setReviews(sortedReviews.slice(0, 5));
+          const sortedReviews = data.result.reviews.sort(
+            (a, b) => b.time - a.time
+          ); // Ordena por fecha (más recientes primero)
+          const limitedReviews = sortedReviews.slice(0, 5); // Limita a 5 reseñas
+          setReviews(limitedReviews); // Guarda solo las 5 opiniones más recientes
+        } else {
+          console.warn("No reviews found in the response");
         }
-      })
-      .catch((error) => {
-        console.error("Error al obtener las reseñas:", error);
-      });
-  }, []); */
+        
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
+
+      
+    };
+
+    fetchReviews();
+
+    
+  }, [cloudRunUrl]);
+
+  
 
   /*   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragStartX, setDragStartX] = useState(0);
@@ -108,20 +112,17 @@ export const Opinions = () => {
           className={styles.line}
         />
       </div>
-
-      {/* {reviews && reviews.length > 0 ? (
-        reviews.map((review, index) => (
+      <div id="reviewsContainer">
+        {reviews.slice(0, 5).map((review, index) => (
           <div key={index}>
             <p>
-              <strong>{review.author_name}</strong> ({review.rating} estrellas)
+              <strong>{review.author_name}</strong> - {review.rating} estrellas
             </p>
             <p>{review.text}</p>
+            <hr />
           </div>
-        ))
-      ) : (
-        <p>Cargando reseñas...</p>
-      )} */}
-
+        ))}
+      </div>
 
       {/* <div
         className={styles.sliderContainer}
