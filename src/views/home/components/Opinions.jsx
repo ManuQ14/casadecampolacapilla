@@ -6,7 +6,23 @@ export const Opinions = () => {
   const [reviews, setReviews] = useState([]);
   const placeId = "ChIJa9a-wxhUuZURWP9hFWNy2Wc"; // Place ID de "Casa de Campo La Capilla"
 
+
   useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch('/api/reviews');
+        const data = await response.json();
+        setReviews(data.reviews);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+  
+    fetchReviews();
+  }, []);
+
+
+ /*  useEffect(() => {
     const loadGoogleMapsReviews = () => {
       const service = new window.google.maps.places.PlacesService(
         document.createElement("div")
@@ -36,7 +52,7 @@ export const Opinions = () => {
     } else {
       console.error("Google Maps API failed to load.");
     }
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.sectionOpiniones}>
