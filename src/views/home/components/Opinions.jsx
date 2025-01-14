@@ -1,23 +1,11 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import styles from "../styles/home.module.scss";
 import line from "../../../assets/icons/subray.svg";
 
+
+
 export const Opinions = () => {
-  const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('/api/reviews');
-        const data = await response.json();
-        setReviews(data.reviews);
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
-    };
-
-    fetchReviews();
-  }, []);
 
   return (
     <div className={styles.sectionOpiniones}>
@@ -31,21 +19,7 @@ export const Opinions = () => {
       </div>
 
       <div>
-        {reviews.length > 0 ? (
-          reviews.map((review, index) => (
-            <div key={index}>
-              <p>
-                <strong>{review.author_name}</strong> - {review.rating}{" "}
-                estrellas
-              </p>
-              <p>{review.text}</p>
-              <p>{new Date(review.time * 1000).toLocaleDateString()}</p>
-              <hr />
-            </div>
-          ))
-        ) : (
-          <p>Cargando opiniones...</p>
-        )}
+      
       </div>
     </div>
   );
