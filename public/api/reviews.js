@@ -1,4 +1,4 @@
-//import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
 let cachedReviews = null;
 let lastFetchTime = 0;
@@ -11,8 +11,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // const apiKey = process.env.GOOGLE_API_KEY; // No cambiar, esto funciona en Vercel
-    const apiKey = "AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0";
+    const apiKey = "AIzaSyC1TL86PhjMQAZ8VUli4KQpngox0bOijM0"; // Valor por defecto para desarrollo local
     const placeId = "ChIJa9a-wxhUuZURWP9hFWNy2Wc";
     const url = `https://maps.googleapis.com/maps/api/place/details/json?placeId=${placeId}&fields=reviews&key=${apiKey}`;
 
