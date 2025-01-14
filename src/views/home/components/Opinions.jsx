@@ -1,31 +1,42 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/home.module.scss";
 import line from "../../../assets/icons/subray.svg";
-import axios from "axios";
 
 export const Opinions = () => {
   const [reviews, setReviews] = useState([]);
   const placeId = "ChIJa9a-wxhUuZURWP9hFWNy2Wc"; // Place ID de "Casa de Campo La Capilla"
-  const vercelFunctionUrl = "/api/reviews"; // Reemplaza con la URL de tu función
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await axios.get(vercelFunctionUrl, {
-          params: { placeId: placeId },
-        });
-        if (response.data && response.data.reviews) {
-          setReviews(response.data.reviews);
+    const loadGoogleMapsReviews = () => {
+      const service = new window.google.maps.places.PlacesService(
+        document.createElement("div")
+      );
+
+      const request = {
+        placeId: placeId,
+        fields: ["name", "rating", "reviews", "user_ratings_total", "geometry", "formatted_address"],
+      };
+
+      service.getDetails(request, (place, status) => {
+        if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+          const reviewsWithTranslations = place.reviews.map((review) => ({
+            ...review,
+            text: review.translations?.[0]?.text || review.text, // Usa la traducción si está disponible
+          }));
+          const sortedReviews = reviewsWithTranslations.sort((a, b) => b.time - a.time); // Ordena por fecha (más recientes primero)
+          setReviews(sortedReviews.slice(0, 5)); // Muestra solo las 5 reseñas más recientes
         } else {
-          console.warn("No reviews found in the response");
+          console.error("Error fetching place details:", status);
         }
-      } catch (error) {
-        console.error("Error:", error.message);
-      }
+      });
     };
 
-    fetchReviews();
-  }, [vercelFunctionUrl, placeId]);
+    if (window.google && window.google.maps) {
+      loadGoogleMapsReviews();
+    } else {
+      console.error("Google Maps API failed to load.");
+    }
+  }, []);
 
   return (
     <div className={styles.sectionOpiniones}>
@@ -37,6 +48,7 @@ export const Opinions = () => {
           className={styles.line}
         />
       </div>
+
       <div>
         {reviews.length > 0 ? (
           reviews.map((review, index) => (
@@ -46,6 +58,8 @@ export const Opinions = () => {
                 estrellas
               </p>
               <p>{review.text}</p>
+              <p>{new Date(review.time * 1000).toLocaleDateString()}</p>{" "}
+              {/* Muestra la fecha en formato legible */}
               <hr />
             </div>
           ))
