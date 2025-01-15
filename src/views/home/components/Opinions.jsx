@@ -30,7 +30,9 @@ export const Opinions = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [startX, setStartX] = useState(null);
   const carouselRef = useRef(null);
+  const intervalRef = useRef(null); // useRef para manejar el intervalo sin perder la referencia
 
   useEffect(() => {
     let intervalId;
@@ -52,6 +54,44 @@ export const Opinions = () => {
     setIsPaused(false);
   };
 
+  const startCarousel = () => {
+    intervalRef.current = setInterval(nextSlide, 5000); // Asigna el intervalo a la referencia
+  };
+
+  const stopCarousel = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); // Limpia el intervalo
+      intervalRef.current = null;
+    }
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+  };
+
+  const handleTouchStart = (e) => {
+    stopCarousel(); // Detiene el carrusel cuando empieza el touch
+    setStartX(e.touches[0].clientX); // Guarda la posición inicial
+  };
+
+  const handleTouchEnd = (e) => {
+    if (startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const difference = endX - startX;
+
+    if (difference > 50) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
+      );
+    } else if (difference < -50) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+    setStartX(null);
+    startCarousel(); // Reinicia el intervalo después del touch
+  };
+
   return (
     <div className={styles.sectionOpiniones}>
       <div className={styles.subtitleContainerOpiniones}>
@@ -66,10 +106,12 @@ export const Opinions = () => {
       <div
         className={styles.carouselContainer}
         ref={carouselRef}
-        onTouchStart={handlePause}
+        onTouchStart={handlePause && handleTouchStart}
         onMouseEnter={handlePause}
-        onTouchEnd={handleResume}
+        onTouchEnd={handleResume && handleTouchEnd}
         onMouseLeave={handleResume}
+
+        //onTouchEnd={handleTouchEnd}
       >
         <div
           className={styles.carousel}

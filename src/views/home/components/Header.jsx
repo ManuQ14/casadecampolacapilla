@@ -35,6 +35,10 @@ export const Header = () => {
     navigate("/contacto");
   };
 
+  const handleToHistory = () => {
+    navigate("/nuestra-historia");
+  };
+
   return (
     <>
       {/** Header Desktop */}
@@ -89,7 +93,7 @@ export const Header = () => {
               <div onClick={() => handleScrollToSection("camping")}>
                 El Camping
               </div>
-              <div onClick={() => handleScrollToSection("nuestra-historia")}>
+              <div onClick={() => handleToHistory("nuestra-historia")}>
                 Nuestra historia
               </div>
               <div onClick={() => handleScrollToSection("servicios")}>
