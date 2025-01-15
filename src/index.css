@@ -5,21 +5,56 @@
 
 body {
   overflow-x: hidden !important;
+  /*background-color: #fafafa !important;*/
+  
+
 }
 
 .no-scroll {
   overflow: hidden !important;
 }
 
-
-
 footer {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 434px;
   font-family: Lato;
-  background-color: #D34600;
+  background-color: #d34600;
   color: white;
+}
+
+.contenedor-navegador {
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navegador {
+  color: var(--Secundario-light, #f8f2ee);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.1px;
+}
+
+.media-icons-container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  width: 176px;
+}
+
+.icon-media {
+  width: 35px;
 }

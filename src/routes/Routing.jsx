@@ -8,9 +8,24 @@ import { Llegar } from "../views/comoLlegar/Llegar";
 import { Error } from "../views/Error/Error";
 import { Camping } from "../views/camping/Camping";
 
-//import styles from "../"
+//imports svgs e iconos
+import capillaIcon from "../assets/iconCapilla.jpeg";
+
+import instagramFooter from "../assets/icons/footer/instagramFooter.svg";
+import youtubeFooter from "../assets/icons/footer/youTubeFooter.svg";
+import tiktokFootrr from "../assets/icons/footer/tikTokFooter.svg";
+import facebookFooter from "../assets/icons/footer/facebookFooter.svg";
 
 export const Routing = () => {
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+
+      document.body.classList.remove("no-scroll");
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -19,7 +34,7 @@ export const Routing = () => {
           <Route path="/inicio" element={<Home />} />
           <Route path="/nuestra-historia" element={<Historia />} />
           <Route path="/el-camping" element={<Camping />} />
-        {/*   <Route path="/galeria" element={<Galeria />} /> */}
+          {/*   <Route path="/galeria" element={<Galeria />} /> */}
           <Route path="/como-llegar" element={<Llegar />} />
           <Route path="/contacto" element={<Contact />} />
 
@@ -27,7 +42,42 @@ export const Routing = () => {
         </Routes>
       </BrowserRouter>
 
-      <footer>copyright todos los derechos reservados</footer>
+      <footer>
+        <img src={capillaIcon} alt="" width={140} className="iconCapilla" />
+        <div className="contenedor-navegador">
+          <div
+            onClick={() => handleScrollToSection("camping")}
+            className="navegador"
+          >
+            El Camping
+          </div>
+          <div
+            onClick={() => handleScrollToSection("servicios")}
+            className="navegador"
+          >
+            Servicios
+          </div>
+          <div
+            onClick={() => handleScrollToSection("tarifas")}
+            className="navegador"
+          >
+            Tarifas
+          </div>
+          <div
+            onClick={() => handleScrollToSection("llegar")}
+            className="navegador"
+          >
+            Cómo llegar
+          </div>
+        </div>
+        <div className="media-icons-container">
+          <img src={instagramFooter} className="icon-media" />
+          <img src={youtubeFooter} className="icon-media" />
+          <img src={tiktokFootrr} className="icon-media" />
+          <img src={facebookFooter} className="icon-media" />
+        </div>
+        <p>Todos los derechos reservados. Creado por Camila Gallardo</p>
+      </footer>
     </>
   );
 };
