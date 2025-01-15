@@ -25,13 +25,13 @@ export const Llegar = () => {
       <div className={styles.trenBoxContainer}>
         <img src={tren} alt="Icono de tren" className={styles.iconTransporte} />
 
-        <p className={styles.descripciónLlegar}>
+        <p className={styles.descripcionLlegar}>
           Si venís en tren, toma el ramal <b>San Martín Retiro - Junín</b> y
           baja en la estación Castilla, nosotros te pasamos a buscar por la
           estación y te llevamos al predio sin cargo, solo avísanos con
           anticipación.
         </p>
-        <p className={styles.descripciónLlegar}>
+        <p className={styles.descripcionLlegar}>
           <br />
           Los pasajes se compran con antelación en este{" "}
           <Link
@@ -45,7 +45,7 @@ export const Llegar = () => {
           <br />
           <br />
         </p>
-        <p className={styles.descripciónLlegar}>
+        <p className={styles.descripcionLlegar}>
           El tren tiene un <b>único horario por día </b>, llega a Castilla a las
           21:53 y sale a las 3:30 am. Podés quedarte en el predio hasta las 3 am
           y nosotros te llevamos a la estación.
@@ -62,8 +62,14 @@ export const Llegar = () => {
         </Link>
       </div>
       <div className={styles.autoBoxContainer}>
-        <img src={auto} alt="Icono auto" className={styles.iconTransporte} />
-        <p className={styles.descripciónLlegar}>
+        <img
+          src={auto}
+          alt="Icono auto"
+          className={styles.iconTransporte}
+          width={53}
+          height={47}
+        />
+        <p className={styles.descripcionLlegarAuto}>
           Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta Carmen de
           Areco. Ahí, girá a la izquierda por la Ruta 51. Luego de 20 km, doblá
           nuevamente a la izquierda para tomar la Ruta 43. Manejás 8 km más y te
@@ -72,7 +78,13 @@ export const Llegar = () => {
           nuestra Casa de Campo.
         </p>
       </div>
-      <img src={mapa} alt="" width={380} />
+      <img
+        src={mapa}
+        alt=""
+        width={380}
+        height={475}
+        className={styles.mapaInfo}
+      />
       <div className={styles.infoBoxContainer}>
         <div className={styles.itemInfoContainer}>
           <img
