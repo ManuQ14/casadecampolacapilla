@@ -5,9 +5,7 @@
 
 body {
   overflow-x: hidden !important;
-  /*background-color: #fafafa !important;*/
-  
-
+  background-color: #fafafa !important;
 }
 
 .no-scroll {
@@ -18,11 +16,18 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
-  height: 434px;
+  justify-content: flex-start;
+  height: 514px;
   font-family: Lato;
   background-color: #d34600;
   color: white;
+}
+
+.iconCapilla{
+  width: 140px;
+  height: 111px;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .contenedor-navegador {
@@ -32,6 +37,7 @@ footer {
   flex-flow: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .navegador {
@@ -53,8 +59,22 @@ footer {
   justify-content: space-between;
   height: 35px;
   width: 176px;
+  margin-bottom: 32px;
 }
 
 .icon-media {
   width: 35px;
+}
+
+.texto-copyright {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
 }

@@ -76,7 +76,7 @@ export const Routing = () => {
           <img src={tiktokFootrr} className="icon-media" />
           <img src={facebookFooter} className="icon-media" />
         </div>
-        <p>Todos los derechos reservados. Creado por Camila Gallardo</p>
+        <p className="texto-copyright">Todos los derechos reservados. Creado por Camila Gallardo</p>
       </footer>
     </>
   );

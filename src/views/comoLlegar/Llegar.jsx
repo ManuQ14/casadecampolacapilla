@@ -5,7 +5,7 @@ import styles from "./styles/llegar.module.scss";
 import line from "../../assets/icons/subray.svg";
 import tren from "../../assets/icons/train.svg";
 import auto from "../../assets/icons/auto.svg";
-import mapa from "../../assets/icons/mapa.jpeg";
+import mapa from "../../assets/images/mapa.jpg";
 import chrevronRight from "../../assets/icons/chevronRigth.svg";
 import locationIcon from "../../assets/icons/maps.svg";
 import mailIcon from "../../assets/icons/mail.svg";
