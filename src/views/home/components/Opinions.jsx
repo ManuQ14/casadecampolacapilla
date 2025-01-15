@@ -29,24 +29,15 @@ export const Opinions = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [startX, setStartX] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef(null);
 
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-  };
-
-
-
-  useEffect((index) => {
+  useEffect(() => {
     let intervalId;
 
     if (!isPaused) {
       intervalId = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-        setCurrentIndex(index);
       }, 5000); // Cambia la velocidad de rotación en milisegundos (5000 = 5 segundos)
     }
 
@@ -59,30 +50,6 @@ export const Opinions = () => {
 
   const handleResume = () => {
     setIsPaused(false);
-  };
-
-
-  const handleTouchStart = (e) => {
-    stopCarousel(); // Detiene el carrusel cuando empieza el touch
-    setStartX(e.touches[0].clientX); // Guarda la posición inicial
-  };
-
-  const handleTouchEnd = (e) => {
-    if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const difference = endX - startX;
-
-    if (difference > 50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
-      );
-    } else if (difference < -50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
-      );
-    }
-    setStartX(null);
-    startCarousel(); // Reinicia el intervalo después del touch
   };
 
   return (
