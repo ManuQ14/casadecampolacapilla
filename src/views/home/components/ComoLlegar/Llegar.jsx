@@ -120,7 +120,7 @@ export const Llegar = () => {
           </div>
         )}
       </div>
-
+  
       <img
         src={mapa}
         alt=""
@@ -129,6 +129,7 @@ export const Llegar = () => {
         className={styles.mapaInfo}
         onClick={openModal}
       />
+      
       <div className={styles.infoBoxContainer}>
         <div className={styles.itemInfoContainer}>
           <img

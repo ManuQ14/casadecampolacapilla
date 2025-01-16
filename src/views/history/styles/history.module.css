@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../../../styles/_variables.scss);
 @font-face {
   font-family: Bookman;
@@ -15,47 +16,133 @@
   font-family: LatoBold;
   src: url(./fonts/Lato-Bold.ttf) format("truetype");
 }
-.headerHistory {
-  background-image: url(../../../assets/images/5.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-  width: 100%;
-  height: 650px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.historySectionContainer {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 800px;
-}
-
-.historyFragmentContainer {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.historyText {
-  width: 40%;
-  font-family: Lato;
-  font-size: 16px;
-}
-
-.historyImage {
-  width: 550px;
-}
-
-.historyFragmentContainerInverted {
-  display: flex;
-  flex-flow: row-reverse;
-  align-items: center;
-  justify-content: space-evenly;
+@media (max-width: 767px) {
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 243, 237, 0.9725490196);
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+  .menuOpen {
+    right: 0;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 328px;
+    height: 406px;
+    margin-top: 108px;
+  }
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 265px;
+    color: #d34600;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 166.667% */
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #d34600;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .mediaIconContainer {
+    width: 210px;
+    height: 35px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .iconMedia {
+    width: 35px;
+    height: 35px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets//images/headerHistory.jpg);
+    background-size: cover;
+    background-position: 90%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: var(--Secundario-light, #f8f2ee);
+    font-feature-settings: "liga" off, "clig" off;
+    /* mobile/BK H1 */
+    font-family: "Bookman Old Style";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 133.333% */
+  }
+  h3 {
+    color: #f8f2ee;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: LatoBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=history.module.css.map */
