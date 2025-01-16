@@ -60,15 +60,16 @@ export const Gallery = () => {
   };
 
   return (
-    <div className={styles.gallerySection}>
+    <div className={styles.gallerySection} >
       {isModalOpen && (
-        <div className={`${styles.modalOverlay}`} id="modalGaleria">
+        <div className={`${styles.modalOverlay}`} id="modalGaleria" onMouseDown={closeModal}>
           <div
             className={`${styles.modalContent} ${
               fadeTransition ? styles.fadeIn : ""
             }`}
             onClick={(e) => e.stopPropagation()}
-           id="modalContent">
+            id="modalContent"
+          >
             {fotosGaleria.map((foto, index) => (
               <img
                 key={index}
@@ -83,7 +84,7 @@ export const Gallery = () => {
             ))}
 
             <div className={styles.closeButton} onClick={closeModal}>
-              Cerrar
+              X
             </div>
           </div>
         </div>
@@ -103,7 +104,7 @@ export const Gallery = () => {
           />
         ))}
       </div>
-      
+
       <div className={styles.goToGalleryContainer} onClick={handleGoToGallery}>
         <div className={styles.goToGallery}>Ver galería</div>
       </div>

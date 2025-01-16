@@ -100,7 +100,7 @@ export const Llegar = () => {
         {isModalOpen && (
           <div className={styles.modalMapaContenedor}>
             <div
-            onMouseDown={closeModal}
+            
               className={`${styles.modalContent} ${
                 fadeTransition ? styles.fadeIn : ""
               }`}

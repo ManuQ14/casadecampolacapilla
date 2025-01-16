@@ -71,12 +71,34 @@ export const Routing = () => {
           </div>
         </div>
         <div className="media-icons-container">
-          <a to="https://google.com">
+          <a
+            href="https://instagram.com/casadecampolacapilla"
+            target="_blanc"
+            rel="noreferrers"
+          >
             <img src={instagramFooter} className="icon-media" />
           </a>
-          <img src={youtubeFooter} className="icon-media" />
-          <img src={tiktokFootrr} className="icon-media" />
-          <img src={facebookFooter} className="icon-media" />
+          <a
+            href="https://www.youtube.com/user/nikolunapra"
+            target="_blanc"
+            rel="noreferrers"
+          >
+            <img src={youtubeFooter} className="icon-media" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@casadecampolacapilla"
+            target="_blanc"
+            rel="noreferrers"
+          >
+            <img src={tiktokFootrr} className="icon-media" />
+          </a>
+          <a
+            href="https://www.facebook.com/casadecampolacapilla"
+            target="_blanc"
+            rel="noreferrers"
+          >
+            <img src={facebookFooter} className="icon-media" />
+          </a>
         </div>
         <p className="texto-copyright">
           Todos los derechos reservados. Creado por Camila Gallardo
