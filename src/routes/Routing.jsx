@@ -71,12 +71,16 @@ export const Routing = () => {
           </div>
         </div>
         <div className="media-icons-container">
-          <img src={instagramFooter} className="icon-media" />
+          <a to="https://google.com">
+            <img src={instagramFooter} className="icon-media" />
+          </a>
           <img src={youtubeFooter} className="icon-media" />
           <img src={tiktokFootrr} className="icon-media" />
           <img src={facebookFooter} className="icon-media" />
         </div>
-        <p className="texto-copyright">Todos los derechos reservados. Creado por Camila Gallardo</p>
+        <p className="texto-copyright">
+          Todos los derechos reservados. Creado por Camila Gallardo
+        </p>
       </footer>
     </>
   );

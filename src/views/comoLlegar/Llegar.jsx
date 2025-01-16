@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./styles/llegar.module.scss";
@@ -5,13 +6,30 @@ import styles from "./styles/llegar.module.scss";
 import line from "../../assets/icons/subray.svg";
 import tren from "../../assets/icons/train.svg";
 import auto from "../../assets/icons/auto.svg";
-import mapa from "../../assets/images/mapa.jpg";
+
+import mapa from "../../assets/images/mapa.jpg"; //Mapa
+
 import chrevronRight from "../../assets/icons/chevronRigth.svg";
 import locationIcon from "../../assets/icons/maps.svg";
 import mailIcon from "../../assets/icons/mail.svg";
 import phoneIcon from "../../assets/icons/telefono.svg";
 
 export const Llegar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [fadeTransition, setFadeTransition] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    setTimeout(() => {
+      setFadeTransition(true); // Activa la transición al abrir
+    }, 0);
+  };
+
+  const closeModal = () => {
+    setFadeTransition(false); // Desactiva la transición antes de cerrar
+    setTimeout(() => setIsModalOpen(false), 300); // Espera a que termine la animación
+  };
+
   return (
     <div className={styles.llegarSection} id="llegar">
       <div className={styles.subtitleContainerLlegar}>
@@ -61,7 +79,7 @@ export const Llegar = () => {
           <img src={chrevronRight} alt="" className={styles.chrevronRight} />
         </Link>
       </div>
-      <div className={styles.autoBoxContainer}>
+      <div className={styles.autoBoxContainer} >
         <img
           src={auto}
           alt="Icono auto"
@@ -78,12 +96,36 @@ export const Llegar = () => {
           nuestra Casa de Campo.
         </p>
       </div>
+      <div className={styles.modalSection} onMouseDown={closeModal}>
+        {isModalOpen && (
+          <div className={styles.modalMapaContenedor}>
+            <div
+            onMouseDown={closeModal}
+              className={`${styles.modalContent} ${
+                fadeTransition ? styles.fadeIn : ""
+              }`}
+            >
+              <img
+                src={mapa}
+                alt="Mapa a Castilla"
+                className={styles.mapaGrande}
+                onClick={openModal}
+              />
+              <div className={styles.closeButton} onClick={closeModal}>
+                X
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
       <img
         src={mapa}
         alt=""
         width={380}
         height={475}
         className={styles.mapaInfo}
+        onClick={openModal}
       />
       <div className={styles.infoBoxContainer}>
         <div className={styles.itemInfoContainer}>

@@ -5,7 +5,7 @@
 @media (max-width: 767px) {
   .llegarSection {
     width: 100vw;
-    height: 1514px;
+    height: 1570px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -119,16 +119,90 @@
     margin-bottom: 24px;
   }
 
+  .modalSection {
+    width: 100vw;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $naranja-terciario;
+  }
+
+  .modalMapaContenedor {
+    position: fixed;
+    width: 100vw;
+    height: 95vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: inline-block;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+   
+    z-index: 1000;
+  }
+
+  .modalContent {
+    position: relative;
+    width: 100vw;
+    height: 90%;
+    //background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    top: 6%;
+  }
+
+  .fadeIn {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .mapaGrande {
+    width: 100vw;
+    height: 538px;
+    height: 90%;
+    margin-top: 24px;
+    transition: opacity 0.3s ease;
+    position: absolute;
+
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 5px;
+  }
+
+  .closeButton {
+    width: 288px;
+    height: 19px;
+    font-family: $lato;
+    color: $naranja-oficial;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    top: 1%;
+    left: 46%;
+  }
+
   .itemInfoContainer {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    height: 89px;
+    height: 112px;
     margin-bottom: 16px;
   }
 
-  .iconInfo{
+  .iconInfo {
     height: 32px;
     margin-bottom: 8px;
   }
@@ -138,12 +212,12 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
+    height: 64px;
     margin-bottom: 16px;
   }
 
   .descriptionInfo {
-    height: 49px;
+    height: 72px;
     color: $gris-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -151,14 +225,14 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 114.286% */
+    line-height: 24px; /* 114.286% */
     letter-spacing: 0.25px;
   }
 
   .descripcionLlegarAuto {
     color: $gris-oficial;
     text-align: center;
-    font-feature-settings: "liga" off, "clig" off;    
+    font-feature-settings: "liga" off, "clig" off;
     font-family: $lato;
     font-size: 16px;
     font-style: normal;

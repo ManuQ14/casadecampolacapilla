@@ -543,9 +543,7 @@
   .modalContent {
     position: relative;
     width: 100vw;
-    //height: 508px;
-    height: 480px;
-    //height: auto;
+    height: 480px;    
     background-color: white;
     display: flex;
     flex-flow: column;
@@ -891,7 +889,7 @@
 
   .sectionOpiniones {
     width: 100vw;
-    height: 400px;
+    height: 460px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -933,7 +931,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 400px;
+    height: 460px;
   }
 
   .subtitleContainerOpiniones {
@@ -951,7 +949,7 @@
     width: 380px;
     overflow: hidden;
     cursor: grab;
-    height: 247px;
+    height: 310px;
   }
 
   .carousel {
@@ -995,7 +993,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 24px;
     letter-spacing: 0.25px;
     padding: 0px 16px 16px 16px;
   }
