@@ -1,0 +1,265 @@
+@import url(../../../../../styles/_variables.scss);
+@import "../../../../../styles/variables";
+
+@media (max-width: 767px) {
+  //Inicio Tarifario
+  .tarifaSection {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tarifasContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    height: 360px;
+    justify-content: space-between;
+  }
+
+  .subtitleContainerTarifa {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .boxTarifaDia {
+    width: 380px;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 5px;
+    background: $naranja-terciario;
+  }
+
+  //Caja de ayuda para contener 2 elementos alineados de precio
+  .helpBox {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 238px;
+  }
+
+  .itemTarifaDia {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    width: 46%;
+    margin-left: 8px;
+    margin-bottom: 2px;
+  }
+
+  .descripcionTarifa {
+    width: 193px;
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+  }
+
+  .precioTarifa {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-right: 8px;
+  }
+
+  .boxTarifaPernocte {
+    width: 380px;
+    height: 140px;
+    background-color: $naranja-terciario;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .itemTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .helpBoxPernocte {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+
+  .tarifa {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .descripcionTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+
+  .precioTarifaPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+
+  .aclaracionPernocte {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+  }
+
+  .boxTarifaDiaFinde {
+    width: 380px;
+    height: 56px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 5px;
+    background: $naranja-terciario;
+  }
+
+  .referenciaPrecio {
+    width: 380px;
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+  }
+
+  .boxBeneficiosTarifas {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 367px;
+    margin: auto;
+    margin-top: 24px;
+    height: 80px;
+    justify-content: space-between;
+  }
+
+  .boxBeneficio {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  .tilde {
+    width: 14px;
+    height: 10px;
+    margin-right: 5px;
+  }
+
+  .beneficio {
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+  }
+
+  .reserveButtonTarifa {
+    display: flex;
+    width: 328px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: $naranja-oficial;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    color: white;
+    text-align: center;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  //fin seccion tarifa
+}

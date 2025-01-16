@@ -1,0 +1,91 @@
+@import url(../../../../../styles/_variables.scss);
+@font-face {
+  font-family: Bookman;
+  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+}
+@media (max-width: 767px) {
+  .mktSection {
+    width: 100vw;
+    height: 1090px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .containerMktOne {
+    width: 100%;
+    height: 437px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+  .containerMktTwo {
+    width: 100%;
+    height: 541px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .subtitleContainerMkt {
+    width: 380px;
+    height: 96px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .subtitleContainerMkt2 {
+    width: 380px;
+    height: 176px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h2Mkt {
+    color: var(--Dark, #4b4a4a);
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 166.667% */
+  }
+  .astroExplication {
+    color: #4b4a4a;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+  }
+  .fotoContainer {
+    width: 100vw;
+    height: 309px;
+  }
+  .fotoContainer2 {
+    width: 100vw;
+    height: 309px;
+    margin-top: 56px;
+  }
+}/*# sourceMappingURL=mkt.module.css.map */

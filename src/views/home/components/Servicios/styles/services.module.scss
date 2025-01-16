@@ -1,0 +1,95 @@
+@import url(../../../../../styles/_variables.scss);
+@import "../../../../../styles/variables";
+
+@media (max-width: 767px) {
+  //Inicio Servicios
+  .serviceSection {
+    width: 100vw;
+    height: 810px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(../../../../../assets/images/backgroundServices.jpg);
+    background-position: center;
+  }
+
+  .coverServices {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+      0deg,
+      rgba(41, 46, 33, 0.69) 0%,
+      rgba(41, 46, 33, 0.69) 50%
+    );
+  }
+
+  .subtitleContainerServices {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .h2Servicios {
+    color: #f5b498;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .iconServiciesContainer {
+    display: flex;
+    width: 380px;
+    height: 702px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 8px;
+    flex-wrap: wrap;
+  }
+
+  .serviceContainer {
+    display: flex;
+    width: 186px;
+    height: 164px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    height: 124px;
+  }
+
+  span {
+    //text-align: center;
+    color: $naranja-terciario;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    height: 64px;
+    /* mobile/body bold */
+    font-family: $lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+    width: 186px;
+    align-self: stretch;
+  }
+
+  //fin sección servicios
+}

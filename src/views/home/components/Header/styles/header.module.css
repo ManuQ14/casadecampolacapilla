@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import url(../../../../../styles/_variables.scss);
+@font-face {
+  font-family: Bookman;
+  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+}
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+  .navBar {
+    display: none;
+  }
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 243, 237, 0.9725490196);
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+  .menuOpen {
+    right: 0;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 328px;
+    height: 406px;
+    margin-top: 108px;
+  }
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 265px;
+    color: #d34600;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 166.667% */
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #d34600;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .mediaIconContainer {
+    width: 210px;
+    height: 35px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .iconMedia {
+    width: 35px;
+    height: 35px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .videoCamping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+  .contentHeader {
+    width: 328px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    color: #f8f2ee;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Bookman;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.15px;
+  }
+  h3 {
+    color: #f8f2ee;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: LatoBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #d34600;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: LatoBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=header.module.css.map */
