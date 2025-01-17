@@ -1,0 +1,71 @@
+@import url(../../../../../styles/_variables.scss);
+@import "../../../../../styles/variables";
+
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 435px;
+    font-family: Lato;
+    background-color: #d34600;
+    color: white;
+  }
+
+  .iconCapilla {
+    width: 140px;
+    height: 111px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contenedorNavegador {
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .navegador {
+    color: var(--Secundario-light, #f8f2ee);
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+
+  .mediaIconsContainer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    width: 176px;
+    margin-bottom: 32px;
+  }
+
+  .iconMedia {
+    width: 35px;
+  }
+
+  .textoCopyright {
+    color: #fff;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+  }
+}

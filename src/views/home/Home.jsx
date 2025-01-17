@@ -6,6 +6,7 @@ import { Gallery } from "./components/GaleriaHome/Gallery";
 import { Tarifas } from "./components/Tarifas/Tarifas";
 import { Llegar } from "./components/ComoLlegar/Llegar";
 import { Opinions } from "./components/Opiniones/Opinions";
+import { Footer } from "./components/Footer/footer";
 
 export const Home = () => {
   return (
@@ -13,11 +14,12 @@ export const Home = () => {
       <Header />
       <Camping />
       <Services />
-      <Mkt/>
-      <Gallery/>
-      <Tarifas/>
-      <Llegar/>
-      <Opinions/>
+      <Mkt />
+      <Gallery />
+      <Tarifas />
+      <Llegar />
+      <Opinions />
+      <Footer />
     </>
   );
 };

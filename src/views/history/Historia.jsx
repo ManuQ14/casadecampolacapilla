@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { Sueño } from "./components/Sueño";
 import { Pueblo } from "./components/Pueblo";
 import { Notas } from "./components/Notas";
+import { Footer } from "../home/components/Footer/footer";
 
 
 export const Historia = () => {
@@ -11,6 +12,7 @@ export const Historia = () => {
       <Sueño />
       <Pueblo/>
       <Notas/>
+      <Footer/>
     </>
   );
 };
