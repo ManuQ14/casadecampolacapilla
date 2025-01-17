@@ -9,21 +9,21 @@ const PRESS_NOTES = [
   {
     id: 1,
     titulo:
-      "Duermen en un antiguo Gallinero mientras construyen un complejo turístico",
+      '"Duermen en un antiguo Gallinero mientras construyen un complejo turístico"',
     foto: "https://img.youtube.com/vi/WGwosA9222c/hqdefault.jpg",
     url: "https://www.youtube.com/watch?v=WGwosA9222c&feature=youtu.be",
     altText: "Foto del antiguo Gallinero convertido en alojamiento",
   },
   {
     id: 2,
-    titulo: "Primer video de La Casa Viajera",
+    titulo: '"Primer video de La Casa Viajera"',
     foto: "https://img.youtube.com/vi/QXtA2QT3_nQ/hqdefault.jpg",
     url: "https://www.youtube.com/watch?v=QXtA2QT3_nQ&ab_channel=LACASAVIAJERA",
     altText: "Captura del primer video de La Casa Viajera",
   },
   {
     id: 3,
-    titulo: "Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires",
+    titulo: '"Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires"',
     foto: "https://img.youtube.com/vi/HC0dSwjEu94/hqdefault.jpg",
     url: "https://www.youtube.com/watch?v=HC0dSwjEu94&ab_channel=TelediarioDigital",
     altText: "Vista de la localidad de Castilla",
@@ -31,14 +31,14 @@ const PRESS_NOTES = [
   {
     id: 4,
     titulo:
-      "En tren, micro o auto, destinos muy cerquita de Caba para despejarse, comer rico, descans...",
+      '"En tren, micro o auto, destinos muy cerquita de Caba para despejarse, comer rico, descans..."',
     foto: foto4,
     url: "https://elle.clarin.com/estilo-de-vida/salidas/salidas-escapadas-destinos_0_IQP0XsX5f3.html#",
     altText: "Imagen de destinos cercanos a CABA",
   },
   {
     id: 5,
-    titulo: "Nota periodística Radio Eclipse 104.3",
+    titulo: '"Nota periodística Radio Eclipse 104.3"',
     foto: foto5,
     url: "https://www.facebook.com/share/v/18VHDzssJv/",
     altText: "Imagen de la entrevista en Radio Eclipse",
@@ -46,7 +46,7 @@ const PRESS_NOTES = [
   {
     id: 6,
     titulo:
-      "Cumpliendo sus sueños, la historia de Niko y Naty y la importancia de cicloturismo para el pueblito",
+      '"Cumpliendo sus sueños, la historia de Niko y Naty y la importancia de cicloturismo para el pueblito"',
     foto: "https://img.youtube.com/vi/IAqsgr2MLD8/hqdefault.jpg",
     url: "https://www.youtube.com/watch?v=IAqsgr2MLD8&ab_channel=coreanoezequiel",
     altText: "Foto de Niko y Naty con sus bicicletas",
