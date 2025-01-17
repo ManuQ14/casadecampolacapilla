@@ -24,6 +24,13 @@ export const Camping = () => {
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
+    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 300);
   };
 
   const startCarousel = () => {
@@ -85,8 +92,6 @@ export const Camping = () => {
       setTimeout(scrollToSection, 300);
     }
   }, [location]);
-
-
 
   return (
     <div className={styles.campingSection} id="camping">

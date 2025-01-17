@@ -1,9 +1,9 @@
 import styles from "../styles/history.module.scss";
 
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
+import openLink from "../../../assets/icons/openLink.svg";
 import foto4 from "../../../assets/images/fotoNotas/fotoNota4.jpeg";
 import foto5 from "../../../assets/images/fotoNotas/fotoNota5.jpeg";
-
 
 const PRESS_NOTES = [
   {
@@ -82,6 +82,7 @@ export const Notas = () => {
                 loading="lazy"
               />
               <h3 className={styles.tituloNota}>{nota.titulo}</h3>
+              <img src={openLink} alt="" />
             </a>
           </article>
         ))}

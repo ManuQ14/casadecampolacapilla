@@ -340,9 +340,14 @@
     height: 309px;
   }
 
-
+  .linkTituloNotaContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+  }
 
   .tituloNota {
+    width: 92%;
     color: $gris-oficial;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $lato;
@@ -353,6 +358,4 @@
     letter-spacing: 0.15px;
     text-align: left;
   }
-
- 
 }

@@ -38,6 +38,12 @@ export const Header = () => {
   const handleToHistory = () => {
     navigate("/nuestra-historia");
     document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   return (
