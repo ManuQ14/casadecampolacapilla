@@ -30,7 +30,7 @@ export const Camping = () => {
         top: 0,
         behavior: "smooth",
       });
-    }, 300);
+    });
   };
 
   const startCarousel = () => {

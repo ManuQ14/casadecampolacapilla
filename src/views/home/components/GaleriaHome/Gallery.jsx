@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/galleryHome.module.scss";
 
@@ -14,110 +14,113 @@ import foto6 from "../../../../assets/images/galleryHome/6.jpg";
 import foto7 from "../../../../assets/images/galleryHome/7.jpg";
 import foto8 from "../../../../assets/images/galleryHome/8.jpg";
 
-const fotosGaleria = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8];
+const GALLERY_PHOTOS = [
+  { id: 1, src: foto1, alt: "Vista de la casa" },
+  { id: 2, src: foto2, alt: "Paisaje del campo" },
+  { id: 3, src: foto3, alt: "Interior de la casa" },
+  { id: 4, src: foto4, alt: "Área exterior" },
+  { id: 5, src: foto5, alt: "Amanecer en el campo" },
+  { id: 6, src: foto6, alt: "Instalaciones" },
+  { id: 7, src: foto7, alt: "Vista panorámica" },
+  { id: 8, src: foto8, alt: "Atardecer en el campo" }
+];
 
 export const Gallery = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [modalState, setModalState] = useState({
+    isOpen: false,
+    currentIndex: 0,
+    fadeTransition: false
+  });
   const [startX, setStartX] = useState(null);
-  const [fadeTransition, setFadeTransition] = useState(false);
   const navigate = useNavigate();
 
-  const openModal = (index) => {
-    setCurrentIndex(index);
-    setIsModalOpen(true);
+  const openModal = useCallback((index) => {
+    setModalState({ isOpen: true, currentIndex: index, fadeTransition: false });
     document.body.classList.add("no-scroll");
     setTimeout(() => {
-      setFadeTransition(true); // Activa la transición al abrir
+      setModalState(prev => ({ ...prev, fadeTransition: true }));
     }, 0);
-  };
+  }, []);
 
-  const closeModal = () => {
-    setFadeTransition(false); // Desactiva la transición antes de cerrar
+  const closeModal = useCallback(() => {
+    setModalState(prev => ({ ...prev, fadeTransition: false }));
     document.body.classList.remove("no-scroll");
-    setTimeout(() => setIsModalOpen(false), 300); // Espera a que termine la animación
-  };
+    setTimeout(() => {
+      setModalState(prev => ({ ...prev, isOpen: false }));
+    }, 300);
+  }, []);
 
-  const handleTouchStart = (e) => {
-    setStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = (e) => {
+  const handleSwipe = useCallback((e) => {
     if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const difference = endX - startX;
+    const difference = e.changedTouches[0].clientX - startX;
+    const threshold = 50;
 
-    if (difference > 50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? fotosGaleria.length - 1 : prevIndex - 1
-      );
-    } else if (difference < -50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === fotosGaleria.length - 1 ? 0 : prevIndex + 1
-      );
+    if (Math.abs(difference) > threshold) {
+      setModalState(prev => ({
+        ...prev,
+        currentIndex: difference > 0
+          ? prev.currentIndex === 0 ? GALLERY_PHOTOS.length - 1 : prev.currentIndex - 1
+          : prev.currentIndex === GALLERY_PHOTOS.length - 1 ? 0 : prev.currentIndex + 1
+      }));
     }
     setStartX(null);
-  };
-
-  const handleGoToGallery = () => {
-    navigate("/galeria");
-  };
+  }, [startX]);
 
   return (
-    <div className={styles.gallerySection}>
-      {isModalOpen && (
-        <div
-          className={`${styles.modalOverlay}`}
-          id="modalGaleria"
-          onMouseDown={closeModal}
-        >
-          <div
-            className={`${styles.modalContent} ${
-              fadeTransition ? styles.fadeIn : ""
-            }`}
-            onClick={(e) => e.stopPropagation()}
-            id="modalContent"
+    <section className={styles.gallerySection}>
+      {modalState.isOpen && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div 
+            className={`${styles.modalContent} ${modalState.fadeTransition ? styles.fadeIn : ''}`}
+            onClick={e => e.stopPropagation()}
           >
-            {fotosGaleria.map((foto, index) => (
+            {GALLERY_PHOTOS.map((photo, index) => (
               <img
-                key={index}
-                src={foto}
-                alt={`Imagen ${index + 1}`}
+                key={photo.id}
+                src={photo.src}
+                alt={photo.alt}
                 className={`${styles.fotoAbierta} ${
-                  currentIndex === index ? styles.active : ""
+                  modalState.currentIndex === index ? styles.active : ""
                 }`}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
+                onTouchStart={e => setStartX(e.touches[0].clientX)}
+                onTouchEnd={handleSwipe}
               />
             ))}
-
-            <img
-              src={closeButton}
+            <button 
               className={styles.closeButton}
               onClick={closeModal}
-            />
+              aria-label="Cerrar galería"
+            >
+              <img src={closeButton} alt="Cerrar" />
+            </button>
           </div>
         </div>
       )}
-      <div className={styles.subtitleContainer}>
+
+      <header className={styles.subtitleContainer}>
         <h2 className={styles.h2}>Galería</h2>
-        <img src={line} alt="linea subrayadora" />
-      </div>
+        <img src={line} alt="línea decorativa" />
+      </header>
+
       <div className={styles.gallery}>
-        {fotosGaleria.map((foto, index) => (
-          <img
-            key={index}
-            src={foto}
-            alt={`Imagen ${index + 1}`}
-            className={styles.galleryImage}
-            onClick={() => openModal(index)}
-          />
+        {GALLERY_PHOTOS.map((photo, index) => (
+          <div key={photo.id} className={styles.imageWrapper}>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className={styles.galleryImage}
+              onClick={() => openModal(index)}
+            />
+          </div>
         ))}
       </div>
 
-      <div className={styles.goToGalleryContainer} onClick={handleGoToGallery}>
-        <div className={styles.goToGallery}>Ver galería</div>
-      </div>
-    </div>
+      <button 
+        className={styles.goToGalleryContainer} 
+        onClick={() => navigate("/galeria")}
+      >
+        <span className={styles.goToGallery}>Ver galería</span>
+      </button>
+    </section>
   );
 };

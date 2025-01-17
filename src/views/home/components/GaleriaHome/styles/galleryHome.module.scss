@@ -1,65 +1,73 @@
-@import url(../../../../../styles/_variables.scss);
 @import "../../../../../styles/variables";
 
 @media (max-width: 767px) {
-  //Inicio section Galería
   .gallerySection {
     width: 100vw;
-    height: 760px;
+    min-height: 760px;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     background-color: $naranja-terciario;
     margin-top: 56px;
-    //margin-bottom: 40px;
+    padding: 16px 0;
   }
 
   .subtitleContainer {
     width: 100%;
-    height: 48px;
+    padding: 16px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 16px;
-    align-self: stretch;
-    margin-top: 16px;
     margin-bottom: 32px;
   }
 
   .h2 {
     color: $naranja-oficial;
-    font-feature-settings: "liga" off, "clig" off;
     font-family: $bookman;
     font-size: 24px;
-    font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
 
   .gallery {
-    display: flex;
-    flex-flow: column wrap;
     width: 93%;
-    height: 595px;
-    align-items: flex-start;
-    justify-content: space-between;
-    transition: all 300ms;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; // Creates a square aspect ratio
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .galleryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // This ensures the image covers the square area
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .modalOverlay {
     position: fixed;
-    width: 100vw;
-    height: 101vh;
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,82 +76,69 @@
 
   .modalContent {
     position: relative;
-    width: 100vw;
-    height: 480px;
     background-color: white;
-    display: flex;
-    flex-flow: column;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transform: scale(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  .galleryImage {
-    max-width: 49%;
-    height: 140px;
-    border-radius: 5px;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 24px; 
+    max-width: calc(100vw - 48px); 
+    max-height: calc(100vh - 48px); 
   }
 
   .fadeIn {
     transform: scale(1);
-    opacity: 1;
+    opacity: 1 !important;
   }
 
   .fotoAbierta {
-    width: 90%;
-    max-height: 400px;
-    height: auto;
-    margin-top: 24px;
-    transition: opacity 0.3s ease;
-    position: absolute;
+    max-width: 100%; 
+    max-height: calc(100vh - 96px); 
+    object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    border-radius: 5px;
+    display: none; // 
+
     &.active {
       opacity: 1;
+      display: block; // Muestra solo la imagen activa
     }
   }
 
   .closeButton {
-    width: 288px;
-    height: 19px;
-    font-family: $lato;
-    color: $naranja-oficial;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 24px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
     position: absolute;
-    top: -3%;
-    left: 57%;
+    top: 2px; // Ajustado para mantener una distancia consistente
+    right: 2px;
+    background: none;
+    border: none;
+    
+    cursor: pointer;
+    z-index: 1;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .goToGalleryContainer {
     width: 95%;
-    height: 43px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 0;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
   .goToGallery {
-    width: 95%;
-    height: 100%;
+    margin: auto;
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: center;
+    width: 328px;
+    height: 43px;
     font-size: 16px;
     font-weight: 700;
     color: $naranja-oficial;
@@ -151,5 +146,4 @@
     border: 2px solid $naranja-oficial;
     border-radius: 10px;
   }
-  //Fin galería
 }
