@@ -21,6 +21,7 @@ export const Llegar = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
+    document.body.classList.add("no-scroll");
     setTimeout(() => {
       setFadeTransition(true); // Activa la transición al abrir
     }, 0);
@@ -28,6 +29,7 @@ export const Llegar = () => {
 
   const closeModal = () => {
     setFadeTransition(false); // Desactiva la transición antes de cerrar
+    document.body.classList.remove("no-scroll");
     setTimeout(() => setIsModalOpen(false), 300); // Espera a que termine la animación
   };
 
@@ -120,7 +122,7 @@ export const Llegar = () => {
           </div>
         )}
       </div>
-  
+
       <img
         src={mapa}
         alt=""
@@ -129,7 +131,7 @@ export const Llegar = () => {
         className={styles.mapaInfo}
         onClick={openModal}
       />
-      
+
       <div className={styles.infoBoxContainer}>
         <div className={styles.itemInfoContainer}>
           <img

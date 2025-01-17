@@ -37,6 +37,7 @@ export const Header = () => {
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
+    document.body.classList.remove("no-scroll");
   };
 
   return (

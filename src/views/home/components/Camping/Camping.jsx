@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 
 import styles from "./styles/camping.module.scss";
 
@@ -69,6 +69,24 @@ export const Camping = () => {
     setStartX(null);
     startCarousel(); // Reinicia el intervalo después del touch
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const scrollToSection = () => {
+        const section = document.querySelector(location.hash);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // Espera un tiempo corto para asegurar la carga completa
+      setTimeout(scrollToSection, 300);
+    }
+  }, [location]);
+
+
 
   return (
     <div className={styles.campingSection} id="camping">

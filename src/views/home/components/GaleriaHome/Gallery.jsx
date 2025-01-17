@@ -25,6 +25,7 @@ export const Gallery = () => {
   const openModal = (index) => {
     setCurrentIndex(index);
     setIsModalOpen(true);
+    document.body.classList.add("no-scroll");
     setTimeout(() => {
       setFadeTransition(true); // Activa la transición al abrir
     }, 0);
@@ -32,6 +33,7 @@ export const Gallery = () => {
 
   const closeModal = () => {
     setFadeTransition(false); // Desactiva la transición antes de cerrar
+    document.body.classList.remove("no-scroll");
     setTimeout(() => setIsModalOpen(false), 300); // Espera a que termine la animación
   };
 
@@ -61,9 +63,13 @@ export const Gallery = () => {
   };
 
   return (
-    <div className={styles.gallerySection} >
+    <div className={styles.gallerySection}>
       {isModalOpen && (
-        <div className={`${styles.modalOverlay}`} id="modalGaleria" onMouseDown={closeModal}>
+        <div
+          className={`${styles.modalOverlay}`}
+          id="modalGaleria"
+          onMouseDown={closeModal}
+        >
           <div
             className={`${styles.modalContent} ${
               fadeTransition ? styles.fadeIn : ""

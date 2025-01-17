@@ -20,21 +20,33 @@ export const Header = () => {
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
-  const handleScrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-      document.body.classList.remove("no-scroll");
-    }
-  };
-
   const handleToReserve = () => {
     navigate("/contacto");
   };
 
-  const handleToHistory = () => {
+  const handleGoToHome = () => {
     navigate("/inicio");
+    document.body.classList.remove("no-scroll");
+  };
+
+  const handleToCamping = () => {
+    navigate("/inicio#camping");
+    document.body.classList.remove("no-scroll");
+  };
+
+  const handleToServices = () => {
+    navigate("/inicio#servicios");
+    document.body.classList.remove("no-scroll");
+  };
+
+  const handleToTarifas = () => {
+    navigate("/inicio#tarifas");
+    document.body.classList.remove("no-scroll");
+  };
+
+  const handleToLlegar = () => {
+    navigate("/inicio#llegar");
+    document.body.classList.remove("no-scroll");
   };
 
   return (
@@ -42,7 +54,7 @@ export const Header = () => {
       {/** Header Mobile */}
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
-         {/*  <img src={fotoHistory} className={styles.headerHistory} /> */}
+          {/*  <img src={fotoHistory} className={styles.headerHistory} /> */}
 
           <div className={styles.contentHeader}>
             <h1 className={styles.h1History}>Nuestra Historia</h1>
@@ -70,21 +82,13 @@ export const Header = () => {
           />
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
-              <div onClick={() => handleScrollToSection("camping")}>
-                El Camping
-              </div>
-              <div onClick={() => handleToHistory("nuestra-historia")}>
-                Nuestra historia
-              </div>
-              <div onClick={() => handleScrollToSection("servicios")}>
-                Servicios
-              </div>
-              <div onClick={() => handleScrollToSection("tarifas")}>
-                Tarifas
-              </div>
-              <div onClick={() => handleScrollToSection("llegar")}>
-                Cómo Llegar
-              </div>
+              <div onClick={handleGoToHome}>Inicio</div>
+
+              <div onClick={handleToCamping}>El Camping</div>
+
+              <div onClick={handleToServices}>Servicios</div>
+              <div onClick={handleToTarifas}>Tarifas</div>
+              <div onClick={handleToLlegar}>Cómo Llegar</div>
             </div>
             <div onClick={handleToReserve} className={styles.reserveButton}>
               Reservar
