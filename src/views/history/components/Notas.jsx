@@ -1,33 +1,31 @@
 import styles from "../styles/history.module.scss";
+
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
-import foto1 from "../../../assets/images/fotoNotas/fotoNota1.jpeg";
-import foto2 from "../../../assets/images/fotoNotas/fotoNota2.jpeg";
-import foto3 from "../../../assets/images/fotoNotas/fotoNota3.jpeg";
 import foto4 from "../../../assets/images/fotoNotas/fotoNota4.jpeg";
 import foto5 from "../../../assets/images/fotoNotas/fotoNota5.jpeg";
-import foto6 from "../../../assets/images/fotoNotas/fotoNota6.jpeg";
+
 
 const PRESS_NOTES = [
   {
     id: 1,
     titulo:
       "Duermen en un antiguo Gallinero mientras construyen un complejo turístico",
-    foto: foto1,
-    url: "",
+    foto: "https://img.youtube.com/vi/WGwosA9222c/hqdefault.jpg",
+    url: "https://www.youtube.com/watch?v=WGwosA9222c&feature=youtu.be",
     altText: "Foto del antiguo Gallinero convertido en alojamiento",
   },
   {
     id: 2,
     titulo: "Primer video de La Casa Viajera",
-    foto: foto2,
-    url: "",
+    foto: "https://img.youtube.com/vi/QXtA2QT3_nQ/hqdefault.jpg",
+    url: "https://www.youtube.com/watch?v=QXtA2QT3_nQ&ab_channel=LACASAVIAJERA",
     altText: "Captura del primer video de La Casa Viajera",
   },
   {
     id: 3,
     titulo: "Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires",
-    foto: foto3,
-    url: "",
+    foto: "https://img.youtube.com/vi/HC0dSwjEu94/hqdefault.jpg",
+    url: "https://www.youtube.com/watch?v=HC0dSwjEu94&ab_channel=TelediarioDigital",
     altText: "Vista de la localidad de Castilla",
   },
   {
@@ -35,22 +33,22 @@ const PRESS_NOTES = [
     titulo:
       "En tren, micro o auto, destinos muy cerquita de Caba para despejarse, comer rico, descans...",
     foto: foto4,
-    url: "",
+    url: "https://elle.clarin.com/estilo-de-vida/salidas/salidas-escapadas-destinos_0_IQP0XsX5f3.html#",
     altText: "Imagen de destinos cercanos a CABA",
   },
   {
     id: 5,
     titulo: "Nota periodística Radio Eclipse 104.3",
     foto: foto5,
-    url: "",
+    url: "https://www.facebook.com/share/v/18VHDzssJv/",
     altText: "Imagen de la entrevista en Radio Eclipse",
   },
   {
     id: 6,
     titulo:
       "Cumpliendo sus sueños, la historia de Niko y Naty y la importancia de cicloturismo para el pueblito",
-    foto: foto6,
-    url: "",
+    foto: "https://img.youtube.com/vi/IAqsgr2MLD8/hqdefault.jpg",
+    url: "https://www.youtube.com/watch?v=IAqsgr2MLD8&ab_channel=coreanoezequiel",
     altText: "Foto de Niko y Naty con sus bicicletas",
   },
 ];
