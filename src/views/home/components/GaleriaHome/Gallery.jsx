@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles/galleryHome.module.scss";
 
 import line from "../../../../assets/icons/subrayOrange.svg";
+import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
 import foto1 from "../../../../assets/images/galleryHome/1.jpg";
 import foto2 from "../../../../assets/images/galleryHome/2.jpg";
@@ -90,9 +91,11 @@ export const Gallery = () => {
               />
             ))}
 
-            <div className={styles.closeButton} onClick={closeModal}>
-              X
-            </div>
+            <img
+              src={closeButton}
+              className={styles.closeButton}
+              onClick={closeModal}
+            />
           </div>
         </div>
       )}

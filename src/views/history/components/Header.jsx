@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/history.module.scss";
 
+import subrayLine from "../../../assets/icons/subrayWhite.svg";
 import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
@@ -58,6 +59,7 @@ export const Header = () => {
 
           <div className={styles.contentHeader}>
             <h1 className={styles.h1History}>Nuestra Historia</h1>
+            <img src={subrayLine} alt="" />
           </div>
         </div>
 
