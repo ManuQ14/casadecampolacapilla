@@ -10,7 +10,7 @@ import youtubeFooter from "../../../../assets/icons/footer/youTubeFooter.svg";
 import tiktokFootrr from "../../../../assets/icons/footer/tikTokFooter.svg";
 import facebookFooter from "../../../../assets/icons/footer/facebookFooter.svg";
 
-export const Footer = () => {
+export const Fut = () => {
   const navigate = useNavigate();
 
   const handleToCamping = () => {
