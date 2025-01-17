@@ -4,7 +4,7 @@ import styles from "./styles/galleryHome.module.scss";
 
 import line from "../../../../assets/icons/subrayOrange.svg";
 
-import foto1 from "../../../../assets/images/galleryHome/9.jpg";
+import foto1 from "../../../../assets/images/galleryHome/1.jpg";
 import foto2 from "../../../../assets/images/galleryHome/2.jpg";
 import foto3 from "../../../../assets/images/galleryHome/3.jpg";
 import foto4 from "../../../../assets/images/galleryHome/4.jpg";

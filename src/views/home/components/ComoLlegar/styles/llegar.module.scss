@@ -5,7 +5,7 @@
 @media (max-width: 767px) {
   .llegarSection {
     width: 100vw;
-    height: 1570px;
+    height: 1611px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -43,8 +43,8 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    height: 400px;
-    width: 380px;
+    height: 441px;
+    width: 92%;
   }
 
   .iconTransporte {
@@ -75,6 +75,7 @@
   }
 
   .linkTarifasTren {
+    width: 304px;
     color: $naranja-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -96,7 +97,7 @@
   }
 
   .autoBoxContainer {
-    width: 380px;
+    width: 92%;
     height: 255px;
     display: flex;
     flex-flow: column;
@@ -110,13 +111,14 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    width: 380px;
-    height: 249px;
+    width: 92%;
+    height: 288px;
     margin-bottom: 16px;
   }
 
   .mapaInfo {
     margin-bottom: 24px;
+    width: 92%;
   }
 
   .modalSection {

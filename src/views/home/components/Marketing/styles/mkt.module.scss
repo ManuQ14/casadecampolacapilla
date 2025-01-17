@@ -42,7 +42,7 @@
   }
 
   .subtitleContainerMkt2 {
-    width: 380px;
+    width: 95%;
     height: 176px;
     display: flex;
     flex-flow: column;
@@ -62,6 +62,7 @@
   }
 
   .astroExplication {
+    width: 95%;
     color: $gris-oficial;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $lato;

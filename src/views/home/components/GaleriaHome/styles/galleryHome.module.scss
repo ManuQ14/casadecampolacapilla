@@ -42,7 +42,7 @@
   .gallery {
     display: flex;
     flex-flow: row wrap;
-    width: 380px;
+    width: 93%;
     height: 595px;
     align-items: flex-start;
     justify-content: space-between;
@@ -81,7 +81,7 @@
   }
 
   .galleryImage {
-    width: 186px !important;
+    max-width: 49%;    
     height: 140px;
     border-radius: 5px;
     transition: opacity 0.5s ease-in-out;
@@ -124,6 +124,7 @@
   }
 
   .goToGalleryContainer {
+    width: 95%;
     height: 43px;
     display: flex;
     flex-flow: column;
@@ -135,7 +136,7 @@
   }
 
   .goToGallery {
-    width: 380px;
+    width: 95%;
     height: 100%;
     display: flex;
     flex-flow: column;

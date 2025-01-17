@@ -15,7 +15,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100vw;
+    width: 95%;
     height: 360px;
     justify-content: space-between;
   }
@@ -45,7 +45,7 @@
   }
 
   .boxTarifaDia {
-    width: 380px;
+    width: 95%;
     height: 40px;
     display: flex;
     flex-flow: row;
@@ -109,7 +109,7 @@
   }
 
   .boxTarifaPernocte {
-    width: 380px;
+    width: 95%;
     height: 140px;
     background-color: $naranja-terciario;
     display: flex;
@@ -184,7 +184,7 @@
   }
 
   .boxTarifaDiaFinde {
-    width: 380px;
+    width: 95%;
     height: 56px;
     display: flex;
     flex-flow: row;
@@ -196,7 +196,7 @@
   }
 
   .referenciaPrecio {
-    width: 380px;
+    width: 95%;
     color: $gris-oficial;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $lato;
@@ -211,7 +211,7 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    width: 367px;
+    width: 90%;
     margin: auto;
     margin-top: 24px;
     height: 80px;
