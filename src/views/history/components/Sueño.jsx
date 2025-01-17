@@ -1,105 +1,123 @@
-import { useRef, useState } from "react";
-
+import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
-
-//Import de fotos de carrousel
 import foto1 from "../../../assets/images/galleryHistory/1.jpg";
 import foto2 from "../../../assets/images/galleryHistory/2.jpg";
 import foto3 from "../../../assets/images/galleryHistory/3.jpg";
 
-const fotosSueño = [foto1, foto2, foto3];
+const CAROUSEL_INTERVAL = 5000;
+const SWIPE_THRESHOLD = 50;
+const fotos = [foto1, foto2, foto3];
 
 export const Sueño = () => {
-  const intervalRef = useRef(null); // useRef para manejar el intervalo sin perder la referencia
-
+  const intervalRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startX, setStartX] = useState(null);
 
-  const startCarousel = () => {
-    intervalRef.current = setInterval(nextSlide, 5000); // Asigna el intervalo a la referencia
-  };
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotos.length);
+  }, []);
 
-  const stopCarousel = () => {
+  const startCarousel = useCallback(() => {
+    intervalRef.current = setInterval(nextSlide, CAROUSEL_INTERVAL);
+  }, [nextSlide]);
+
+  const stopCarousel = useCallback(() => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Limpia el intervalo
+      clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosSueño.length);
-  };
+  useEffect(() => {
+    startCarousel();
+    return stopCarousel;
+  }, [startCarousel, stopCarousel]);
 
-  const handleDotClick = (index) => {
-    stopCarousel(); // Detiene el carrusel al hacer clic
-    setCurrentIndex(index);
-    startCarousel(); // Reinicia el intervalo después de interactuar
-  };
+  const handleDotClick = useCallback(
+    (index) => {
+      stopCarousel();
+      setCurrentIndex(index);
+      startCarousel();
+    },
+    [stopCarousel, startCarousel]
+  );
 
-  const handleTouchStart = (e) => {
-    stopCarousel(); // Detiene el carrusel cuando empieza el touch
-    setStartX(e.touches[0].clientX); // Guarda la posición inicial
-  };
+  const handleTouchStart = useCallback(
+    (e) => {
+      stopCarousel();
+      setStartX(e.touches[0].clientX);
+    },
+    [stopCarousel]
+  );
 
-  const handleTouchEnd = (e) => {
-    if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const difference = endX - startX;
+  const handleTouchEnd = useCallback(
+    (e) => {
+      if (startX === null) return;
 
-    if (difference > 50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? fotosSueño.length - 1 : prevIndex - 1
-      );
-    } else if (difference < -50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === fotosSueño.length - 1 ? 0 : prevIndex + 1
-      );
-    }
-    setStartX(null);
-    startCarousel(); // Reinicia el intervalo después del touch
-  };
+      const difference = e.changedTouches[0].clientX - startX;
+
+      if (Math.abs(difference) > SWIPE_THRESHOLD) {
+        setCurrentIndex((prevIndex) => {
+          if (difference > 0) {
+            return prevIndex === 0 ? fotos.length - 1 : prevIndex - 1;
+          }
+          return prevIndex === fotos.length - 1 ? 0 : prevIndex + 1;
+        });
+      }
+
+      setStartX(null);
+      startCarousel();
+    },
+    [startX, startCarousel]
+  );
 
   return (
     <div className={styles.unSueñoContainer}>
-      <div className={styles.subtitleContainerHistory}>
+      <header className={styles.subtitleContainerHistory}>
         <h2 className={styles.h2}>Un Sueño</h2>
         <img
           src={subrayLine}
           alt="linea subrayadora de subtitulo"
           className={styles.line}
         />
-      </div>
+      </header>
 
-      <div className={styles.textoSueñoContainer}>
-        Hola! Somos Naty y Niko los anfitriones de Casa de Campo La Capilla. Nos
-        conocimos en el 2008 y desde allí comenzamos a proyectar nuestra vida
-        como familia viajera. <br />
-        <br />
-        De novios amábamos recorrer pueblos y lugares de nuestra bella
-        Argentina, hasta que finalmente encontramos nuestro lugar en el mundo en
-        Castilla. Comenzamos pensando en nuestro espacio para proyectarlo a
-        largo plazo como un lugar de descanso para quienes buscan salir del
-        apuro y del ruido de la ciudad, y poder vivir esta experiencia rural así
-        como nosotros la disfrutamos. <br /> <br />
-        Con pandemia de por medio y casi sin pensarlo decidimos que era el
-        momento oportuno de dejarlo todo e ir a vivir al campo. Desde aquí,
-        empezamos a ver que era solo cuestión de animarnos y apostar a este
-        emprendimiento familiar con mucho cariño y pasión podía salir adelante
-        siempre que se mantenga la esencia de la Experiencia Rural. <br />
-        <br />
-        Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
-        recibiremos con los brazos abiertos para tu experiencia sea relajante y
-        placentera
-      </div>
-      {/**Inicio carrousel */}
-      <div
+      <section className={styles.textoSueñoContainer}>
+        <p>
+          Hola! Somos Naty y Niko los anfitriones de Casa de Campo La Capilla.
+          Nos conocimos en el 2008 y desde allí comenzamos a proyectar nuestra
+          vida como familia viajera.
+        </p>
+        <p>
+          De novios amábamos recorrer pueblos y lugares de nuestra bella
+          Argentina, hasta que finalmente encontramos nuestro lugar en el mundo
+          en Castilla. Comenzamos pensando en nuestro espacio para proyectarlo a
+          largo plazo como un lugar de descanso para quienes buscan salir del
+          apuro y del ruido de la ciudad, y poder vivir esta experiencia rural
+          así como nosotros la disfrutamos.
+        </p>
+        <p>
+          Con pandemia de por medio y casi sin pensarlo decidimos que era el
+          momento oportuno de dejarlo todo e ir a vivir al campo. Desde aquí,
+          empezamos a ver que era solo cuestión de animarnos y apostar a este
+          emprendimiento familiar con mucho cariño y pasión podía salir adelante
+          siempre que se mantenga la esencia de la Experiencia Rural.
+        </p>
+        <p>
+          Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
+          recibiremos con los brazos abiertos para tu experiencia sea relajante
+          y placentera
+        </p>
+      </section>
+
+      <section
         className={styles.carrouselCamping}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         <div className={styles.imageWrapper}>
-          {fotosSueño.map((foto, index) => (
+          {fotos.map((foto, index) => (
             <img
               key={index}
               src={foto}
@@ -111,7 +129,7 @@ export const Sueño = () => {
           ))}
         </div>
         <div className={styles.dots}>
-          {fotosSueño.map((_, index) => (
+          {fotos.map((_, index) => (
             <span
               key={index}
               className={`${styles.dot} ${
@@ -121,7 +139,7 @@ export const Sueño = () => {
             />
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

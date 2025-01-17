@@ -1,97 +1,106 @@
-import { useRef, useState } from "react";
-
+import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
-
-//Import de fotos de carrousel
 import foto4 from "../../../assets/images/galleryHistory/4.jpg";
 import foto5 from "../../../assets/images/galleryHistory/5.jpg";
 import foto6 from "../../../assets/images/galleryHistory/6.jpg";
 import foto7 from "../../../assets/images/galleryHistory/7.jpg";
 import foto8 from "../../../assets/images/galleryHistory/8.jpg";
 
-const fotosPueblo = [foto4, foto5, foto6, foto7, foto8];
+const CAROUSEL_INTERVAL = 5000;
+const SWIPE_THRESHOLD = 50;
+const PHOTOS = [foto4, foto5, foto6, foto7, foto8];
 
 export const Pueblo = () => {
-  const intervalRef = useRef(null); // useRef para manejar el intervalo sin perder la referencia
-
+  const intervalRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startX, setStartX] = useState(null);
 
-  const startCarousel = () => {
-    intervalRef.current = setInterval(nextSlide, 5000); // Asigna el intervalo a la referencia
-  };
+  const nextSlide = useCallback(() => {
+    setCurrentIndex(prevIndex => (prevIndex + 1) % PHOTOS.length);
+  }, []);
 
-  const stopCarousel = () => {
+  const startCarousel = useCallback(() => {
+    intervalRef.current = setInterval(nextSlide, CAROUSEL_INTERVAL);
+  }, [nextSlide]);
+
+  const stopCarousel = useCallback(() => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Limpia el intervalo
+      clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosPueblo.length);
-  };
+  useEffect(() => {
+    startCarousel();
+    return stopCarousel;
+  }, [startCarousel, stopCarousel]);
 
-  const handleDotClick = (index) => {
-    stopCarousel(); // Detiene el carrusel al hacer clic
+  const handleDotClick = useCallback((index) => {
+    stopCarousel();
     setCurrentIndex(index);
-    startCarousel(); // Reinicia el intervalo después de interactuar
-  };
+    startCarousel();
+  }, [stopCarousel, startCarousel]);
 
-  const handleTouchStart = (e) => {
-    stopCarousel(); // Detiene el carrusel cuando empieza el touch
-    setStartX(e.touches[0].clientX); // Guarda la posición inicial
-  };
+  const handleTouchStart = useCallback((e) => {
+    stopCarousel();
+    setStartX(e.touches[0].clientX);
+  }, [stopCarousel]);
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = useCallback((e) => {
     if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const difference = endX - startX;
-
-    if (difference > 50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? fotosPueblo.length - 1 : prevIndex - 1
-      );
-    } else if (difference < -50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === fotosPueblo.length - 1 ? 0 : prevIndex + 1
-      );
+    
+    const difference = e.changedTouches[0].clientX - startX;
+    
+    if (Math.abs(difference) > SWIPE_THRESHOLD) {
+      setCurrentIndex(prevIndex => {
+        if (difference > 0) {
+          return prevIndex === 0 ? PHOTOS.length - 1 : prevIndex - 1;
+        }
+        return prevIndex === PHOTOS.length - 1 ? 0 : prevIndex + 1;
+      });
     }
+    
     setStartX(null);
-    startCarousel(); // Reinicia el intervalo después del touch
-  };
+    startCarousel();
+  }, [startX, startCarousel]);
 
   return (
     <div className={styles.puebloContainer}>
-      <div className={styles.subtitleContainerHistory}>
+      <header className={styles.subtitleContainerHistory}>
         <h2 className={styles.h2}>El Pueblo</h2>
         <img
           src={subrayLine}
           alt="linea subrayadora de subtitulo"
           className={styles.line}
         />
-      </div>
-      <div className={styles.textoPuebloContainer}>
-        Casa de Campo La Capilla te invita a disfrutar de la tranquilidad y los
-        sonidos auténticos de la vida rural. Este es un lugar donde la conexión
-        con la naturaleza se vive plenamente, y hacemos todo lo posible para que
-        no te falte nada durante tu estadía. <br />
-        Ofrecemos un servicio de acampe diseñado para que experimentes el
-        encanto del campo, acompañado del mejor servicio personalizado. <br />
-        <br />
-        Además, desde nuestro campito, ubicado al borde del pueblo, podrás
-        deleitarte con los amaneceres y atardeceres más hermosos, contemplando
-        el horizonte sembrado que se extiende hasta donde alcanza la vista.
-      </div>
-      {/**Inicio carrousel */}
-      <div
+      </header>
+
+      <section className={styles.textoPuebloContainer}>
+        <p>
+          Casa de Campo La Capilla te invita a disfrutar de la tranquilidad y los
+          sonidos auténticos de la vida rural. Este es un lugar donde la conexión
+          con la naturaleza se vive plenamente, y hacemos todo lo posible para que
+          no te falte nada durante tu estadía.
+        </p>
+        <p>
+          Ofrecemos un servicio de acampe diseñado para que experimentes el
+          encanto del campo, acompañado del mejor servicio personalizado.
+        </p>
+        <p>
+          Además, desde nuestro campito, ubicado al borde del pueblo, podrás
+          deleitarte con los amaneceres y atardeceres más hermosos, contemplando
+          el horizonte sembrado que se extiende hasta donde alcanza la vista.
+        </p>
+      </section>
+
+      <section
         className={styles.carrouselCamping}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         <div className={styles.imageWrapper}>
-          {fotosPueblo.map((foto, index) => (
+          {PHOTOS.map((foto, index) => (
             <img
               key={index}
               src={foto}
@@ -103,7 +112,7 @@ export const Pueblo = () => {
           ))}
         </div>
         <div className={styles.dots}>
-          {fotosPueblo.map((_, index) => (
+          {PHOTOS.map((_, index) => (
             <span
               key={index}
               className={`${styles.dot} ${
@@ -113,7 +122,7 @@ export const Pueblo = () => {
             />
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };
