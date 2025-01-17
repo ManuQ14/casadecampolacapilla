@@ -1,28 +1,43 @@
 import { useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import styles from "./styles/galleryHome.module.scss";
 
-import line from "../../../../assets/icons/subrayOrange.svg";
-import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
+import styles from "../styles/galeria.module.scss";
+import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
-import foto1 from "../../../../assets/images/galleryHome/9.jpg";
-import foto2 from "../../../../assets/images/galleryHome/2.jpg";
-import foto3 from "../../../../assets/images/galleryHome/3.jpg";
-import foto4 from "../../../../assets/images/galleryHome/4.jpg";
-import foto5 from "../../../../assets/images/galleryHome/5.jpg";
-import foto6 from "../../../../assets/images/galleryHome/6.jpg";
-import foto7 from "../../../../assets/images/galleryHome/7.jpg";
-import foto8 from "../../../../assets/images/galleryHome/8.jpg";
+//Import de fotos
+import foto1 from "../../../assets/images/galeria/1.jpg";
+import foto2 from "../../../assets/images/galeria/2.jpg";
+import foto3 from "../../../assets/images/galeria/3.jpg";
+import foto4 from "../../../assets/images/galeria/4.jpg";
+import foto5 from "../../../assets/images/galeria/5.jpg";
+import foto6 from "../../../assets/images/galeria/6.jpg";
+import foto7 from "../../../assets/images/galeria/7.jpg";
+import foto8 from "../../../assets/images/galeria/8.jpg";
+import foto9 from "../../../assets/images/galeria/9.jpg";
+import foto10 from "../../../assets/images/galeria/10.jpg";
+import foto11 from "../../../assets/images/galeria/11.jpg";
+import foto12 from "../../../assets/images/galeria/12.jpg";
+import foto13 from "../../../assets/images/galeria/13.jpg";
+import foto14 from "../../../assets/images/galeria/14.jpg";
+import foto15 from "../../../assets/images/galeria/15.jpg";
+import foto16 from "../../../assets/images/galeria/16.jpg";
 
-const GALLERY_PHOTOS = [
-  { id: 1, src: foto1, alt: "Vista de la casa" },
-  { id: 2, src: foto2, alt: "Paisaje del campo" },
-  { id: 3, src: foto3, alt: "Interior de la casa" },
-  { id: 4, src: foto4, alt: "Área exterior" },
-  { id: 5, src: foto5, alt: "Amanecer en el campo" },
-  { id: 6, src: foto6, alt: "Instalaciones" },
-  { id: 7, src: foto7, alt: "Vista panorámica" },
-  { id: 8, src: foto8, alt: "Atardecer en el campo" },
+const galeryPhotos = [
+  { id: 1, src: foto1, alt: "vistas" },
+  { id: 2, src: foto2, alt: "vistas" },
+  { id: 3, src: foto3, alt: "vistas" },
+  { id: 4, src: foto4, alt: "vistas" },
+  { id: 5, src: foto5, alt: "vistas" },
+  { id: 6, src: foto6, alt: "vistas" },
+  { id: 7, src: foto7, alt: "vistas" },
+  { id: 8, src: foto8, alt: "vistas" },
+  { id: 9, src: foto9, alt: "vistas" },
+  { id: 10, src: foto10, alt: "vistas" },
+  { id: 11, src: foto11, alt: "vistas" },
+  { id: 12, src: foto12, alt: "vistas" },
+  { id: 13, src: foto13, alt: "vistas" },
+  { id: 14, src: foto14, alt: "vistas" },
+  { id: 15, src: foto15, alt: "vistas" },
+  { id: 16, src: foto16, alt: "vistas" },
 ];
 
 export const Gallery = () => {
@@ -32,7 +47,6 @@ export const Gallery = () => {
     fadeTransition: false,
   });
   const [startX, setStartX] = useState(null);
-  const navigate = useNavigate();
 
   const openModal = useCallback((index) => {
     setModalState({ isOpen: true, currentIndex: index, fadeTransition: false });
@@ -62,9 +76,9 @@ export const Gallery = () => {
           currentIndex:
             difference > 0
               ? prev.currentIndex === 0
-                ? GALLERY_PHOTOS.length - 1
+                ? galeryPhotos.length - 1
                 : prev.currentIndex - 1
-              : prev.currentIndex === GALLERY_PHOTOS.length - 1
+              : prev.currentIndex === galeryPhotos.length - 1
               ? 0
               : prev.currentIndex + 1,
         }));
@@ -84,7 +98,7 @@ export const Gallery = () => {
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            {GALLERY_PHOTOS.map((photo, index) => (
+            {galeryPhotos.map((photo, index) => (
               <img
                 key={photo.id}
                 src={photo.src}
@@ -107,13 +121,8 @@ export const Gallery = () => {
         </div>
       )}
 
-      <header className={styles.subtitleContainer}>
-        <h2 className={styles.h2}>Galería</h2>
-        <img src={line} alt="línea decorativa" />
-      </header>
-
       <div className={styles.gallery}>
-        {GALLERY_PHOTOS.map((photo, index) => (
+        {galeryPhotos.map((photo, index) => (
           <div key={photo.id} className={styles.imageWrapper}>
             <img
               src={photo.src}
@@ -124,13 +133,6 @@ export const Gallery = () => {
           </div>
         ))}
       </div>
-
-      <button
-        className={styles.goToGalleryContainer}
-        onClick={() => navigate("/galeria")}
-      >
-        <span className={styles.goToGallery}>Ver galería</span>
-      </button>
     </section>
   );
 };
