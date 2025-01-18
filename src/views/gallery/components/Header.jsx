@@ -23,16 +23,39 @@ export const Header = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleGoToHome = () => {
     navigate("/inicio");
     document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleToCamping = () => {
     navigate("/inicio#camping");
     document.body.classList.remove("no-scroll");
+  };
+
+  const handleToHistory = () => {
+    navigate("/nuestra-historia");
+    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleToServices = () => {
@@ -85,9 +108,8 @@ export const Header = () => {
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
               <div onClick={handleGoToHome}>Inicio</div>
-
               <div onClick={handleToCamping}>El Camping</div>
-
+              <div onClick={handleToHistory}>Nuestra historia</div>
               <div onClick={handleToServices}>Servicios</div>
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Cómo Llegar</div>

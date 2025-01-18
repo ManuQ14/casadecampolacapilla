@@ -23,6 +23,13 @@ export const Header = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
+    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleGoToHome = () => {
@@ -37,6 +44,11 @@ export const Header = () => {
 
   const handleToServices = () => {
     navigate("/inicio#servicios");
+    document.body.classList.remove("no-scroll");
+  };
+
+  const handleToGalery = () => {
+    navigate("/galeria");
     document.body.classList.remove("no-scroll");
   };
 
@@ -85,10 +97,9 @@ export const Header = () => {
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
               <div onClick={handleGoToHome}>Inicio</div>
-
               <div onClick={handleToCamping}>El Camping</div>
-
               <div onClick={handleToServices}>Servicios</div>
+              <div onClick={handleToGalery}>Galeria</div>
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Cómo Llegar</div>
             </div>

@@ -17,7 +17,7 @@ export const Pueblo = () => {
   const [startX, setStartX] = useState(null);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % PHOTOS.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % PHOTOS.length);
   }, []);
 
   const startCarousel = useCallback(() => {
@@ -36,34 +36,43 @@ export const Pueblo = () => {
     return stopCarousel;
   }, [startCarousel, stopCarousel]);
 
-  const handleDotClick = useCallback((index) => {
-    stopCarousel();
-    setCurrentIndex(index);
-    startCarousel();
-  }, [stopCarousel, startCarousel]);
+  const handleDotClick = useCallback(
+    (index) => {
+      stopCarousel();
+      setCurrentIndex(index);
+      startCarousel();
+    },
+    [stopCarousel, startCarousel]
+  );
 
-  const handleTouchStart = useCallback((e) => {
-    stopCarousel();
-    setStartX(e.touches[0].clientX);
-  }, [stopCarousel]);
+  const handleTouchStart = useCallback(
+    (e) => {
+      stopCarousel();
+      setStartX(e.touches[0].clientX);
+    },
+    [stopCarousel]
+  );
 
-  const handleTouchEnd = useCallback((e) => {
-    if (startX === null) return;
-    
-    const difference = e.changedTouches[0].clientX - startX;
-    
-    if (Math.abs(difference) > SWIPE_THRESHOLD) {
-      setCurrentIndex(prevIndex => {
-        if (difference > 0) {
-          return prevIndex === 0 ? PHOTOS.length - 1 : prevIndex - 1;
-        }
-        return prevIndex === PHOTOS.length - 1 ? 0 : prevIndex + 1;
-      });
-    }
-    
-    setStartX(null);
-    startCarousel();
-  }, [startX, startCarousel]);
+  const handleTouchEnd = useCallback(
+    (e) => {
+      if (startX === null) return;
+
+      const difference = e.changedTouches[0].clientX - startX;
+
+      if (Math.abs(difference) > SWIPE_THRESHOLD) {
+        setCurrentIndex((prevIndex) => {
+          if (difference > 0) {
+            return prevIndex === 0 ? PHOTOS.length - 1 : prevIndex - 1;
+          }
+          return prevIndex === PHOTOS.length - 1 ? 0 : prevIndex + 1;
+        });
+      }
+
+      setStartX(null);
+      startCarousel();
+    },
+    [startX, startCarousel]
+  );
 
   return (
     <div className={styles.puebloContainer}>
@@ -77,21 +86,25 @@ export const Pueblo = () => {
       </header>
 
       <section className={styles.textoPuebloContainer}>
-        <p>
-          Casa de Campo La Capilla te invita a disfrutar de la tranquilidad y los
-          sonidos auténticos de la vida rural. Este es un lugar donde la conexión
-          con la naturaleza se vive plenamente, y hacemos todo lo posible para que
-          no te falte nada durante tu estadía.
-        </p>
-        <p>
-          Ofrecemos un servicio de acampe diseñado para que experimentes el
-          encanto del campo, acompañado del mejor servicio personalizado.
-        </p>
-        <p>
-          Además, desde nuestro campito, ubicado al borde del pueblo, podrás
-          deleitarte con los amaneceres y atardeceres más hermosos, contemplando
-          el horizonte sembrado que se extiende hasta donde alcanza la vista.
-        </p>
+        Fundado en 1895, Castilla, con 600 habitantes, es conocido como la
+        Capital Nacional de la Amistad por el legado del granadero de San
+        Martín, Rabuffi. Thomas Keating de origen irlandés fue quién donó las
+        tierras para la construcción de la estación de tren. <br />
+        <br />
+        En su mejor época, el pueblo que albergaba 2000 habitantes, fue un
+        próspero centro de producción de miel, ganado y conejos. Aunque las
+        fábricas cerraron, las historias de ese pasado glorioso aún viven en sus
+        rincones.
+        <br />
+        <br />
+        Hoy, Castilla combina tradición y servicios esenciales: escuela,
+        hospital, bomberos y la estación ferroviaria activa. Ofrece almacenes,
+        panaderías, una forrajería-museo, y destacados artesanos que elaboran
+        productos de cuero, macramé ponchos, mates y muebles de diseño.
+        <br />
+        <br />A pocos kilómetros, tenemos los pueblos vecinos de Rawson a 13 km
+        y Rivas a 15 km, pueblos que fueron fundados gracias a la llegada del
+        tren Pacífico
       </section>
 
       <section

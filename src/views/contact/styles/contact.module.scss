@@ -1,0 +1,277 @@
+@import url(../../../styles/_variables.scss);
+@import "../../../styles/variables";
+
+@media (max-width: 767px) {
+  //Header history
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff3edf8;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 328px;
+    height: 406px;
+    margin-top: 108px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 265px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 166.667% */
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $naranja-oficial;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 210px;
+    height: 35px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 35px;
+    height: 35px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $naranja-terciario;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $naranja-terciario;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: $naranja-oficial;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Inicio sección formulario
+
+  .formContainer {
+    width: 90%;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-size: 16px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 95%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      padding: 8px;
+      height: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--Gray-A, #9e9e9e);
+      background: var(--background, #fafafa);
+
+      &:focus {
+        outline: none;
+        border-color: #666;
+      }
+      &::placeholder {
+        color: #9e9e9e;
+      }
+    }
+
+    textarea {
+      height: 313px;
+      resize: none;
+    }
+  }
+
+  .required {
+    color: #ff4444;
+  }
+
+  .dateGroup {
+    display: flex;
+    gap: 16px;
+
+    .inputGroup {
+      flex: 1;
+    }
+  }
+
+  .guestsGroup {
+    display: flex;
+    gap: 16px;
+
+    .inputGroup {
+      flex: 1;
+    }
+  }
+
+  .charCount {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 16px;
+    background-color: #c93413;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 16px;
+
+    &:hover {
+      background-color: darken(#c93413, 5%);
+    }
+  }
+}

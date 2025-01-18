@@ -33,10 +33,27 @@ export const Header = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
+    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
+  };
+
+  const handleToGalery = () => {
+    navigate("/galeria");
     document.body.classList.remove("no-scroll");
     setTimeout(() => {
       window.scrollTo({
@@ -106,6 +123,7 @@ export const Header = () => {
               <div onClick={() => handleScrollToSection("servicios")}>
                 Servicios
               </div>
+              <div onClick={() => handleToGalery("galeria")}>Galería</div>
               <div onClick={() => handleScrollToSection("tarifas")}>
                 Tarifas
               </div>
