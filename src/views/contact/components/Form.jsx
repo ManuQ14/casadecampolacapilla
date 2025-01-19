@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+//import { useForm } from "react-hook-form";
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es";
 import { differenceInDays } from "date-fns"; // Importamos esta función
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "../styles/contact.module.scss";
+import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
 export const Form = () => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+  const [isFormCompleted, setIsFormCompleted] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -66,6 +69,21 @@ export const Form = () => {
     });
   };
 
+  useEffect(() => {
+    const checkFormCompletion = () => {
+      const requiredFields = ["fullName", "email", "phone", "comment"];
+      const allFieldsFilled = requiredFields.every(
+        (field) => formData[field].trim() !== ""
+      );
+      const datesSelected = startDate && endDate;
+      setIsFormCompleted(allFieldsFilled && datesSelected);
+    };
+    checkFormCompletion();
+  }, [formData, startDate, endDate]);
+
+  /*   //Hook del useForm
+  const { register } = useForm();
+ */
   return (
     <section className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -78,12 +96,21 @@ export const Form = () => {
             id="fullName"
             name="fullName"
             value={formData.fullName}
+            onKeyPress={(e) => {
+              const charCode = e.which ? e.which : e.keyCode;
+              if (
+                (charCode < 65 || charCode > 90) &&
+                (charCode < 97 || charCode > 122) &&
+                charCode !== 32
+              ) {
+                e.preventDefault();
+              }
+            }}
             onChange={handleChange}
             required
             placeholder="Nombre Apellido"
           />
         </div>
-
         <div className={styles.inputGroup}>
           <label htmlFor="email">
             Correo electrónico <span className={styles.required}>*</span>
@@ -94,17 +121,20 @@ export const Form = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            /* {...register("email", {
+              pattern:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, // Expresión regular para email
+            })} */
             required
             placeholder="correo@dominio.com/.com.ar"
           />
         </div>
-
         <div className={styles.inputGroup}>
           <label htmlFor="phone">
             Número de teléfono <span className={styles.required}>*</span>
           </label>
           <input
-            type="tel"
+            type="number"
             id="phone"
             name="phone"
             value={formData.phone}
@@ -121,7 +151,7 @@ export const Form = () => {
             </label>
             <div className={styles.datePreview} onClick={handleDateClick}>
               {startDate && endDate ? (
-                <span className={styles.spanFechas} >
+                <span className={styles.spanFechas}>
                   {formatDate(startDate)} - {formatDate(endDate)}
                   {calculateStayDays() && (
                     <span className={styles.stayDays}>
@@ -137,21 +167,21 @@ export const Form = () => {
           </div>
         </div>
 
+        {/* En el componente Form, modifica la parte del DatePicker modal así: */}
         {isDatePickerOpen && (
-          <div className={styles.datePickerModal}>
-            <div
-              className={styles.datePickerOverlay}
-              onClick={() => setIsDatePickerOpen(false)}
-            />
+          <div
+            className={`${styles.datePickerModal} ${
+              isDatePickerOpen ? styles.modalOpen : ""
+            }`}
+          >
             <div className={styles.datePickerContent}>
               <div className={styles.datePickerHeader}>
-                <button
-                  type="button"
+                <img
+                  src={closeButton}
                   className={styles.closeButtonDates}
                   onClick={() => setIsDatePickerOpen(false)}
-                >
-                  X
-                </button>
+                  alt="Botón de cerrar"
+                />
                 <h3 className={styles.selectDates}>Seleccionar fechas</h3>
               </div>
               <DatePicker
@@ -164,23 +194,22 @@ export const Form = () => {
                 onChange={handleDateChange}
                 monthsShown={2}
                 inline
-                calendarClassName={styles.calendar}
+                shouldCloseOnSelect={false}
+                calendarClassName={styles.reactDatepicker}
                 minDate={new Date()}
+                required
               />
-              <div className={styles.datePickerFooter}>
-                <button
-                  type="button"
-                  className={styles.applyButton}
-                  onClick={() => setIsDatePickerOpen(false)}
-                >
-                  Aplicar
-                </button>
-              </div>
+              <button
+                type="button"
+                className={styles.applyButton}
+                onClick={() => setIsDatePickerOpen(false)}
+              >
+                Seleccionar fechas
+              </button>
             </div>
           </div>
         )}
         {/**Fin de selector de fechas */}
-
         <div className={styles.guestsGroup}>
           <div className={styles.inputGroup}>
             <label htmlFor="adults">Adultos</label>
@@ -216,7 +245,6 @@ export const Form = () => {
             </select>
           </div>
         </div>
-
         <div className={styles.inputGroup}>
           <label htmlFor="comment">
             Comentario <span className={styles.required}>*</span>
@@ -228,13 +256,19 @@ export const Form = () => {
             onChange={handleChange}
             maxLength={5000}
             required
+            placeholder="Dejanos tus dudas o consultas :)"
           />
           <div className={styles.charCount}>{formData.comment.length}/5000</div>
         </div>
-
-        <button type="submit" className={styles.submitButton}>
-          Enviar
-        </button>
+     
+        <input
+          type="submit"
+          value="Enviar"
+          className={
+            isFormCompleted ? styles.submitButton : styles.submitButtonOff
+          }
+          disabled={!isFormCompleted}
+        />
       </form>
     </section>
   );
