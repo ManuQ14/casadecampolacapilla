@@ -29,6 +29,7 @@ export const Header = () => {
         behavior: "smooth",
       });
     }, 100);
+    document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
   const handleGoToHome = () => {

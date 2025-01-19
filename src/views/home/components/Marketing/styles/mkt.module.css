@@ -51,7 +51,7 @@
     justify-content: space-between;
   }
   .subtitleContainerMkt2 {
-    width: 380px;
+    width: 95%;
     height: 176px;
     display: flex;
     flex-flow: column;
@@ -69,6 +69,7 @@
     line-height: 40px; /* 166.667% */
   }
   .astroExplication {
+    width: 95%;
     color: #4b4a4a;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Lato;

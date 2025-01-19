@@ -1,4 +1,3 @@
-@import url(../../../../../styles/_variables.scss);
 @font-face {
   font-family: Bookman;
   src: url(./fonts/BOOKOSB.TTF) format("truetype");
@@ -18,56 +17,64 @@
 @media (max-width: 767px) {
   .gallerySection {
     width: 100vw;
-    height: 760px;
+    min-height: 760px;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     background-color: #f8f2ee;
     margin-top: 56px;
+    padding: 16px 0;
   }
   .subtitleContainer {
     width: 100%;
-    height: 48px;
+    padding: 16px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 16px;
-    align-self: stretch;
-    margin-top: 16px;
     margin-bottom: 32px;
   }
   .h2 {
     color: #d34600;
-    font-feature-settings: "liga" off, "clig" off;
     font-family: Bookman;
     font-size: 24px;
-    font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
   .gallery {
-    display: flex;
-    flex-flow: row wrap;
-    width: 380px;
-    height: 595px;
-    align-items: flex-start;
-    justify-content: space-between;
-    transition: all 300ms;
+    width: 93%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .galleryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .galleryImage:hover {
+    transform: scale(1.05);
   }
   .modalOverlay {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,73 +82,63 @@
   }
   .modalContent {
     position: relative;
-    width: 100vw;
-    height: 480px;
     background-color: white;
-    display: flex;
-    flex-flow: column;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     transform: scale(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .galleryImage {
-    width: 186px !important;
-    height: 140px;
-    border-radius: 5px;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 48px);
   }
   .fadeIn {
     transform: scale(1);
-    opacity: 1;
+    opacity: 1 !important;
   }
   .fotoAbierta {
-    width: 90%;
-    max-height: 390px;
-    height: auto;
-    margin-top: 24px;
-    transition: opacity 0.3s ease;
-    position: absolute;
+    max-width: 100%;
+    max-height: calc(100vh - 96px);
+    -o-object-fit: contain;
+       object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    display: none;
     border-radius: 5px;
   }
   .fotoAbierta.active {
     opacity: 1;
+    display: block;
   }
   .closeButton {
-    width: 288px;
-    height: 19px;
-    font-family: Lato;
-    color: #d34600;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 24px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
-    top: 85%;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .closeButton img {
+    width: 24px;
+    height: 24px;
   }
   .goToGalleryContainer {
-    height: 43px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    width: 95%;
+    margin: 16px 0;
+    background: none;
+    border: none;
+    padding: 0;
   }
   .goToGallery {
-    width: 380px;
-    height: 100%;
+    margin: auto;
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: center;
+    width: 328px;
+    height: 43px;
     font-size: 16px;
     font-weight: 700;
     color: #d34600;

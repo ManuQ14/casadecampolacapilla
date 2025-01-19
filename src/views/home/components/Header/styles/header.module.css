@@ -17,12 +17,6 @@
   src: url(./fonts/Lato-Bold.ttf) format("truetype");
 }
 @media (max-width: 767px) {
-  .header {
-    display: none;
-  }
-  .navBar {
-    display: none;
-  }
   .burgerMenu {
     display: flex;
     flex-flow: column;
@@ -40,6 +34,7 @@
   }
   .menuOpen {
     right: 0;
+    height: 103vh !important;
   }
   .closeMenu {
     position: absolute;

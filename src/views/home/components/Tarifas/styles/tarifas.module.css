@@ -27,7 +27,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100vw;
+    width: 95%;
     height: 360px;
     justify-content: space-between;
   }
@@ -54,7 +54,7 @@
     letter-spacing: 0.15px;
   }
   .boxTarifaDia {
-    width: 380px;
+    width: 95%;
     height: 40px;
     display: flex;
     flex-flow: row;
@@ -112,13 +112,14 @@
     margin-right: 8px;
   }
   .boxTarifaPernocte {
-    width: 380px;
+    width: 95%;
     height: 140px;
     background-color: #f8f2ee;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-between;
+    border-radius: 5px;
   }
   .itemTarifaPernocte {
     color: #d34600;
@@ -180,7 +181,7 @@
     margin-bottom: 8px;
   }
   .boxTarifaDiaFinde {
-    width: 380px;
+    width: 95%;
     height: 56px;
     display: flex;
     flex-flow: row;
@@ -191,7 +192,7 @@
     background: #f8f2ee;
   }
   .referenciaPrecio {
-    width: 380px;
+    width: 95%;
     color: #4b4a4a;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Lato;
@@ -205,7 +206,7 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    width: 367px;
+    width: 90%;
     margin: auto;
     margin-top: 24px;
     height: 80px;

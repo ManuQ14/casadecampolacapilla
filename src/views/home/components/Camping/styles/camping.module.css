@@ -49,8 +49,8 @@
     letter-spacing: 0.15px;
   }
   .campingTextContainer {
-    width: 380px;
-    height: 380px;
+    width: 92%;
+    height: 403px;
     display: flex;
     flex-flow: column;
     align-items: center;
