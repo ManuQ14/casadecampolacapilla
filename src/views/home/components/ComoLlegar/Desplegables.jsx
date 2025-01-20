@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import tren from "../../../../assets/icons/llegarIcons/train.svg";
 import auto from "../../../../assets/icons/llegarIcons/auto.svg";
@@ -33,46 +33,44 @@ export const Desplegables = () => {
         />
       </div>
 
-      {isExpanded && (
-        <>
-          <div className={styles.indicationContainer}>
-            <p>
-              Si venís en tren, toma el ramal{" "}
-              <strong>San Martín Retiro - Junín</strong> y baja en la estación
-              Castilla, nosotros te pasamos a buscar por la estación y{" "}
-              <strong>
-                te llevamos al predio sin cargo, solo avísanos con anticipación.
-              </strong>
-            </p>
-            <br />
-            <p>
-              Los pasajes se compran con antelación en este{" "}
-              <a
-                href="https://webventas.sofse.gob.ar/"
-                target="_blank"
-                rel="noreferrer"
-                className={styles.linkCompraPasaje}
-              >
-                link
-              </a>
-            </p>
-            <br />
-            <p>
-              El tren tiene un <strong>único horario por día </strong>, llega a
-              Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el
-              predio hasta las 3 am y nosotros te llevamos a la estación
-            </p>
-          </div>
-          <Link
-            to="https://www.argentina.gob.ar/transporte/trenes-argentinos/horarios-tarifas-y-recorridos/servicios-regionales-larga-distancia/buenosaires-junin"
-            target="blanc"
-            className={styles.linkTarifasTren}
-          >
-            Accedé a los horarios y tarifas del tren
-            <img src={chrevronRight} alt="" className={styles.chrevronRight} />
-          </Link>
-        </>
-      )}
+      <div className={`${styles.accordionContent} ${isExpanded ? styles.expanded : ''}`}>
+        <div className={styles.indicationContainer}>
+          <p>
+            Si venís en tren, toma el ramal{" "}
+            <strong>San Martín Retiro - Junín</strong> y baja en la estación
+            Castilla, nosotros te pasamos a buscar por la estación y{" "}
+            <strong>
+              te llevamos al predio sin cargo, solo avísanos con anticipación.
+            </strong>
+          </p>
+          <br />
+          <p>
+            Los pasajes se compran con antelación en este{" "}
+            <a
+              href="https://webventas.sofse.gob.ar/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.linkCompraPasaje}
+            >
+              link
+            </a>
+          </p>
+          <br />
+          <p>
+            El tren tiene un <strong>único horario por día </strong>, llega a
+            Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el predio
+            hasta las 3 am y nosotros te llevamos a la estación
+          </p>
+        </div>
+        <Link
+          to="https://www.argentina.gob.ar/transporte/trenes-argentinos/horarios-tarifas-y-recorridos/servicios-regionales-larga-distancia/buenosaires-junin"
+          target="blanc"
+          className={styles.linkTarifasTren}
+        >
+          Accedé a los horarios y tarifas del tren
+          <img src={chrevronRight} alt="" className={styles.chrevronRight} />
+        </Link>
+      </div>
     </div>
   );
 };
