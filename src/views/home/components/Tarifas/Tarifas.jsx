@@ -12,7 +12,6 @@ export const Tarifas = () => {
     navigate("/contacto");
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   };
 

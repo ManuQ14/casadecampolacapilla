@@ -10,7 +10,6 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: $naranja-terciario;
   }
 
   //Inicio sección Como llegar
@@ -70,6 +69,74 @@
     color: $gris-oficial;
   }
 
+  .mapaLocation {
+    width: 92%;
+    height: 336px;
+    border: none;
+    margin-bottom: 16px;
+  }
+
+  //Acordeon Section
+
+  .contenedorAcordeon {
+    border-bottom: 2px solid $naranja-oficial;
+    width: 92%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .titleContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding-left: 16px;
+    height: 62px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .trainSVG {
+    margin-right: 16px;
+  }
+
+  .expandAcordeon {
+    right: 4%;
+    display: flex;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .indicationContainer {
+    width: 92%;
+    text-align: center;
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    margin: auto;
+    margin-bottom: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ubitacionTitle {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+
   .linkCompraPasaje {
     text-decoration: underline !important;
   }
@@ -88,8 +155,9 @@
     display: flex;
     flex-flow: row;
     align-items: center;
-    margin-bottom: 24px;
-    margin-top: 16px;
+
+    margin: auto;
+    margin-bottom: 16px;
   }
 
   .chrevronRight {
@@ -114,84 +182,6 @@
     width: 92%;
     height: 288px;
     margin-bottom: 16px;
-  }
-
-  .mapaInfo {
-    margin-bottom: 24px;
-    width: 92%;
-  }
-
-  .modalSection {
-    width: 100vw;
-
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: $naranja-terciario;
-  }
-
-  .modalMapaContenedor {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    display: inline-block;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-
-    z-index: 1000;
-  }
-
-  .modalContent {
-    position: relative;
-    width: 100vw;
-    height: 90%;
-    //background-color: white;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    top: 6%;
-  }
-
-  .fadeIn {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  .mapaGrande {
-    width: 125%;
-    height: 85%;
-    margin-top: 24px;
-    transition: opacity 0.3s ease;
-    position: absolute;
-    left: -19%;
-    transition: opacity 0.5s ease-in-out;
-    border-radius: 5px;
-  }
-
-  .closeButton {
-    width: 288px;
-    height: 19px;
-    font-family: $lato;
-    color: $naranja-oficial;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 24px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
-    top: 1%;
-    left: 46%;
   }
 
   .itemInfoContainer {

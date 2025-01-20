@@ -25,11 +25,8 @@ export const Camping = () => {
   const handleToHistory = () => {
     navigate("/nuestra-historia");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    window.scrollTo({
+      top: 0,
     });
   };
 
