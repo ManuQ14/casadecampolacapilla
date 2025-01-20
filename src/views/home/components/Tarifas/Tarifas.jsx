@@ -10,6 +10,10 @@ export const Tarifas = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -51,8 +55,7 @@ export const Tarifas = () => {
             {/**Tarifa 2 */}
             <div className={styles.tarifa}>
               <div className={styles.descripcionTarifaPernocte}>
-                De 4 a 15 años
-                -------------------------------------------
+                De 4 a 15 años -------------------------------------------
               </div>
               <div className={styles.precioTarifaPernocte}>$4200</div>
             </div>

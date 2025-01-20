@@ -23,12 +23,12 @@ export const Header = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 

@@ -33,6 +33,7 @@ export const Header = () => {
 
   const handleToReserve = () => {
     navigate("/contacto");
+    document.body.classList.remove("no-scroll");
     setTimeout(() => {
       window.scrollTo({
         top: 0,
@@ -43,17 +44,6 @@ export const Header = () => {
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
-    document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
-  };
-
-  const handleToGalery = () => {
-    navigate("/galeria");
     document.body.classList.remove("no-scroll");
     setTimeout(() => {
       window.scrollTo({
@@ -114,21 +104,41 @@ export const Header = () => {
           />
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
-              <div onClick={() => handleScrollToSection("camping")}>
+              <div
+                onClick={() => handleScrollToSection("camping")}
+                className={styles.itemOption}
+              >
                 El Camping
               </div>
-              <div onClick={() => handleToHistory("nuestra-historia")}>
+              <div
+                onClick={() => handleToHistory("nuestra-historia")}
+                className={styles.itemOption}
+              >
                 Nuestra historia
               </div>
-              <div onClick={() => handleScrollToSection("servicios")}>
+              <div
+                onClick={() => handleScrollToSection("servicios")}
+                className={styles.itemOption}
+              >
                 Servicios
               </div>
-              <div onClick={() => handleToGalery("galeria")}>Galería</div>
-              <div onClick={() => handleScrollToSection("tarifas")}>
+              <div
+                onClick={() => handleScrollToSection("galeria")}
+                className={styles.itemOption}
+              >
+                Galería
+              </div>
+              <div
+                onClick={() => handleScrollToSection("tarifas")}
+                className={styles.itemOption}
+              >
                 Tarifas
               </div>
-              <div onClick={() => handleScrollToSection("llegar")}>
-                Cómo Llegar
+              <div
+                onClick={() => handleScrollToSection("llegar")}
+                className={styles.itemOption}
+              >
+                Ubicación
               </div>
             </div>
             <div onClick={handleToReserve} className={styles.reserveButton}>

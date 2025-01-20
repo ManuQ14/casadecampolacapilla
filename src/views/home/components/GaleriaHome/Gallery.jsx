@@ -34,6 +34,16 @@ export const Gallery = () => {
   const [startX, setStartX] = useState(null);
   const navigate = useNavigate();
 
+  const hanldeToMainGallery = () => {
+    navigate("galeria");
+    document.body.classList.remove("no-scroll");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const openModal = useCallback((index) => {
     setModalState({ isOpen: true, currentIndex: index, fadeTransition: false });
     document.body.classList.add("no-scroll");
@@ -75,7 +85,7 @@ export const Gallery = () => {
   );
 
   return (
-    <section className={styles.gallerySection}>
+    <section className={styles.gallerySection} id="galeria">
       {modalState.isOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div
@@ -127,7 +137,7 @@ export const Gallery = () => {
 
       <button
         className={styles.goToGalleryContainer}
-        onClick={() => navigate("/galeria")}
+        onClick={hanldeToMainGallery}
       >
         <span className={styles.goToGallery}>Ver galería</span>
       </button>
