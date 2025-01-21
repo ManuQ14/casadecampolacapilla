@@ -21,13 +21,14 @@
   }
 
   .contenedorNavegador {
-    width: 100%;
+    width: 92%;
     height: 144px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+    text-align: center;
   }
 
   .navegador {

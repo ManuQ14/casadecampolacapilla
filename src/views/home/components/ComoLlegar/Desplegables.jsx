@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import tren from "../../../../assets/icons/llegarIcons/train.svg";
-import auto from "../../../../assets/icons/llegarIcons/auto.svg";
 import expandAcordeon from "../../../../assets/icons/add.svg";
 import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
 import chrevronRight from "../../../../assets/icons/chevron.svg";
@@ -33,7 +32,11 @@ export const Desplegables = () => {
         />
       </div>
 
-      <div className={`${styles.accordionContent} ${isExpanded ? styles.expanded : ''}`}>
+      <div
+        className={`${styles.accordionContent} ${
+          isExpanded ? styles.expanded : ""
+        }`}
+      >
         <div className={styles.indicationContainer}>
           <p>
             Si venís en tren, toma el ramal{" "}
@@ -58,8 +61,8 @@ export const Desplegables = () => {
           <br />
           <p>
             El tren tiene un <strong>único horario por día </strong>, llega a
-            Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el predio
-            hasta las 3 am y nosotros te llevamos a la estación
+            Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el
+            predio hasta las 3 am y nosotros te llevamos a la estación
           </p>
         </div>
         <Link

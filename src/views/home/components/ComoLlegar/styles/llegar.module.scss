@@ -5,7 +5,7 @@
 @media (max-width: 767px) {
   .llegarSection {
     width: 100vw;
-    height: 1611px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -83,16 +83,6 @@
     width: 92%;
   }
 
-  .titleContainer {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    padding-left: 16px;
-    height: 62px;
-    align-items: center;
-    cursor: pointer;
-  }
-
   .accordionContent {
     max-height: 0;
     overflow: hidden;
@@ -104,9 +94,21 @@
       max-height: 1000px;
       opacity: 1;
       visibility: visible;
-      transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
-      //visibility 0s linear 0s;
+      transition: max-height 0.5s ease-in, opacity 0.3s ease-in,
+        visibility 0s linear 0s;
     }
+  }
+
+  .titleContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding-left: 16px;
+    height: 62px;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
   }
 
   .trainSVG {
@@ -119,7 +121,7 @@
     position: absolute;
     cursor: pointer;
     transition: transform 0.3s ease;
-
+    -webkit-tap-highlight-color: transparent;
     &:hover {
       opacity: 0.8;
     }
@@ -162,7 +164,7 @@
   }
 
   .linkTarifasTren {
-    width: 310px;
+    width: 304px;
     color: $naranja-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -250,5 +252,13 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
+  }
+
+  .mapaLlegar {
+    width: 92%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 }

@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import styles from "./styles/footer.module.scss";
 
 //imports svgs e iconos
@@ -11,28 +9,6 @@ import tiktokFootrr from "../../../../assets/icons/footer/tikTokFooter.svg";
 import facebookFooter from "../../../../assets/icons/footer/facebookFooter.svg";
 
 export const Fut = () => {
-  const navigate = useNavigate();
-
-  const handleToCamping = () => {
-    navigate("/inicio#camping");
-    document.body.classList.remove("no-scroll");
-  };
-
-  const handleToServices = () => {
-    navigate("/inicio#servicios");
-    document.body.classList.remove("no-scroll");
-  };
-
-  const handleToTarifas = () => {
-    navigate("/inicio#tarifas");
-    document.body.classList.remove("no-scroll");
-  };
-
-  const handleToLlegar = () => {
-    navigate("/inicio#llegar");
-    document.body.classList.remove("no-scroll");
-  };
-
   return (
     <footer className={styles.footer}>
       <img
@@ -42,17 +18,15 @@ export const Fut = () => {
         className={styles.iconCapilla}
       />
       <div className={styles.contenedorNavegador}>
-        <div onClick={handleToCamping} className={styles.navegador}>
-          El Camping
+        <div className={styles.infoContainer}>
+          Acceso camino a Rawson, Calle 100, RP 42 entre Calles 11 y 13, B6616
+          Castilla, Provincia de Buenos Aires
         </div>
-        <div onClick={handleToServices} className={styles.navegador}>
-          Servicios
+        <div className={styles.infoContainer}>
+          <strong>Email:</strong> Casadecampolacapilla@gmail.com
         </div>
-        <div onClick={handleToTarifas} className={styles.navegador}>
-          Tarifas
-        </div>
-        <div onClick={handleToLlegar} className={styles.navegador}>
-          Cómo llegar
+        <div className={styles.infoContainer}>
+          <strong>Whatsapp:</strong> 11 5856-7591
         </div>
       </div>
       <div className={styles.mediaIconsContainer}>
