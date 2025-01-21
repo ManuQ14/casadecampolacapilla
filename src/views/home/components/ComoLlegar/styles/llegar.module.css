@@ -18,7 +18,7 @@
 @media (max-width: 767px) {
   .llegarSection {
     width: 100vw;
-    height: 1611px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -33,7 +33,6 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    margin-top: 16px;
     margin-bottom: 32px;
   }
   .h2 {
@@ -83,7 +82,25 @@
   .contenedorAcordeon {
     border-bottom: 2px solid #d34600;
     width: 92%;
-    transition: all 0.3s ease-in-out;
+  }
+  .contenedorAcordeonAuto {
+    border-bottom: 2px solid #d34600;
+    width: 92%;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  .accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .accordionContent.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
   }
   .titleContainer {
     width: 100%;
@@ -92,7 +109,11 @@
     padding-left: 16px;
     height: 62px;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .trainSVG {
     margin-right: 16px;
@@ -101,7 +122,12 @@
     right: 4%;
     display: flex;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    transition: transform 1s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .expandAcordeon:hover {
+    opacity: 0.8;
   }
   .indicationContainer {
     width: 92%;
@@ -121,7 +147,7 @@
     width: 92%;
     margin: auto;
     margin-bottom: 16px;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
   }
   .ubitacionTitle {
     color: #d34600;
@@ -130,7 +156,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     letter-spacing: 0.1px;
   }
   .linkCompraPasaje {
@@ -216,5 +242,12 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
+  }
+  .mapaLlegar {
+    width: 92%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 }/*# sourceMappingURL=llegar.module.css.map */

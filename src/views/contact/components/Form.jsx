@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
-//import { useForm } from "react-hook-form";
+
+//Imports del datepicker
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es";
-import { differenceInDays } from "date-fns"; // Importamos esta función
+import { differenceInDays } from "date-fns";
 import "react-datepicker/dist/react-datepicker.css";
+//fin imports datepicker
+
 import styles from "../styles/contact.module.scss";
 import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
-
+//Foto del fondo del formulario
 import bottomForm from "../../../assets/images/bottomContact.jpg";
 
 export const Form = () => {
+  const WHATSAPP_NUMBER = "54911klfjfsdñ";
+
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [isFormCompleted, setIsFormCompleted] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -24,12 +30,118 @@ export const Form = () => {
     comment: "",
   });
 
+  const validateName = (name) => {
+    const nameRegex = /^[a-záéíóúñA-ZÁÉÍÓÚÑ\s]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Validaciones específicas por campo
+    if (name === "fullName") {
+      if (value.trim() === "") {
+        setErrors((prev) => ({
+          ...prev,
+          fullName: "El campo no puede quedar vacío, ingrese nombre y apellido",
+        }));
+      } else if (!validateName(value)) {
+        setErrors((prev) => ({
+          ...prev,
+          fullName: "El nombre solo puede contener letras y espacios",
+        }));
+      } else {
+        setErrors((prev) => {
+          const newErrors = { ...prev };
+          delete newErrors.fullName;
+          return newErrors;
+        });
+      }
+    }
+
+    if (name === "email") {
+      if (value.trim() === "") {
+        setErrors((prev) => ({
+          ...prev,
+          email: "El campo no puede quedar vacío, ingresá un email",
+        }));
+      } else if (!validateEmail(value)) {
+        setErrors((prev) => ({
+          ...prev,
+          email: "Por favor, ingrese un email válido",
+        }));
+      } else {
+        setErrors((prev) => {
+          const newErrors = { ...prev };
+          delete newErrors.email;
+          return newErrors;
+        });
+      }
+    }
+
+    if (name === "phone") {
+      if (value.trim() === "") {
+        setErrors((prev) => ({
+          ...prev,
+          phone: "El campo no puede quedar vacío, ingresá un teléfono",
+        }));
+      } else {
+        setErrors((prev) => {
+          const newErrors = { ...prev };
+          delete newErrors.phone;
+          return newErrors;
+        });
+      }
+    }
+
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
+  };
+
+  const createWhatsAppMessage = () => {
+    const stayDays = calculateStayDays();
+    const message = `Hola, soy%0A${formData.fullName}%0A
+mi email es%0A${formData.email}%0A
+mi teléfono es%0A${formData.phone}%0A
+Quisiera averiguar disponibilidad en las%0A
+fechas del%0A${startDate ? formatDate(startDate) : ""} al ${
+      endDate ? formatDate(endDate) : ""
+    }%0A
+serían ${stayDays} días%0A
+Somos ${formData.adults} adultos y ${formData.children} niños%0A
+Comentario: ${formData.comment}`;
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validación final antes del envío
+    const newErrors = {};
+
+    if (!validateName(formData.fullName)) {
+      newErrors.fullName = "El campo sólo puede contener letras y espacios";
+    }
+
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Por favor, ingrese un email válido";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Si no hay errores, abre WhatsApp
+    window.open(createWhatsAppMessage(), "_blank");
   };
 
   const handleDateChange = (update) => {
@@ -62,15 +174,6 @@ export const Form = () => {
     setIsDatePickerOpen(!isDatePickerOpen);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log({
-      ...formData,
-      checkIn: startDate,
-      checkOut: endDate,
-    });
-  };
-
   useEffect(() => {
     const checkFormCompletion = () => {
       const requiredFields = ["fullName", "email", "phone", "comment"];
@@ -83,9 +186,6 @@ export const Form = () => {
     checkFormCompletion();
   }, [formData, startDate, endDate]);
 
-  /*   //Hook del useForm
-  const { register } = useForm();
- */
   return (
     <>
       <section className={styles.formContainer}>
@@ -93,6 +193,7 @@ export const Form = () => {
           Envianos tu consulta y nos vamos a poner en contacto a la brevedad
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
+          {/**nombre */}
           <div className={styles.inputGroup}>
             <label htmlFor="fullName">
               Nombre y apellido <span className={styles.required}>*</span>
@@ -102,21 +203,17 @@ export const Form = () => {
               id="fullName"
               name="fullName"
               value={formData.fullName}
-              onKeyPress={(e) => {
-                const charCode = e.which ? e.which : e.keyCode;
-                if (
-                  (charCode < 65 || charCode > 90) &&
-                  (charCode < 97 || charCode > 122) &&
-                  charCode !== 32
-                ) {
-                  e.preventDefault();
-                }
-              }}
               onChange={handleChange}
               required
               placeholder="Nombre Apellido"
+              className={errors.fullName ? styles.errorInput : ""}
             />
+            {errors.fullName && (
+              <span className={styles.errorMessage}>{errors.fullName}</span>
+            )}
           </div>
+
+          {/**correo */}
           <div className={styles.inputGroup}>
             <label htmlFor="email">
               Correo electrónico <span className={styles.required}>*</span>
@@ -128,9 +225,15 @@ export const Form = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="correo@dominio.com/.com.ar"
+              placeholder="correo@dominio.com"
+              className={errors.email ? styles.errorInput : ""}
             />
+            {errors.email && (
+              <span className={styles.errorMessage}>{errors.email}</span>
+            )}
           </div>
+
+          {/**Telefono */}
           <div className={styles.inputGroup}>
             <label htmlFor="phone">
               Número de teléfono <span className={styles.required}>*</span>
@@ -143,7 +246,11 @@ export const Form = () => {
               onChange={handleChange}
               required
               placeholder="(011)11111111"
+              className={errors.phone ? styles.errorInput : ""}
             />
+            {errors.phone && (
+              <span className={styles.errorMessage}>{errors.phone}</span>
+            )}
           </div>
           {/**Selector de fechas */}
           <div className={styles.dateGroup}>
@@ -271,7 +378,7 @@ export const Form = () => {
             className={
               isFormCompleted ? styles.submitButton : styles.submitButtonOff
             }
-            disabled={!isFormCompleted}
+            disabled={!isFormCompleted || Object.keys(errors).length > 0}
           />
         </form>
       </section>

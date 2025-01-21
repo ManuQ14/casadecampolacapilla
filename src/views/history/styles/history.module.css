@@ -33,7 +33,9 @@
     z-index: 200;
   }
   .menuOpen {
-    right: 0;
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
   }
   .closeMenu {
     position: absolute;
@@ -43,13 +45,11 @@
   }
   .menuItems {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    width: 328px;
-    height: 406px;
+    justify-content: flex-start;
     margin-top: 108px;
+    width: 328px;
   }
   .itemsNavigationContainer {
     display: flex;
@@ -57,7 +57,7 @@
     align-items: center;
     justify-content: space-between;
     width: 170px;
-    height: 265px;
+    height: 320px;
     color: #d34600;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -66,7 +66,8 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 40px; /* 166.667% */
+    line-height: 40px;
+    margin-bottom: 32px;
   }
   a:visited,
   a:link {
@@ -77,8 +78,8 @@
     overflow: hidden;
   }
   .mediaIconContainer {
-    width: 210px;
-    height: 35px;
+    width: 207px;
+    height: 30px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -161,6 +162,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 32px;
   }
   .unSueñoContainer {
     display: flex;
@@ -198,7 +200,7 @@
   }
   .textoSueñoContainer {
     width: 92%;
-    height: 675px;
+    height: auto;
     color: #4b4a4a;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -329,5 +331,9 @@
     line-height: 32px; /* 160% */
     letter-spacing: 0.15px;
     text-align: left;
+  }
+  .iconLink {
+    margin-bottom: 7%;
+    margin-right: 5px;
   }
 }/*# sourceMappingURL=history.module.css.map */

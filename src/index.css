@@ -30,6 +30,7 @@ body {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 32px;
   }
 
   .react-datepicker__month {
@@ -81,18 +82,6 @@ body {
     background: #d34600 !important;
   }
 
-  /* 
-  .react-datepicker__day--in-selecting-range,
-  .react-datepicker__day--selected {
-    background-color: #d34600 !important; 
-    color: white !important;
-  } */
-
-  /*   .react-datepicker__day--in-selecting-range:not(
-      .react-datepicker__day--in-range
-    ) {
-    background-color: rgba(201, 52, 19, 1);
-  } */
 
   .react-datepicker__day {
     color: #4b4a4a;
