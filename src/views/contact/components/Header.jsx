@@ -90,7 +90,7 @@ export const Header = () => {
               <div onClick={handleToServices}>Servicios</div>
               <div onClick={handleToGalery}>Galeria</div>
               <div onClick={handleToTarifas}>Tarifas</div>
-              <div onClick={handleToLlegar}>Cómo Llegar</div>
+              <div onClick={handleToLlegar}>Ubicacion</div>
             </div>
             <div className={styles.reserveButton}>Reservar</div>
             <div className={styles.mediaIconContainer}>

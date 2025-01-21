@@ -16,7 +16,7 @@ export const DesplegableAuto = () => {
   };
 
   return (
-    <div className={styles.contenedorAcordeon}>
+    <div className={styles.contenedorAcordeonAuto}>
       <div className={styles.titleContainer}>
         <img
           src={auto}
@@ -46,7 +46,7 @@ export const DesplegableAuto = () => {
           tomar la Ruta Provincial 42. A solo 1.000 metros te esperamos en
           nuestra Casa de Campo.
         </div>
-        <img src={maps} alt="" className={styles.mapaLlegar}/>
+        <img src={maps} alt="" className={styles.mapaLlegar} />
       </div>
     </div>
   );

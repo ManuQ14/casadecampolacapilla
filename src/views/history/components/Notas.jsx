@@ -82,7 +82,7 @@ export const Notas = () => {
                 loading="lazy"
               />
               <h3 className={styles.tituloNota}>{nota.titulo}</h3>
-              <img src={openLink} alt="" />
+              <img src={openLink} alt="" className={styles.iconLink} />
             </a>
           </article>
         ))}

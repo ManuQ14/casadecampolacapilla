@@ -213,7 +213,7 @@
 
   .textoSueñoContainer {
     width: 92%;
-    height: 675px;
+    height: auto;
     color: $gris-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -363,5 +363,10 @@
     line-height: 32px; /* 160% */
     letter-spacing: 0.15px;
     text-align: left;
+  }
+
+  .iconLink{
+    margin-bottom: 7%;
+    margin-right: 5px;
   }
 }

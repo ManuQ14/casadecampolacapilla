@@ -89,6 +89,9 @@ export const Form = () => {
   return (
     <>
       <section className={styles.formContainer}>
+        <div className={styles.textoIntroductorio}>
+          Envianos tu consulta y nos vamos a poner en contacto a la brevedad
+        </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.inputGroup}>
             <label htmlFor="fullName">
@@ -124,7 +127,6 @@ export const Form = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              
               required
               placeholder="correo@dominio.com/.com.ar"
             />
@@ -273,12 +275,7 @@ export const Form = () => {
           />
         </form>
       </section>
-      <img
-        src={bottomForm}
-        alt=""
-       
-        className={styles.bottomFormImage}
-      />
+      <img src={bottomForm} alt="" className={styles.bottomFormImage} />
     </>
   );
 };

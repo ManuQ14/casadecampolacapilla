@@ -5,13 +5,13 @@
   //Inicio sección Camping
   .campingSection {
     width: 100vw;
-    height: 850px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 56px;
-    margin-top: 40px;
+    margin-top: 56px;
   }
 
   .subtitleContainer {
@@ -23,7 +23,6 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    margin-top: 16px;
     margin-bottom: 32px;
   }
 
@@ -40,12 +39,12 @@
 
   .campingTextContainer {
     width: 92%;
-    height: 403px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 35px;
+    justify-content: flex-start;
+    margin-bottom: 32px;
   }
 
   .campingText {
@@ -56,16 +55,17 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     letter-spacing: 0.1px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .conoceMasContainer {
-    width: 257px;
-    height: 24px;
     display: flex;
+    align-items: center;
     flex-flow: row;
+    width: 257px;
+    height: 48px;
     justify-content: space-between;
   }
 
