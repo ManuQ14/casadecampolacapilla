@@ -21,7 +21,9 @@
   }
 
   .menuOpen {
-    right: 0;
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
   }
 
   .closeMenu {
@@ -33,13 +35,11 @@
 
   .menuItems {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    width: 328px;
-    height: 406px;
+    justify-content: flex-start;
     margin-top: 108px;
+    width: 328px;
   }
 
   .itemsNavigationContainer {
@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: space-between;
     width: 170px;
-    height: 265px;
+    height: 320px;
     color: $naranja-oficial;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -57,7 +57,8 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 40px; /* 166.667% */
+    line-height: 40px;
+    margin-bottom: 32px;
   }
 
   a:visited,
@@ -71,16 +72,16 @@
   }
 
   .mediaIconContainer {
-    width: 210px;
-    height: 35px;
+    width: 207px;
+    height: 30px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
   }
 
   .iconMedia {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 
   // Header Mobile
@@ -165,6 +166,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 32px;
   }
   //Fin sección header + menu hamburguesa
 
@@ -428,5 +430,11 @@
     font-weight: 700;
     line-height: normal;
     background-color: gainsboro;
+  }
+
+  .bottomFormImage {
+    width: 100%;
+    height: 310px;
+    margin-bottom: 56px;
   }
 }

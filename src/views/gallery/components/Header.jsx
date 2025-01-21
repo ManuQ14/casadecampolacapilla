@@ -26,21 +26,9 @@ export const Header = () => {
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
 
     document.body.classList.toggle("no-scroll", !isMenuOpen);
-  };
-
-  const handleGoToHome = () => {
-    navigate("/inicio");
-    document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
   };
 
   const handleToCamping = () => {
@@ -108,12 +96,12 @@ export const Header = () => {
           />
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
-              <div onClick={handleGoToHome}>Inicio</div>
               <div onClick={handleToCamping}>El Camping</div>
               <div onClick={handleToHistory}>Nuestra historia</div>
               <div onClick={handleToServices}>Servicios</div>
+              <div>Galería</div>
               <div onClick={handleToTarifas}>Tarifas</div>
-              <div onClick={handleToLlegar}>Cómo Llegar</div>
+              <div onClick={handleToLlegar}>Ubicación</div>
             </div>
             <div onClick={handleToReserve} className={styles.reserveButton}>
               Reservar

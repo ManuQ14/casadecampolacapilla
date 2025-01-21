@@ -21,11 +21,6 @@ export const Header = () => {
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
-  const handleGoToHome = () => {
-    navigate("/inicio");
-    document.body.classList.remove("no-scroll");
-  };
-
   const handleToCamping = () => {
     navigate("/inicio#camping");
     document.body.classList.remove("no-scroll");
@@ -55,6 +50,7 @@ export const Header = () => {
     navigate("/inicio#llegar");
     document.body.classList.remove("no-scroll");
   };
+
   return (
     <section className={styles.reserveSection}>
       {/** Header Mobile */}
@@ -89,7 +85,6 @@ export const Header = () => {
           />
           <nav className={styles.menuItems}>
             <div className={styles.itemsNavigationContainer}>
-              <div onClick={handleGoToHome}>Inicio</div>
               <div onClick={handleToCamping}>El Camping</div>
               <div onClick={handleToHistory}>Nuestra historia</div>
               <div onClick={handleToServices}>Servicios</div>
@@ -97,7 +92,7 @@ export const Header = () => {
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Cómo Llegar</div>
             </div>
-
+            <div className={styles.reserveButton}>Reservar</div>
             <div className={styles.mediaIconContainer}>
               <a
                 href="https://instagram.com/casadecampolacapilla"

@@ -35,12 +35,11 @@ export const Gallery = () => {
   const navigate = useNavigate();
 
   const hanldeToMainGallery = () => {
-    navigate("galeria");
+    navigate("/galeria");
     document.body.classList.remove("no-scroll");
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   };
 
