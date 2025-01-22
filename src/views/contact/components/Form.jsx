@@ -108,10 +108,10 @@ export const Form = () => {
 
   const createWhatsAppMessage = () => {
     const stayDays = calculateStayDays();
-    const message = `Hola, soy%0A${formData.fullName}%0A
+    const message = `Hola, soy ${formData.fullName}%0A
 Mi email es: ${formData.email}%0A
 Mi teléfono es ${formData.phone}%0A %0A
-Quisiera averiguar disponibilidad en las fechas del ${
+Quisiera averiguar disponibilidad en las fechas del `` ${
       startDate ? formatDate(startDate) : ""
     } al ${endDate ? formatDate(endDate) : ""}%0A
  (${stayDays} días)%0A
