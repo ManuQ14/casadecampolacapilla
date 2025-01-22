@@ -109,14 +109,14 @@ export const Form = () => {
   const createWhatsAppMessage = () => {
     const stayDays = calculateStayDays();
     const message = `Hola, soy%0A${formData.fullName}%0A
-mi email es%0A${formData.email}%0A
-mi teléfono es%0A${formData.phone}%0A
-Quisiera averiguar disponibilidad en las%0A
-fechas del%0A${startDate ? formatDate(startDate) : ""} al ${
-      endDate ? formatDate(endDate) : ""
-    }%0A
-serían ${stayDays} días%0A
-Somos ${formData.adults} adultos y ${formData.children} niños%0A
+Mi email es: %0A${formData.email}%0A
+Mi teléfono es%0A${formData.phone}%0A %0A
+Quisiera averiguar disponibilidad en las fechas del%0A${
+      startDate ? formatDate(startDate) : ""
+    } al ${endDate ? formatDate(endDate) : ""}%0A
+ (${stayDays} días)%0A
+Adultos: ${formData.adults} %0A
+Niños: ${formData.children} %0A
 Comentario: ${formData.comment}`;
 
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
