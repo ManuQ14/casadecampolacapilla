@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, /* useEffect */ useMemo } from "react";
 
 //Imports del datepicker
 import DatePicker from "react-datepicker";
@@ -14,12 +14,12 @@ import bottomForm from "../../../assets/images/bottomContact.jpg";
 
 export const Form = () => {
   //const WHATSAPP_NUMBER = "5491158567591";
-  const WHATSAPP_NUMBER = "5491166583307";
+  const WHATSAPP_NUMBER = "54911[numero]";
 
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
-  const [isFormCompleted, setIsFormCompleted] = useState(false);
+  //const [isFormCompleted, setIsFormCompleted] = useState(false);
   const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
@@ -116,7 +116,7 @@ Quisiera averiguar disponibilidad en las fechas del *${
     } al ${endDate ? formatDate(endDate) : ""}
  (${stayDays} días)*%0A
 Adultos: ${formData.adults} %0A
-*niños:* ${formData.children} %0A
+*niños: ${formData.children} %0A
 Comentario: ${formData.comment}`;
 
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
@@ -175,7 +175,7 @@ Comentario: ${formData.comment}`;
     setIsDatePickerOpen(!isDatePickerOpen);
   };
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const checkFormCompletion = () => {
       const requiredFields = ["fullName", "email", "phone", "comment"];
       const allFieldsFilled = requiredFields.every(
@@ -185,6 +185,14 @@ Comentario: ${formData.comment}`;
       setIsFormCompleted(allFieldsFilled && datesSelected);
     };
     checkFormCompletion();
+  }, [formData, startDate, endDate]); */
+  const isFormCompleted = useMemo(() => {
+    const requiredFields = ["fullName", "email", "phone", "comment"];
+    return (
+      requiredFields.every((field) => formData[field].trim() !== "") &&
+      startDate &&
+      endDate
+    );
   }, [formData, startDate, endDate]);
 
   return (
@@ -203,6 +211,7 @@ Comentario: ${formData.comment}`;
               type="text"
               id="fullName"
               name="fullName"
+              aria-describedby="name-error"
               value={formData.fullName}
               onChange={handleChange}
               required
@@ -210,7 +219,9 @@ Comentario: ${formData.comment}`;
               className={errors.fullName ? styles.errorInput : ""}
             />
             {errors.fullName && (
-              <span className={styles.errorMessage}>{errors.fullName}</span>
+              <span className={styles.errorMessage} role="alert">
+                {errors.fullName}
+              </span>
             )}
           </div>
 
@@ -230,7 +241,9 @@ Comentario: ${formData.comment}`;
               className={errors.email ? styles.errorInput : ""}
             />
             {errors.email && (
-              <span className={styles.errorMessage}>{errors.email}</span>
+              <span className={styles.errorMessage} role="alert">
+                {errors.email}
+              </span>
             )}
           </div>
 
@@ -243,6 +256,7 @@ Comentario: ${formData.comment}`;
               type="number"
               id="phone"
               name="phone"
+              pattern="[0-9]*"
               value={formData.phone}
               onChange={handleChange}
               required
@@ -250,7 +264,9 @@ Comentario: ${formData.comment}`;
               className={errors.phone ? styles.errorInput : ""}
             />
             {errors.phone && (
-              <span className={styles.errorMessage}>{errors.phone}</span>
+              <span className={styles.errorMessage} role="alert">
+                {errors.phone}
+              </span>
             )}
           </div>
           {/**Selector de fechas */}
@@ -283,6 +299,9 @@ Comentario: ${formData.comment}`;
               className={`${styles.datePickerModal} ${
                 isDatePickerOpen ? styles.modalOpen : ""
               }`}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modalTitle"
             >
               <div className={styles.datePickerContent}>
                 <div className={styles.datePickerHeader}>
@@ -291,6 +310,9 @@ Comentario: ${formData.comment}`;
                     className={styles.closeButtonDates}
                     onClick={() => setIsDatePickerOpen(false)}
                     alt="Botón de cerrar"
+                    role="button"
+                    aria-label="Cerrar selector de fechas"
+                    tabIndex={0}
                   />
                   <h3 className={styles.selectDates}>Seleccionar fechas</h3>
                 </div>
@@ -381,6 +403,12 @@ Comentario: ${formData.comment}`;
               isFormCompleted ? styles.submitButton : styles.submitButtonOff
             }
             disabled={!isFormCompleted || Object.keys(errors).length > 0}
+            aria-disabled={!isFormCompleted || Object.keys(errors).length > 0}
+            aria-label={
+              !isFormCompleted
+                ? "Complete todos los campos para habilitar el envío"
+                : "Enviar formulario"
+            }
           />
         </form>
       </section>
