@@ -102,7 +102,7 @@ export const Services = () => {
                   className={styles.iconService}
                 />
               </div>
-              <span>{servicio.description}</span>
+              <span className={styles.spanServicios}>{servicio.description}</span>
             </div>
           ))}
         </div>

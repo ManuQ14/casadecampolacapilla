@@ -76,23 +76,21 @@
     margin-bottom: 8px;
   }
 
-  span {
+  .spanServicios {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    //text-align: center;
     color: $naranja-terciario;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    /* mobile/body bold */
     font-family: $lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     letter-spacing: 0.25px;
     width: 175px;
     align-self: stretch;

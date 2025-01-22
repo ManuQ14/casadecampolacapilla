@@ -13,7 +13,8 @@ import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 import bottomForm from "../../../assets/images/bottomContact.jpg";
 
 export const Form = () => {
-  const WHATSAPP_NUMBER = "54911klfjfsdñ";
+  //const WHATSAPP_NUMBER = "5491158567591";
+  const WHATSAPP_NUMBER = "5491166583307";
 
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
@@ -354,12 +355,13 @@ Comentario: ${formData.comment}`;
               </select>
             </div>
           </div>
-          <div className={styles.inputGroup}>
-            <label htmlFor="comment">
+          <div className={styles.inputGroupTextArea}>
+            <label htmlFor="comment" className={styles.labelComentario}>
               Comentario <span className={styles.required}>*</span>
             </label>
             <textarea
               id="comment"
+              className={styles.textAreaComent}
               name="comment"
               value={formData.comment}
               onChange={handleChange}
