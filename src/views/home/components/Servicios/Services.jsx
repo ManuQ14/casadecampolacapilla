@@ -1,10 +1,7 @@
-//import { Link } from "react-router-dom";
-
 import styles from "./styles/services.module.scss";
-
 import line from "../../../../assets/icons/subrayLightOrange.svg";
 
-//Imports de iconos de servicios
+// Importamos todas las imágenes de servicios
 import ducha from "../../../../assets/icons/servicesIcons/Duchas.svg";
 import wifi from "../../../../assets/icons/servicesIcons/Wifi.svg";
 import proveeduria from "../../../../assets/icons/servicesIcons/Proveeduria.svg";
@@ -15,6 +12,73 @@ import pileta from "../../../../assets/icons/servicesIcons/Pileta.svg";
 import comidas from "../../../../assets/icons/servicesIcons/Comidas.svg";
 import juegos from "../../../../assets/icons/servicesIcons/Juegos.svg";
 import mesas from "../../../../assets/icons/servicesIcons/Mesas.svg";
+
+// Array de servicios
+const servicios = [
+  {
+    id: 1,
+    icon: ducha,
+    description: "Baños con ducha y agua caliente las 24hs",
+    alt: "Duchas",
+  },
+  {
+    id: 2,
+    icon: wifi,
+    description: "Wifi en todo el predio",
+    alt: "Wifi",
+  },
+  {
+    id: 3,
+    icon: proveeduria,
+    description:
+      "Proveeduría a costos de almacén. Bebidas, snacks y comestibles regionales",
+    alt: "Proveeduría",
+  },
+  {
+    id: 4,
+    icon: carpas,
+    description: "Alquiler de carpas, colchones y frazadas",
+    alt: "Carpas",
+  },
+  {
+    id: 5,
+    icon: tomacorrientes,
+    description: "Tomacorrientes e iluminación",
+    alt: "Tomacorrientes",
+  },
+  {
+    id: 6,
+    icon: asador,
+    description:
+      "Asador y fogonero. Se incluyen accesorios como discos de arado, estaca a la cruz, espeto, etc...",
+    alt: "Asador",
+  },
+  {
+    id: 7,
+    icon: pileta,
+    description: "Piletas en temporada de verano",
+    alt: "Pileta",
+  },
+  {
+    id: 8,
+    icon: comidas,
+    description: "Preparación de comidas, desayunos y bebidas",
+    alt: "Comidas",
+  },
+  {
+    id: 9,
+    icon: juegos,
+    description:
+      "Juegos para niños. Hamacas, calesitas, casita de juegos y rodados",
+    alt: "Juegos infantiles",
+  },
+  {
+    id: 10,
+    icon: mesas,
+    description: "Mesas al aire libre",
+    alt: "Mesas",
+  },
+];
 
 export const Services = () => {
   return (
@@ -29,54 +93,18 @@ export const Services = () => {
           />
         </div>
         <div className={styles.iconServiciesContainer}>
-          <div className={styles.serviceContainer}>
-            <img src={ducha} alt="Duchas" width={40} height={54} />
-            <span>Baños con ducha y agua caliente las 24hs</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={wifi} alt="" />
-            <span>Wifi en todo el predio</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={proveeduria} alt="" />
-            <span>
-              Proveeduría a costos de almacén. Bebidas, snacks y comestibles
-              regionales
-            </span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={carpas} alt="" />
-            <span>Alquiler de carpas, colchones y frazadas</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={tomacorrientes} alt="" />
-            <span>Tomacorrientes e iluminación</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={asador} alt="" />
-            <span>
-              Asador y fogonero. Se incluyen accesorios como discos de arado,
-              estaca a la cruz, espeto, etc...
-            </span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={pileta} alt="" />
-            <span>Piletas en temporada de verano</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={comidas} alt="" />
-            <span>Preparación de comidas, desayunos y bebidas</span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={juegos} alt="" />
-            <span>
-              Juegos para niños. Hamacas, calesitas, casita de juegos y rodados
-            </span>
-          </div>
-          <div className={styles.serviceContainer}>
-            <img src={mesas} alt="" />
-            <span>Mesas al aire libre</span>
-          </div>
+          {servicios.map((servicio) => (
+            <div className={styles.serviceContainer} key={servicio.id}>
+              <div className={styles.contenedorIcon}>
+                <img
+                  src={servicio.icon}
+                  alt={servicio.alt}
+                  className={styles.iconService}
+                />
+              </div>
+              <span>{servicio.description}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
