@@ -175,17 +175,6 @@ Comentario: ${formData.comment}`;
     setIsDatePickerOpen(!isDatePickerOpen);
   };
 
-  /*   useEffect(() => {
-    const checkFormCompletion = () => {
-      const requiredFields = ["fullName", "email", "phone", "comment"];
-      const allFieldsFilled = requiredFields.every(
-        (field) => formData[field].trim() !== ""
-      );
-      const datesSelected = startDate && endDate;
-      setIsFormCompleted(allFieldsFilled && datesSelected);
-    };
-    checkFormCompletion();
-  }, [formData, startDate, endDate]); */
   const isFormCompleted = useMemo(() => {
     const requiredFields = ["fullName", "email", "phone", "comment"];
     return (
