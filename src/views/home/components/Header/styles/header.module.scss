@@ -180,3 +180,181 @@
   }
   //Fin sección header + menu hamburguesa
 }
+
+@media (max-width: 1439px) {
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff3edf8;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 108px;
+    width: 328px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 320px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $naranja-oficial;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 570px;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5); // Fondo negro con opacidad al 50%
+  }
+
+  .videoCamping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 432px;
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    color: $naranja-terciario;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    color: $naranja-terciario;
+    color: var(--Secundario-light, #f8f2ee);
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 24px;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: $naranja-oficial;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150; // Asegúrate de que el ícono de menú sea visible
+    cursor: pointer;
+  }
+}

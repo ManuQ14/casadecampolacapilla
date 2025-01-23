@@ -298,7 +298,7 @@
   }
   .containerNotas {
     width: 100vw;
-    height: 2500px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;

@@ -18,7 +18,7 @@
 @media (max-width: 767px) {
   .serviceSection {
     width: 100vw;
-    height: 810px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -26,12 +26,10 @@
     background-position: center;
   }
   .coverServices {
-    width: 100vw;
-    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background: linear-gradient(0deg, rgba(41, 46, 33, 0.69) 0%, rgba(41, 46, 33, 0.69) 50%);
   }
   .subtitleContainerServices {
@@ -58,37 +56,42 @@
   }
   .iconServiciesContainer {
     display: flex;
-    width: 95%;
-    height: 702px;
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-content: center;
-    gap: 20px 8px;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 94%;
   }
   .serviceContainer {
     display: flex;
-    width: 165px;
-    height: 164px;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 8px;
-    flex-shrink: 0;
-    justify-content: space-between;
-    height: 124px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
   }
-  span {
+  .contenedorIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 8px;
+  }
+  .spanServicios {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column;
+    width: 100%;
     color: #f8f2ee;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    /* mobile/body bold */
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     letter-spacing: 0.25px;
     width: 175px;
     align-self: stretch;

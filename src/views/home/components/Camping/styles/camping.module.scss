@@ -143,3 +143,146 @@
   }
 }
 //Fin El Camping
+
+@media (max-width: 1439px) {
+  //Inicio sección Camping
+  .campingSection {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 56px;
+    margin-top: 56px;
+  }
+
+  .subtitleContainer {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $naranja-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-family: "Bookman Old Style";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 100% */
+    letter-spacing: 0.15px;
+  }
+
+  .campingTextContainer {
+    width: 92%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 46px;
+  }
+
+  .campingText {
+    color: $gris-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  .conoceMasContainer {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    width: 257px;
+    //height: 48px;
+    justify-content: space-between;
+  }
+
+  .conoceMasText {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 20px;
+    width: 231px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.4px;
+  }
+
+  .chrevronRight {
+    width: 24px;
+    height: 24px;
+  }
+
+  //Carrousel
+
+  .carrouselCamping {
+    position: relative;
+    width: 100%;
+    height: 310px; // Asegúrate de definir la altura que necesitas
+    overflow: hidden; // Mantén esto para evitar desbordamiento lateral no deseado
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      height: 100%; // Asegúrate de usar el 100% de la altura del contenedor principal
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; // Respeta la proporción del contenedor padre
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        cursor: pointer;
+
+        &.activeDot {
+          background-color: #787878;
+        }
+      }
+    }
+  }
+}
