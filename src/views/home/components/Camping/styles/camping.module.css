@@ -139,7 +139,7 @@
     background-color: #787878;
   }
 }
-@media (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .campingSection {
     width: 100vw;
     height: auto;
@@ -165,11 +165,10 @@
     color: #d34600;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Bookman;
-    font-family: "Bookman Old Style";
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 100% */
+    line-height: 32px;
     letter-spacing: 0.15px;
   }
   .campingTextContainer {
@@ -222,9 +221,10 @@
   }
   .carrouselCamping {
     position: relative;
-    width: 100%;
-    height: 310px;
+    width: 90%;
     overflow: hidden;
+    border-radius: 5px;
+    height: 516px;
   }
   .carrouselCamping .imageWrapper {
     position: relative;

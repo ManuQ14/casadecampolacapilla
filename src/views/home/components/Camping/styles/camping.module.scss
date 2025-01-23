@@ -65,7 +65,6 @@
     align-items: center;
     flex-flow: row;
     width: 257px;
-    //height: 48px;
     justify-content: space-between;
   }
 
@@ -96,13 +95,13 @@
   .carrouselCamping {
     position: relative;
     width: 100%;
-    height: 310px; // Asegúrate de definir la altura que necesitas
-    overflow: hidden; // Mantén esto para evitar desbordamiento lateral no deseado
+    height: 310px;
+    overflow: hidden;
 
     .imageWrapper {
       position: relative;
       width: 100%;
-      height: 100%; // Asegúrate de usar el 100% de la altura del contenedor principal
+      height: 100%;
     }
 
     .image {
@@ -110,7 +109,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; // Respeta la proporción del contenedor padre
+      height: 100%;
       object-fit: cover;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
@@ -144,7 +143,7 @@
 }
 //Fin El Camping
 
-@media (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   //Inicio sección Camping
   .campingSection {
     width: 100vw;
@@ -173,11 +172,10 @@
     color: $naranja-oficial;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $bookman;
-    font-family: "Bookman Old Style";
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 100% */
+    line-height: 32px;
     letter-spacing: 0.15px;
   }
 
@@ -209,7 +207,6 @@
     align-items: center;
     flex-flow: row;
     width: 257px;
-    //height: 48px;
     justify-content: space-between;
   }
 
@@ -239,14 +236,15 @@
 
   .carrouselCamping {
     position: relative;
-    width: 100%;
-    height: 310px; // Asegúrate de definir la altura que necesitas
-    overflow: hidden; // Mantén esto para evitar desbordamiento lateral no deseado
+    width: 90%;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 516px;
 
     .imageWrapper {
       position: relative;
       width: 100%;
-      height: 100%; // Asegúrate de usar el 100% de la altura del contenedor principal
+      height: 100%;
     }
 
     .image {
@@ -254,7 +252,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; // Respeta la proporción del contenedor padre
+      height: 100%;
       object-fit: cover;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;

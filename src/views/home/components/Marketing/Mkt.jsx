@@ -22,7 +22,7 @@ export const Mkt = () => {
       </div>
       <div className={styles.containerMktTwo}>
         <div className={styles.subtitleContainerMkt2}>
-          <h2 className={styles.h2Mkt}>
+          <h2 className={styles.h2Mkt2}>
             ¿Sabías que Castilla tiene casi cero contaminación lumínica?
           </h2>
           <img src={lineGray} alt="linea subrayadora" />
