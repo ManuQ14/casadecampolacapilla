@@ -180,10 +180,11 @@
   }
 
   .gallery {
-    width: 90%;
+    width: 93%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 8px;
+    //padding: 0 16px;
   }
 
   .imageWrapper {
@@ -209,8 +210,8 @@
   }
 
   .modalOverlay {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 300vh;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -218,9 +219,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
-    backdrop-filter: blur(2px);
     z-index: 1000;
   }
 
@@ -236,7 +234,7 @@
     border-radius: 8px;
     padding: 24px;
     max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 48px);
+    max-height: calc(100vh - 14%);
   }
 
   .fadeIn {
@@ -246,7 +244,7 @@
 
   .fotoAbierta {
     max-width: 100%;
-    max-height: calc(100vh - 96px);
+    max-height: 60vh;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
