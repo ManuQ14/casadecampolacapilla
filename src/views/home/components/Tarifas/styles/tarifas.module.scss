@@ -119,6 +119,10 @@
     border-radius: 5px;
   }
 
+  .lineHelper{
+    display: none;
+  }
+
   .itemTarifaPernocte {
     color: $naranja-oficial;
     font-feature-settings: "liga" off, "clig" off;
@@ -142,11 +146,11 @@
   }
 
   .tarifa {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .descripcionTarifaPernocte {
@@ -301,7 +305,7 @@
     color: $naranja-oficial;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $bookman;
-    font-size: 24px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
@@ -381,6 +385,11 @@
     align-items: flex-start;
     justify-content: space-between;
     border-radius: 5px;
+  }
+
+  .lineHelper{
+    width: 100%;
+    display: inline;
   }
 
   .itemTarifaPernocte {
