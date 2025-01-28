@@ -180,7 +180,7 @@
   }
 
   .gallery {
-    width: 93%;
+    width: 89%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
@@ -189,8 +189,8 @@
 
   .imageWrapper {
     position: relative;
-    width: 100%;
-    padding-top: 100%; // Creates a square aspect ratio
+    width: 336px;
+    padding-top: 253px; // Creates a square aspect ratio
     overflow: hidden;
     border-radius: 5px;
   }

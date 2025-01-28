@@ -275,9 +275,9 @@
     width: 100vw;
     height: auto;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   //Inicio sección Como llegar
@@ -338,7 +338,7 @@
   }
 
   .mapaLocation {
-    width: 92%;
+    width: 336px;
     height: 336px;
     border: none;
     margin-bottom: 16px;
@@ -348,12 +348,13 @@
 
   .contenedorAcordeon {
     border-bottom: 2px solid $naranja-oficial;
-    width: 92%;
+    width: 688px;
+    margin-top: 16px;
   }
 
   .contenedorAcordeonAuto {
     border-bottom: 2px solid $naranja-oficial;
-    width: 92%;
+    width: 688px;
     margin-top: 32px;
     margin-bottom: 16px;
   }
@@ -391,7 +392,7 @@
   }
 
   .expandAcordeon {
-    right: 4%;
+    right: 6%;
     display: flex;
     position: absolute;
     cursor: pointer;
@@ -476,8 +477,9 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    width: 92%;
-    height: 288px;
+    width: 336px;
+    height: 336px;
+    margin-left: 16px;
     margin-bottom: 16px;
   }
 
