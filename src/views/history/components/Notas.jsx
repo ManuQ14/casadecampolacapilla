@@ -81,8 +81,10 @@ export const Notas = () => {
                 className={styles.imagenNota}
                 loading="lazy"
               />
+              <div className={styles.containerLinkTitle}>
               <h3 className={styles.tituloNota}>{nota.titulo}</h3>
               <img src={openLink} alt="" className={styles.iconLink} />
+              </div>
             </a>
           </article>
         ))}
