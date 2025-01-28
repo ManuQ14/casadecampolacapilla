@@ -401,7 +401,11 @@ Comentario: ${formData.comment}`;
           />
         </form>
       </section>
-      <img src={bottomForm} alt="" className={styles.bottomFormImage} />
+      <img
+        src={bottomForm}
+        alt="Foto de fin del formulario"
+        className={styles.bottomFormImage}
+      />
     </>
   );
 };

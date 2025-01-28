@@ -505,3 +505,515 @@
     letter-spacing: 0.2px;
   }
 }
+
+//Inicio sección tablet
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  //Header history
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff3edf8;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 108px;
+    width: 328px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 320px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $naranja-oficial;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $naranja-terciario;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $naranja-terciario;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: $naranja-oficial;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Texto previo
+  .textoIntroductorio {
+    color: $gris-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  //Inicio sección formulario
+
+  .formContainer {
+    width: 90%;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    color: $gris-oficial;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+    margin-bottom: 72px;
+  }
+
+  .inputGroupTextArea {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    font-family: $lato;
+  }
+
+  .textAreaComent {
+    border-radius: 15px;
+    border: 1px solid var(--Gray-A, #9e9e9e);
+    background: var(--background, #fafafa);
+    height: 100%;
+    display: flex;
+    height: 160px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    font-family: $lato !important;
+  }
+
+  .labelComentario {
+    margin-bottom: 8px;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+
+    label {
+      font-size: 16px;
+      color: #333;
+      font-size: 14px;
+      height: 16px;
+      margin-top: 16px;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 95%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: $lato;
+      padding: 8px;
+      height: 14px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      border: 1px solid var(--Gray-A, #9e9e9e);
+      background: var(--background, #fafafa);
+
+      &:focus {
+        outline: none;
+        border-color: #666;
+      }
+      &::placeholder {
+        color: #9e9e9e !important;
+        text-align: left !important;
+      }
+    }
+
+    .countsPersons {
+      height: 36px;
+      width: 100%;
+    }
+
+    textarea {
+      height: 313px;
+      resize: none;
+      font-family: $lato !important;
+    }
+  }
+
+  .required {
+    color: #ff4444;
+  }
+
+  .datePreview {
+    display: flex;
+    flex-flow: column;
+    height: 16px;
+    border-radius: 10px;
+    padding: 8px;
+    border-radius: 1px solid gray;
+    border: 1px solid var(--Gray-A, #9e9e9e);
+  }
+
+  .placeholderText {
+    color: #9e9e9e !important;
+    font-family: $lato;
+    text-align: left !important;
+    font-weight: normal;
+  }
+
+  .spanFechas {
+    color: $gris-oficial !important;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  .stayDays {
+    color: $gris-oficial !important;
+  }
+
+  .datePickerModal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: all 300ms !important;
+
+    &.modalOpen {
+      transform: translateY(0);
+      bottom: 0;
+      transition: all 300ms !important;
+    }
+  }
+
+  .datePickerContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid var(--Gray-A, #9e9e9e);
+    transition: all 300ms !important;
+    color: $gris-oficial;
+  }
+
+  :global {
+    .react-datepicker {
+      font-family: "Lato", sans-serif;
+
+      &__day {
+        &--in-range {
+          background-color: rgba(201, 52, 19, 0.1) !important;
+          border-radius: 0 !important;
+        }
+
+        &--in-selecting-range {
+          background-color: rgba(201, 52, 19, 0.1) !important;
+          border-radius: 0 !important;
+        }
+
+        &--selected {
+          background-color: #c93413 !important;
+          border-radius: 50% !important;
+          color: white !important;
+        }
+
+        // Para los extremos del rango
+        &--range-start {
+          border-radius: 50% 0 0 50% !important;
+          background-color: #c93413 !important;
+          color: white !important;
+        }
+
+        &--range-end {
+          border-radius: 0 50% 50% 0 !important;
+          background-color: #c93413 !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .applyButton {
+    width: 50%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: $naranja-oficial;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: $lato;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .closeButtonDates {
+    display: flex;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    width: 20px;
+  }
+
+  .datePickerHeader {
+    height: 40px !important;
+  }
+
+  .selectDates {
+    color: $naranja-oficial;
+    font-family: $lato;
+    text-align: center;
+    width: 147px;
+    margin: auto;
+    font-size: 18px;
+  }
+
+  .guestsGroup {
+    display: flex;
+    gap: 16px;
+
+    .inputGroup {
+      flex: 1;
+    }
+  }
+
+  .charCount {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+
+  .submitButton {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: $naranja-oficial;
+  }
+
+  .submitButtonOff {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color: gray;
+    text-align: center;
+    font-family: $lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: gainsboro;
+  }
+
+  .bottomFormImage {
+    width: 90%;
+    height: 783px;
+    margin-bottom: 56px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    width: 688px;
+    object-fit: cover;
+  }
+  .errorInput {
+    border-color: #cf3342;
+  }
+
+  .errorMessage {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    font-family: $lato;
+    font-weight: bold;
+    color: #cf3342;
+    font-size: 12px;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+}

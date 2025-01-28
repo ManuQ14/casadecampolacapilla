@@ -2,7 +2,7 @@
 @import "../../../styles/variables";
 
 @media (max-width: 767px) {
-  //Header history
+  //Header Gallery
   // Manejo de menú hamburguesa
   .burgerMenu {
     display: flex;
@@ -226,6 +226,325 @@
     object-fit: cover;
     transition: transform 0.3s ease;
 
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modalContent {
+    position: relative;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    opacity: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 48px);
+  }
+
+  .fadeIn {
+    transform: scale(1);
+    opacity: 1 !important;
+  }
+
+  .fotoAbierta {
+    max-width: 100%;
+    max-height: calc(100vh - 96px);
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none; //
+
+    &.active {
+      opacity: 1;
+      display: block; // Muestra solo la imagen activa
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 2px; // Ajustado para mantener una distancia consistente
+    right: 2px;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    z-index: 1;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .goToGalleryContainer {
+    width: 95%;
+    margin: 16px 0;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .goToGallery {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 328px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $naranja-oficial;
+    font-family: $lato;
+    border: 2px solid $naranja-oficial;
+    border-radius: 10px;
+  }
+}
+
+//Inicio sección tablet
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  //Header gallery
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff3edf8;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 108px;
+    width: 328px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 320px;
+    color: $naranja-oficial;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $naranja-oficial;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 88%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $naranja-terciario;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $bookman;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $naranja-terciario;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: $naranja-oficial;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $lato-bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Inicio sector galería
+
+  .gallerySection {
+    width: 100vw;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $naranja-terciario;
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .subtitleContainer {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $naranja-oficial;
+    font-family: $bookman;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .gallery {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 336px;
+    height: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .galleryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 253px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
     &:hover {
       transform: scale(1.05);
     }
