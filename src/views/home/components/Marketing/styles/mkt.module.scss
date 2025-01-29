@@ -30,7 +30,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .subtitleContainerMkt {
@@ -48,7 +48,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .h2Mkt {
@@ -58,36 +58,41 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
   }
 
   .h2Mkt2 {
     color: $dark;
-    height: 108px;
-    width: 265px;
+    height: 80px;
+    width: 100%;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 36px; /* 150% */
+    font-weight: 500;
+    line-height: 40px;
     letter-spacing: 0.15px;
-    
+  }
+
+  .lineaSubrayadoraDos {
+    margin-top: 16px;
   }
 
   .astroExplication {
-    width: 95%;
+    width: 100%;
+    height: 48px;
     color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
-    font-size: 16px;
+    font-family: $second-typography;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
     text-align: center;
+    margin-top: 32px;
   }
 
   .fotoContainer {
@@ -98,7 +103,7 @@
   .fotoContainer2 {
     width: 100vw;
     height: 309px;
-    margin-top: 56px;
+    margin-top: 32px;
   }
   //Fin sectión MKT
 }
@@ -159,7 +164,6 @@
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 0.15px;
-    
   }
 
   .h2Mkt2 {
@@ -168,7 +172,7 @@
     width: 265px;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

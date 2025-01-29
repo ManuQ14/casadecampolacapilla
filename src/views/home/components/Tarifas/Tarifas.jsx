@@ -47,7 +47,7 @@ export const Tarifas = () => {
             {/**Tarifa 1 */}
             <div className={styles.tarifa}>
               <div className={styles.descripcionTarifaPernocte}>
-                Menores de 3 años --------------------------------------
+                Menores de 3 años ----------------------
                 <p className={styles.lineHelper}>
                   ----------------------------------------------------------------------------
                 </p>
@@ -57,7 +57,7 @@ export const Tarifas = () => {
             {/**Tarifa 2 */}
             <div className={styles.tarifa}>
               <div className={styles.descripcionTarifaPernocte}>
-                De 4 a 15 años -------------------------------------------
+                De 4 a 15 años --------------------------
                 <p className={styles.lineHelper}>
                   ----------------------------------------------------------------------------
                 </p>
@@ -67,7 +67,7 @@ export const Tarifas = () => {
             {/**Tarifa 3 */}
             <div className={styles.tarifa}>
               <div className={styles.descripcionTarifaPernocte}>
-                Mayores de 16 años -------------------------------------
+                Mayores de 16 años ---------------------
                 <p className={styles.lineHelper}>
                   ----------------------------------------------------------------------------
                 </p>

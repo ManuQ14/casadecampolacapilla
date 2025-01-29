@@ -1,6 +1,6 @@
 import styles from "./styles/mkt.module.scss";
 
-import lineGray from "../../../../assets/icons/subrayBlack.svg";
+import lineGray from "../../../../assets/icons/subrayOrange.svg";
 import fotoMkt1 from "../../../../assets/images/mkt/fotoMkt1.jpg";
 import fotoMkt2 from "../../../../assets/images/mkt/fotoMkt2.jpg";
 
@@ -25,7 +25,7 @@ export const Mkt = () => {
           <h2 className={styles.h2Mkt2}>
             ¿Sabías que Castilla tiene casi cero contaminación lumínica?
           </h2>
-          <img src={lineGray} alt="linea subrayadora" />
+          <img src={lineGray} alt="linea subrayadora" className={styles.lineaSubrayadoraDos} />
           <p className={styles.astroExplication}>
             Lo que la convierte en el lugar perfecto para hacer{" "}
             <b>astrofotografía</b> y disfrutar de las estrellas.

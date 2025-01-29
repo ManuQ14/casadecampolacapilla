@@ -27,12 +27,13 @@
   }
 
   .h2 {
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
@@ -44,14 +45,14 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
   }
 
   .campingText {
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -64,7 +65,7 @@
     display: flex;
     align-items: center;
     flex-flow: row;
-    width: 257px;
+    width: 281px;
     justify-content: space-between;
   }
 
@@ -73,11 +74,11 @@
     flex-flow: row;
     align-items: center;
     height: 20px;
-    width: 231px;
+    width: 257px;
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;

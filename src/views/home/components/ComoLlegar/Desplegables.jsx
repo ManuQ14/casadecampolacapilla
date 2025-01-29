@@ -23,7 +23,7 @@ export const Desplegables = () => {
           width={25}
           className={styles.trainSVG}
         />
-        <div className={styles.ubitacionTitle}>Cómo llegar en tren</div>
+        <div className={styles.ubicationTitle}>Cómo llegar en tren</div>
         <img
           src={isExpanded ? closeAcordeon : expandAcordeon}
           alt={isExpanded ? "Cerrar información" : "Expandir información"}

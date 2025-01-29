@@ -28,6 +28,7 @@
 
   .h2 {
     color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 24px;
@@ -241,7 +242,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -424,13 +425,13 @@
     transition: all 1s ease-in-out;
   }
 
-  .ubitacionTitle {
-    color: $primario-principal;
+  .ubicationTitle {
+    color: $primario-principal !important;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $main-typography !important;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }

@@ -24,7 +24,7 @@ export const DesplegableAuto = () => {
           width={25}
           className={styles.trainSVG}
         />
-        <div className={styles.ubitacionTitle}>Cómo llegar en auto</div>
+        <div className={styles.ubicationTitle}>Cómo llegar en auto</div>
         <img
           src={isExpanded ? closeAcordeon : expandAcordeon}
           alt={isExpanded ? "Cerrar información" : "Expandir información"}

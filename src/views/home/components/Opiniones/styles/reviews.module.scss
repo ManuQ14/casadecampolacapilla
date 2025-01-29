@@ -18,9 +18,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -127,11 +127,11 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 100%;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -157,9 +157,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -190,16 +190,14 @@
   }
 
   .slider {
-    color: var(--Dark, #4b4a4a);
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-
-    /* mobile/body reg */
-    font-family: Lato;
+    font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     letter-spacing: 0.25px;
   }
 
@@ -268,11 +266,11 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 100%;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

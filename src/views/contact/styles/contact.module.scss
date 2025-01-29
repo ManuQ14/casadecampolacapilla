@@ -14,7 +14,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #fff3edf8;
+    background-color: $primario-light;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -53,7 +53,7 @@
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     text-decoration: none;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -120,9 +120,9 @@
   }
 
   .h1History {
-    color: $naranja-terciario;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -130,10 +130,10 @@
   }
 
   h3 {
-    color: $naranja-terciario;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato-bold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -157,11 +157,11 @@
     gap: 10px;
     align-self: stretch;
     border-radius: 10px;
-    background: $naranja-oficial;
+    background: $primario-principal;
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: $lato-bold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -172,10 +172,10 @@
 
   //Texto previo
   .textoIntroductorio {
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -198,9 +198,9 @@
     width: 100%;
     flex-direction: column;
 
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -214,13 +214,13 @@
     flex-flow: column;
     justify-content: flex-start;
     margin-bottom: 8px;
-    font-family: $lato;
+    font-family: $main-typography;
   }
 
   .textAreaComent {
     border-radius: 15px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
-    background: var(--background, #fafafa);
+    border: 1px solid $gray-a;
+    background: $background;
     height: 100%;
     display: flex;
     height: 160px;
@@ -229,7 +229,7 @@
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
-    font-family: $lato !important;
+    font-family: $main-typography !important;
   }
 
   .labelComentario {
@@ -245,7 +245,7 @@
 
     label {
       font-size: 16px;
-      color: #333;
+      color: $dark;
       font-size: 14px;
       height: 16px;
       margin-top: 16px;
@@ -256,23 +256,23 @@
     select,
     textarea {
       width: 95%;
-      border: 1px solid #ccc;
+      border: 1px solid $gray-b;
       border-radius: 4px;
       font-size: 14px;
-      font-family: $lato;
+      font-family: $main-typography;
       padding: 8px;
       height: 14px;
       margin-bottom: 5px;
       border-radius: 10px;
-      border: 1px solid var(--Gray-A, #9e9e9e);
-      background: var(--background, #fafafa);
+      border: 1px solid $gray-a;
+      background: $gray-b;
 
       &:focus {
         outline: none;
         border-color: #666;
       }
       &::placeholder {
-        color: #9e9e9e !important;
+        color: $gray-a !important;
         text-align: left !important;
       }
     }
@@ -285,7 +285,7 @@
     textarea {
       height: 313px;
       resize: none;
-      font-family: $lato !important;
+      font-family: $main-typography !important;
     }
   }
 
@@ -300,24 +300,24 @@
     border-radius: 10px;
     padding: 8px;
     border-radius: 1px solid gray;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid $gray-a;
   }
 
   .placeholderText {
-    color: #9e9e9e !important;
-    font-family: $lato;
+    color: $gray-a !important;
+    font-family: $main-typography;
     text-align: left !important;
     font-weight: normal;
   }
 
   .spanFechas {
-    color: $gris-oficial !important;
+    color: $dark !important;
     text-align: left;
     font-weight: normal;
   }
 
   .stayDays {
-    color: $gris-oficial !important;
+    color: $dark !important;
   }
 
   .datePickerModal {
@@ -326,7 +326,7 @@
     left: 0;
     width: 100%;
     height: 80vh;
-    background: white;
+    background: $background;
     border-radius: 10px 10px 0 0;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
@@ -349,14 +349,14 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid $gray-a;
     transition: all 300ms !important;
-    color: $gris-oficial;
+    color: $dark;
   }
 
   :global {
     .react-datepicker {
-      font-family: "Lato", sans-serif;
+      font-family: $main-typography, sans-serif;
 
       &__day {
         &--in-range {
@@ -395,11 +395,11 @@
     width: 90%;
     padding: 12px;
     margin-top: 20px;
-    background-color: $naranja-oficial;
+    background-color: $primario-principal;
     color: white;
     border: none;
     border-radius: 8px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     cursor: pointer;
   }
@@ -417,8 +417,8 @@
   }
 
   .selectDates {
-    color: $naranja-oficial;
-    font-family: $lato;
+    color: $primario-principal;
+    font-family: $main-typography;
     text-align: center;
     width: 147px;
     margin: auto;
@@ -437,7 +437,7 @@
   .charCount {
     text-align: right;
     font-size: 14px;
-    color: #666;
+    color: $gray-a;
     margin-top: 8px;
     margin-right: 5px;
   }
@@ -458,7 +458,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: $naranja-oficial;
+    background-color: $primario-principal;
   }
 
   .submitButtonOff {
@@ -472,12 +472,12 @@
     border: none;
     color: gray;
     text-align: center;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: gainsboro;
+    background-color: $background;
   }
 
   .bottomFormImage {
@@ -493,7 +493,7 @@
     width: 100%;
     height: auto;
     margin: 0px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-weight: bold;
     color: #cf3342;
     font-size: 12px;
@@ -520,7 +520,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #fff3edf8;
+    background-color: $primario-light;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -555,11 +555,11 @@
     justify-content: space-between;
     width: 170px;
     height: 320px;
-    color: $naranja-oficial;
+    color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     text-decoration: none;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -570,7 +570,7 @@
   a:visited,
   a:link {
     text-decoration: none;
-    color: $naranja-oficial;
+    color: $primario-principal;
   }
 
   .no-scroll {
@@ -626,9 +626,9 @@
   }
 
   .h1History {
-    color: $naranja-terciario;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
@@ -636,10 +636,10 @@
   }
 
   h3 {
-    color: $naranja-terciario;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato-bold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -663,11 +663,11 @@
     gap: 10px;
     align-self: stretch;
     border-radius: 10px;
-    background: $naranja-oficial;
+    background: $primario-principal;
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: $lato-bold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -678,10 +678,10 @@
 
   //Texto previo
   .textoIntroductorio {
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -704,9 +704,9 @@
     width: 100%;
     flex-direction: column;
 
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -720,13 +720,13 @@
     flex-flow: column;
     justify-content: flex-start;
     margin-bottom: 8px;
-    font-family: $lato;
+    font-family: $main-typography;
   }
 
   .textAreaComent {
     border-radius: 15px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
-    background: var(--background, #fafafa);
+    border: 1px solid $gray-a;
+    background: $gray-b;
     height: 100%;
     display: flex;
     height: 160px;
@@ -735,7 +735,7 @@
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
-    font-family: $lato !important;
+    font-family: $main-typography !important;
   }
 
   .labelComentario {
@@ -751,7 +751,7 @@
 
     label {
       font-size: 16px;
-      color: #333;
+      color: $dark;
       font-size: 14px;
       height: 16px;
       margin-top: 16px;
@@ -765,20 +765,20 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 14px;
-      font-family: $lato;
+      font-family: $main-typography;
       padding: 8px;
       height: 14px;
       margin-bottom: 5px;
       border-radius: 10px;
-      border: 1px solid var(--Gray-A, #9e9e9e);
-      background: var(--background, #fafafa);
+      border: 1px solid $gray-a;
+      background: $gray-b;
 
       &:focus {
         outline: none;
         border-color: #666;
       }
       &::placeholder {
-        color: #9e9e9e !important;
+        color: $gray-a !important;
         text-align: left !important;
       }
     }
@@ -791,7 +791,7 @@
     textarea {
       height: 313px;
       resize: none;
-      font-family: $lato !important;
+      font-family: $main-typography !important;
     }
   }
 
@@ -806,24 +806,24 @@
     border-radius: 10px;
     padding: 8px;
     border-radius: 1px solid gray;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid $gray-a;
   }
 
   .placeholderText {
-    color: #9e9e9e !important;
-    font-family: $lato;
+    color: $gray-a !important;
+    font-family: $main-typography;
     text-align: left !important;
     font-weight: normal;
   }
 
   .spanFechas {
-    color: $gris-oficial !important;
+    color: $dark !important;
     text-align: left;
     font-weight: normal;
   }
 
   .stayDays {
-    color: $gris-oficial !important;
+    color: $dark !important;
   }
 
   .datePickerModal {
@@ -855,14 +855,14 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid $gray-a;
     transition: all 300ms !important;
-    color: $gris-oficial;
+    color: $dark;
   }
 
   :global {
     .react-datepicker {
-      font-family: "Lato", sans-serif;
+      font-family: $main-typography, sans-serif;
 
       &__day {
         &--in-range {
@@ -901,11 +901,11 @@
     width: 50%;
     padding: 12px;
     margin-top: 20px;
-    background-color: $naranja-oficial;
+    background-color: $primario-principal;
     color: white;
     border: none;
     border-radius: 8px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     cursor: pointer;
   }
@@ -923,8 +923,8 @@
   }
 
   .selectDates {
-    color: $naranja-oficial;
-    font-family: $lato;
+    color: $primario-principal;
+    font-family: $main-typography;
     text-align: center;
     width: 147px;
     margin: auto;
@@ -959,12 +959,12 @@
     border: none;
     color: white;
     text-align: center;
-    font-family: Lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: $naranja-oficial;
+    background-color: $primario-principal;
   }
 
   .submitButtonOff {
@@ -978,12 +978,12 @@
     border: none;
     color: gray;
     text-align: center;
-    font-family: $lato;
+    font-family: $primario-principal;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: gainsboro;
+    background-color: $background;
   }
 
   .bottomFormImage {
@@ -1005,14 +1005,12 @@
     width: 100%;
     height: auto;
     margin: 0px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-weight: bold;
     color: #cf3342;
     font-size: 12px;
-    font-family: Lato;
     font-size: 12px;
     font-style: normal;
-
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
   }
