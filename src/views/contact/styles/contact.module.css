@@ -1,20 +1,24 @@
 @charset "UTF-8";
 @import url(../../../styles/_variables.scss);
 @font-face {
-  font-family: Bookman;
-  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-family: Cardo;
+  src: url(./fonts/Cardo-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: Lato;
-  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-family: DMSansMedium;
+  src: url(./fonts/DMSans-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: LatoBold;
-  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+  font-family: DMSansSemiBold;
+  src: url(./fonts/DMSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: DMSansRegular;
+  src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
   .burgerMenu {
@@ -27,7 +31,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 243, 237, 0.9725490196);
+    background-color: #fad9cb;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -58,11 +62,11 @@
     justify-content: space-between;
     width: 170px;
     height: 320px;
-    color: #d34600;
+    color: #e55d19;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     text-decoration: none;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -72,7 +76,7 @@
   a:visited,
   a:link {
     text-decoration: none;
-    color: #d34600;
+    color: #e55d19;
   }
   .no-scroll {
     overflow: hidden;
@@ -119,19 +123,19 @@
     justify-content: space-between;
   }
   .h1History {
-    color: #f8f2ee;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
   }
   h3 {
-    color: #f8f2ee;
+    color: #c25308;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: LatoBold;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -153,11 +157,11 @@
     gap: 10px;
     align-self: stretch;
     border-radius: 10px;
-    background: #d34600;
+    background: #e55d19;
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: LatoBold;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -165,10 +169,10 @@
     margin-bottom: 32px;
   }
   .textoIntroductorio {
-    color: #4b4a4a;
+    color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -186,9 +190,9 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    color: #4b4a4a;
+    color: #333333;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -201,12 +205,12 @@
     flex-flow: column;
     justify-content: flex-start;
     margin-bottom: 8px;
-    font-family: Lato;
+    font-family: DMSansMedium;
   }
   .textAreaComent {
     border-radius: 15px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
-    background: var(--background, #fafafa);
+    border: 1px solid #9e9e9e;
+    background: #fcfaf6;
     height: 100%;
     display: flex;
     height: 160px;
@@ -215,7 +219,7 @@
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
-    font-family: Lato !important;
+    font-family: DMSansMedium !important;
   }
   .labelComentario {
     margin-bottom: 8px;
@@ -229,7 +233,7 @@
   }
   .inputGroup label {
     font-size: 16px;
-    color: #333;
+    color: #333333;
     font-size: 14px;
     height: 16px;
     margin-top: 16px;
@@ -239,16 +243,16 @@
   .inputGroup select,
   .inputGroup textarea {
     width: 95%;
-    border: 1px solid #ccc;
+    border: 1px solid #d1d1d1;
     border-radius: 4px;
     font-size: 14px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     padding: 8px;
     height: 14px;
     margin-bottom: 5px;
     border-radius: 10px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
-    background: var(--background, #fafafa);
+    border: 1px solid #9e9e9e;
+    background: #d1d1d1;
   }
   .inputGroup input:focus,
   .inputGroup select:focus,
@@ -273,7 +277,7 @@
   .inputGroup textarea {
     height: 313px;
     resize: none;
-    font-family: Lato !important;
+    font-family: DMSansMedium !important;
   }
   .required {
     color: #ff4444;
@@ -285,21 +289,21 @@
     border-radius: 10px;
     padding: 8px;
     border-radius: 1px solid gray;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid #9e9e9e;
   }
   .placeholderText {
     color: #9e9e9e !important;
-    font-family: Lato;
+    font-family: DMSansMedium;
     text-align: left !important;
     font-weight: normal;
   }
   .spanFechas {
-    color: #4b4a4a !important;
+    color: #333333 !important;
     text-align: left;
     font-weight: normal;
   }
   .stayDays {
-    color: #4b4a4a !important;
+    color: #333333 !important;
   }
   .datePickerModal {
     position: fixed;
@@ -307,7 +311,7 @@
     left: 0;
     width: 100%;
     height: 80vh;
-    background: white;
+    background: #fcfaf6;
     border-radius: 10px 10px 0 0;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
@@ -328,12 +332,12 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid var(--Gray-A, #9e9e9e);
+    border: 1px solid #9e9e9e;
     transition: all 300ms !important;
-    color: #4b4a4a;
+    color: #333333;
   }
   :global .react-datepicker {
-    font-family: "Lato", sans-serif;
+    font-family: DMSansMedium, sans-serif;
   }
   :global .react-datepicker__day--in-range {
     background-color: rgba(201, 52, 19, 0.1) !important;
@@ -362,11 +366,11 @@
     width: 90%;
     padding: 12px;
     margin-top: 20px;
-    background-color: #d34600;
+    background-color: #e55d19;
     color: white;
     border: none;
     border-radius: 8px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     cursor: pointer;
   }
@@ -381,8 +385,453 @@
     height: 40px !important;
   }
   .selectDates {
-    color: #d34600;
+    color: #e55d19;
+    font-family: DMSansMedium;
+    text-align: center;
+    width: 147px;
+    margin: auto;
+    font-size: 18px;
+  }
+  .guestsGroup {
+    display: flex;
+    gap: 16px;
+  }
+  .guestsGroup .inputGroup {
+    flex: 1;
+  }
+  .charCount {
+    text-align: right;
+    font-size: 14px;
+    color: #9e9e9e;
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+  .submitButton {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    text-align: center;
     font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: #e55d19;
+  }
+  .submitButtonOff {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color: gray;
+    text-align: center;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: #fcfaf6;
+  }
+  .bottomFormImage {
+    width: 100%;
+    height: 310px;
+    margin-bottom: 56px;
+  }
+  .errorInput {
+    border-color: #cf3342;
+  }
+  .errorMessage {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    font-family: DMSansMedium;
+    font-weight: bold;
+    color: #cf3342;
+    font-size: 12px;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fad9cb;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 108px;
+    width: 328px;
+  }
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 320px;
+    color: #e55d19;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: DMSansMedium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #e55d19;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #e55d19;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  .textoIntroductorio {
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+  .formContainer {
+    width: 90%;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #333333;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+    margin-bottom: 72px;
+  }
+  .inputGroupTextArea {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    font-family: DMSansMedium;
+  }
+  .textAreaComent {
+    border-radius: 15px;
+    border: 1px solid #9e9e9e;
+    background: #d1d1d1;
+    height: 100%;
+    display: flex;
+    height: 160px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    font-family: DMSansMedium !important;
+  }
+  .labelComentario {
+    margin-bottom: 8px;
+  }
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  .inputGroup label {
+    font-size: 16px;
+    color: #333333;
+    font-size: 14px;
+    height: 16px;
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+  .inputGroup input,
+  .inputGroup select,
+  .inputGroup textarea {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: DMSansMedium;
+    padding: 8px;
+    height: 14px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid #9e9e9e;
+    background: #d1d1d1;
+  }
+  .inputGroup input:focus,
+  .inputGroup select:focus,
+  .inputGroup textarea:focus {
+    outline: none;
+    border-color: #666;
+  }
+  .inputGroup input::-moz-placeholder, .inputGroup select::-moz-placeholder, .inputGroup textarea::-moz-placeholder {
+    color: #9e9e9e !important;
+    text-align: left !important;
+  }
+  .inputGroup input::placeholder,
+  .inputGroup select::placeholder,
+  .inputGroup textarea::placeholder {
+    color: #9e9e9e !important;
+    text-align: left !important;
+  }
+  .inputGroup .countsPersons {
+    height: 36px;
+    width: 100%;
+  }
+  .inputGroup textarea {
+    height: 313px;
+    resize: none;
+    font-family: DMSansMedium !important;
+  }
+  .required {
+    color: #ff4444;
+  }
+  .datePreview {
+    display: flex;
+    flex-flow: column;
+    height: 16px;
+    border-radius: 10px;
+    padding: 8px;
+    border-radius: 1px solid gray;
+    border: 1px solid #9e9e9e;
+  }
+  .placeholderText {
+    color: #9e9e9e !important;
+    font-family: DMSansMedium;
+    text-align: left !important;
+    font-weight: normal;
+  }
+  .spanFechas {
+    color: #333333 !important;
+    text-align: left;
+    font-weight: normal;
+  }
+  .stayDays {
+    color: #333333 !important;
+  }
+  .datePickerModal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: all 300ms !important;
+  }
+  .datePickerModal.modalOpen {
+    transform: translateY(0);
+    bottom: 0;
+    transition: all 300ms !important;
+  }
+  .datePickerContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #9e9e9e;
+    transition: all 300ms !important;
+    color: #333333;
+  }
+  :global .react-datepicker {
+    font-family: DMSansMedium, sans-serif;
+  }
+  :global .react-datepicker__day--in-range {
+    background-color: rgba(201, 52, 19, 0.1) !important;
+    border-radius: 0 !important;
+  }
+  :global .react-datepicker__day--in-selecting-range {
+    background-color: rgba(201, 52, 19, 0.1) !important;
+    border-radius: 0 !important;
+  }
+  :global .react-datepicker__day--selected {
+    background-color: #c93413 !important;
+    border-radius: 50% !important;
+    color: white !important;
+  }
+  :global .react-datepicker__day--range-start {
+    border-radius: 50% 0 0 50% !important;
+    background-color: #c93413 !important;
+    color: white !important;
+  }
+  :global .react-datepicker__day--range-end {
+    border-radius: 0 50% 50% 0 !important;
+    background-color: #c93413 !important;
+    color: white !important;
+  }
+  .applyButton {
+    width: 50%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #e55d19;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .closeButtonDates {
+    display: flex;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    width: 20px;
+  }
+  .datePickerHeader {
+    height: 40px !important;
+  }
+  .selectDates {
+    color: #e55d19;
+    font-family: DMSansMedium;
     text-align: center;
     width: 147px;
     margin: auto;
@@ -413,12 +862,12 @@
     border: none;
     color: white;
     text-align: center;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: #d34600;
+    background-color: #e55d19;
   }
   .submitButtonOff {
     display: flex;
@@ -431,17 +880,24 @@
     border: none;
     color: gray;
     text-align: center;
-    font-family: Lato;
+    font-family: #e55d19;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: gainsboro;
+    background-color: #fcfaf6;
   }
   .bottomFormImage {
-    width: 100%;
-    height: 310px;
+    width: 90%;
+    height: 783px;
     margin-bottom: 56px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    width: 688px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .errorInput {
     border-color: #cf3342;
@@ -450,11 +906,10 @@
     width: 100%;
     height: auto;
     margin: 0px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-weight: bold;
     color: #cf3342;
     font-size: 12px;
-    font-family: Lato;
     font-size: 12px;
     font-style: normal;
     line-height: 16px; /* 133.333% */

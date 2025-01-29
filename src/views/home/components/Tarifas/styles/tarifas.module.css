@@ -48,7 +48,8 @@
     margin-bottom: 32px;
   }
   .h2 {
-    color: #e55d19;
+    color: #333333;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Cardo;
     font-size: 24px;
@@ -73,24 +74,25 @@
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    width: 238px;
+    width: 275px;
+    justify-content: flex-start;
   }
   .itemTarifaDia {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
-    width: 46%;
+    width: 96px;
     margin-left: 8px;
     margin-bottom: 2px;
   }
   .descripcionTarifa {
-    width: 193px;
-    color: #e55d19;
+    width: 164px;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
     font-family: DMSansMedium;
     font-size: 12px;
@@ -105,9 +107,9 @@
     height: 24px;
   }
   .precioTarifa {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -126,12 +128,12 @@
     border-radius: 5px;
   }
   .lineHelper {
-    display: none;
+    display: none !important;
   }
   .itemTarifaPernocte {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -156,9 +158,9 @@
     justify-content: space-between;
   }
   .descripcionTarifaPernocte {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -166,9 +168,9 @@
     letter-spacing: 0.2px;
   }
   .precioTarifaPernocte {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -176,7 +178,7 @@
     letter-spacing: 0.2px;
   }
   .aclaracionPernocte {
-    color: #e55d19;
+    color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
     font-family: DMSansMedium;
     font-size: 12px;
@@ -232,7 +234,7 @@
   .beneficio {
     color: #333333;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: DMSansRegular;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -256,7 +258,7 @@
     font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
 }

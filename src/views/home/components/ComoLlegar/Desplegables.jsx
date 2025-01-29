@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import tren from "../../../../assets/icons/llegarIcons/train.svg";
 import expandAcordeon from "../../../../assets/icons/add.svg";
 import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
-import chrevronRight from "../../../../assets/icons/chevron.svg";
+import chrevronRight from "../../../../assets/icons/chevronTwo.svg";
 
 import styles from "./styles/llegar.module.scss";
 
@@ -62,7 +62,7 @@ export const Desplegables = () => {
           <p>
             El tren tiene un <strong>único horario por día </strong>, llega a
             Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el
-            predio hasta las 3 am y nosotros te llevamos a la estación
+            predio hasta las 3 am y nosotros te llevamos a la estación.
           </p>
         </div>
         <Link

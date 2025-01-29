@@ -34,7 +34,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    background: linear-gradient(0deg, rgba(41, 46, 33, 0.69) 0%, rgba(41, 46, 33, 0.69) 50%);
+    background: linear-gradient(0deg, rgba(41, 46, 33, 0.69) 0%, rgba(41, 46, 33, 0.85) 50%);
   }
   .subtitleContainerServices {
     width: 100%;
@@ -50,11 +50,12 @@
   }
   .h2Servicios {
     color: #fad9cb;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Cardo;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
@@ -65,6 +66,7 @@
     justify-content: space-between;
     height: auto;
     width: 94%;
+    margin-bottom: 16px;
   }
   .serviceContainer {
     display: flex;
@@ -91,11 +93,11 @@
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: DMSansMedium;
+    font-family: DMSansRegular;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
+    font-weight: 400;
+    line-height: 20px;
     letter-spacing: 0.25px;
     width: 175px;
     align-self: stretch;

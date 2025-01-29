@@ -80,12 +80,12 @@
   //Acordeon Section
 
   .contenedorAcordeon {
-    border-bottom: 2px solid $primario-principal;
+    border-bottom: 2px solid $primario-dark;
     width: 92%;
   }
 
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid $primario-principal;
+    border-bottom: 2px solid $primario-dark;
     width: 92%;
     margin-top: 32px;
     margin-bottom: 16px;
@@ -140,7 +140,7 @@
     text-align: center;
     color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -156,28 +156,29 @@
     transition: all 1s ease-in-out;
   }
 
-  .ubitacionTitle {
-    color: $primario-principal;
+  .ubicationTitle {
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }
 
   .linkCompraPasaje {
     text-decoration: underline !important;
+    color: $primario-dark !important;
   }
 
   .linkTarifasTren {
     width: 310px;
-    color: $primario-principal;
+    color: $primario-dark !important;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
-    font-size: 16px;
+    font-family: $second-typography;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: 16px; /* 100% */
@@ -271,6 +272,7 @@
   }
 }
 
+//Inicio modo tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .llegarSection {
     width: 100vw;
@@ -348,13 +350,13 @@
   //Acordeon Section
 
   .contenedorAcordeon {
-    border-bottom: 2px solid $primario-principal;
+    border-bottom: 2px solid $primario-dark;
     width: 688px;
     margin-top: 16px;
   }
 
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid $primario-principal;
+    border-bottom: 2px solid $primario-dark;
     width: 688px;
     margin-top: 32px;
     margin-bottom: 16px;
