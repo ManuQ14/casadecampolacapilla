@@ -34,9 +34,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -53,7 +53,7 @@
     justify-content: space-between;
     gap: 5px;
     border-radius: 5px;
-    background: $naranja-terciario;
+    background: $background;
   }
 
   //Caja de ayuda para contener 2 elementos alineados de precio
@@ -66,9 +66,9 @@
   }
 
   .itemTarifaDia {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -81,9 +81,9 @@
 
   .descripcionTarifa {
     width: 193px;
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -97,9 +97,9 @@
   }
 
   .precioTarifa {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -111,7 +111,7 @@
   .boxTarifaPernocte {
     width: 95%;
     height: 140px;
-    background-color: $naranja-terciario;
+    background-color: $background;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
@@ -119,14 +119,14 @@
     border-radius: 5px;
   }
 
-  .lineHelper{
+  .lineHelper {
     display: none;
   }
 
   .itemTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -154,9 +154,9 @@
   }
 
   .descripcionTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -165,9 +165,9 @@
   }
 
   .precioTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -176,9 +176,9 @@
   }
 
   .aclaracionPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -197,14 +197,14 @@
     justify-content: space-between;
     gap: 5px;
     border-radius: 5px;
-    background: $naranja-terciario;
+    background: $background;
   }
 
   .referenciaPrecio {
     width: 95%;
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -236,9 +236,9 @@
   }
 
   .beneficio {
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -254,13 +254,13 @@
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: $naranja-oficial;
+    background: $primario-principal;
     margin: auto;
     margin-top: 24px;
     margin-bottom: 56px;
     color: white;
     text-align: center;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -302,9 +302,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -321,7 +321,7 @@
     justify-content: space-between;
     gap: 5px;
     border-radius: 5px;
-    background: $naranja-terciario;
+    background: $background;
   }
 
   //Caja de ayuda para contener 2 elementos alineados de precio
@@ -334,9 +334,9 @@
   }
 
   .itemTarifaDia {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -349,9 +349,9 @@
 
   .descripcionTarifa {
     width: 193px;
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -365,9 +365,9 @@
   }
 
   .precioTarifa {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -379,7 +379,7 @@
   .boxTarifaPernocte {
     width: 95%;
     height: 140px;
-    background-color: $naranja-terciario;
+    background-color: $background;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
@@ -387,15 +387,15 @@
     border-radius: 5px;
   }
 
-  .lineHelper{
+  .lineHelper {
     width: 100%;
     display: inline;
   }
 
   .itemTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -423,9 +423,9 @@
   }
 
   .descripcionTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -434,9 +434,9 @@
   }
 
   .precioTarifaPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -445,9 +445,9 @@
   }
 
   .aclaracionPernocte {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -466,14 +466,14 @@
     justify-content: space-between;
     gap: 5px;
     border-radius: 5px;
-    background: $naranja-terciario;
+    background: $background;
   }
 
   .referenciaPrecio {
     width: 95%;
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -505,9 +505,9 @@
   }
 
   .beneficio {
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -523,13 +523,13 @@
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: $naranja-oficial;
+    background: $primario-principal;
     margin: auto;
     margin-top: 24px;
     margin-bottom: 56px;
     color: white;
     text-align: center;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

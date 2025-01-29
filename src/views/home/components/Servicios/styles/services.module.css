@@ -1,19 +1,23 @@
 @import url(../../../../../styles/_variables.scss);
 @font-face {
-  font-family: Bookman;
-  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-family: Cardo;
+  src: url(./fonts/Cardo-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: Lato;
-  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-family: DMSansMedium;
+  src: url(./fonts/DMSans-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: LatoBold;
-  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+  font-family: DMSansSemiBold;
+  src: url(./fonts/DMSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: DMSansRegular;
+  src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
   .serviceSection {
@@ -45,9 +49,9 @@
     margin-bottom: 32px;
   }
   .h2Servicios {
-    color: #f5b498;
+    color: #fad9cb;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -83,11 +87,11 @@
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    color: #f8f2ee;
+    color: #fcfaf6;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -128,9 +132,9 @@
     margin-bottom: 32px;
   }
   .h2Servicios {
-    color: #f5b498;
+    color: #fad9cb;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -166,11 +170,11 @@
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    color: #f8f2ee;
+    color: #fad9cb;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;

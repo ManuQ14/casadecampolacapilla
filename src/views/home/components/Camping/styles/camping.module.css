@@ -1,19 +1,23 @@
 @import url(../../../../../styles/_variables.scss);
 @font-face {
-  font-family: Bookman;
-  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-family: Cardo;
+  src: url(./fonts/Cardo-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: Lato;
-  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-family: DMSansMedium;
+  src: url(./fonts/DMSans-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: LatoBold;
-  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+  font-family: DMSansSemiBold;
+  src: url(./fonts/DMSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: DMSansRegular;
+  src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
   .campingSection {
@@ -38,9 +42,9 @@
     margin-bottom: 32px;
   }
   .h2 {
-    color: #d34600;
+    color: #e55d19;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -57,10 +61,10 @@
     margin-bottom: 46px;
   }
   .campingText {
-    color: #4b4a4a;
+    color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -81,10 +85,10 @@
     align-items: center;
     height: 20px;
     width: 231px;
-    color: #d34600;
+    color: #e55d19;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -162,9 +166,9 @@
     margin-bottom: 32px;
   }
   .h2 {
-    color: #d34600;
+    color: #e55d19;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -181,10 +185,10 @@
     margin-bottom: 46px;
   }
   .campingText {
-    color: #4b4a4a;
+    color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -205,10 +209,10 @@
     align-items: center;
     height: 20px;
     width: 231px;
-    color: #d34600;
+    color: #e55d19;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;

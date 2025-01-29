@@ -1,19 +1,23 @@
 @import url(../../../../../styles/_variables.scss);
 @font-face {
-  font-family: Bookman;
-  src: url(./fonts/BOOKOSB.TTF) format("truetype");
+  font-family: Cardo;
+  src: url(./fonts/Cardo-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: Lato;
-  src: url(./fonts/Lato-Regular.ttf) format("truetype");
+  font-family: DMSansMedium;
+  src: url(./fonts/DMSans-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: LatoBold;
-  src: url(./fonts/Lato-Bold.ttf) format("truetype");
+  font-family: DMSansSemiBold;
+  src: url(./fonts/DMSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: DMSansRegular;
+  src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
   .llegarSection {
@@ -36,9 +40,9 @@
     margin-bottom: 32px;
   }
   .h2 {
-    color: #d34600;
+    color: #333333;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Bookman;
+    font-family: Cardo;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -64,14 +68,14 @@
   }
   .descripcionLlegar {
     height: 192px;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: #4b4a4a;
+    color: #333333;
   }
   .mapaLocation {
     width: 92%;
@@ -80,11 +84,11 @@
     margin-bottom: 16px;
   }
   .contenedorAcordeon {
-    border-bottom: 2px solid #d34600;
+    border-bottom: 2px solid #e55d19;
     width: 92%;
   }
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid #d34600;
+    border-bottom: 2px solid #e55d19;
     width: 92%;
     margin-top: 32px;
     margin-bottom: 16px;
@@ -132,9 +136,9 @@
   .indicationContainer {
     width: 92%;
     text-align: center;
-    color: #4b4a4a;
+    color: #333333;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -150,9 +154,9 @@
     transition: all 1s ease-in-out;
   }
   .ubitacionTitle {
-    color: #d34600;
+    color: #e55d19;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -164,10 +168,10 @@
   }
   .linkTarifasTren {
     width: 310px;
-    color: #d34600;
+    color: #e55d19;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -222,10 +226,10 @@
   }
   .descriptionInfo {
     height: 72px;
-    color: #4b4a4a;
+    color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -233,10 +237,248 @@
     letter-spacing: 0.25px;
   }
   .descripcionLlegarAuto {
-    color: #4b4a4a;
+    color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+  .mapaLlegar {
+    width: 92%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .llegarSection {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .subtitleContainerLlegar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-bottom: 32px;
+  }
+  .h2 {
+    color: #333333;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+  .trenBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 441px;
+    width: 92%;
+  }
+  .iconTransporte {
+    width: 46px;
+    height: 47px;
+    margin-bottom: 16px;
+  }
+  .boxText {
+    width: 208px;
+    width: 100%;
+  }
+  .descripcionLlegar {
+    height: 192px;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    color: #333333;
+  }
+  .mapaLocation {
+    width: 336px;
+    height: 336px;
+    border: none;
+    margin-bottom: 16px;
+  }
+  .contenedorAcordeon {
+    border-bottom: 2px solid #e55d19;
+    width: 688px;
+    margin-top: 16px;
+  }
+  .contenedorAcordeonAuto {
+    border-bottom: 2px solid #e55d19;
+    width: 688px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  .accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .accordionContent.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
+  }
+  .titleContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding-left: 16px;
+    height: 62px;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .trainSVG {
+    margin-right: 16px;
+  }
+  .expandAcordeon {
+    right: 6%;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 1s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .expandAcordeon:hover {
+    opacity: 0.8;
+  }
+  .indicationContainer {
+    width: 92%;
+    text-align: center;
+    color: #333333;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    margin: auto;
+    margin-bottom: 16px;
+    transition: all 1s ease-in-out;
+  }
+  .ubitacionTitle {
+    color: #e55d19;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .linkCompraPasaje {
+    text-decoration: underline !important;
+  }
+  .linkTarifasTren {
+    width: 310px;
+    color: #e55d19;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.4px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 16px;
+  }
+  .chrevronRight {
+    margin-top: 3px;
+  }
+  .autoBoxContainer {
+    width: 92%;
+    height: 255px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .infoBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 336px;
+    height: 336px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+  .itemInfoContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 112px;
+    margin-bottom: 16px;
+  }
+  .iconInfo {
+    height: 32px;
+    margin-bottom: 8px;
+  }
+  .itemInfoContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+  .descriptionInfo {
+    height: 72px;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 114.286% */
+    letter-spacing: 0.25px;
+  }
+  .descripcionLlegarAuto {
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

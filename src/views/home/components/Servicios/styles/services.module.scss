@@ -40,9 +40,9 @@
   }
 
   .h2Servicios {
-    color: #f5b498;
+    color: $primario-light;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -82,11 +82,11 @@
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    color: $naranja-terciario;
+    color: $background;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -99,8 +99,6 @@
   //fin sección servicios
 }
 
-
-
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Inicio Servicios
   .serviceSection {
@@ -111,7 +109,6 @@
     align-items: center;
     background-image: url(../../../../../assets/images/backgroundServices.jpg);
     background-position: center;
-    
   }
 
   .coverServices {
@@ -141,9 +138,9 @@
   }
 
   .h2Servicios {
-    color: #f5b498;
+    color: $primario-light;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -183,11 +180,11 @@
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    color: $naranja-terciario;
+    color: $primario-light;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;

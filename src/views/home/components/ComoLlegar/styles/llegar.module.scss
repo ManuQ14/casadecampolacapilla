@@ -27,9 +27,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -59,14 +59,14 @@
 
   .descripcionLlegar {
     height: 192px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: $gris-oficial;
+    color: $dark;
   }
 
   .mapaLocation {
@@ -79,12 +79,12 @@
   //Acordeon Section
 
   .contenedorAcordeon {
-    border-bottom: 2px solid $naranja-oficial;
+    border-bottom: 2px solid $primario-principal;
     width: 92%;
   }
 
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid $naranja-oficial;
+    border-bottom: 2px solid $primario-principal;
     width: 92%;
     margin-top: 32px;
     margin-bottom: 16px;
@@ -137,9 +137,9 @@
   .indicationContainer {
     width: 92%;
     text-align: center;
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -156,9 +156,9 @@
   }
 
   .ubitacionTitle {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -172,10 +172,10 @@
 
   .linkTarifasTren {
     width: 310px;
-    color: $naranja-oficial;
+    color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -238,10 +238,10 @@
 
   .descriptionInfo {
     height: 72px;
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -250,10 +250,10 @@
   }
 
   .descripcionLlegarAuto {
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -295,9 +295,9 @@
   }
 
   .h2 {
-    color: $naranja-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $bookman;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -327,14 +327,14 @@
 
   .descripcionLlegar {
     height: 192px;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: $gris-oficial;
+    color: $dark;
   }
 
   .mapaLocation {
@@ -347,13 +347,13 @@
   //Acordeon Section
 
   .contenedorAcordeon {
-    border-bottom: 2px solid $naranja-oficial;
+    border-bottom: 2px solid $primario-principal;
     width: 688px;
     margin-top: 16px;
   }
 
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid $naranja-oficial;
+    border-bottom: 2px solid $primario-principal;
     width: 688px;
     margin-top: 32px;
     margin-bottom: 16px;
@@ -406,9 +406,9 @@
   .indicationContainer {
     width: 92%;
     text-align: center;
-    color: $gris-oficial;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -425,9 +425,9 @@
   }
 
   .ubitacionTitle {
-    color: $naranja-oficial;
+    color: $primario-principal;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -441,10 +441,10 @@
 
   .linkTarifasTren {
     width: 310px;
-    color: $naranja-oficial;
+    color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -508,10 +508,10 @@
 
   .descriptionInfo {
     height: 72px;
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -520,10 +520,10 @@
   }
 
   .descripcionLlegarAuto {
-    color: $gris-oficial;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
