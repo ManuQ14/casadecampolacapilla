@@ -56,12 +56,12 @@ body {
 
   .react-datepicker__current-month {
     text-transform: capitalize;
-    font-family: "DMSans-Medium";
+    font-family: "DMSansMedium";
     font-size: 16px;
   }
 
   .react-datepicker {
-    font-family: "DMSans-Medium", sans-serif;
+    font-family: "DMSansMedium", sans-serif;
   }
 
   .react-datepicker__day--in-range {
@@ -160,12 +160,12 @@ body {
 
   .react-datepicker__current-month {
     text-transform: capitalize;
-    font-family: "DMSans-Medium";
+    font-family: "DMSansMedium";
     font-size: 16px;
   }
 
   .react-datepicker {
-    font-family: "DMSans-Medium", sans-serif;
+    font-family: "DMSansMedium", sans-serif;
   }
 
   .react-datepicker__day--in-range {

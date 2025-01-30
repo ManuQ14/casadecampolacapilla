@@ -14,7 +14,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #fff3edf8;
+    background-color: $background;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -47,7 +47,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
+    width: 180px;
     height: 320px;
     color: $primario-principal;
     text-align: center;
@@ -56,7 +56,7 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
   }
@@ -120,7 +120,7 @@
   }
 
   .h1History {
-    color: $primario-dark;
+    color: $background;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 30px;
@@ -178,7 +178,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $primario-dark;
+    //background-color: $primario-dark;
     margin-top: 56px;
     padding-bottom: 56px;
   }
@@ -212,7 +212,8 @@
   .imageWrapper {
     position: relative;
     width: 100%;
-    padding-top: 82%;
+    height: 140px;
+    //padding-top: 82%;
     overflow: hidden;
     border-radius: 5px;
   }
@@ -222,7 +223,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 140px;
     object-fit: cover;
     transition: transform 0.3s ease;
 

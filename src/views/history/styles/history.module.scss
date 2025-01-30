@@ -48,7 +48,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
+    width: 180px;
     height: 320px;
     color: $primario-principal;
     text-align: center;
@@ -57,7 +57,7 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
   }
@@ -117,17 +117,18 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .h1History {
-    color: $primario-dark;
+    color: $background;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 30px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 40px; /* 133.333% */
+    margin-bottom: 16px;
   }
 
   h3 {
@@ -201,7 +202,8 @@
   }
 
   .h2 {
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 24px;
@@ -217,7 +219,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -228,11 +230,11 @@
 
   .textoPuebloContainer {
     width: 92%;
-    height: 530px;
+    height: auto;
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -295,7 +297,7 @@
   //Inicio sección notas
 
   .notaSection {
-    margin-bottom: 56px;
+    margin-bottom: 24px;
   }
 
   .subtitleContainerNotas {
@@ -314,7 +316,8 @@
 
   .h2Notas {
     width: 92%;
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 24px;
@@ -361,13 +364,14 @@
 
   .tituloNota {
     width: 90%;
+    height: auto;
     margin-left: 8px;
-    color: $dark;
+    color: $dark !important;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 32px; /* 160% */
     letter-spacing: 0.15px;
     text-align: left;
