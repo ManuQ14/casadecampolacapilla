@@ -80,6 +80,7 @@
   }
 }
 
+//Inicio tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .footer {
     display: flex;
@@ -90,6 +91,7 @@
     font-family: Lato;
     background-color: #d34600;
     color: white;
+    margin-top: 56px;
   }
 
   .iconCapilla {

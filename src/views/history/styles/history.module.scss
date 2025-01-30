@@ -383,6 +383,7 @@
   }
 }
 
+//Inicio tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Header history
 
@@ -392,7 +393,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     width: 100%;
@@ -405,7 +406,7 @@
 
   .menuOpen {
     right: 0 !important;
-    height: 103vh !important;
+    height: 100vh !important;
     width: 100vw !important;
   }
 
@@ -430,7 +431,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
+    //width: 170px;
     height: 320px;
     color: $primario-principal;
     text-align: center;
@@ -439,7 +440,7 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
   }
@@ -471,7 +472,7 @@
   .headerMobile {
     position: relative;
     width: 100vw;
-    height: 420px;
+    height: 650px;
     background-image: url(../../../assets//images/headerHistory.jpg);
     background-size: cover;
     background-position: 90%;
@@ -503,25 +504,13 @@
   }
 
   .h1History {
-    color: $primario-dark;
+    color: $background;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px; /* 133.333% */
-  }
-
-  h3 {
-    color: $primario-dark;
-    text-align: center;
-    font-feature-settings: "liga" off, "clig" off;
-    font-family: $second-bold-typography;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.1px;
   }
 
   img[alt="Abrir menú hamburguesa"] {
@@ -578,12 +567,13 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    margin-top: 56px;
+    margin-top: 80px;
     margin-bottom: 32px;
   }
 
   .h2 {
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 32px;
@@ -599,7 +589,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $primario-principal;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -614,7 +604,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -627,8 +617,9 @@
 
   .carrouselCamping {
     position: relative;
-    width: 100%;
-    height: 310px;
+    height: 516px;
+    width: 90%;
+    border-radius: 5px;
     overflow: hidden;
 
     .imageWrapper {
@@ -677,7 +668,7 @@
   //Inicio sección notas
 
   .notaSection {
-    margin-bottom: 56px;
+    margin-bottom: 80px;
   }
 
   .subtitleContainerNotas {
@@ -695,8 +686,9 @@
   }
 
   .h2Notas {
-    width: 92%;
-    color: $primario-principal;
+    width: 60%;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 32px;
@@ -714,6 +706,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
   }
 
   .boxContainerNota {
@@ -749,12 +742,12 @@
     //height: auto;
     max-height: 92px;
     margin-left: 8px;
-    color: $dark;
+    color: $dark !important;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 100%;
     letter-spacing: 0.15px;
     text-align: left;

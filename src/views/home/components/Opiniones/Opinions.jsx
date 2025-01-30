@@ -27,6 +27,10 @@ export const Opinions = () => {
       stars: 5,
       review: `Excelente lugar para acampar, descansar o simplemente pasar el día. Cuenta con proveeduría, baños con agua caliente, lugares para acampar cómodamente y piletas para los días de calor. La atención fue súper cálida y amable. Lo recomiendo 100% para descansar y desconectar de todo sin otros ruidos que no sean los de la naturaleza`,
     },
+    {
+      stars: 5,
+      review: `Muy lindo camping, lugar muy tranquilo. Buena sombra para acampar. Los dueños son excelentes! Hay algunas opciones de comida casera, proveeduría a muy buen precio. Venta de productos locales como miel, mermelada, dulce de leche, etc `,
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -514,12 +514,12 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: $primario-light;
+    background-color: $background;
     transition: right 300ms ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 200;
@@ -527,7 +527,7 @@
 
   .menuOpen {
     right: 0 !important;
-    height: 103vh !important;
+    height: 100vh !important;
     width: 100vw !important;
   }
 
@@ -552,7 +552,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
+    //width: 170px;
     height: 320px;
     color: $primario-principal;
     text-align: center;
@@ -561,7 +561,7 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
   }
@@ -593,7 +593,7 @@
   .headerMobile {
     position: relative;
     width: 100vw;
-    height: 420px;
+    height: 650px;
     background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
     background-size: cover;
     background-position: 94%;
@@ -625,7 +625,7 @@
   }
 
   .h1History {
-    color: $primario-dark;
+    color: $background;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 36px;

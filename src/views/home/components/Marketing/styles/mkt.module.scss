@@ -86,7 +86,7 @@
     color: $dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $second-typography;
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
@@ -108,6 +108,7 @@
   //Fin sectión MKT
 }
 
+//Inicio tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Inicio sección MKT
   .mktSection {
@@ -161,7 +162,7 @@
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 36px;
     letter-spacing: 0.15px;
   }
@@ -169,16 +170,17 @@
   .h2Mkt2 {
     color: $dark;
     height: 108px;
-    width: 265px;
+    //width: 265px;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 36px; /* 150% */
     letter-spacing: 0.15px;
     margin-top: 23px;
+    margin-bottom: 16px;
   }
 
   .astroExplication {

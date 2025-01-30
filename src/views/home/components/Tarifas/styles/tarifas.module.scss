@@ -274,7 +274,7 @@
 
 
 
-
+//Inicio tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Inicio Tarifario
   .tarifaSection {
@@ -308,7 +308,8 @@
   }
 
   .h2 {
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 32px;
@@ -335,12 +336,12 @@
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: space-between;
-    width: 238px;
+    justify-content: flex-start;
+    width: 295px;
   }
 
   .itemTarifaDia {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 16px;
@@ -348,14 +349,13 @@
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    width: 46%;
+    width: 32%;
     margin-left: 8px;
     margin-bottom: 2px;
   }
 
   .descripcionTarifa {
-    width: 193px;
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 12px;
@@ -371,7 +371,7 @@
   }
 
   .precioTarifa {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 16px;
@@ -399,7 +399,7 @@
   }
 
   .itemTarifaPernocte {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 16px;
@@ -429,7 +429,7 @@
   }
 
   .descripcionTarifaPernocte {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 12px;
@@ -440,7 +440,7 @@
   }
 
   .precioTarifaPernocte {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 16px;
@@ -451,7 +451,7 @@
   }
 
   .aclaracionPernocte {
-    color: $primario-principal;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 12px;
@@ -538,7 +538,7 @@
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
 }

@@ -299,6 +299,7 @@
 
   .h2 {
     color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 32px;
@@ -411,7 +412,7 @@
     text-align: center;
     color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -428,7 +429,7 @@
   }
 
   .ubicationTitle {
-    color: $primario-principal !important;
+    color: $primario-dark !important;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography !important;
     font-size: 16px;
@@ -440,14 +441,14 @@
 
   .linkCompraPasaje {
     text-decoration: underline !important;
+    color: $primario-dark !important;
   }
 
   .linkTarifasTren {
-    width: 310px;
-    color: $primario-principal;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -456,7 +457,7 @@
     display: flex;
     flex-flow: row;
     align-items: center;
-
+    justify-content: center;
     margin: auto;
     margin-bottom: 16px;
   }
@@ -514,7 +515,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

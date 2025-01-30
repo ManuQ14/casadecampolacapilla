@@ -144,6 +144,7 @@
 }
 //Fin El Camping
 
+//Inicio tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Inicio sección Camping
   .campingSection {
@@ -170,7 +171,8 @@
   }
 
   .h2 {
-    color: $primario-principal;
+    color: $dark;
+    text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $third-typography;
     font-size: 32px;
@@ -194,7 +196,7 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -207,8 +209,8 @@
     display: flex;
     align-items: center;
     flex-flow: row;
-    width: 257px;
-    justify-content: space-between;
+    //width: 328px;
+    justify-content: flex-start;
   }
 
   .conoceMasText {
@@ -216,7 +218,7 @@
     flex-flow: row;
     align-items: center;
     height: 20px;
-    width: 231px;
+    width: 100%;
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
