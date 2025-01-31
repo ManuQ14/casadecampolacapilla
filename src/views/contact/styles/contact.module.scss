@@ -157,7 +157,7 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 10px;
+    border-radius: 5px;
     background: $primario-principal;
     text-decoration: none;
     color: var(--White, #fff);
@@ -182,7 +182,7 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 
   //Inicio sección formulario
@@ -204,7 +204,7 @@
     font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    //font-weight: 700;
     line-height: 16px; /* 114.286% */
     letter-spacing: 0.25px;
     margin-bottom: 72px;
@@ -219,9 +219,9 @@
   }
 
   .textAreaComent {
-    border-radius: 15px;
+    border-radius: 5px;
     border: 1px solid $gray-a;
-    background: $background;
+    //background: $background;
     height: 100%;
     display: flex;
     height: 160px;
@@ -237,10 +237,14 @@
     margin-bottom: 8px;
   }
 
+  .countsPersons {
+    color: $dark !important;
+  }
+
   .inputGroup {
     display: flex;
     flex-direction: column;
-    height: 90px;
+    height: 74px;
     justify-content: flex-start;
     margin-bottom: 8px;
 
@@ -249,33 +253,39 @@
       color: $dark;
       font-size: 14px;
       height: 16px;
-      margin-top: 16px;
+      //margin-top: 16px;
       margin-bottom: 5px;
+      font-family: $second-bold-typography;
     }
 
     input,
     select,
     textarea {
       width: 95%;
-      border: 1px solid $gray-b;
+      //border: 1px solid $gray-b;
       border-radius: 4px;
       font-size: 14px;
       font-family: $main-typography;
       padding: 8px;
       height: 14px;
       margin-bottom: 5px;
-      border-radius: 10px;
+      border-radius: 5px;
       border: 1px solid $gray-a;
+      color: $dark !important;
 
       &:focus {
         outline: none;
-        border-color: #666;
+        //border-color: 1px solid $primario-principal;
       }
       &::placeholder {
         color: $gray-a !important;
         text-align: left !important;
       }
     }
+
+    /*   input:active {
+      border: 0.1px solid $primario-principal;
+    } */
 
     .countsPersons {
       height: 36px;
@@ -297,9 +307,9 @@
     display: flex;
     flex-flow: column;
     height: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 8px;
-    border-radius: 1px solid gray;
+    border-radius: 5px;
     border: 1px solid $gray-a;
   }
 
@@ -326,13 +336,13 @@
     left: 0;
     width: 100%;
     height: 80vh;
-    background: $background;
-    border-radius: 10px 10px 0 0;
+    background: white;
+    border-radius: 5px 5px 0 0;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     transform: translateY(100%);
     transition: all 300ms !important;
-
+    border: 1px solid $gray-b;
     &.modalOpen {
       transform: translateY(0);
       bottom: 0;
@@ -348,7 +358,7 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid $gray-a;
     transition: all 300ms !important;
     color: $dark;
@@ -430,6 +440,7 @@
 
     .inputGroup {
       flex: 1;
+      border-radius: 5px !important ;
     }
   }
 
@@ -439,6 +450,7 @@
     color: $gray-a;
     margin-top: 8px;
     margin-right: 5px;
+    border-radius: 5px !important ;
   }
 
   .submitButton {
@@ -448,7 +460,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: white;
     text-align: center;
@@ -467,7 +479,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: $gray-a;
     text-align: center;
@@ -484,16 +496,24 @@
     height: 310px;
     margin-bottom: 56px;
   }
+
+  /*  .fullName {
+    border-color: $primario-principal !important;
+  } */
+
   .errorInput {
-    border-color: #cf3342;
+    border-color: #cf3342 !important;
+  }
+
+  .inputCorrect:focus {
+    border: 1px solid $primario-dark !important;
   }
 
   .errorMessage {
     width: 100%;
     height: auto;
     margin: 0px;
-    font-family: $main-typography;
-    font-weight: bold;
+    font-family: $main-typography !important;
     color: #cf3342;
     font-size: 12px;
     font-family: Lato;
@@ -661,7 +681,7 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 10px;
+    border-radius: 5px;
     background: $primario-principal;
     text-decoration: none;
     color: var(--White, #fff);
@@ -747,6 +767,7 @@
     height: 90px;
     justify-content: flex-start;
     margin-bottom: 8px;
+    border-radius: 5px !important;
 
     label {
       font-size: 16px;
@@ -768,7 +789,7 @@
       padding: 8px;
       height: 14px;
       margin-bottom: 5px;
-      border-radius: 10px;
+      border-radius: 5px !important;
       border: 1px solid $gray-a;
       background: $gray-b;
 
@@ -791,6 +812,7 @@
       height: 313px;
       resize: none;
       font-family: $main-typography !important;
+      border-radius: 5px !important;
     }
   }
 
@@ -802,7 +824,7 @@
     display: flex;
     flex-flow: column;
     height: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 8px;
     border-radius: 1px solid gray;
     border: 1px solid $gray-a;
@@ -832,7 +854,7 @@
     width: 100%;
     height: 80vh;
     background: white;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     transform: translateY(100%);
@@ -853,7 +875,7 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid $gray-a;
     transition: all 300ms !important;
     color: $dark;
@@ -954,7 +976,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: white;
     text-align: center;
@@ -973,7 +995,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: gray;
     text-align: center;

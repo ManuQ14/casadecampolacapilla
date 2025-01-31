@@ -49,7 +49,7 @@ export const Form = () => {
       if (value.trim() === "") {
         setErrors((prev) => ({
           ...prev,
-          fullName: "El campo no puede quedar vacío, ingrese nombre y apellido",
+          fullName: "El campo no puede quedar vacío",
         }));
       } else if (!validateName(value)) {
         setErrors((prev) => ({
@@ -205,7 +205,7 @@ Comentario: ${formData.comment}`;
               onChange={handleChange}
               required
               placeholder="Nombre Apellido"
-              className={errors.fullName ? styles.errorInput : ""}
+              className={errors.fullName ? styles.errorInput : styles.inputCorrect}
             />
             {errors.fullName && (
               <span className={styles.errorMessage} role="alert">
@@ -227,7 +227,7 @@ Comentario: ${formData.comment}`;
               onChange={handleChange}
               required
               placeholder="correo@dominio.com"
-              className={errors.email ? styles.errorInput : ""}
+              className={errors.email ? styles.errorInput : styles.inputCorrect}
             />
             {errors.email && (
               <span className={styles.errorMessage} role="alert">
@@ -250,7 +250,7 @@ Comentario: ${formData.comment}`;
               onChange={handleChange}
               required
               placeholder="(011)11111111"
-              className={errors.phone ? styles.errorInput : ""}
+              className={errors.phone ? styles.errorInput : styles.inputCorrect}
             />
             {errors.phone && (
               <span className={styles.errorMessage} role="alert">

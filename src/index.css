@@ -7,6 +7,10 @@ body {
   overflow-x: hidden !important;
 }
 
+input{
+  border-radius: 5px !important;
+}
+
 .no-scroll {
   overflow: hidden !important;
 }
