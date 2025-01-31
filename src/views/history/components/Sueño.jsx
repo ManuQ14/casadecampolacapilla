@@ -97,6 +97,7 @@ export const Sueño = () => {
           apuro y del ruido de la ciudad, y poder vivir esta experiencia rural
           así como nosotros la disfrutamos.
         </p>
+        <br />
         <p>
           Con pandemia de por medio y casi sin pensarlo decidimos que era el
           momento oportuno de dejarlo todo e ir a vivir al campo. Desde aquí,
@@ -104,6 +105,7 @@ export const Sueño = () => {
           emprendimiento familiar con mucho cariño y pasión podía salir adelante
           siempre que se mantenga la esencia de la Experiencia Rural.
         </p>
+        <br />
         <p>
           Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
           recibiremos con los brazos abiertos para tu experiencia sea relajante

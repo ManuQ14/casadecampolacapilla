@@ -222,11 +222,10 @@
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 16px; /* 100% */
+    line-height: 16px;
     letter-spacing: 0.4px;
   }
 
