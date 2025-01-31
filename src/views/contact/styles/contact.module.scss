@@ -283,9 +283,7 @@
       }
     }
 
-    /*   input:active {
-      border: 0.1px solid $primario-principal;
-    } */
+
 
     .countsPersons {
       height: 36px;
@@ -409,7 +407,7 @@
     background-color: $primario-principal;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-family: $main-typography;
     font-size: 16px;
     cursor: pointer;
@@ -531,13 +529,13 @@
 //Inicio sección tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Header history
-  // Manejo de menú hamburguesa
-  .burgerMenu {
+   // Manejo de menú hamburguesa
+   .burgerMenu {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
@@ -550,7 +548,7 @@
 
   .menuOpen {
     right: 0 !important;
-    height: 100vh !important;
+    height: 103vh !important;
     width: 100vw !important;
   }
 
@@ -703,10 +701,10 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    //font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-bottom: 32px;
@@ -728,10 +726,9 @@
 
     color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
     line-height: 16px; /* 114.286% */
     letter-spacing: 0.25px;
     margin-bottom: 72px;
@@ -746,9 +743,8 @@
   }
 
   .textAreaComent {
-    border-radius: 15px;
+    border-radius: 5px;
     border: 1px solid $gray-a;
-    background: $gray-b;
     height: 100%;
     display: flex;
     height: 160px;
@@ -767,7 +763,7 @@
   .inputGroup {
     display: flex;
     flex-direction: column;
-    height: 90px;
+    height: 74px;
     justify-content: flex-start;
     margin-bottom: 8px;
     border-radius: 5px !important;
@@ -777,28 +773,27 @@
       color: $dark;
       font-size: 14px;
       height: 16px;
-      margin-top: 16px;
       margin-bottom: 5px;
+      font-family: $second-bold-typography;
     }
 
     input,
     select,
     textarea {
-      width: 95%;
-      border: 1px solid $gray-a;
+      width: 97%;
       border-radius: 4px;
       font-size: 14px;
-      font-family: $main-typography;
+      font-family: $main-typography !important;
       padding: 8px;
       height: 14px;
       margin-bottom: 5px;
       border-radius: 5px !important;
       border: 1px solid $gray-a;
-      background: $gray-b;
+      color: $dark !important;
 
       &:focus {
         outline: none;
-        border-color: #666;
+  
       }
       &::placeholder {
         color: $gray-a !important;
@@ -815,7 +810,8 @@
       height: 313px;
       resize: none;
       font-family: $main-typography !important;
-      border-radius: 5px !important;
+      /* border-radius: 5px !important;
+      background-color: transparent !important; */
     }
   }
 
@@ -829,7 +825,7 @@
     height: 16px;
     border-radius: 5px;
     padding: 8px;
-    border-radius: 1px solid gray;
+    border-radius: 5px;
     border: 1px solid $gray-a;
   }
 
@@ -855,7 +851,7 @@
     bottom: -100%;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 65vh;
     background: white;
     border-radius: 5px 5px 0 0;
     transition: transform 0.3s ease-in-out;
@@ -882,6 +878,7 @@
     border: 1px solid $gray-a;
     transition: all 300ms !important;
     color: $dark;
+    padding-top: 15px;
   }
 
   :global {
@@ -924,11 +921,11 @@
   .applyButton {
     width: 50%;
     padding: 12px;
-    margin-top: 20px;
+    //margin-top: 20px;
     background-color: $primario-principal;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-family: $main-typography;
     font-size: 16px;
     cursor: pointer;
@@ -937,22 +934,24 @@
   .closeButtonDates {
     display: flex;
     position: absolute;
-    right: 2%;
-    top: 1%;
+    right: 4%;
+    top: 2.5%;
     width: 20px;
   }
 
   .datePickerHeader {
     height: 40px !important;
+    margin-bottom: 15px;
   }
 
   .selectDates {
-    color: $primario-principal;
-    font-family: $main-typography;
+    color: $primario-principal !important;
+    font-family: $second-bold-typography;
     text-align: center;
-    width: 147px;
+    
     margin: auto;
     font-size: 18px;
+    font-weight: normal !important;
   }
 
   .guestsGroup {
@@ -1000,14 +999,14 @@
     gap: 10px;
     border-radius: 5px;
     border: none;
-    color: gray;
+    color: $gray-a;
     text-align: center;
     font-family: $primario-principal;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: $background;
+    background-color: $gray-b;
   }
 
   .bottomFormImage {
@@ -1022,8 +1021,12 @@
     object-fit: cover;
   }
   .errorInput {
-    border-color: #cf3342;
+    border-color: #cf3342 !important;
   }
+
+.inputCorrect:focus{
+  border: 1px solid $primario-dark !important;
+}
 
   .errorMessage {
     width: 100%;

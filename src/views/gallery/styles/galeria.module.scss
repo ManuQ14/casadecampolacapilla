@@ -328,7 +328,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
@@ -341,7 +341,7 @@
 
   .menuOpen {
     right: 0 !important;
-    height: 100vh !important;
+    height: 103vh !important;
     width: 100vw !important;
   }
 

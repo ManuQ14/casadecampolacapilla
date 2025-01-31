@@ -187,13 +187,14 @@
 
 //Inicio seccion tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  
   // Manejo de menú hamburguesa
   .burgerMenu {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
@@ -206,7 +207,7 @@
 
   .menuOpen {
     right: 0 !important;
-    height: 100vh !important;
+    height: 103vh !important;
     width: 100vw !important;
   }
 
@@ -342,7 +343,7 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 10px;
+    border-radius: 5px;
     background: $primario-principal;
     text-decoration: none;
     color: $background;
