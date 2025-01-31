@@ -60,6 +60,7 @@ input{
     text-transform: capitalize;
     font-family: "DMSansMedium";
     font-size: 16px;
+    font-weight: normal;
   }
 
   .react-datepicker {
@@ -108,7 +109,7 @@ input{
   }
 
   .react-datepicker__navigation {
-    top: 15px;
+    top: 4px;
   }
 
   .react-datepicker__day-name {
@@ -116,6 +117,12 @@ input{
     font-weight: 500;
     text-transform: capitalize;
   }
+
+  .react-datepicker__day--outside-month{
+    background-color: transparent !important;
+    color: #d1d1d1;
+  }
+
 }
 
 /* Inicio sección tablet */

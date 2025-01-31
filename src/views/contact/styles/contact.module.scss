@@ -362,6 +362,7 @@
     border: 1px solid $gray-a;
     transition: all 300ms !important;
     color: $dark;
+    padding-top: 15px;
   }
 
   :global {
@@ -404,7 +405,7 @@
   .applyButton {
     width: 90%;
     padding: 12px;
-    margin-top: 20px;
+    //margin-top: 20px;
     background-color: $primario-principal;
     color: white;
     border: none;
@@ -417,21 +418,23 @@
   .closeButtonDates {
     display: flex;
     position: absolute;
-    right: 2%;
-    top: 1%;
+    right: 4%;
+    top: 2.5%;
     width: 20px;
   }
 
   .datePickerHeader {
     height: 40px !important;
+    margin-bottom: 15px;
   }
 
   .selectDates {
     color: $primario-principal !important;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     text-align: center;
     margin: auto;
     font-size: 18px;
+    font-weight: normal !important;
   }
 
   .guestsGroup {
