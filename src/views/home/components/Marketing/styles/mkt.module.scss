@@ -210,3 +210,118 @@
   }
   //Fin sectión MKT
 }
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  //Inicio sección MKT
+  .mktSection {
+    width: 100vw;
+    height: 1000px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+
+  .containerMktOne {
+    width: 1120px;
+    height: 420px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-top: 56px;
+  }
+
+  .containerMktTwo {
+    width: 1120px;
+    height: 420px;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .subtitleContainerMkt {
+    width: 560px;
+    height: 420px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subtitleContainerMkt2 {
+    width: 560px;
+    height: 420px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .h2Mkt {
+    color: $dark;
+    height: 108px;
+    width: 265px;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    width: 560px;
+    line-height: 48px;
+    height: 96px;
+    margin-bottom: 16px;
+  }
+
+  .h2Mkt2 {
+    color: $dark;
+    height: 108px;
+    width: 265px;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    width: 536px;
+    line-height: 48px;
+    height: 96px;
+    margin-bottom: 16px;
+    margin-left: 24px;
+  }
+
+  .astroExplication {
+    width: 95%;
+    color: $dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: 16px;
+    font-family: $second-typography;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .fotoContainer {
+    width: 560px;
+    height: 420px;
+    border-radius: 5px 5px 5px 0px;
+  }
+
+  .fotoContainer2 {
+    width: 560px;
+    height: 420px;
+    border-radius: 5px 0px 5px 5px;
+  }
+  //Fin sectión MKT
+}

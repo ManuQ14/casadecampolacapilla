@@ -14,6 +14,12 @@
     margin-top: 56px;
   }
 
+  .contenedorCampingDesktop {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+  }
+
   .subtitleContainer {
     width: 100%;
     height: 48px;
@@ -157,6 +163,11 @@
     margin-bottom: 56px;
     margin-top: 56px;
   }
+  .contenedorCampingDesktop {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+  }
 
   .subtitleContainer {
     width: 100%;
@@ -242,6 +253,158 @@
     overflow: hidden;
     border-radius: 5px;
     height: 516px;
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        cursor: pointer;
+
+        &.activeDot {
+          background-color: #787878;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  //Inicio sección Camping
+  .campingSection {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: flex;
+    flex-flow: flex wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 56px;
+  }
+
+  .contenedorCampingDesktop {
+    margin-top: 56px;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    width: 548px;
+  }
+
+  .subtitleContainer {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $dark;
+    text-transform: uppercase;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .campingTextContainer {
+    width: 92%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 46px;
+  }
+
+  .campingText {
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  .conoceMasContainer {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    //width: 328px;
+    justify-content: flex-start;
+  }
+
+  .conoceMasText {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    color: $primario-principal;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+  }
+
+  .chrevronRight {
+    width: 24px;
+    height: 24px;
+  }
+
+  //Carrousel
+
+  .carrouselCamping {
+    position: relative;
+    width: 548px;
+    height: 411px;
+    overflow: hidden;
+    border-radius: 5px;
 
     .imageWrapper {
       position: relative;

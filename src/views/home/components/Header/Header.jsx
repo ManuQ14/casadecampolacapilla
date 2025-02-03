@@ -56,13 +56,54 @@ export const Header = () => {
   return (
     <>
       {/** Header Desktop */}
-      <header className={styles.header}>
-        <nav className={styles.navBar}></nav>
-      </header>
+      {/*  <header className={styles.header}></header> */}
 
       {/** Header Mobile */}
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
+          <nav className={styles.navBar}>
+            <div className={styles.logoDesktop}>
+              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+            </div>
+            <div className={styles.navigatonHeader}>
+              <div
+                onClick={() => handleScrollToSection("camping")}
+                className={styles.itemOption}
+              >
+                El Camping
+              </div>
+              <div
+                onClick={() => handleToHistory("nuestra-historia")}
+                className={styles.itemOption}
+              >
+                Nuestra historia
+              </div>
+              <div
+                onClick={() => handleScrollToSection("servicios")}
+                className={styles.itemOption}
+              >
+                Servicios
+              </div>
+              <div
+                onClick={() => handleScrollToSection("galeria")}
+                className={styles.itemOption}
+              >
+                Galería
+              </div>
+              <div
+                onClick={() => handleScrollToSection("tarifas")}
+                className={styles.itemOption}
+              >
+                Tarifas
+              </div>
+              <div
+                onClick={() => handleScrollToSection("llegar")}
+                className={styles.itemOption}
+              >
+                Ubicación
+              </div>
+            </div>
+          </nav>
           <video
             src={videoCamping}
             autoPlay
@@ -88,6 +129,7 @@ export const Header = () => {
           alt="Abrir menú hamburguesa"
           onClick={toggleMenu}
           aria-label="Abrir menú hamburguesa"
+          className={styles.menuHamburguesaButton}
         />
         {/*Menu hamburguesa */}
         <div

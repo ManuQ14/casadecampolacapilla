@@ -92,6 +92,8 @@ export const Camping = () => {
 
   return (
     <div className={styles.campingSection} id="camping">
+      {/**Version mobile y tablet */}
+      <div className={styles.contenedorCampingDesktop}>
       <div className={styles.subtitleContainer}>
         <h2 className={styles.h2}>El camping</h2>
         <img
@@ -124,6 +126,7 @@ export const Camping = () => {
           />
         </div>
       </div>
+      </div>
 
       {/**Inicio carrousel */}
       <div
@@ -155,6 +158,8 @@ export const Camping = () => {
           ))}
         </div>
       </div>
+
+      {/**Version dektop */}
     </div>
   );
 };
