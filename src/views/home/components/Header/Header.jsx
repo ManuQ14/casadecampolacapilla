@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./styles/header.module.scss";
@@ -15,6 +15,7 @@ import facebookIcon from "../../../../assets/icons/iconsBurguerMenu/facebook.svg
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -53,6 +54,22 @@ export const Header = () => {
     }, 100);
   };
 
+  //Control de scroll para cambio de estado de la navBar
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el scroll vertical es mayor a 650px, activamos la clase
+      if (window.scrollY > 650) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Limpia el listener cuando el componente se desmonte
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/** Header Desktop */}
@@ -61,11 +78,17 @@ export const Header = () => {
       {/** Header Mobile */}
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
-          <nav className={styles.navBar}>
+          <nav
+            className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
+          >
             <div className={styles.logoDesktop}>
               <img src="logo" alt="" className={styles.imgLogoDesktop} />
             </div>
-            <div className={styles.navigatonHeader}>
+            <div
+              className={`${styles.navigatonHeader} ${
+                scrolled ? styles.navigatonHeaderScrolled : ""
+              }`}
+            >
               <div
                 onClick={() => handleScrollToSection("camping")}
                 className={styles.itemOption}

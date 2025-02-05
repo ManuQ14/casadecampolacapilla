@@ -13,7 +13,15 @@ export const Opinions = () => {
     },
     {
       stars: 5,
-      review: `Un camping para descansar, totalmente tranquilo y con buena gente. Con muy buena atención y amabilidad`,
+      review: `¡Descubrí el secreto mejor guardado de Buenos Aires y sus alrededores! La Capilla en Castilla es un verdadero tesoro que supera todas las expectativas.
+
+Lo que hace que este lugar sea truly especial es el servicio, el cuidado y la calidad que ofrecen. Y no solo me refiero a la atención que recibes, sino también a la calidez humana que te brindan sus propietarios, una familia con un corazón enorme.
+
+Desde el momento en que llegas, te hacen sentir como en casa. Se preocupan por tu bienestar y seguridad, y te solucionan cualquier requerimiento que tengas. Y lo mejor de todo es que lo hacen con la mejor onda y una sonrisa.
+
+Además, es admirable su compromiso con la naturaleza y el medio ambiente. Su conciencia y responsabilidad social son un ejemplo a seguir.
+
+En resumen, La Capilla en Castilla ofrece servicios de 5 estrellas, pero yo les daría una estrella Michelin. ¡Recomiendo 150% este lugar! No te pierdas la oportunidad de descubrir este tesoro escondido`,
     },
     {
       stars: 5,
