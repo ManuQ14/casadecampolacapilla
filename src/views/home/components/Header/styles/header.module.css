@@ -21,6 +21,9 @@
   src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
+  .navBar {
+    display: none !important;
+  }
   .burgerMenu {
     display: flex;
     flex-flow: column;
@@ -116,7 +119,7 @@
   }
   .contentHeader {
     width: 90%;
-    height: 130px;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -156,7 +159,6 @@
   }
   .reserveButton {
     display: flex;
-    padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -174,6 +176,9 @@
     line-height: 16px;
     letter-spacing: 0.4px;
     margin-bottom: 32px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
   }
   img[alt="Abrir menú hamburguesa"] {
     position: absolute;
@@ -184,12 +189,15 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .navBar {
+    display: none !important;
+  }
   .burgerMenu {
-    display: flex;
+    display: flex !important;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
@@ -201,7 +209,7 @@
   }
   .menuOpen {
     right: 0 !important;
-    height: 100vh !important;
+    height: 103vh !important;
     width: 100vw !important;
   }
   .closeMenu {
@@ -223,7 +231,6 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
     height: 320px;
     color: #e55d19;
     text-align: center;
@@ -232,7 +239,7 @@
     font-family: DMSansMedium;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
   }
@@ -258,14 +265,14 @@
   .headerMobile {
     position: relative;
     width: 100vw;
-    height: 570px;
+    height: 650px;
   }
   .coverHeader {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
   }
   .videoCamping {
     position: absolute;
@@ -279,7 +286,6 @@
   }
   .contentHeader {
     width: 486px;
-    height: 140px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -296,7 +302,7 @@
     color: #fcfaf6;
     font-feature-settings: "liga" off, "clig" off;
     font-family: Cardo;
-    font-size: 36px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
@@ -304,13 +310,13 @@
     margin-bottom: 16px;
   }
   h3 {
-    color: #fcfaf6;
+    color: #fcfaf6 !important;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     font-family: DMSansMedium;
     font-size: 20px !important;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-bottom: 24px;
@@ -322,10 +328,10 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #e55d19;
     text-decoration: none;
-    color: var(--White, #fff);
+    color: #fcfaf6;
     text-align: center;
     font-family: DMSansMedium;
     font-size: 16px;
@@ -340,5 +346,167 @@
     right: 15px;
     z-index: 150;
     cursor: pointer;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .headerMobile {
+    height: 680px;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .videoCamping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Estado inicial: sin fondo o background transparente */
+    background: transparent;
+    transition: background 0.1s ease, -webkit-backdrop-filter 0.1s ease;
+    transition: background 0.1s ease, backdrop-filter 0.1s ease;
+    transition: background 0.1s ease, backdrop-filter 0.1s ease, -webkit-backdrop-filter 0.1s ease;
+  }
+  .scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    color: #e55d19 !important;
+    -webkit-backdrop-filter: blur(1.25px);
+            backdrop-filter: blur(1.25px);
+  }
+  .imgLogoDesktop {
+    width: 66px;
+    height: 39px;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 24px;
+    top: 0;
+    left: 0;
+  }
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #fcfaf6;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #e55d19;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .itemOption {
+    transition: all 300ms;
+  }
+  .itemOption:hover {
+    color: #e55d19;
+    transition: all 300ms !important;
+    font-weight: bold;
+    transform: scale(105%);
+  }
+  .contentHeader {
+    width: 486px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.15px;
+    margin-bottom: 16px;
+  }
+  h3 {
+    color: #fcfaf6 !important;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 24px;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background: #e55d19;
+    text-decoration: none;
+    color: #fcfaf6;
+    text-align: center;
+    font-family: DMSansMedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  .reserveButton:hover {
+    transform: scale(105%);
+    transition: all 300ms;
+    background-color: #c25308;
+  }
+  .burgerMenu {
+    display: none;
   }
 }/*# sourceMappingURL=header.module.css.map */

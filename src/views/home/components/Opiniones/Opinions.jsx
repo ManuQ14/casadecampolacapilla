@@ -25,7 +25,22 @@ En resumen, La Capilla en Castilla ofrece servicios de 5 estrellas, pero yo les 
     },
     {
       stars: 5,
-      review: `Excelente experiencia! Todas las comodidades! Agua caliente, alquiler de carpas, colchones y frazadas, parrillas y espacios de fuego, venta de comidas, luz y alargues con zapatilla! Y lo mejor de todo, la calidad humana que transmite su familia al lugar del camping para que lo disfrutes a pleno!`,
+      review: `Natalia Carolina Arroyo
+ 
+Excelente espacio.
+Al llegar Naty nos recibió maravillosamente mostrandonos todo el lugar y contándonos los servicios con los que cuentan (tomas accesibles, luces en los diferentes sectores, pileta, baño de hombre y de mujeres con duchas con agua caliente las 24hs, fogones, proveduria e incluso muchas opciones para pedir comida).
+
+El lugar transmite una calma única, ofrece una vista espectacular y se pueden apreciar los sonidos de la naturaleza en todo momento.
+
+Si estas buscando desconectar no dudes en venir!
+
+Para los precios podes comunicarte por Instagram donde ella o su marido te van a saber dar toda la información necesaria.
+Área de juegos
+Cuentan con 3 piletas para poder refrescarse. Hay hamacas, calesita y mucho para explorar
+Baños
+En excelente estado, cuenta con duchas las cuales tiene agua caliente las 24hs
+Área de pícnic
+Ofrece varios espacios donde poder sentarse a disfrutar de la vista tanto como de una comida.`,
     },
     {
       stars: 5,

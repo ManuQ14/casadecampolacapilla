@@ -14,7 +14,7 @@ import bottomForm from "../../../assets/images/bottomContact.jpg";
 
 export const Form = () => {
   //const WHATSAPP_NUMBER = "5491158567591";
-  const WHATSAPP_NUMBER = "54911[numero]";
+  const WHATSAPP_NUMBER = "5491136392349";
 
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
@@ -108,16 +108,30 @@ export const Form = () => {
 
   const createWhatsAppMessage = () => {
     const stayDays = calculateStayDays();
-    const message = `Hola, soy ${formData.fullName}%0A
-Mi email es: ${formData.email}%0A
-Mi teléfono es ${formData.phone}%0A %0A
-Quisiera averiguar disponibilidad en las fechas del *${
-      startDate ? formatDate(startDate) : ""
-    } al ${endDate ? formatDate(endDate) : ""}
- (${stayDays} días)*%0A
-Adultos: ${formData.adults} %0A
-*niños: ${formData.children} %0A
-Comentario: ${formData.comment}`;
+
+    // Mensaje base obligatorio
+    let message = `Hola, soy ${formData.fullName}%0A
+  Mi email es: ${formData.email}%0A
+  Mi teléfono es ${formData.phone}%0A%0A`;
+
+    // Si hay fechas seleccionadas, agregarlas al mensaje
+    if (startDate && endDate) {
+      message += `Quisiera averiguar disponibilidad en las fechas del *${formatDate(
+        startDate
+      )} al ${formatDate(endDate)}*
+   (${stayDays} días)*%0A`;
+    }
+
+    // Si hay adultos o niños mayores a 0, agregarlos
+    if (formData.adults > 0) {
+      message += `Adultos: ${formData.adults} %0A`;
+    }
+    if (formData.children > 0) {
+      message += `Niños: ${formData.children} %0A`;
+    }
+
+    // Agregar comentario
+    message += `Comentario: ${formData.comment}`;
 
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
   };
@@ -177,12 +191,10 @@ Comentario: ${formData.comment}`;
 
   const isFormCompleted = useMemo(() => {
     const requiredFields = ["fullName", "email", "phone", "comment"];
-    return (
-      requiredFields.every((field) => formData[field].trim() !== "") &&
+    return requiredFields.every((field) => formData[field].trim() !== "") /* &&
       startDate &&
-      endDate
-    );
-  }, [formData, startDate, endDate]);
+      endDate */;
+  }, [formData /* , startDate, endDate */]);
 
   return (
     <>
@@ -205,7 +217,9 @@ Comentario: ${formData.comment}`;
               onChange={handleChange}
               required
               placeholder="Nombre Apellido"
-              className={errors.fullName ? styles.errorInput : styles.inputCorrect}
+              className={
+                errors.fullName ? styles.errorInput : styles.inputCorrect
+              }
             />
             {errors.fullName && (
               <span className={styles.errorMessage} role="alert">
@@ -262,7 +276,8 @@ Comentario: ${formData.comment}`;
           <div className={styles.dateGroup}>
             <div className={styles.inputGroup}>
               <label className={styles.labelDatePicker}>
-                Fechas de estadía <span className={styles.required}>*</span>
+                Fechas de estadía{" "}
+                {/* <span className={styles.required}>*</span> */}
               </label>
               <div className={styles.datePreview} onClick={handleDateClick}>
                 {startDate && endDate ? (
@@ -318,7 +333,7 @@ Comentario: ${formData.comment}`;
                   shouldCloseOnSelect={false}
                   calendarClassName={styles.reactDatepicker}
                   minDate={new Date()}
-                  required
+                  //required
                 />
                 <button
                   type="button"
@@ -341,9 +356,9 @@ Comentario: ${formData.comment}`;
                 value={formData.adults}
                 onChange={handleChange}
               >
-                {[...Array(10)].map((_, i) => (
-                  <option key={i} value={i + 1}>
-                    {i + 1}
+                {[...Array(11)].map((_, i) => (
+                  <option key={i} value={i}>
+                    {i}
                   </option>
                 ))}
               </select>
@@ -366,6 +381,7 @@ Comentario: ${formData.comment}`;
               </select>
             </div>
           </div>
+
           <div className={styles.inputGroupTextArea}>
             <label htmlFor="comment" className={styles.labelComentario}>
               Comentario <span className={styles.required}>*</span>

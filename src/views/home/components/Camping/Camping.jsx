@@ -94,38 +94,39 @@ export const Camping = () => {
     <div className={styles.campingSection} id="camping">
       {/**Version mobile y tablet */}
       <div className={styles.contenedorCampingDesktop}>
-      <div className={styles.subtitleContainer}>
-        <h2 className={styles.h2}>El camping</h2>
-        <img
-          src={line}
-          alt="linea subrayadora de subtitulo"
-          className={styles.line}
-        />
-      </div>
-      <div className={styles.campingTextContainer}>
-        <div className={styles.campingText}>
-          Casa de Campo La Capilla te invita a disfrutar de la tranquilidad y
-          los sonidos auténticos de la vida rural. Este es un lugar donde la
-          conexión con la naturaleza se vive plenamente, y hacemos todo lo
-          posible para que no te falte nada durante tu estadía. <br />
-          Ofrecemos un servicio de acampe diseñado para que experimentes el
-          encanto del campo, acompañado del mejor servicio personalizado.
-          <br /> <br />
-          Además, desde nuestro campito, ubicado al borde del pueblo, podrás
-          deleitarte con los amaneceres y atardeceres más hermosos, contemplando
-          el horizonte sembrado que se extiende hasta donde alcanza la vista.
-        </div>
-        <div className={styles.conoceMasContainer} onClick={handleToHistory}>
-          <span className={styles.conoceMasText}>
-            Conocé mas de nuestra historia
-          </span>
+        <div className={styles.subtitleContainer}>
+          <h2 className={styles.h2}>El camping</h2>
           <img
-            src={chevronRight}
-            alt="Chrevron right"
-            className={styles.chevronRight}
+            src={line}
+            alt="linea subrayadora de subtitulo"
+            className={styles.line}
           />
         </div>
-      </div>
+        <div className={styles.campingTextContainer}>
+          <div className={styles.campingText}>
+            Casa de Campo La Capilla te invita a disfrutar de la tranquilidad y
+            los sonidos auténticos de la vida rural. Este es un lugar donde la
+            conexión con la naturaleza se vive plenamente, y hacemos todo lo
+            posible para que no te falte nada durante tu estadía. <br />
+            Ofrecemos un servicio de acampe diseñado para que experimentes el
+            encanto del campo, acompañado del mejor servicio personalizado.
+            <br /> <br />
+            Además, desde nuestro campito, ubicado a 1000 metros del pueblo,
+            podrás deleitarte con los amaneceres y atardeceres más hermosos,
+            contemplando el horizonte sembrado que se extiende hasta donde
+            alcanza la vista.
+          </div>
+          <div className={styles.conoceMasContainer} onClick={handleToHistory}>
+            <span className={styles.conoceMasText}>
+              Conocé mas de nuestra historia
+            </span>
+            <img
+              src={chevronRight}
+              alt="Chrevron right"
+              className={styles.chevronRight}
+            />
+          </div>
+        </div>
       </div>
 
       {/**Inicio carrousel */}
@@ -153,6 +154,10 @@ export const Camping = () => {
               className={`${styles.dot} ${
                 currentIndex === index ? styles.activeDot : ""
               }`}
+              style={{
+                width: currentIndex === index ? "20px" : "10px", // PUNTO ACTIVO ES MÁS ANCHO
+                borderRadius: currentIndex === index ? "10px" : "50%", // Para que el punto ancho sea más suave
+              }}
               onClick={() => handleDotClick(index)}
             />
           ))}

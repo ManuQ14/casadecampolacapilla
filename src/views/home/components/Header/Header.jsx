@@ -142,7 +142,7 @@ export const Header = () => {
             <h1>Casa de Campo La Capilla</h1>
             <h3>Experiencia de acampe rural, vivila...</h3>
             <div onClick={handleToReserve} className={styles.reserveButton}>
-              Reservar
+              Hacenos tu consulta
             </div>
           </div>
         </div>
@@ -207,7 +207,7 @@ export const Header = () => {
               </div>
             </div>
             <div onClick={handleToReserve} className={styles.reserveButton}>
-              Reservar
+              Hacenos tu consulta
             </div>
             <div className={styles.mediaIconContainer}>
               <a
