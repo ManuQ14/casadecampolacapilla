@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
+    background-color: $background;
   }
 
   .subtitleContainerOpiniones {
@@ -122,6 +123,19 @@
   .starIcon {
     width: 24px;
     height: 24px;
+  }
+
+  .nameReview {
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
   }
 
   .reviewText {

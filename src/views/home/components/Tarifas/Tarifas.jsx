@@ -52,7 +52,7 @@ export const Tarifas = () => {
                   --------------------------------------------------
                 </p>
               </div>
-              <div className={styles.precioTarifaPernocte}>Gratis</div>
+              <div className={styles.precioTarifaPernocte}>Sin costo</div>
             </div>
             {/**Tarifa 2 */}
             <div className={styles.tarifa}>
@@ -129,7 +129,7 @@ export const Tarifas = () => {
         </div>
       </div>
       <div onClick={handleToReserve} className={styles.reserveButtonTarifa}>
-        Reservar
+        Hacenos tu consulta
       </div>
     </div>
   );

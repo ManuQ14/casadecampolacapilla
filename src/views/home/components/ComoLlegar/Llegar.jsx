@@ -1,5 +1,6 @@
 import { Desplegables } from "./Desplegables";
 import { DesplegableAuto } from "./DesplegableAuto";
+import { DesplegableBici } from "./DesplegableBici";
 
 import styles from "./styles/llegar.module.scss";
 
@@ -20,11 +21,10 @@ export const Llegar = () => {
           className={styles.line}
         />
       </div>
-      
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7858.810076011966!2d-59.91222499999999!3d-34.61002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b95418c3bed66b%3A0x67d972631561ff58!2sCasa%20de%20Campo%20La%20Capilla!5e1!3m2!1ses-419!2sus!4v1737419683095!5m2!1ses-419!2sus"
         className={styles.mapaLocation}
-        
       ></iframe>
 
       <div className={styles.infoBoxContainer}>
@@ -35,8 +35,7 @@ export const Llegar = () => {
             className={styles.iconInfo}
           />
           <p className={styles.descriptionInfo}>
-            Acceso camino a Rawson, Calle 100, RP 42 entre Calles 11 y 13, B6616
-            Castilla, Provincia de Buenos Aires
+            Calle 100 (RP42) Nro 98, Castilla, B6616, Provincia de Buenos Aires
           </p>
         </div>
         <div className={styles.itemInfoContainerDos}>
@@ -57,6 +56,7 @@ export const Llegar = () => {
       {/**Inicio desplegable tren */}
       <Desplegables />
       <DesplegableAuto />
+      <DesplegableBici />
     </div>
   );
 };

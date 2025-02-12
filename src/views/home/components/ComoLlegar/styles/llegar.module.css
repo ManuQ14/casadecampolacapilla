@@ -92,6 +92,11 @@
     border-bottom: 2px solid #c25308;
     width: 92%;
     margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .contenedorBici {
+    border-bottom: 2px solid #c25308;
+    width: 92%;
     margin-bottom: 16px;
   }
   .accordionContent {
@@ -122,6 +127,8 @@
   }
   .trainSVG {
     margin-right: 16px;
+    width: 29px;
+    height: 29px;
   }
   .expandAcordeon {
     right: 4%;
@@ -212,7 +219,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    height: 112px;
+    height: auto;
     margin-bottom: 16px;
   }
   .iconInfo {
@@ -228,7 +235,7 @@
     margin-bottom: 16px;
   }
   .descriptionInfo {
-    height: 72px;
+    height: auto;
     color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;

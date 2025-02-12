@@ -88,6 +88,13 @@
     border-bottom: 2px solid $primario-dark;
     width: 92%;
     margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .contenedorBici {
+    border-bottom: 2px solid $primario-dark;
+    width: 92%;
+
     margin-bottom: 16px;
   }
 
@@ -121,6 +128,8 @@
 
   .trainSVG {
     margin-right: 16px;
+    width: 29px;
+    height: 29px;
   }
 
   .expandAcordeon {
@@ -221,7 +230,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    height: 112px;
+    height: auto;
     margin-bottom: 16px;
   }
 
@@ -240,7 +249,7 @@
   }
 
   .descriptionInfo {
-    height: 72px;
+    height: auto;
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;

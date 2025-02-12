@@ -179,6 +179,7 @@
     width: 200px;
     height: 40px;
     margin: auto;
+    margin-bottom: 32px;
   }
   img[alt="Abrir menú hamburguesa"] {
     position: absolute;

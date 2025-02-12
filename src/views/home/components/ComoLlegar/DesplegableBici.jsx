@@ -1,14 +1,12 @@
 import { useState } from "react";
 
-import carmotor from "../../../../assets/icons/llegarIcons/carmotor.svg";
+import biciIcon from "../../../../assets/icons/llegarIcons/biciIcon.svg";
 import expandAcordeon from "../../../../assets/icons/add.svg";
 import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
 
-import maps from "../../../../assets/images/comoLlegar/maps.jpg";
-
 import styles from "./styles/llegar.module.scss";
 
-export const DesplegableAuto = () => {
+export const DesplegableBici = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleAccordion = () => {
@@ -16,15 +14,15 @@ export const DesplegableAuto = () => {
   };
 
   return (
-    <div className={styles.contenedorAcordeonAuto}>
+    <div className={styles.contenedorBici}>
       <div className={styles.titleContainer}>
         <img
-          src={carmotor}
+          src={biciIcon}
           alt="Icono de tren"
           width={25}
           className={styles.trainSVG}
         />
-        <div className={styles.ubicationTitle}>Cómo llegar en auto/moto</div>
+        <div className={styles.ubicationTitle}>Cómo llegar en bicicleta</div>
         <img
           src={isExpanded ? closeAcordeon : expandAcordeon}
           alt={isExpanded ? "Cerrar información" : "Expandir información"}
@@ -39,14 +37,11 @@ export const DesplegableAuto = () => {
         }`}
       >
         <div className={styles.indicationContainer}>
-          Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta Carmen de
-          Areco. Ahí, girá a la izquierda por la Ruta 51. Luego de 20 km, doblá
-          nuevamente a la izquierda para tomar la Ruta 43. Manejás 8 km más y te
-          vas a encontrar con la entrada a Castilla; ahí girás a la derecha para
-          tomar la Ruta Provincial 42. A solo 1.000 metros te esperamos en
-          nuestra Casa de Campo.
+          Tomás el tren Once - Moreno y hacés transbordo al Moreno - Mercedes.
+          Desde allí, son 46 km siguiendo las vías del tren por la Ruta
+          Provincial 42, un camino de tierra que atraviesa los pueblos de San
+          Jacinto, Franklin y Rivas, hasta llegar a Castilla.
         </div>
-        <img src={maps} alt="" className={styles.mapaLlegar} />
       </div>
     </div>
   );

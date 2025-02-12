@@ -150,6 +150,9 @@
     font-family: DMSansSemiBold;
     border: 2px solid #e55d19;
     border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {

@@ -143,7 +143,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
@@ -275,11 +275,14 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #787878;
+    background-color: #f16529;
+    width: 20px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -408,10 +411,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #787878;
+    background-color: #f16529;
+    width: 20px;
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=camping.module.css.map */
