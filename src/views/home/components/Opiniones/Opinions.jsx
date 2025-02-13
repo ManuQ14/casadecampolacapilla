@@ -9,51 +9,37 @@ export const Opinions = () => {
   const reviews = [
     {
       stars: 5,
-      name: "Florencia Muñoz",
-      review: `La atención de Naty y Nico es muy cordial. Me enamoré de este lugar, es tranquilo y limpio. Es acampe rural, las noches se disfrutan por la paz que hay. Lo super recomiendo, ideal para meditar, llevar el telescopio, para desenchufar con un libro o simplemente contemplando el atardecer. Lo vuelvo a elegir`,
-    },
-    {
-      stars: 5,
-      name: "Florencia Muñoz",
-      review: `¡Descubrí el secreto mejor guardado de Buenos Aires y sus alrededores! La Capilla en Castilla es un verdadero tesoro que supera todas las expectativas.
-
-Lo que hace que este lugar sea truly especial es el servicio, el cuidado y la calidad que ofrecen. Y no solo me refiero a la atención que recibes, sino también a la calidez humana que te brindan sus propietarios, una familia con un corazón enorme.
-
-Desde el momento en que llegas, te hacen sentir como en casa. Se preocupan por tu bienestar y seguridad, y te solucionan cualquier requerimiento que tengas. Y lo mejor de todo es que lo hacen con la mejor onda y una sonrisa.
-
-Además, es admirable su compromiso con la naturaleza y el medio ambiente. Su conciencia y responsabilidad social son un ejemplo a seguir.
-
-En resumen, La Capilla en Castilla ofrece servicios de 5 estrellas, pero yo les daría una estrella Michelin. ¡Recomiendo 150% este lugar! No te pierdas la oportunidad de descubrir este tesoro escondido`,
-    },
-    {
-      stars: 5,
       name: "Natalia Carolina Arroyo",
       review: `Excelente espacio. Al llegar Naty nos recibió maravillosamente mostrandonos todo el lugar y contándonos los servicios con los que cuentan (tomas accesibles, luces en los diferentes sectores, pileta, baño de hombre y de mujeres con duchas con agua caliente las 24hs, fogones, proveduria e incluso muchas opciones para pedir comida).
-      
-El lugar transmite una calma única, ofrece una vista espectacular y se pueden apreciar los sonidos de la naturaleza en todo momento.
-      
-Si estas buscando desconectar no dudes en venir!
-      
-Para los precios podes comunicarte por Instagram donde ella o su marido te van a saber dar toda la información necesaria.
-      
-Área de juegos: Cuentan con 3 piletas para poder refrescarse. Hay hamacas, calesita y mucho para explorar
-Baños: En excelente estado, cuenta con duchas las cuales tiene agua caliente las 24hs
-Área de pícnic: Ofrece varios espacios donde poder sentarse a disfrutar de la vista tanto como de una comida.`,
+      El lugar transmite una calma única, ofrece una vista espectacular y se pueden apreciar los sonidos de la naturaleza en todo momento.
+      Si estas buscando desconectar no dudes en venir!
+      Para los precios podes comunicarte por Instagram donde ella o su marido te van a saber dar toda la información necesaria.
+      Área de juegos: Cuentan con 3 piletas para poder refrescarse. Hay hamacas, calesita y mucho para explorar
+      Baños: En excelente estado, cuenta con duchas las cuales tiene agua caliente las 24hs
+      Área de pícnic: Ofrece varios espacios donde poder sentarse a disfrutar de la vista tanto como de una comida.`,
     },
     {
       stars: 5,
-      name: "Florencia Muñoz",
-      review: `Excelente lugar!!!  Encontras lo que buscas.  Paz. Tranquilidad. Hospitalidad. Calidez. Y sobre todo. Una gran historia de Niko y Naty junto a su hermosa hija. (Dueños)  De cómo llegaron al lugar. Hay parrilla, fogones, mesas, 24 hs de agua caliente. Hay una pequeña proveeduría. Se puede pedir menú del día. Hay una carta variada de comida casera.  Productos regionales. Alquilan carpa. Wifi. Todo perfecto!!!!`,
+      name: "Val Corbetto",
+      review: `Excelente lugar para pasar unos días de campo, rodeado de naturaleza y atendido por una familia súper esmerados en dar la mejor experiencia a sus visitantes. Volveré sin duda!!! Súper recomendable.`,
     },
     {
       stars: 5,
-      name: "Florencia Muñoz",
-      review: `Excelente lugar para acampar, descansar o simplemente pasar el día. Cuenta con proveeduría, baños con agua caliente, lugares para acampar cómodamente y piletas para los días de calor. La atención fue súper cálida y amable. Lo recomiendo 100% para descansar y desconectar de todo sin otros ruidos que no sean los de la naturaleza`,
+      name: "María Belén Soto",
+      review: `Un lugar ideal para escaparse unos días y recargar energías. El tren desde Retiro sale a las 18:15 y llegás a las 22. Apenas llegás, te reciben con algo para comer si lo necesitás, y desde ahí todo es comodidad y buena onda.
+      Lo más lindo es cómo te reciben Nico, Naty y sus hijas. Te pasan a buscar por la estación y te hacen sentir parte de su familia desde el primer momento. Siempre están atentos a que no te falte nada y tienen una calidez que no se encuentra todos los días.
+      El pueblo de Castilla es una maravilla: pura tranquilidad, paisajes que te llenan de paz y unos atardeceres que te dejan sin palabras. Todo está cuidado hasta el último detalle. Sin dudas, un lugar para recomendar y volver.`,
     },
     {
       stars: 5,
-      name: "Florencia Muñoz",
-      review: `Muy lindo camping, lugar muy tranquilo. Buena sombra para acampar. Los dueños son excelentes! Hay algunas opciones de comida casera, proveeduría a muy buen precio. Venta de productos locales como miel, mermelada, dulce de leche, etc `,
+      name: "Gastón Luna",
+      review: `Amabilidad, te ofrecen todo lo que necesitas para estar bien, tranquilo.  Alquilan carpas, camas, frazadas, te dan lo que necesites para cocinar. Nico y Naty están presupuestos ayudarte en todo momento. Excelente la vista de las estrellas. IMPRESIONANTE !`,
+    },
+    {
+      stars: 5,
+      name: "Fernando Peroña",
+      review:
+        "Fuimos. Pasar el 30/31 y 1 Ro de enero al camping.. y vivimos una experiencia hermosa.. todas las comodidades y la mejor atención de Nico y Nati.. los dueños .. unos genios los 2 .. toda la amabilidad y súper serviciales.. el lugar es muy tranquilo y en un entorno mágico.. la noche estrellada es l frutilla del poste de esos hermosas días . El 31 después de las 12 fuimos a hacer una caravana por el pueblo invitados x los dueños.. que fue una experiencia hermosa para nuestros hijos y sobrinos.. muchas gracias x todo.. sin duda volveremos pronto!!",
     },
   ];
 

@@ -1,12 +1,16 @@
 import styles from "./styles/footer.module.scss";
 
 //imports svgs e iconos
-import capillaIcon from "../../../../assets/iconCapilla.jpeg";
+import capillaIcon from "../../../../assets/icons/CapillaLogo.svg";
 
 import instagramFooter from "../../../../assets/icons/footer/instagramFooter.svg";
 import youtubeFooter from "../../../../assets/icons/footer/youTubeFooter.svg";
 import tiktokFootrr from "../../../../assets/icons/footer/tikTokFooter.svg";
 import facebookFooter from "../../../../assets/icons/footer/facebookFooter.svg";
+
+import whatsapp from "../../../../assets/icons/footer/wpp.svg";
+import mail from "../../../../assets/icons/footer/mail.svg";
+import location from "../../../../assets/icons/footer/maps.svg";
 
 export const Fut = () => {
   return (
@@ -19,13 +23,15 @@ export const Fut = () => {
       />
       <div className={styles.contenedorNavegador}>
         <div className={styles.infoContainer}>
+          <img src={location} alt="Location icon" className={styles.iconFooters}/>
           Calle 100 (RP42) Nro 98, Castilla, B6616, Provincia de Buenos Aires
         </div>
-        <div className={styles.infoContainer}>
-          <strong>Email:</strong> Casadecampolacapilla@gmail.com
+        <div className={styles.infoContainerDos}>
+          <img src={mail} alt="Mail Icon" className={styles.iconFooters} /> Casadecampolacapilla@gmail.com
         </div>
-        <div className={styles.infoContainer}>
-          <strong>Whatsapp:</strong> 11 5856-7591
+        <div className={styles.infoContainerDos}>
+          <img src={whatsapp} alt="Whatsapp icon" className={styles.iconFooters} />
+          11 5856-7591
         </div>
       </div>
       <div className={styles.mediaIconsContainer}>
