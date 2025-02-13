@@ -48,7 +48,7 @@ export const Desplegables = () => {
           </p>
           <br />
           <p>
-            Los pasajes se compran con antelación en este{" "}
+            Te recomendamos comprar el pasaje con antelación en este{" "}
             <a
               href="https://webventas.sofse.gob.ar/"
               target="_blank"

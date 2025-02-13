@@ -19,8 +19,7 @@ export const Fut = () => {
       />
       <div className={styles.contenedorNavegador}>
         <div className={styles.infoContainer}>
-          Acceso camino a Rawson, Calle 100, RP 42 entre Calles 11 y 13, B6616
-          Castilla, Provincia de Buenos Aires
+          Calle 100 (RP42) Nro 98, Castilla, B6616, Provincia de Buenos Aires
         </div>
         <div className={styles.infoContainer}>
           <strong>Email:</strong> Casadecampolacapilla@gmail.com

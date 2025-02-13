@@ -31,13 +31,17 @@
 
   .sectionOpiniones {
     width: 100vw;
-    height: 460px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
     background-color: $background;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .subtitleContainerOpiniones {
@@ -57,13 +61,11 @@
     color: var(--Dark, #4b4a4a);
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-
-    /* mobile/body reg */
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     letter-spacing: 0.25px;
   }
 
@@ -75,7 +77,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
 
   .subtitleContainerOpiniones {
@@ -91,10 +93,12 @@
 
   //Inicio carousel reviews
   .carouselContainer {
+    position: relative;
     width: 92%;
     overflow: hidden;
+    height: auto;
+    margin-bottom: 16px;
     cursor: grab;
-    height: 310px;
   }
 
   .carousel {
@@ -109,7 +113,9 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding: 16px;
+    height: auto;
   }
 
   .starContainer {
@@ -139,14 +145,11 @@
   }
 
   .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
     font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
@@ -154,6 +157,60 @@
     line-height: 24px;
     letter-spacing: 0.25px;
     padding: 0px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+
+  .collapsed {
+    max-height: 380px;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+
+  .toggleButton {
+    color: $primario-principal;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  .toggleInline {
+    color: $primario-principal;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #d9d9d98c;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.activeDot {
+        background-color: $primario-principal;
+        width: 20px;
+        border-radius: 10px;
+      }
+    }
   }
 }
 
