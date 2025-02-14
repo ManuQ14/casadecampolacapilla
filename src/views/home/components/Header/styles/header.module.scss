@@ -233,7 +233,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 108px;
+    margin-top: 16px;
     width: 328px;
   }
 
@@ -254,6 +254,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   a:visited,
@@ -348,12 +349,11 @@
 
   .reserveButton {
     display: flex;
-    padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 5px;
+    border-radius: 10px;
     background: $primario-principal;
     text-decoration: none;
     color: $background;
@@ -363,6 +363,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 32px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
     margin-bottom: 32px;
   }
 

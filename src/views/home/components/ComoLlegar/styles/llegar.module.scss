@@ -95,7 +95,6 @@
   .contenedorBici {
     border-bottom: 2px solid $primario-dark;
     width: 92%;
-
     margin-bottom: 72px;
   }
 
@@ -374,6 +373,12 @@
     width: 688px;
     margin-top: 32px;
     margin-bottom: 16px;
+  }
+
+  .contenedorBici {
+    border-bottom: 2px solid $primario-dark;
+    width: 92%;
+    margin-bottom: 72px;
   }
 
   .accordionContent {

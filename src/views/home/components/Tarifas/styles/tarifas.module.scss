@@ -175,7 +175,6 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
-    
   }
 
   .precioTarifaPernocteDos {
@@ -389,7 +388,7 @@
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 8px;
+    margin-right: 24px;
   }
 
   .boxTarifaPernocte {
@@ -458,6 +457,18 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+
+  .precioTarifaPernocteDos {
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 3%;
   }
 
   .aclaracionPernocte {
@@ -538,7 +549,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: $primario-principal;
     margin: auto;
     margin-top: 24px;
