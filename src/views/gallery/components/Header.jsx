@@ -11,6 +11,7 @@ import instagramIcon from "../../../assets/icons/iconsBurguerMenu/instagram.svg"
 import youtubeIcon from "../../../assets/icons/iconsBurguerMenu/youTube.svg";
 import tikTokIcon from "../../../assets/icons/iconsBurguerMenu/tikTok.svg";
 import facebookIcon from "../../../assets/icons/iconsBurguerMenu/facebook.svg";
+import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,6 +96,7 @@ export const Header = () => {
             aria-label="Cerrar menú"
           />
           <nav className={styles.menuItems}>
+            <img src={CapillaLogo} alt="Icono de La Capilla" />
             <div className={styles.itemsNavigationContainer}>
               <div onClick={handleToCamping}>El Camping</div>
               <div onClick={handleToHistory}>Nuestra historia</div>
@@ -104,7 +106,7 @@ export const Header = () => {
               <div onClick={handleToLlegar}>Ubicación</div>
             </div>
             <div onClick={handleToReserve} className={styles.reserveButton}>
-              Reservar
+              Hacenos tu consulta
             </div>
             <div className={styles.mediaIconContainer}>
               <a

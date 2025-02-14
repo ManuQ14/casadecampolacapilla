@@ -39,7 +39,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 108px;
+    margin-top: 16px;
     width: 328px;
   }
 
@@ -60,6 +60,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   a:visited,
@@ -153,7 +154,6 @@
 
   .reserveButton {
     display: flex;
-    padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -163,11 +163,17 @@
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: $second-bold-typography;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin-bottom: 32px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
     margin-bottom: 32px;
   }
   //Fin sección header + menu hamburguesa
@@ -284,11 +290,14 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: $gray-b;
+        background-color: #d9d9d98c;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &.activeDot {
-          background-color: $gray-a;
+          background-color: #f16529;
+          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          border-radius: 10px;
         }
       }
     }
@@ -387,35 +396,35 @@
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Header history
 
-    // Manejo de menú hamburguesa
-    .burgerMenu {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: flex-start;
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      height: 100vh;
-      background-color: $background;
-      transition: right 300ms ease-in-out;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-      z-index: 200;
-    }
-  
-    .menuOpen {
-      right: 0 !important;
-      height: 103vh !important;
-      width: 100vw !important;
-    }
-  
-    .closeMenu {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-    }
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
 
   .menuItems {
     display: flex;

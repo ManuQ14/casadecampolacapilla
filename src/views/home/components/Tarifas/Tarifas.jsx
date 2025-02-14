@@ -62,7 +62,7 @@ export const Tarifas = () => {
                 --------------------------------------------------
                 </p>
               </div>
-              <div className={styles.precioTarifaPernocte}>$4200</div>
+              <div className={styles.precioTarifaPernocteDos}>$4200</div>
             </div>
             {/**Tarifa 3 */}
             <div className={styles.tarifa}>
@@ -72,7 +72,7 @@ export const Tarifas = () => {
                 --------------------------------------------------
                 </p>
               </div>
-              <div className={styles.precioTarifaPernocte}>$6400</div>
+              <div className={styles.precioTarifaPernocteDos}>$6400</div>
             </div>
           </div>
           <p className={styles.aclaracionPernocte}>
@@ -87,7 +87,7 @@ export const Tarifas = () => {
               (Desde las 9hs del sábado hasta las 20hs del domingo)
             </div>
           </div>
-          <div className={styles.precioTarifa}>$7800</div>
+          <div className={styles.precioTarifaPernocteDos}>$7800</div>
         </div>
 
         {/*Contenedor Rodantes, motorhome y trailers */}
@@ -100,7 +100,7 @@ export const Tarifas = () => {
               (Adicional por única vez)
             </div>
           </div>
-          <div className={styles.precioTarifa}>$3500</div>
+          <div className={styles.precioTarifaPernocteDos}>$3500</div>
         </div>
         <div className={styles.referenciaPrecio}>
           *Todos los precios de acampe son por persona

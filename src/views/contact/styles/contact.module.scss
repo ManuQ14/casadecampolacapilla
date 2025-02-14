@@ -38,7 +38,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 108px;
+    margin-top: 16px;
     width: 328px;
   }
 
@@ -59,6 +59,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   a:visited,
@@ -152,21 +153,26 @@
 
   .reserveButton {
     display: flex;
-    padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 5px;
+    border-radius: 10px;
     background: $primario-principal;
     text-decoration: none;
     color: var(--White, #fff);
     text-align: center;
-    font-family: $second-bold-typography;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin-bottom: 32px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
     margin-bottom: 32px;
   }
   //Fin sección header + menu hamburguesa
@@ -176,10 +182,10 @@
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-bottom: 16px;
@@ -282,8 +288,6 @@
         text-align: left !important;
       }
     }
-
-
 
     .countsPersons {
       height: 36px;
@@ -456,12 +460,14 @@
 
   .submitButton {
     display: flex;
-    width: 100%;
-    padding: 12px 20px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
+
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     color: white;
     text-align: center;
@@ -476,11 +482,11 @@
   .submitButtonOff {
     display: flex;
     width: 100%;
-    padding: 12px 20px;
+
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     color: $gray-a;
     text-align: center;
@@ -490,6 +496,9 @@
     font-weight: 700;
     line-height: normal;
     background-color: $gray-b;
+    width: 200px;
+    height: 40px;
+    margin: auto;
   }
 
   .bottomFormImage {
@@ -529,8 +538,8 @@
 //Inicio sección tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   //Header history
-   // Manejo de menú hamburguesa
-   .burgerMenu {
+  // Manejo de menú hamburguesa
+  .burgerMenu {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -793,7 +802,6 @@
 
       &:focus {
         outline: none;
-  
       }
       &::placeholder {
         color: $gray-a !important;
@@ -948,7 +956,7 @@
     color: $primario-principal !important;
     font-family: $second-bold-typography;
     text-align: center;
-    
+
     margin: auto;
     font-size: 18px;
     font-weight: normal !important;
@@ -1024,9 +1032,9 @@
     border-color: #cf3342 !important;
   }
 
-.inputCorrect:focus{
-  border: 1px solid $primario-dark !important;
-}
+  .inputCorrect:focus {
+    border: 1px solid $primario-dark !important;
+  }
 
   .errorMessage {
     width: 100%;
