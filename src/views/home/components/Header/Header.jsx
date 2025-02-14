@@ -13,7 +13,8 @@ import youtubeIcon from "../../../../assets/icons/iconsBurguerMenu/youTube.svg";
 import tikTokIcon from "../../../../assets/icons/iconsBurguerMenu/tikTok.svg";
 import facebookIcon from "../../../../assets/icons/iconsBurguerMenu/facebook.svg";
 
-import CapillaLogo from "../../../../assets/icons/CapillaLogoPng.png";
+//import CapillaLogo from "../../../../assets/icons/CapillaLogoPng.png";
+import CapillaLogo from "../../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
