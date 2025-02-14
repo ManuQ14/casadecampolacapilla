@@ -284,14 +284,14 @@
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
 
   .subtitleContainerOpiniones {
     display: flex;
     align-items: center;
     margin-bottom: 32px;
-    width: 92%;
+    width: 89%;
   }
 
   .line {
@@ -304,14 +304,14 @@
     width: 92%;
     overflow: hidden;
     cursor: grab;
-    height: 310px;
+    height: auto;
   }
 
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
-    width: 50%;
+    //width: 50%;
   }
 
   .reviewCard {
@@ -320,7 +320,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    //justify-content: space-between;
   }
 
   .starContainer {
@@ -336,22 +336,88 @@
     height: 24px;
   }
 
-  .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+  .nameReview {
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
+  }
+
+  .reviewText {
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
     padding: 0px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+
+  .collapsed {
+    max-height: 380px;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+
+  .toggleButton {
+    color: $primario-principal;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  .toggleInline {
+    color: $primario-principal;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #d9d9d98c;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.activeDot {
+        background-color: $primario-principal;
+        width: 20px;
+        border-radius: 10px;
+      }
+    }
   }
 }
 

@@ -431,7 +431,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 108px;
+    margin-top: 16px;
     width: 328px;
   }
 
@@ -452,6 +452,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   a:visited,
@@ -652,6 +653,7 @@
       }
     }
 
+   
     .dots {
       position: absolute;
       bottom: 10px;
@@ -664,11 +666,14 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: $gray-b;
+        background-color: #d9d9d98c;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &.activeDot {
-          background-color: $gray-a;
+          background-color: $primario-principal;
+          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          border-radius: 10px;
         }
       }
     }

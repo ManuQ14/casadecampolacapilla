@@ -365,7 +365,7 @@
   .contenedorAcordeon {
     border-bottom: 2px solid $primario-dark;
     width: 688px;
-    margin-top: 16px;
+    margin-top: 32px;
   }
 
   .contenedorAcordeonAuto {
@@ -377,8 +377,9 @@
 
   .contenedorBici {
     border-bottom: 2px solid $primario-dark;
-    width: 92%;
+    width: 90%;
     margin-bottom: 72px;
+    margin-top: 16px;
   }
 
   .accordionContent {
@@ -571,6 +572,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
+    padding-top: 72px;
   }
 
   //Inicio sección Como llegar

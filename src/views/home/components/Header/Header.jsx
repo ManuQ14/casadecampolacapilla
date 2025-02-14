@@ -12,7 +12,7 @@ import instagramIcon from "../../../../assets/icons/iconsBurguerMenu/instagram.s
 import youtubeIcon from "../../../../assets/icons/iconsBurguerMenu/youTube.svg";
 import tikTokIcon from "../../../../assets/icons/iconsBurguerMenu/tikTok.svg";
 import facebookIcon from "../../../../assets/icons/iconsBurguerMenu/facebook.svg";
-
+//import logoHeader from "../../../../assets/icons/logoHome.svg";
 
 import CapillaLogo from "../../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
