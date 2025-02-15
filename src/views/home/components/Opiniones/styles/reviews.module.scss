@@ -448,15 +448,6 @@
     letter-spacing: 0.15px;
   }
 
-  .sectionOpiniones {
-    width: 100vw;
-    height: 460px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   .subtitleContainerOpiniones {
     width: 380px;
     height: 64px;
@@ -485,12 +476,13 @@
   //Inicio opiniones
 
   .sectionOpiniones {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
 
   .subtitleContainerOpiniones {
@@ -507,16 +499,15 @@
 
   //Inicio carousel reviews
   .carouselContainer {
-    width: 92%;
+    width: 70%;
     overflow: hidden;
-    height: 310px;
+    height: auto;
   }
 
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
-    width: 33%;
+    height: auto;
   }
 
   .reviewCard {
@@ -525,7 +516,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .starContainer {
@@ -541,21 +532,129 @@
     height: 24px;
   }
 
-  .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+  .nameReview {
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
+  }
+
+  .reviewText {
+    width: 70%;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    padding: 0px 16px 16px 16px;
+
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+
+  .collapsed {
+    max-height: 380px;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+
+  .toggleButton {
+    color: $primario-principal;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  .toggleInline {
+    color: $primario-principal;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #d9d9d98c;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &.activeDot {
+        background-color: $primario-principal;
+        width: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+  .desktopNavButtons {
+    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    top: 50%;
+    left: 0;
+    transform: translateY(250%);
+    padding: 0 2rem;
+    z-index: 10;
+  }
+
+  /* Botones de navegación */
+  .navButton {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+  }
+
+  /* Botón izquierdo */
+  .leftButton {
+    background-image: url("../../../../assets/icons/ArrowLeft.svg");
+
+    &:hover {
+      background-image: url("../../../../../assets/icons//ArrowRight.svg");
+    }
+  }
+
+  /* Botón derecho */
+  .rightButton {
+    background-image: url("../../../../assets/icons/ArrowRigth.svg");
+
+    &:hover {
+      background-image: url("../../../../assets/icons/ArrowRightHover.svg");
+    }
   }
 }

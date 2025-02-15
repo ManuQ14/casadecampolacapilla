@@ -61,7 +61,8 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Si el scroll vertical es mayor a 650px, activamos la clase
-      if (window.scrollY > 650) {
+      if (window.scrollY > 50) {
+        
         setScrolled(true);
       } else {
         setScrolled(false);

@@ -1,9 +1,16 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./styles/reviews.module.scss";
 import line from "../../../../assets/icons/subrayOrange.svg";
 import star from "../../../../assets/icons/reviews/star.svg";
 
-const TRUNCATE_LENGTH = 150; // Número de caracteres para truncar
+// Importa los SVGs para los botones
+import arrorLeft from "../../../../assets/icons/ArrowLeft.svg";
+import arrorRight from "../../../../assets/icons/ArrowRight.svg";
+import arrorLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
+import arrorRightHover from "../../../../assets/icons/ArrowRightHover.svg";
+
+const DEFAULT_TRUNCATE = 200;
+const DESKTOP_TRUNCATE = 400;
 
 export const Opinions = () => {
   const reviews = [
@@ -47,6 +54,20 @@ export const Opinions = () => {
   const [expandedReviews, setExpandedReviews] = useState({});
   const [startX, setStartX] = useState(null);
   const carouselRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [hoverLeft, setHoverLeft] = useState(false);
+  const [hoverRight, setHoverRight] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 1440);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const TRUNCATE_LENGTH = isDesktop ? DESKTOP_TRUNCATE : DEFAULT_TRUNCATE;
 
   const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);
@@ -61,21 +82,34 @@ export const Opinions = () => {
         setCurrentIndex((prevIndex) =>
           prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
         );
-      } else if (difference < -50) {
+      } else {
         setCurrentIndex((prevIndex) =>
           prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
         );
       }
-      setExpandedReviews({}); // Colapsa todas al hacer swipe
+      setExpandedReviews({});
     }
     setStartX(null);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
+    );
+    setExpandedReviews({});
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+    );
+    setExpandedReviews({});
   };
 
   const toggleExpand = (index) => {
     setExpandedReviews((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  // Función para obtener el texto a mostrar
   const getDisplayText = (text, expanded) => {
     if (expanded || text.length <= TRUNCATE_LENGTH) {
       return text;
@@ -93,6 +127,28 @@ export const Opinions = () => {
           className={styles.line}
         />
       </div>
+
+      {/* Botones de navegación visibles solo en desktop */}
+      {isDesktop && (
+        <div className={styles.desktopNavButtons}>
+          <img
+            src={hoverLeft ? arrorLeftHover : arrorLeft}
+            alt="Anterior"
+            className={styles.navButton}
+            onClick={handlePrev}
+            onMouseEnter={() => setHoverLeft(true)}
+            onMouseLeave={() => setHoverLeft(false)}
+          />
+          <img
+            src={hoverRight ? arrorRightHover : arrorRight}
+            alt="Siguiente"
+            className={styles.navButton}
+            onClick={handleNext}
+            onMouseEnter={() => setHoverRight(true)}
+            onMouseLeave={() => setHoverRight(false)}
+          />
+        </div>
+      )}
 
       <div
         className={styles.carouselContainer}

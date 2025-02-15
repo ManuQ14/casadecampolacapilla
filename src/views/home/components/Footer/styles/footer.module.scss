@@ -191,12 +191,12 @@
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
   .footer {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: flex-start;
-    height: 435px;
-    font-family: Lato;
-    background-color: #d34600;
+    justify-content: space-between;
+    height: 200px;
+    font-family: $main-typography;
+    background-color: $primario-principal;
     color: white;
     margin-top: 56px;
   }
@@ -206,10 +206,11 @@
     height: 111px;
     margin-top: 16px;
     margin-bottom: 32px;
+    margin-left: 160px;
   }
 
   .contenedorNavegador {
-    width: 458px;
+    width: 700px;
     height: 144px;
     display: flex;
     flex-flow: column;
@@ -223,7 +224,7 @@
     color: var(--Secundario-light, #f8f2ee);
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -256,5 +257,20 @@
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
     margin-bottom: 16px;
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-flow: row;
+    width: 526px;
+    margin-bottom: 16px;
+  }
+
+  .iconFooters {
+    margin-right: 8px;
+  }
+
+  .textoCopyright {
+    margin-left: 40%;
   }
 }

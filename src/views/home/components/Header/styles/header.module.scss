@@ -483,8 +483,6 @@
   //contenido del header, h1, h3 y botón reservar
   .contentHeader {
     width: 486px;
-    //height: 140px;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -496,6 +494,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    z-index: 999999;
   }
 
   h1 {
@@ -525,12 +524,13 @@
 
   .reserveButton {
     display: flex;
+    width: 200px;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    border-radius: 5px;
+    border-radius: 10px;
     background: $primario-principal;
     text-decoration: none;
     color: $background;
@@ -541,6 +541,7 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 32px;
+    margin: auto;
     cursor: pointer;
     transition: all 300ms;
   }

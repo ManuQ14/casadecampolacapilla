@@ -364,13 +364,13 @@
 
   .contenedorAcordeon {
     border-bottom: 2px solid $primario-dark;
-    width: 688px;
+    width: 90%;
     margin-top: 32px;
   }
 
   .contenedorAcordeonAuto {
     border-bottom: 2px solid $primario-dark;
-    width: 688px;
+    width: 90%;
     margin-top: 32px;
     margin-bottom: 16px;
   }
@@ -655,6 +655,14 @@
     margin-bottom: 16px;
   }
 
+  .contenedorBici {
+    border-bottom: 2px solid $primario-dark;
+    width: 1120px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+
   .accordionContent {
     max-height: 0;
     overflow: hidden;
@@ -752,7 +760,7 @@
     margin-bottom: 16px;
     text-decoration: none;
     justify-content: flex-start;
-    margin-left: 8px;
+    margin-left: 4%;
   }
 
   .chrevronRight {
@@ -830,7 +838,7 @@
 
   .mapaLlegar {
     height: 860px;
-    width: 80%;
+    width: 70%;
     margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
