@@ -5,6 +5,11 @@ import styles from "./styles/galleryHome.module.scss";
 import line from "../../../../assets/icons/subrayOrange.svg";
 import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
+import arrorLeft from "../../../../assets/icons/ArrowLeft.svg";
+import arrorRight from "../../../../assets/icons/ArrowRight.svg";
+import arrorLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
+import arrorRightHover from "../../../../assets/icons/ArrowRightHover.svg";
+
 import foto1 from "../../../../assets/images/galleryHome/9.jpg";
 import foto2 from "../../../../assets/images/galleryHome/2.jpg";
 import foto3 from "../../../../assets/images/galleryHome/3.jpg";
@@ -31,7 +36,12 @@ export const Gallery = () => {
     currentIndex: 0,
     fadeTransition: false,
   });
+
+
   const [startX, setStartX] = useState(null);
+  const [hoverLeft, setHoverLeft] = useState(false);
+  const [hoverRight, setHoverRight] = useState(false);
+
   const navigate = useNavigate();
 
   const hanldeToMainGallery = () => {
@@ -58,6 +68,23 @@ export const Gallery = () => {
       setModalState((prev) => ({ ...prev, isOpen: false }));
     }, 300);
   }, []);
+
+   // Funciones para navegación en modal
+   const handleModalPrev = () => {
+    setModalState((prev) => ({
+      ...prev,
+      currentIndex:
+        prev.currentIndex === 0 ? GALLERY_PHOTOS.length - 1 : prev.currentIndex - 1,
+    }));
+  };
+
+  const handleModalNext = () => {
+    setModalState((prev) => ({
+      ...prev,
+      currentIndex:
+        prev.currentIndex === GALLERY_PHOTOS.length - 1 ? 0 : prev.currentIndex + 1,
+    }));
+  };
 
   const handleSwipe = useCallback(
     (e) => {
@@ -93,6 +120,31 @@ export const Gallery = () => {
             }`}
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Botones de navegación en el modal */}
+            <div className={styles.modalNavButtons}>
+              <img
+                src={hoverLeft ? arrorLeftHover : arrorLeft}
+                alt="Anterior"
+                className={styles.modalNavButton}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleModalPrev();
+                }}
+                onMouseEnter={() => setHoverLeft(true)}
+                onMouseLeave={() => setHoverLeft(false)}
+              />
+              <img
+                src={hoverRight ? arrorRightHover : arrorRight}
+                alt="Siguiente"
+                className={styles.modalNavButton}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleModalNext();
+                }}
+                onMouseEnter={() => setHoverRight(true)}
+                onMouseLeave={() => setHoverRight(false)}
+              />
+            </div>
             {GALLERY_PHOTOS.map((photo, index) => (
               <img
                 key={photo.id}

@@ -15,6 +15,22 @@ input {
   overflow: hidden !important;
 }
 
+#servicios{
+  scroll-margin-top: 85px;
+}
+
+#galeria{
+  scroll-margin-top: 85px;
+}
+
+#tarifas{
+  scroll-margin-top: 85px;
+}
+
+#llegar{
+  scroll-margin-top: 85px;
+}
+
 @media (max-width: 767px) {
   .react-datepicker {
     text-align: center;

@@ -773,3 +773,383 @@
     margin-right: 5px;
   }
 }
+
+
+//Desktop
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  //Header history
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Estado inicial: sin fondo o background transparente */
+    background: transparent;
+    transition: background 0.1s ease, backdrop-filter 0.1s ease;
+    z-index: 99999999999999999999;
+  }
+
+  .scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    color: $primario-principal !important;
+    backdrop-filter: blur(1.25px);
+  }
+
+  .imgLogoDesktop {
+    width: 66px;
+    height: 39px;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 24px;
+    top: 0;
+    left: 0;
+  }
+
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $background;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $primario-principal;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .itemOption {
+    transition: all 300ms;
+  }
+
+  .itemOption:hover {
+    color: $primario-principal;
+    transition: all 300ms !important;
+    font-weight: bold;
+    transform: scale(105%);
+  }
+
+  
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets//images/headerHistory.jpg);
+    background-size: cover;
+    background-position: 90%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 133.333% */
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150; // Asegúrate de que el ícono de menú sea visible
+    cursor: pointer;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: $primario-principal;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Inicio sección Un Sueño
+
+  .unSueñoContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .puebloContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .subtitleContainerHistory {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
+
+  .h2 {
+    color: $dark;
+    text-transform: uppercase;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .textoSueñoContainer {
+    width: 92%;
+    height: auto;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  .textoPuebloContainer {
+    width: 92%;
+    height: auto;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  //Carrousel
+
+  .carrouselCamping {
+    position: relative;
+    height: 516px;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+   
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #d9d9d98c;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &.activeDot {
+          background-color: $primario-principal;
+          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  //Inicio sección notas
+
+  .notaSection {
+    margin-bottom: 80px;
+  }
+
+  .subtitleContainerNotas {
+    width: 100%;
+    height: 81px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+
+  .h2Notas {
+    width: 60%;
+    color: $dark;
+    text-transform: uppercase;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+
+  .containerNotas {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .boxContainerNota {
+    height: 390px;
+    width: 336px;
+    margin-bottom: 16px;
+  }
+
+  .imagenNota {
+    width: 100%;
+    height: 309px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+  }
+
+  .linkTituloNotaContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .containerLinkTitle {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .tituloNota {
+    width: 280px;
+    //height: auto;
+    max-height: 92px;
+    margin-left: 8px;
+    color: $dark !important;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.15px;
+    text-align: left;
+    margin-bottom: 0 !important;
+  }
+
+  .iconLink {
+    //margin-bottom: 7%;
+    margin-right: 5px;
+  }
+}

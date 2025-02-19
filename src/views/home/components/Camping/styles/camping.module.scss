@@ -319,6 +319,7 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 56px;
+    padding-top: 80px;
   }
 
   .contenedorCampingDesktop {
@@ -380,25 +381,17 @@
     display: flex;
     align-items: center;
     flex-flow: row;
-    width: 281px;
-    justify-content: flex-start;
+    width: 300px;
+    //justify-content: flex-start;
     transition: all 300ms;
   }
-
-  .conoceMasContainer:hover{
-    width: 290px;
-    justify-content: space-between;
-    transition: all 300ms;
-  }
-
-
 
   .conoceMasText {
     display: flex;
     flex-flow: row;
     align-items: center;
     height: 20px;
-    width: 100%;
+    width: 86%;
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -410,10 +403,20 @@
     cursor: pointer;
   }
 
+  .conoceMasText:hover {
+    margin-right: 8px;
+    transition: all 300ms;
+  }
+
   .chrevronRight {
     width: 24px;
     height: 24px;
   }
+
+/*   .chrevronRight:hover{
+    margin-left: 24px;
+    transition: all 300ms;
+  } */
 
   //Carrousel
 

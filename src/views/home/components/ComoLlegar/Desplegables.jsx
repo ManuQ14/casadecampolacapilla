@@ -16,7 +16,7 @@ export const Desplegables = () => {
 
   return (
     <div className={styles.contenedorAcordeon}>
-      <div className={styles.titleContainer}>
+      <div className={styles.titleContainer} onClick={toggleAccordion}>
         <img
           src={tren}
           alt="Icono de tren"
@@ -66,14 +66,16 @@ export const Desplegables = () => {
             traslado hasta la estación
           </p>
         </div>
-        <Link
-          to="https://www.argentina.gob.ar/transporte/trenes-argentinos/horarios-tarifas-y-recorridos/servicios-regionales-larga-distancia/buenosaires-junin"
-          target="blanc"
-          className={styles.linkTarifasTren}
-        >
-          Accedé a los horarios y tarifas del tren
+        <div className={styles.containerLink}>
+          <Link
+            to="https://www.argentina.gob.ar/transporte/trenes-argentinos/horarios-tarifas-y-recorridos/servicios-regionales-larga-distancia/buenosaires-junin"
+            target="blanc"
+            className={styles.linkTarifasTren}
+          >
+            Accedé a los horarios y tarifas del tren
+          </Link>
           <img src={chrevronRight} alt="" className={styles.chrevronRight} />
-        </Link>
+        </div>
       </div>
     </div>
   );

@@ -166,6 +166,38 @@
     letter-spacing: 0.2px;
   }
 
+  .descripcionTarifaPernocte {
+    display: flex; // Para que el texto y la línea estén en la misma fila
+    align-items: center; // Alineados verticalmente
+    gap: 8px; // Espacio entre el texto y la línea
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
+    letter-spacing: 0.2px;
+  }
+
+  .labelText {
+    
+    margin-left: 8px; 
+  }
+
+  .lineFlex {
+    flex: 1; // Ocupa todo el espacio restante
+    height: 1px; // Grosor de la línea
+    background: repeating-linear-gradient(
+      to right,
+      $primario-principal,
+      $primario-principal 5px,
+      transparent 1px,
+      transparent 8px
+    );
+    margin-right: 8px;
+  }
+
   .precioTarifaPernocte {
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
@@ -402,9 +434,36 @@
     border-radius: 5px;
   }
 
-  .lineHelper {
-    width: 100%;
-    display: inline;
+  .descripcionTarifaPernocte {
+    display: flex; // Para que el texto y la línea estén en la misma fila
+    align-items: center; // Alineados verticalmente
+    gap: 8px; // Espacio entre el texto y la línea
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
+    letter-spacing: 0.2px;
+  }
+
+  .labelText {
+    
+    margin-left: 8px; 
+  }
+
+  .lineFlex {
+    flex: 1; // Ocupa todo el espacio restante
+    height: 1px; // Grosor de la línea
+    background: repeating-linear-gradient(
+      to right,
+      $primario-principal,
+      $primario-principal 5px,
+      transparent 1px,
+      transparent 8px
+    );
+    margin-right: 8px;
   }
 
   .itemTarifaPernocte {
@@ -430,7 +489,7 @@
   }
 
   .tarifa {
-    width: 100%;
+    width: 96%;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -682,10 +741,10 @@
     border-radius: 5px;
   }
 
-  .lineHelper {
+  /*   .lineHelper {
     width: 100%;
     display: inline;
-  }
+  } */
 
   .itemTarifaPernocte {
     color: $primario-dark;
@@ -718,14 +777,35 @@
   }
 
   .descripcionTarifaPernocte {
+    display: flex; // Para que el texto y la línea estén en la misma fila
+    align-items: center; // Alineados verticalmente
+    gap: 8px; // Espacio entre el texto y la línea
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $main-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px; 
     letter-spacing: 0.2px;
+  }
+
+  .labelText {
+    
+    margin-left: 8px; 
+  }
+
+  .lineFlex {
+    flex: 1; // Ocupa todo el espacio restante
+    height: 1px; // Grosor de la línea
+    background: repeating-linear-gradient(
+      to right,
+      $primario-principal,
+      $primario-principal 5px,
+      transparent 1px,
+      transparent 8px
+    );
+    margin-right: 8px;
   }
 
   .precioTarifaPernocte {
@@ -843,5 +923,66 @@
     font-weight: 500;
     line-height: normal;
     cursor: pointer;
+    transition: all 300ms;
+  }
+
+  .reserveButtonTarifa:hover {
+    transition: all 300ms;
+    background-color: $primario-dark;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .helpBoxPernocte {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+
+  .tarifa {
+    width: 95%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .precioTarifaPernocte {
+    margin-right: 1%;
+  }
+
+  .descripcionTarifaPernocte {
+    display: flex; // Para que el texto y la línea estén en la misma fila
+    align-items: center; // Alineados verticalmente
+    gap: 8px; // Espacio entre el texto y la línea
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $main-typography;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
+    letter-spacing: 0.2px;
+  }
+
+  .labelText {
+    
+    margin-left: 8px; 
+  }
+
+  .lineFlex {
+    flex: 1; // Ocupa todo el espacio restante
+    height: 1px; // Grosor de la línea
+    background: repeating-linear-gradient(
+      to right,
+      $primario-principal,
+      $primario-principal 5px,
+      transparent 1px,
+      transparent 8px
+    );
+    margin-right: 8px;
   }
 }

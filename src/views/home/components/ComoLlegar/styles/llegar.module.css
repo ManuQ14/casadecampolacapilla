@@ -27,6 +27,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    padding-top: 72px;
   }
   .subtitleContainerLlegar {
     width: 100%;
@@ -97,7 +98,7 @@
   .contenedorBici {
     border-bottom: 2px solid #c25308;
     width: 92%;
-    margin-bottom: 16px;
+    margin-bottom: 72px;
   }
   .accordionContent {
     max-height: 0;
@@ -142,6 +143,8 @@
     opacity: 0.8;
   }
   .indicationContainer {
+    display: flex;
+    flex-flow: row wrap;
     width: 92%;
     text-align: center;
     color: #333333;
@@ -160,7 +163,6 @@
     margin: auto;
     margin-bottom: 16px;
     transition: all 1s ease-in-out;
-    margin-left: 8px;
   }
   .ubicationTitle {
     color: #c25308;
@@ -176,8 +178,11 @@
     text-decoration: underline !important;
     color: #c25308 !important;
   }
+  .containerLink {
+    display: flex;
+  }
   .linkTarifasTren {
-    width: 310px;
+    width: 308px;
     color: #c25308 !important;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -190,8 +195,20 @@
     display: flex;
     flex-flow: row;
     align-items: center;
-    margin: auto;
-    margin-bottom: 16px;
+    width: 284px;
+    color: #c25308 !important;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-left: 6%;
   }
   .chrevronRight {
     margin-top: 3px;
@@ -332,14 +349,20 @@
   }
   .contenedorAcordeon {
     border-bottom: 2px solid #c25308;
-    width: 688px;
-    margin-top: 16px;
+    width: 90%;
+    margin-top: 32px;
   }
   .contenedorAcordeonAuto {
     border-bottom: 2px solid #c25308;
-    width: 688px;
+    width: 90%;
     margin-top: 32px;
     margin-bottom: 16px;
+  }
+  .contenedorBici {
+    border-bottom: 2px solid #c25308;
+    width: 90%;
+    margin-bottom: 72px;
+    margin-top: 16px;
   }
   .accordionContent {
     max-height: 0;
@@ -415,6 +438,13 @@
     text-decoration: underline !important;
     color: #c25308 !important;
   }
+  .containerLink {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    margin-left: 28%;
+  }
   .linkTarifasTren {
     color: #c25308;
     text-align: center;
@@ -429,8 +459,8 @@
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    margin-bottom: 16px;
+    /*  margin: auto;
+    margin-bottom: 16px; */
   }
   .chrevronRight {
     margin-top: 3px;
@@ -514,6 +544,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
+    padding-top: 72px;
   }
   .subtitleContainerLlegar {
     width: 100%;
@@ -577,6 +608,12 @@
     margin-top: 16px;
   }
   .contenedorAcordeonAuto {
+    border-bottom: 2px solid #c25308;
+    width: 1120px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  .contenedorBici {
     border-bottom: 2px solid #c25308;
     width: 1120px;
     margin-top: 32px;
@@ -654,6 +691,11 @@
     text-decoration: underline !important;
     color: #c25308 !important;
   }
+  .containerLink {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 16px;
+  }
   .linkTarifasTren {
     color: #c25308;
     text-align: center;
@@ -667,15 +709,25 @@
     display: flex;
     flex-flow: row;
     align-items: center;
-    margin: auto;
-    margin-bottom: 16px;
+    width: 28%;
     text-decoration: none;
     justify-content: flex-start;
-    margin-left: 8px;
+    margin-left: 4%;
+    transition: all 300ms !important;
+  }
+  .linkTarifasTren:hover {
+    transition: all 300ms !important;
+    margin-right: 4px !important;
   }
   .chrevronRight {
     margin-top: 3px;
+    transition: all 300ms;
   }
+  /* 
+  .chrevronRight:hover{
+    transition: all 300ms !important;
+    margin-left: 8px !important;
+  } */
   .autoBoxContainer {
     width: 92%;
     height: 255px;
@@ -700,6 +752,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    width: 380px;
     height: 112px;
     margin-bottom: 16px;
   }
@@ -740,10 +793,15 @@
   }
   .mapaLlegar {
     height: 860px;
-    width: 80%;
+    width: 70%;
     margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .expandAcordeon {
+    right: 21%;
   }
 }/*# sourceMappingURL=llegar.module.css.map */

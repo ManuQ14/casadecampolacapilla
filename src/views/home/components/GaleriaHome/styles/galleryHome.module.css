@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Cardo;
   src: url(./fonts/Cardo-Regular.ttf) format("truetype");
@@ -154,6 +155,9 @@
     height: 40px;
     border-radius: 10px;
   }
+  .modalNavButton {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .gallerySection {
@@ -209,7 +213,7 @@
     transform: scale(1.05);
   }
   .modalOverlay {
-    position: absolute;
+    /*     position: absolute;
     top: 300vh;
     left: 0;
     width: 100vw;
@@ -218,7 +222,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000; */
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
   .modalContent {
     position: relative;
@@ -285,7 +301,10 @@
     color: #e55d19;
     font-family: DMSansMedium;
     border: 2px solid #e55d19;
-    border-radius: 5px;
+    border-radius: 10px;
+  }
+  .modalNavButton {
+    display: none;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -327,6 +346,7 @@
     height: 197px;
     overflow: hidden;
     border-radius: 5px;
+    cursor: pointer;
   }
   .galleryImage {
     position: absolute;
@@ -342,8 +362,8 @@
     transform: scale(1.05);
   }
   .modalOverlay {
-    position: absolute;
-    top: 300vh;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -352,6 +372,8 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
   .modalContent {
     position: relative;
@@ -398,6 +420,23 @@
     width: 24px;
     height: 24px;
   }
+  /* Botones de navegación del modal */
+  .modalNavButtons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1100;
+  }
+  .modalNavButton {
+    width: 60px;
+    height: 48px;
+    cursor: pointer;
+    transition: all 300ms !important;
+  }
   .goToGalleryContainer {
     width: 95%;
     background: none;
@@ -411,21 +450,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 328px;
-    height: 39px;
+    width: 200px;
+    height: 40px;
     font-size: 16px;
     color: #e55d19;
     font-family: DMSansMedium;
     border: 2px solid #e55d19;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 300ms;
     cursor: pointer;
   }
   .goToGallery:hover {
-    transform: scale(105%);
-    background-color: #c25308;
-    color: #fcfaf6;
-    border: 1px solid #c25308;
+    color: #c25308;
+    border: 2px solid #c25308;
     transition: all 300ms;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .modalOverlay {
+    position: fixed;
+    top: -115px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3sease;
   }
 }/*# sourceMappingURL=galleryHome.module.css.map */

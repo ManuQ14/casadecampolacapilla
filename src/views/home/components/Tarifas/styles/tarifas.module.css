@@ -167,6 +167,28 @@
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
   }
+  .descripcionTarifaPernocte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+  }
+  .labelText {
+    margin-left: 8px;
+  }
+  .lineFlex {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #e55d19, #e55d19 5px, transparent 1px, transparent 8px);
+    margin-right: 8px;
+  }
   .precioTarifaPernocte {
     color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
@@ -176,6 +198,17 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+  .precioTarifaPernocteDos {
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 6%;
   }
   .aclaracionPernocte {
     color: #c25308;
@@ -252,7 +285,6 @@
     background: #e55d19;
     margin: auto;
     margin-top: 24px;
-    margin-bottom: 56px;
     color: white;
     text-align: center;
     font-family: DMSansMedium;
@@ -356,7 +388,7 @@
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 8px;
+    margin-right: 24px;
   }
   .boxTarifaPernocte {
     width: 95%;
@@ -368,9 +400,27 @@
     justify-content: space-between;
     border-radius: 5px;
   }
-  .lineHelper {
-    width: 100%;
-    display: inline;
+  .descripcionTarifaPernocte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+  }
+  .labelText {
+    margin-left: 8px;
+  }
+  .lineFlex {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #e55d19, #e55d19 5px, transparent 1px, transparent 8px);
+    margin-right: 8px;
   }
   .itemTarifaPernocte {
     color: #c25308;
@@ -393,7 +443,7 @@
     height: 64px;
   }
   .tarifa {
-    width: 100%;
+    width: 96%;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -418,6 +468,17 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+  .precioTarifaPernocteDos {
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 3%;
   }
   .aclaracionPernocte {
     color: #c25308;
@@ -490,7 +551,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #e55d19;
     margin: auto;
     margin-top: 24px;
@@ -610,10 +671,10 @@
     justify-content: space-between;
     border-radius: 5px;
   }
-  .lineHelper {
+  /*   .lineHelper {
     width: 100%;
     display: inline;
-  }
+  } */
   .itemTarifaPernocte {
     color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
@@ -642,14 +703,26 @@
     justify-content: space-evenly;
   }
   .descripcionTarifaPernocte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #c25308;
     font-feature-settings: "liga" off, "clig" off;
     font-family: DMSansMedium;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
     letter-spacing: 0.2px;
+  }
+  .labelText {
+    margin-left: 8px;
+  }
+  .lineFlex {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #e55d19, #e55d19 5px, transparent 1px, transparent 8px);
+    margin-right: 8px;
   }
   .precioTarifaPernocte {
     color: #c25308;
@@ -660,6 +733,17 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+  .precioTarifaPernocteDos {
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 3%;
   }
   .aclaracionPernocte {
     color: #c25308;
@@ -727,12 +811,12 @@
   }
   .reserveButtonTarifa {
     display: flex;
-    width: 328px;
+    width: 200px;
     height: 43px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #e55d19;
     margin: auto;
     margin-top: 24px;
@@ -744,5 +828,53 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  .reserveButtonTarifa:hover {
+    transition: all 300ms;
+    background-color: #c25308;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .helpBoxPernocte {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+  .tarifa {
+    width: 95%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .precioTarifaPernocte {
+    margin-right: 1%;
+  }
+  .descripcionTarifaPernocte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c25308;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansMedium;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+  }
+  .labelText {
+    margin-left: 8px;
+  }
+  .lineFlex {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #e55d19, #e55d19 5px, transparent 1px, transparent 8px);
+    margin-right: 8px;
   }
 }/*# sourceMappingURL=tarifas.module.css.map */

@@ -46,32 +46,28 @@ export const Tarifas = () => {
           <div className={styles.helpBoxPernocte}>
             {/**Tarifa 1 */}
             <div className={styles.tarifa}>
-              <div className={styles.descripcionTarifaPernocte}>
-                Menores de 3 años ----------------------
-                <p className={styles.lineHelper}>
-                  --------------------------------------------------
-                </p>
-              </div>
+              <span className={styles.descripcionTarifaPernocte}>
+                Menores de 3 años
+              </span>
+              <span className={styles.lineFlex}></span>
               <div className={styles.precioTarifaPernocte}>Sin costo</div>
             </div>
+
             {/**Tarifa 2 */}
             <div className={styles.tarifa}>
-              <div className={styles.descripcionTarifaPernocte}>
-                De 4 a 15 años --------------------------
-                <p className={styles.lineHelper}>
-                --------------------------------------------------
-                </p>
-              </div>
+              <span className={styles.descripcionTarifaPernocte}>
+                De 4 a 15 años
+              </span>
+              <span className={styles.lineFlex}></span>
               <div className={styles.precioTarifaPernocteDos}>$4200</div>
             </div>
+
             {/**Tarifa 3 */}
             <div className={styles.tarifa}>
-              <div className={styles.descripcionTarifaPernocte}>
-                Mayores de 16 años ---------------------
-                <p className={styles.lineHelper}>
-                --------------------------------------------------
-                </p>
-              </div>
+              <span className={styles.descripcionTarifaPernocte}>
+                Mayores de 16 años
+              </span>
+              <span className={styles.lineFlex}></span>
               <div className={styles.precioTarifaPernocteDos}>$6400</div>
             </div>
           </div>

@@ -15,7 +15,7 @@ export const DesplegableBici = () => {
 
   return (
     <div className={styles.contenedorBici}>
-      <div className={styles.titleContainer}>
+      <div className={styles.titleContainer} onClick={toggleAccordion}>
         <img
           src={biciIcon}
           alt="Icono de tren"

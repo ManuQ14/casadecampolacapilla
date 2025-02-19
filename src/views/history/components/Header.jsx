@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/history.module.scss";
@@ -15,6 +15,7 @@ import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMe
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -31,6 +32,15 @@ export const Header = () => {
         behavior: "smooth",
       });
     }, 100);
+  };
+
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
+      document.body.classList.remove("no-scroll");
+    }
   };
 
   const handleToCamping = () => {
@@ -58,12 +68,71 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
+  //Control de scroll para cambio de estado de la navBar
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el scroll vertical es mayor a 650px, activamos la clase
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Limpia el listener cuando el componente se desmonte
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/** Header Mobile */}
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
-          {/*  <img src={fotoHistory} className={styles.headerHistory} /> */}
+          <nav
+            className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
+          >
+            <div className={styles.logoDesktop}>
+              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+            </div>
+            <div
+              className={`${styles.navigatonHeader} ${
+                scrolled ? styles.navigatonHeaderScrolled : ""
+              }`}
+            >
+              <div
+                onClick={() => handleScrollToSection("camping")}
+                className={styles.itemOption}
+              >
+                El Camping
+              </div>
+              <div className={styles.itemOption}>Nuestra historia</div>
+              <div
+                onClick={() => handleScrollToSection("servicios")}
+                className={styles.itemOption}
+              >
+                Servicios
+              </div>
+              <div
+                onClick={() => handleScrollToSection("galeria")}
+                className={styles.itemOption}
+              >
+                Galería
+              </div>
+              <div
+                onClick={() => handleScrollToSection("tarifas")}
+                className={styles.itemOption}
+              >
+                Tarifas
+              </div>
+              <div
+                onClick={() => handleScrollToSection("llegar")}
+                className={styles.itemOption}
+              >
+                Ubicación
+              </div>
+            </div>
+          </nav>
 
           <div className={styles.contentHeader}>
             <h1 className={styles.h1History}>Nuestra Historia</h1>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../../../../../styles/_variables.scss);
 @font-face {
   font-family: Cardo;
@@ -45,17 +46,21 @@
   }
   .sectionOpiniones {
     width: 100vw;
-    height: 460px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 56px;
     background-color: #fcfaf6;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .subtitleContainerOpiniones {
     width: 380px;
-    height: 64px;
+    height: 82px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,17 +69,17 @@
     gap: 16px;
     margin-top: 56px;
     margin-bottom: 32px;
+    margin-top: 16px;
   }
   .slider {
     color: var(--Dark, #4b4a4a);
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    /* mobile/body reg */
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     letter-spacing: 0.25px;
   }
   .sectionOpiniones {
@@ -83,7 +88,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
   .subtitleContainerOpiniones {
     display: flex;
@@ -95,10 +100,12 @@
     height: 5px;
   }
   .carouselContainer {
+    position: relative;
     width: 92%;
     overflow: hidden;
+    height: auto;
+    margin-bottom: 16px;
     cursor: grab;
-    height: 310px;
   }
   .carousel {
     display: flex;
@@ -111,7 +118,8 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    height: auto;
   }
   .starContainer {
     width: 120px;
@@ -137,14 +145,11 @@
     margin-bottom: 16px;
   }
   .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
     color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
     font-family: DMSansRegular;
     font-size: 16px;
     font-style: normal;
@@ -152,6 +157,54 @@
     line-height: 24px;
     letter-spacing: 0.25px;
     padding: 0px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+  .collapsed {
+    max-height: 380px;
+  }
+  .expanded {
+    max-height: 1000px;
+  }
+  .toggleButton {
+    color: #e55d19;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  .toggleInline {
+    color: #e55d19;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.5490196078);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .dots .dot.activeDot {
+    background-color: #e55d19;
+    width: 20px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -215,13 +268,13 @@
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
   .subtitleContainerOpiniones {
     display: flex;
     align-items: center;
     margin-bottom: 32px;
-    width: 92%;
+    width: 89%;
   }
   .line {
     height: 5px;
@@ -231,13 +284,12 @@
     width: 92%;
     overflow: hidden;
     cursor: grab;
-    height: 310px;
+    height: auto;
   }
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
-    width: 50%;
   }
   .reviewCard {
     flex: 0 0 100%;
@@ -245,7 +297,6 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
   }
   .starContainer {
     width: 120px;
@@ -258,22 +309,80 @@
     width: 24px;
     height: 24px;
   }
-  .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+  .nameReview {
     color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
+  }
+  .reviewText {
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
     padding: 0px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+  .collapsed {
+    max-height: 380px;
+  }
+  .expanded {
+    max-height: 1000px;
+  }
+  .toggleButton {
+    color: #e55d19;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  .toggleInline {
+    color: #e55d19;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.5490196078);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .dots .dot.activeDot {
+    background-color: #e55d19;
+    width: 20px;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -300,14 +409,6 @@
     line-height: 32px;
     letter-spacing: 0.15px;
   }
-  .sectionOpiniones {
-    width: 100vw;
-    height: 460px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
   .subtitleContainerOpiniones {
     width: 380px;
     height: 64px;
@@ -332,12 +433,13 @@
     letter-spacing: 0.25px;
   }
   .sectionOpiniones {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 460px;
+    height: auto;
   }
   .subtitleContainerOpiniones {
     display: flex;
@@ -350,15 +452,14 @@
     width: 51px;
   }
   .carouselContainer {
-    width: 92%;
+    width: 70%;
     overflow: hidden;
-    height: 310px;
+    height: auto;
   }
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
-    width: 33%;
+    height: auto;
   }
   .reviewCard {
     flex: 0 0 100%;
@@ -366,7 +467,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .starContainer {
     width: 120px;
@@ -379,21 +480,115 @@
     width: 24px;
     height: 24px;
   }
-  .reviewText {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+  .nameReview {
     color: #333333;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 100%;
-    font-family: DMSansMedium;
+    font-family: DMSansSemiBold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-bottom: 16px;
+  }
+  .reviewText {
+    width: 70%;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    padding: 0px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+    text-align: center;
+  }
+  .collapsed {
+    max-height: 380px;
+  }
+  .expanded {
+    max-height: 1000px;
+  }
+  .toggleButton {
+    color: #e55d19;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  .toggleInline {
+    color: #e55d19;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    display: inline-block;
+  }
+  .dots {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.5490196078);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .dots .dot.activeDot {
+    background-color: #e55d19;
+    width: 20px;
+    border-radius: 10px;
+  }
+  .desktopNavButtons {
+    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    top: 50%;
+    left: 0;
+    transform: translateY(250%);
+    padding: 0 2rem;
+    z-index: 10;
+  }
+  /* Botones de navegación */
+  .navButton {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+  }
+  /* Botón izquierdo */
+  .leftButton {
+    background-image: url("../../../../assets/icons/ArrowLeft.svg");
+  }
+  .leftButton:hover {
+    background-image: url("../../../../../assets/icons//ArrowRight.svg");
+  }
+  /* Botón derecho */
+  .rightButton {
+    background-image: url("../../../../assets/icons/ArrowRigth.svg");
+  }
+  .rightButton:hover {
+    background-image: url("../../../../assets/icons/ArrowRightHover.svg");
   }
 }/*# sourceMappingURL=reviews.module.css.map */
