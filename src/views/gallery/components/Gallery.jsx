@@ -21,6 +21,11 @@ import foto14 from "../../../assets/images/galeria/14.jpg";
 import foto15 from "../../../assets/images/galeria/15.jpg";
 import foto16 from "../../../assets/images/galeria/16.jpg";
 
+import arrorLeft from "../../../assets/icons/ArrowLeft.svg";
+import arrorRight from "../../../assets/icons/ArrowRight.svg";
+import arrorLeftHover from "../../../assets/icons/ArrowLeftHover.svg";
+import arrorRightHover from "../../../assets/icons/ArrowRightHover.svg";
+
 const galeryPhotos = [
   { id: 1, src: foto1, alt: "vistas" },
   { id: 2, src: foto2, alt: "vistas" },
@@ -41,6 +46,8 @@ const galeryPhotos = [
 ];
 
 export const Gallery = () => {
+  const [hoverLeft, setHoverLeft] = useState(false);
+  const [hoverRight, setHoverRight] = useState(false);
   const [modalState, setModalState] = useState({
     isOpen: false,
     currentIndex: 0,
@@ -63,6 +70,27 @@ export const Gallery = () => {
       setModalState((prev) => ({ ...prev, isOpen: false }));
     }, 300);
   }, []);
+
+  // Funciones para navegación en modal
+  const handleModalPrev = () => {
+    setModalState((prev) => ({
+      ...prev,
+      currentIndex:
+        prev.currentIndex === 0
+          ? galeryPhotos.length - 1
+          : prev.currentIndex - 1,
+    }));
+  };
+
+  const handleModalNext = () => {
+    setModalState((prev) => ({
+      ...prev,
+      currentIndex:
+        prev.currentIndex === galeryPhotos.length - 1
+          ? 0
+          : prev.currentIndex + 1,
+    }));
+  };
 
   const handleSwipe = useCallback(
     (e) => {
@@ -92,6 +120,38 @@ export const Gallery = () => {
     <section className={styles.gallerySection}>
       {modalState.isOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
+          {/* Botones de navegación en el modal */}
+          <div className={styles.modalNavButtons}>
+            <img
+              src={hoverLeft ? arrorLeftHover : arrorLeft}
+              alt="Anterior"
+              className={styles.modalNavButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleModalPrev();
+              }}
+              onMouseEnter={() => setHoverLeft(true)}
+              onMouseLeave={() => setHoverLeft(false)}
+            />
+            <img
+              src={hoverRight ? arrorRightHover : arrorRight}
+              alt="Siguiente"
+              className={styles.modalNavButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleModalNext();
+              }}
+              onMouseEnter={() => setHoverRight(true)}
+              onMouseLeave={() => setHoverRight(false)}
+            />
+          </div>
+          <button
+            className={styles.closeButton}
+            onClick={closeModal}
+            aria-label="Cerrar galería"
+          >
+            <img src={closeButton} alt="Cerrar" />
+          </button>
           <div
             className={`${styles.modalContent} ${
               modalState.fadeTransition ? styles.fadeIn : ""
@@ -110,13 +170,13 @@ export const Gallery = () => {
                 onTouchEnd={handleSwipe}
               />
             ))}
-            <button
+            {/* <button
               className={styles.closeButton}
               onClick={closeModal}
               aria-label="Cerrar galería"
             >
               <img src={closeButton} alt="Cerrar" />
-            </button>
+            </button> */}
           </div>
         </div>
       )}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/galeria.module.scss";
@@ -15,6 +15,7 @@ import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMe
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -53,6 +54,11 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
+  const handleToGalery = () => {
+    navigate("/galeria");
+    document.body.classList.remove("no-scroll");
+  };
+
   const handleToTarifas = () => {
     navigate("/inicio#tarifas");
     document.body.classList.remove("no-scroll");
@@ -63,12 +69,57 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
+  //Control de scroll para cambio de estado de la navBar
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el scroll vertical es mayor a 650px, activamos la clase
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Limpia el listener cuando el componente se desmonte
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
       {/** Header Mobile */}
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
           {/*  <img src={fotoHistory} className={styles.headerHistory} /> */}
+          <nav
+            className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
+          >
+            <div className={styles.logoDesktop}>
+              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+            </div>
+            <div
+              className={`${styles.navigatonHeader} ${
+                scrolled ? styles.navigatonHeaderScrolled : ""
+              }`}
+            >
+              <div onClick={handleToCamping} className={styles.itemOption}>
+                El Camping
+              </div>
+              <div className={styles.itemOption}>Nuestra historia</div>
+              <div onClick={handleToServices} className={styles.itemOption}>
+                Servicios
+              </div>
+              <div onClick={handleToGalery} className={styles.itemOption}>
+                Galería
+              </div>
+              <div onClick={handleToTarifas} className={styles.itemOption}>
+                Tarifas
+              </div>
+              <div onClick={handleToLlegar} className={styles.itemOption}>
+                Ubicación
+              </div>
+            </div>
+          </nav>
 
           <div className={styles.contentHeader}>
             <h1 className={styles.h1History}>Galería</h1>
@@ -81,6 +132,7 @@ export const Header = () => {
           alt="Abrir menú hamburguesa"
           onClick={toggleMenu}
           aria-label="Abrir menú hamburguesa"
+          className={styles.botonMenuHamburguesa}
         />
         {/*Menu hamburguesa */}
         <div

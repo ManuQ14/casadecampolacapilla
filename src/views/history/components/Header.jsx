@@ -34,14 +34,7 @@ export const Header = () => {
     }, 100);
   };
 
-  const handleScrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-      document.body.classList.remove("no-scroll");
-    }
-  };
+
 
   const handleToCamping = () => {
     navigate("/inicio#camping");
@@ -100,35 +93,20 @@ export const Header = () => {
                 scrolled ? styles.navigatonHeaderScrolled : ""
               }`}
             >
-              <div
-                onClick={() => handleScrollToSection("camping")}
-                className={styles.itemOption}
-              >
+              <div onClick={handleToCamping} className={styles.itemOption}>
                 El Camping
               </div>
               <div className={styles.itemOption}>Nuestra historia</div>
-              <div
-                onClick={() => handleScrollToSection("servicios")}
-                className={styles.itemOption}
-              >
+              <div onClick={handleToServices} className={styles.itemOption}>
                 Servicios
               </div>
-              <div
-                onClick={() => handleScrollToSection("galeria")}
-                className={styles.itemOption}
-              >
+              <div onClick={handleToGalery} className={styles.itemOption}>
                 Galería
               </div>
-              <div
-                onClick={() => handleScrollToSection("tarifas")}
-                className={styles.itemOption}
-              >
+              <div onClick={handleToTarifas} className={styles.itemOption}>
                 Tarifas
               </div>
-              <div
-                onClick={() => handleScrollToSection("llegar")}
-                className={styles.itemOption}
-              >
+              <div onClick={handleToLlegar} className={styles.itemOption}>
                 Ubicación
               </div>
             </div>

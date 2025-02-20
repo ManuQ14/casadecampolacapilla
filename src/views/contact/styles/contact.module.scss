@@ -1051,3 +1051,447 @@
     letter-spacing: 0.2px;
   }
 }
+
+//Inicio sección notebook
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  //Header history
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: none;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $primario-dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background: $primario-principal;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  //Fin sección header + menu hamburguesa
+
+  //Texto previo
+  .textoIntroductorio {
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    //font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 32px;
+  }
+
+  //Inicio sección formulario
+
+  .formContainer {
+    width: 90%;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    color: $dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.25px;
+    margin-bottom: 72px;
+  }
+
+  .inputGroupTextArea {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    font-family: $main-typography;
+  }
+
+  .textAreaComent {
+    border-radius: 5px;
+    border: 1px solid $gray-a;
+    height: 100%;
+    display: flex;
+    height: 160px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    font-family: $main-typography !important;
+  }
+
+  .labelComentario {
+    margin-bottom: 8px;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    height: 74px;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    border-radius: 5px !important;
+
+    label {
+      font-size: 16px;
+      color: $dark;
+      font-size: 14px;
+      height: 16px;
+      margin-bottom: 5px;
+      font-family: $second-bold-typography;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 97%;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: $main-typography !important;
+      padding: 8px;
+      height: 14px;
+      margin-bottom: 5px;
+      border-radius: 5px !important;
+      border: 1px solid $gray-a;
+      color: $dark !important;
+
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $gray-a !important;
+        text-align: left !important;
+      }
+    }
+
+    .countsPersons {
+      height: 36px;
+      width: 100%;
+    }
+
+    textarea {
+      height: 313px;
+      resize: none;
+      font-family: $main-typography !important;
+      /* border-radius: 5px !important;
+      background-color: transparent !important; */
+    }
+  }
+
+  .required {
+    color: #ff4444;
+  }
+
+  .datePreview {
+    display: flex;
+    flex-flow: column;
+    height: 16px;
+    border-radius: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid $gray-a;
+  }
+
+  .placeholderText {
+    color: $gray-a !important;
+    font-family: $main-typography;
+    text-align: left !important;
+    font-weight: normal;
+  }
+
+  .spanFechas {
+    color: $dark !important;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  .stayDays {
+    color: $dark !important;
+  }
+
+  .datePickerModal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 65vh;
+    background: white;
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: all 300ms !important;
+
+    &.modalOpen {
+      transform: translateY(0);
+      bottom: 0;
+      transition: all 300ms !important;
+    }
+  }
+
+  .datePickerContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $gray-a;
+    transition: all 300ms !important;
+    color: $dark;
+    padding-top: 15px;
+  }
+
+  :global {
+    .react-datepicker {
+      font-family: $main-typography, sans-serif;
+
+      &__day {
+        &--in-range {
+          background-color: rgba(201, 52, 19, 0.1) !important;
+          border-radius: 0 !important;
+        }
+
+        &--in-selecting-range {
+          background-color: rgba(201, 52, 19, 0.1) !important;
+          border-radius: 0 !important;
+        }
+
+        &--selected {
+          background-color: #c93413 !important;
+          border-radius: 50% !important;
+          color: white !important;
+        }
+
+        // Para los extremos del rango
+        &--range-start {
+          border-radius: 50% 0 0 50% !important;
+          background-color: #c93413 !important;
+          color: white !important;
+        }
+
+        &--range-end {
+          border-radius: 0 50% 50% 0 !important;
+          background-color: #c93413 !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .applyButton {
+    width: 50%;
+    padding: 12px;
+    //margin-top: 20px;
+    background-color: $primario-principal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: $main-typography;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .closeButtonDates {
+    display: flex;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    width: 20px;
+  }
+
+  .datePickerHeader {
+    height: 40px !important;
+    margin-bottom: 15px;
+  }
+
+  .selectDates {
+    color: $primario-principal !important;
+    font-family: $second-bold-typography;
+    text-align: center;
+
+    margin: auto;
+    font-size: 18px;
+    font-weight: normal !important;
+  }
+
+  .guestsGroup {
+    display: flex;
+    gap: 16px;
+
+    .inputGroup {
+      flex: 1;
+    }
+  }
+
+  .charCount {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+
+  .submitButton {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: $main-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: $primario-principal;
+  }
+
+  .submitButtonOff {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: none;
+    color: $gray-a;
+    text-align: center;
+    font-family: $primario-principal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: $gray-b;
+  }
+
+  .bottomFormImage {
+    width: 90%;
+    height: 783px;
+    margin-bottom: 56px;
+    margin: auto;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    width: 688px;
+    object-fit: cover;
+  }
+  .errorInput {
+    border-color: #cf3342 !important;
+  }
+
+  .inputCorrect:focus {
+    border: 1px solid $primario-dark !important;
+  }
+
+  .errorMessage {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    font-family: $main-typography;
+    font-weight: bold;
+    color: #cf3342;
+    font-size: 12px;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+  }
+}
+
+//Inicio sección notebook
+@media screen and (min-width: 1920px) {
+}

@@ -583,4 +583,625 @@
     border: 2px solid #e55d19;
     border-radius: 10px;
   }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .headerMobile {
+    height: 680px;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  .botonMenuHamburguesa {
+    display: none;
+  }
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    z-index: 1000000;
+  }
+  .scrolled {
+    background: rgb(255, 255, 255);
+    color: #333333 !important;
+    -webkit-backdrop-filter: blur(1.25px);
+            backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .imgLogoDesktop {
+    width: 66px;
+    height: 39px;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 24px;
+    top: 0;
+    left: 0;
+  }
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #fcfaf6;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .itemOption {
+    transition: all 300ms;
+  }
+  .itemOption:hover {
+    color: #e55d19;
+    transition: all 300ms !important;
+    font-weight: bold;
+    transform: scale(105%);
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 88%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #e55d19;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  .gallerySection {
+    width: 100vw;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+  .subtitleContainer {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .h2 {
+    color: #e55d19;
+    font-family: Cardo;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    width: 77%;
+  }
+  .imageWrapper {
+    position: relative;
+    width: 262px;
+    height: 197px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .galleryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 253px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+  .galleryImage:hover {
+    transform: scale(1.05);
+  }
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .modalContent {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    opacity: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 14%);
+  }
+  .fadeIn {
+    transform: scale(1);
+    opacity: 1 !important;
+  }
+  .fotoAbierta {
+    max-width: 100%;
+    max-height: calc(100vh - 96px);
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  .fotoAbierta.active {
+    opacity: 1;
+    display: block;
+  }
+  .closeButton {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .closeButton img {
+    width: 24px;
+    height: 24px;
+  }
+  /* Botones de navegación del modal */
+  .modalNavButtons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1100;
+  }
+  .modalNavButton {
+    position: relative;
+    width: 60px;
+    height: 48px;
+    cursor: pointer;
+    transition: all 300ms !important;
+  }
+  .goToGalleryContainer {
+    width: 95%;
+    margin: 16px 0;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .goToGallery {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 328px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e55d19;
+    font-family: DMSansMedium;
+    border: 2px solid #e55d19;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 1920px) and (max-width: 2000px) {
+  .headerMobile {
+    height: 680px;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  .botonMenuHamburguesa {
+    display: none;
+  }
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    z-index: 1000000;
+  }
+  .scrolled {
+    background: rgb(255, 255, 255);
+    color: #333333 !important;
+    -webkit-backdrop-filter: blur(1.25px);
+            backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .imgLogoDesktop {
+    width: 66px;
+    height: 39px;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 24px;
+    top: 0;
+    left: 0;
+  }
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #fcfaf6;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .itemOption {
+    transition: all 300ms;
+  }
+  .itemOption:hover {
+    color: #e55d19;
+    transition: all 300ms !important;
+    font-weight: bold;
+    transform: scale(105%);
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 88%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+  .reserveButton {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #e55d19;
+    text-decoration: none;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  .gallerySection {
+    width: 100vw;
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+  .subtitleContainer {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .h2 {
+    color: #e55d19;
+    font-family: Cardo;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 21px;
+    width: 58%;
+    margin: auto;
+  }
+  .imageWrapper {
+    position: relative;
+    width: 262px;
+    height: 197px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .galleryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 253px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+  .galleryImage:hover {
+    transform: scale(1.05);
+  }
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .modalContent {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    opacity: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 14%);
+  }
+  .fadeIn {
+    transform: scale(1);
+    opacity: 1 !important;
+  }
+  .fotoAbierta {
+    max-width: 100%;
+    max-height: calc(100vh - 96px);
+    -o-object-fit: contain;
+       object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  .fotoAbierta.active {
+    opacity: 1;
+    display: block;
+  }
+  .closeButton {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .closeButton img {
+    width: 24px;
+    height: 24px;
+  }
+  /* Botones de navegación del modal */
+  .modalNavButtons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1100;
+  }
+  .modalNavButton {
+    position: relative;
+    width: 60px;
+    height: 48px;
+    cursor: pointer;
+    transition: all 300ms !important;
+  }
+  .goToGalleryContainer {
+    width: 95%;
+    margin: 16px 0;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .goToGallery {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 328px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e55d19;
+    font-family: DMSansMedium;
+    border: 2px solid #e55d19;
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=galeria.module.css.map */
