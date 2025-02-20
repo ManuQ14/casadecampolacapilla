@@ -390,6 +390,16 @@
     margin-bottom: 7%;
     margin-right: 5px;
   }
+
+  .desktopBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .navBar{
+    display: none;
+  }
 }
 
 //Inicio tablet
@@ -653,7 +663,6 @@
       }
     }
 
-   
     .dots {
       position: absolute;
       bottom: 10px;
@@ -772,11 +781,14 @@
     //margin-bottom: 7%;
     margin-right: 5px;
   }
+
+  .desktopBoxContainer {
+    display: none;
+  }
 }
 
-
 //Desktop
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   //Header history
   .navBar {
     display: flex;
@@ -857,7 +869,14 @@
     transform: scale(105%);
   }
 
-  
+  .menuHamburguesaButton {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+
   // Header Mobile
   .headerMobile {
     position: relative;
@@ -1033,7 +1052,6 @@
       }
     }
 
-   
     .dots {
       position: absolute;
       bottom: 10px;
@@ -1152,4 +1170,7 @@
     //margin-bottom: 7%;
     margin-right: 5px;
   }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2080px) {
 }

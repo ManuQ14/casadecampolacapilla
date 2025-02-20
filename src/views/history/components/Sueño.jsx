@@ -74,45 +74,46 @@ export const Sueño = () => {
 
   return (
     <div className={styles.unSueñoContainer}>
-      <header className={styles.subtitleContainerHistory}>
-        <h2 className={styles.h2}>Un Sueño</h2>
-        <img
-          src={subrayLine}
-          alt="linea subrayadora de subtitulo"
-          className={styles.line}
-        />
-      </header>
+      <div className={styles.desktopBoxContainer}>
+        <header className={styles.subtitleContainerHistory}>
+          <h2 className={styles.h2}>Un Sueño</h2>
+          <img
+            src={subrayLine}
+            alt="linea subrayadora de subtitulo"
+            className={styles.line}
+          />
+        </header>
 
-      <section className={styles.textoSueñoContainer}>
-        <p>
-          Hola! Somos Naty y Niko los anfitriones de Casa de Campo La Capilla.
-          Nos conocimos en el 2008 y desde allí comenzamos a proyectar nuestra
-          vida como familia viajera.
-        </p>
-        <p>
-          De novios amábamos recorrer pueblos y lugares de nuestra bella
-          Argentina, hasta que finalmente encontramos nuestro lugar en el mundo
-          en Castilla. Comenzamos pensando en nuestro espacio para proyectarlo a
-          largo plazo como un lugar de descanso para quienes buscan salir del
-          apuro y del ruido de la ciudad, y poder vivir esta experiencia rural
-          así como nosotros la disfrutamos.
-        </p>
-        <br />
-        <p>
-          Con pandemia de por medio y casi sin pensarlo decidimos que era el
-          momento oportuno de dejarlo todo e ir a vivir al campo. Desde aquí,
-          empezamos a ver que era solo cuestión de animarnos y apostar a este
-          emprendimiento familiar con mucho cariño y pasión podía salir adelante
-          siempre que se mantenga la esencia de la Experiencia Rural.
-        </p>
-        <br />
-        <p>
-          Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
-          recibiremos con los brazos abiertos para tu experiencia sea relajante
-          y placentera
-        </p>
-      </section>
-
+        <section className={styles.textoSueñoContainer}>
+          <p>
+            Hola! Somos Naty y Niko los anfitriones de Casa de Campo La Capilla.
+            Nos conocimos en el 2008 y desde allí comenzamos a proyectar nuestra
+            vida como familia viajera.
+          </p>
+          <p>
+            De novios amábamos recorrer pueblos y lugares de nuestra bella
+            Argentina, hasta que finalmente encontramos nuestro lugar en el
+            mundo en Castilla. Comenzamos pensando en nuestro espacio para
+            proyectarlo a largo plazo como un lugar de descanso para quienes
+            buscan salir del apuro y del ruido de la ciudad, y poder vivir esta
+            experiencia rural así como nosotros la disfrutamos.
+          </p>
+          <br />
+          <p>
+            Con pandemia de por medio y casi sin pensarlo decidimos que era el
+            momento oportuno de dejarlo todo e ir a vivir al campo. Desde aquí,
+            empezamos a ver que era solo cuestión de animarnos y apostar a este
+            emprendimiento familiar con mucho cariño y pasión podía salir
+            adelante siempre que se mantenga la esencia de la Experiencia Rural.
+          </p>
+          <br />
+          <p>
+            Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
+            recibiremos con los brazos abiertos para tu experiencia sea
+            relajante y placentera
+          </p>
+        </section>
+      </div>
       <section
         className={styles.carrouselCamping}
         onTouchStart={handleTouchStart}

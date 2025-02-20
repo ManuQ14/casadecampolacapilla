@@ -221,21 +221,11 @@
   }
 
   .modalOverlay {
-    /*     position: absolute;
-    top: 300vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; */
     position: fixed;
     top: -50px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -404,7 +394,7 @@
 
   .modalContent {
     position: relative;
-    background-color: white;
+    //background-color: white;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -422,8 +412,8 @@
   }
 
   .fotoAbierta {
-    max-width: 100%;
-    max-height: 60vh;
+    max-width: 88vw;
+    max-height: 95vh;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -438,8 +428,8 @@
 
   .closeButton {
     position: absolute;
-    top: 2px; // Ajustado para mantener una distancia consistente
-    right: 2px;
+    top: 7px;
+    right: 7px;
     background: none;
     border: none;
 
@@ -513,7 +503,7 @@
     top: -115px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 125%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -521,5 +511,21 @@
     z-index: 1000000;
     opacity: 1;
     transition: opacity 0.3sease;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 122px;
+    right: 9px;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    z-index: 1;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

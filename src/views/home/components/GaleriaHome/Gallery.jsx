@@ -37,7 +37,6 @@ export const Gallery = () => {
     fadeTransition: false,
   });
 
-
   const [startX, setStartX] = useState(null);
   const [hoverLeft, setHoverLeft] = useState(false);
   const [hoverRight, setHoverRight] = useState(false);
@@ -69,12 +68,14 @@ export const Gallery = () => {
     }, 300);
   }, []);
 
-   // Funciones para navegación en modal
-   const handleModalPrev = () => {
+  // Funciones para navegación en modal
+  const handleModalPrev = () => {
     setModalState((prev) => ({
       ...prev,
       currentIndex:
-        prev.currentIndex === 0 ? GALLERY_PHOTOS.length - 1 : prev.currentIndex - 1,
+        prev.currentIndex === 0
+          ? GALLERY_PHOTOS.length - 1
+          : prev.currentIndex - 1,
     }));
   };
 
@@ -82,7 +83,9 @@ export const Gallery = () => {
     setModalState((prev) => ({
       ...prev,
       currentIndex:
-        prev.currentIndex === GALLERY_PHOTOS.length - 1 ? 0 : prev.currentIndex + 1,
+        prev.currentIndex === GALLERY_PHOTOS.length - 1
+          ? 0
+          : prev.currentIndex + 1,
     }));
   };
 
@@ -114,37 +117,44 @@ export const Gallery = () => {
     <section className={styles.gallerySection} id="galeria">
       {modalState.isOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
+          {/* Botones de navegación en el modal */}
+          <div className={styles.modalNavButtons}>
+            <img
+              src={hoverLeft ? arrorLeftHover : arrorLeft}
+              alt="Anterior"
+              className={styles.modalNavButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleModalPrev();
+              }}
+              onMouseEnter={() => setHoverLeft(true)}
+              onMouseLeave={() => setHoverLeft(false)}
+            />
+            <img
+              src={hoverRight ? arrorRightHover : arrorRight}
+              alt="Siguiente"
+              className={styles.modalNavButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleModalNext();
+              }}
+              onMouseEnter={() => setHoverRight(true)}
+              onMouseLeave={() => setHoverRight(false)}
+            />
+          </div>
+          <button
+            className={styles.closeButton}
+            onClick={closeModal}
+            aria-label="Cerrar galería"
+          >
+            <img src={closeButton} alt="Cerrar" />
+          </button>
           <div
             className={`${styles.modalContent} ${
               modalState.fadeTransition ? styles.fadeIn : ""
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Botones de navegación en el modal */}
-            <div className={styles.modalNavButtons}>
-              <img
-                src={hoverLeft ? arrorLeftHover : arrorLeft}
-                alt="Anterior"
-                className={styles.modalNavButton}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleModalPrev();
-                }}
-                onMouseEnter={() => setHoverLeft(true)}
-                onMouseLeave={() => setHoverLeft(false)}
-              />
-              <img
-                src={hoverRight ? arrorRightHover : arrorRight}
-                alt="Siguiente"
-                className={styles.modalNavButton}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleModalNext();
-                }}
-                onMouseEnter={() => setHoverRight(true)}
-                onMouseLeave={() => setHoverRight(false)}
-              />
-            </div>
             {GALLERY_PHOTOS.map((photo, index) => (
               <img
                 key={photo.id}
@@ -157,13 +167,6 @@ export const Gallery = () => {
                 onTouchEnd={handleSwipe}
               />
             ))}
-            <button
-              className={styles.closeButton}
-              onClick={closeModal}
-              aria-label="Cerrar galería"
-            >
-              <img src={closeButton} alt="Cerrar" />
-            </button>
           </div>
         </div>
       )}

@@ -145,6 +145,7 @@ export const Header = () => {
           alt="Abrir menú hamburguesa"
           onClick={toggleMenu}
           aria-label="Abrir menú hamburguesa"
+          className={styles.menuHamburguesaButton}
         />
         {/*Menu hamburguesa */}
         <div
