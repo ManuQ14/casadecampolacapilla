@@ -323,11 +323,12 @@
   }
 
   .contenedorCampingDesktop {
-    margin-top: 56px;
+    //margin-top: 56px;
     align-items: center;
     display: flex;
     flex-flow: column;
     width: 548px;
+    margin-right: 24px;
   }
 
   .subtitleContainer {
@@ -355,7 +356,7 @@
   }
 
   .campingTextContainer {
-    width: 92%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-flow: column;
@@ -423,7 +424,7 @@
   .carrouselCamping {
     position: relative;
     width: 548px;
-    height: 411px;
+    height: 470px;
     overflow: hidden;
     border-radius: 5px;
 

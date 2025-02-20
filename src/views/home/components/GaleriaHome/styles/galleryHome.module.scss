@@ -397,7 +397,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000000;
     opacity: 1;
     transition: opacity 0.3s ease;
   }
@@ -412,7 +412,6 @@
     opacity: 0 !important;
     transition: all 0.3s ease;
     border-radius: 8px;
-    padding: 24px;
     max-width: calc(100vw - 48px);
     max-height: calc(100vh - 14%);
   }
@@ -466,6 +465,8 @@
   }
 
   .modalNavButton {
+    position: relative;
+    //left: -40%;
     width: 60px;
     height: 48px;
     cursor: pointer;
@@ -517,7 +518,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000000;
     opacity: 1;
     transition: opacity 0.3sease;
   }

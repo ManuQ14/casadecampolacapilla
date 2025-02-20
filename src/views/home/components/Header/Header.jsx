@@ -76,10 +76,7 @@ export const Header = () => {
 
   return (
     <>
-      {/** Header Desktop */}
-      {/*  <header className={styles.header}></header> */}
-
-      {/** Header Mobile */}
+      
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
           <nav

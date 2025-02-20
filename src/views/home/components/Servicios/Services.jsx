@@ -48,10 +48,10 @@ const servicios = [
   },
   {
     id: 6,
-    icon: asador,
+    icon: comidas,
     description:
-      "Asador y fogonero. Se incluyen accesorios como discos de arado, estaca a la cruz, espeto, etc...",
-    alt: "Asador",
+      "Preparación de comidas, desayunos y bebidas",
+    alt: "comidas",
   },
   {
     id: 7,
@@ -61,9 +61,9 @@ const servicios = [
   },
   {
     id: 8,
-    icon: comidas,
-    description: "Preparación de comidas, desayunos y bebidas",
-    alt: "Comidas",
+    icon: asador,
+    description: "Asador y fogonero. Se incluyen accesorios como disco de arado, estacas a la cruz, espeto, etc...",
+    alt: "Asador",
   },
   {
     id: 9,
