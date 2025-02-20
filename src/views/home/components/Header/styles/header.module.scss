@@ -417,7 +417,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    
+
     background: transparent;
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
     z-index: 1000000;
@@ -426,7 +426,7 @@
 
   .scrolled {
     background: rgba(255, 255, 255, 1);
-    color: $primario-principal !important;
+    color: $dark !important;
     backdrop-filter: blur(1.25px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   }
@@ -465,7 +465,7 @@
     align-items: center;
     justify-content: space-between;
     width: 608px;
-    color: $primario-principal;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     font-family: $second-typography;

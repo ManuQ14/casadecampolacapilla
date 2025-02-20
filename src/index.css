@@ -15,22 +15,6 @@ input {
   overflow: hidden !important;
 }
 
-#servicios{
-  scroll-margin-top: 85px;
-}
-
-#galeria{
-  scroll-margin-top: 85px;
-}
-
-#tarifas{
-  scroll-margin-top: 85px;
-}
-
-#llegar{
-  scroll-margin-top: 85px;
-}
-
 @media (max-width: 767px) {
   .react-datepicker {
     text-align: center;
@@ -142,6 +126,14 @@ input {
 
 /* Inicio sección tablet */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  #camping {
+    scroll-margin-top: 32px;
+  }
+
+  #llegar {
+    scroll-margin-top: 10px;
+  }
+
   .react-datepicker {
     text-align: center;
     display: flex;
@@ -248,5 +240,28 @@ input {
   .react-datepicker__day--outside-month {
     background-color: transparent !important;
     color: #d1d1d1;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  #camping {
+    scroll-margin-top: 85px;
+  }
+
+  #servicios {
+    scroll-margin-top: 85px;
+  }
+
+  #galeria {
+    scroll-margin-top: 85px;
+  }
+
+  #tarifas {
+    scroll-margin-top: 85px;
+  }
+
+  #llegar {
+    scroll-margin-top: 85px;
   }
 }

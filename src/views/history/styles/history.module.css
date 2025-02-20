@@ -360,6 +360,14 @@
     margin-bottom: 7%;
     margin-right: 5px;
   }
+  .desktopBoxContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .navBar {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .burgerMenu {
@@ -688,8 +696,11 @@
   .iconLink {
     margin-right: 5px;
   }
+  .desktopBoxContainer {
+    display: none;
+  }
 }
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .navBar {
     display: flex;
     flex-flow: row;
@@ -764,6 +775,12 @@
     transition: all 300ms !important;
     font-weight: bold;
     transform: scale(105%);
+  }
+  .menuHamburguesaButton {
+    display: none;
+  }
+  .burgerMenu {
+    display: none;
   }
   .headerMobile {
     position: relative;

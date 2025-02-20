@@ -34,11 +34,11 @@ export const DesplegableAuto = () => {
       </div>
 
       <div
-        className={`${styles.accordionContent} ${
+        className={`${styles.accordionContentAuto} ${
           isExpanded ? styles.expanded : ""
         }`}
       >
-        <div className={styles.indicationContainer}>
+        <div className={styles.indicationContainerAuto}>
           Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta Carmen de
           Areco. Ahí, girá a la izquierda por la Ruta 51. Luego de 20 km, doblá
           nuevamente a la izquierda para tomar la Ruta 43. Manejás 8 km más y te
