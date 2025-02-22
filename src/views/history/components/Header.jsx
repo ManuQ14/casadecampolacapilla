@@ -7,7 +7,6 @@ import subrayLine from "../../../assets/icons/subrayWhite.svg";
 import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
-
 import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
 export const Header = () => {
@@ -19,10 +18,6 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
-
-
-
-
 
   const handleToCamping = () => {
     navigate("/inicio#camping");
@@ -37,6 +32,12 @@ export const Header = () => {
   const handleToGalery = () => {
     navigate("/galeria");
     document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const handleToTarifas = () => {
@@ -136,7 +137,6 @@ export const Header = () => {
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Ubicación</div>
             </div>
-            
           </nav>
         </div>
         {/**Fin menu hamburguesa */}

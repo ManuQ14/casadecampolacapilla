@@ -197,7 +197,7 @@ export const Form = () => {
   }, [formData /* , startDate, endDate */]);
 
   return (
-    <>
+    <div className={styles.contactMainContainer}>
       <section className={styles.formContainer}>
         <div className={styles.textoIntroductorio}>
           Envianos tu consulta y nos vamos a poner en contacto a la brevedad
@@ -422,6 +422,6 @@ export const Form = () => {
         alt="Foto de fin del formulario"
         className={styles.bottomFormImage}
       />
-    </>
+    </div>
   );
 };

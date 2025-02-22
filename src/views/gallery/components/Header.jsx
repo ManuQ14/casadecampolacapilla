@@ -24,6 +24,8 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
+
+
   const handleToHistory = () => {
     navigate("/nuestra-historia");
     document.body.classList.remove("no-scroll");
@@ -91,7 +93,7 @@ export const Header = () => {
               <div onClick={handleToCamping} className={styles.itemOption}>
                 El Camping
               </div>
-              <div className={styles.itemOption}>Nuestra historia</div>
+              <div onClick={handleToHistory} className={styles.itemOption}>Nuestra historia</div>
               <div onClick={handleToServices} className={styles.itemOption}>
                 Servicios
               </div>
