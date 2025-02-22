@@ -67,7 +67,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 103vh;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -77,7 +77,6 @@
 
   .modalContent {
     position: relative;
-    background-color: white;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +84,6 @@
     opacity: 0 !important;
     transition: all 0.3s ease;
     border-radius: 8px;
-    padding: 24px;
     max-width: calc(100vw - 48px);
     max-height: calc(100vh - 48px);
   }
@@ -97,7 +95,7 @@
 
   .fotoAbierta {
     max-width: 100%;
-    max-height: calc(100vh - 96px);
+    max-height: 100%;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -112,8 +110,8 @@
 
   .closeButton {
     position: absolute;
-    top: 2px; // Ajustado para mantener una distancia consistente
-    right: 2px;
+    top: 10px;
+    right: 5px;
     background: none;
     border: none;
 
@@ -237,7 +235,7 @@
 
   .modalContent {
     position: relative;
-    background-color: white;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +243,7 @@
     opacity: 0 !important;
     transition: all 0.3s ease;
     border-radius: 8px;
-    padding: 24px;
+
     max-width: calc(100vw - 48px);
     max-height: calc(100vh - 14%);
   }
@@ -257,7 +255,7 @@
 
   .fotoAbierta {
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 92vh;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -272,8 +270,8 @@
 
   .closeButton {
     position: absolute;
-    top: 2px; // Ajustado para mantener una distancia consistente
-    right: 2px;
+    top: 6%;
+    right: 1%;
     background: none;
     border: none;
 

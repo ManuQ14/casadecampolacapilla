@@ -7,10 +7,7 @@ import subrayLine from "../../../assets/icons/subrayWhite.svg";
 import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
-import instagramIcon from "../../../assets/icons/iconsBurguerMenu/instagram.svg";
-import youtubeIcon from "../../../assets/icons/iconsBurguerMenu/youTube.svg";
-import tikTokIcon from "../../../assets/icons/iconsBurguerMenu/tikTok.svg";
-import facebookIcon from "../../../assets/icons/iconsBurguerMenu/facebook.svg";
+
 import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
 export const Header = () => {
@@ -23,16 +20,7 @@ export const Header = () => {
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
-  const handleToReserve = () => {
-    navigate("/contacto");
-    document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
-  };
+
 
 
 
@@ -148,55 +136,7 @@ export const Header = () => {
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Ubicación</div>
             </div>
-            <div onClick={handleToReserve} className={styles.reserveButton}>
-              Hacenos tu consulta
-            </div>
-            <div className={styles.mediaIconContainer}>
-              <a
-                href="https://instagram.com/casadecampolacapilla"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={instagramIcon}
-                  alt="Instagram icon"
-                  className={styles.iconMedia}
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/user/nikolunapra"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={youtubeIcon}
-                  alt="Youtube icon"
-                  className={styles.iconMedia}
-                />
-              </a>
-              <a
-                href="https://www.tiktok.com/@casadecampolacapilla"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={tikTokIcon}
-                  alt="Tik Tok Icon"
-                  className={styles.iconMedia}
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/casadecampolacapilla"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={facebookIcon}
-                  alt="Facebook Icon"
-                  className={styles.iconMedia}
-                />
-              </a>
-            </div>
+            
           </nav>
         </div>
         {/**Fin menu hamburguesa */}

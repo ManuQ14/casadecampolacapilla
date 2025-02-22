@@ -75,7 +75,7 @@
     width: 92%;
     height: 336px;
     border: none;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
 
   //Acordeon Section
@@ -602,9 +602,8 @@
     align-items: center;
     justify-content: flex-start;
     width: 336px;
-    height: 336px;
+    height: auto;
     margin-left: 16px;
-    margin-bottom: 16px;
   }
 
   .itemInfoContainer {
