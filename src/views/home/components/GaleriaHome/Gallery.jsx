@@ -7,10 +7,10 @@ import line from "../../../../assets/icons/subrayOrange.svg";
 import closeButtonGray from "../../../../assets/icons/closeButtonGray.svg";
 import closeButtonGrayHover from "../../../../assets/icons/closeButtonHoverGray.svg";
 
-import arrorLeft from "../../../../assets/icons/arrowLeft.svg";
-import arrorRight from "../../../../assets/icons/arrowRigth.svg";
-import arrorLeftHover from "../../../../assets/icons/arrowLeftHover.svg";
-import arrorRightHover from "../../../../assets/icons/arrowRigthHover.svg";
+import arrowLeft from "../../../../assets/icons/arrowLeft.svg";
+import arrowRight from "../../../../assets/icons/arrowRigth.svg";
+import arrowLeftHover from "../../../../assets/icons/arrowLeftHover.svg";
+import arrowRightHover from "../../../../assets/icons/arrowRigthHover.svg";
 
 import foto1 from "../../../../assets/images/galleryHome/9.jpg";
 import foto2 from "../../../../assets/images/galleryHome/2.jpg";
@@ -123,7 +123,7 @@ export const Gallery = () => {
           {/* Botones de navegación en el modal */}
           <div className={styles.modalNavButtons}>
             <img
-              src={hoverLeft ? arrorLeftHover : arrorLeft}
+              src={hoverLeft ? arrowLeftHover : arrowLeft}
               alt="Anterior"
               className={styles.modalNavButton}
               onClick={(e) => {
@@ -134,7 +134,7 @@ export const Gallery = () => {
               onMouseLeave={() => setHoverLeft(false)}
             />
             <img
-              src={hoverRight ? arrorRightHover : arrorRight}
+              src={hoverRight ? arrowRightHover : arrowRight}
               alt="Siguiente"
               className={styles.modalNavButton}
               onClick={(e) => {
