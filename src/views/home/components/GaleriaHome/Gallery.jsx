@@ -153,9 +153,9 @@ export const Gallery = () => {
             {/* <img src={closeButtonGray} alt="Cerrar" /> */}
             <img
               src={closeHover ? closeButtonGrayHover : closeButtonGray}
-              alt="Cerrar foto"
-              onMouseEnter={()=> setCloseHover(true)}
-              onMouseLeave={()=> setCloseHover(false)}
+              alt="Cerrar  foto"
+              onMouseEnter={() => setCloseHover(true)}
+              onMouseLeave={() => setCloseHover(false)}
             />
           </button>
           <div
@@ -207,4 +207,3 @@ export const Gallery = () => {
     </section>
   );
 };
-
