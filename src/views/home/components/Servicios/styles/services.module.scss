@@ -106,7 +106,7 @@
   //Inicio Servicios
   .serviceSection {
     width: 100vw;
-    height: 918px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -187,11 +187,11 @@
     color: $primario-light;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 64px;
+    height: 80px;
     font-family: $main-typography;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+
     line-height: 16px;
     letter-spacing: 0.25px;
     width: 175px;
