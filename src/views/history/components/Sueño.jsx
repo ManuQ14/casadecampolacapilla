@@ -86,17 +86,18 @@ export const Sueño = () => {
 
         <section className={styles.textoSueñoContainer}>
           <p>
-            Hola! Somos Naty y Niko los anfitriones de Casa de Campo La Capilla.
+            Hola! Somos Nati y Nico los anfitriones de Casa de Campo La Capilla.
             Nos conocimos en el 2008 y desde allí comenzamos a proyectar nuestra
-            vida como familia viajera.
+            vida como familia viajera. De novios amábamos recorrer pueblos y
+            lugares de nuestra bella Argentina, hasta que finalmente encontramos
+            nuestro lugar en el mundo en Castilla.
           </p>
+          <br />
           <p>
-            De novios amábamos recorrer pueblos y lugares de nuestra bella
-            Argentina, hasta que finalmente encontramos nuestro lugar en el
-            mundo en Castilla. Comenzamos pensando en nuestro espacio para
-            proyectarlo a largo plazo como un lugar de descanso para quienes
-            buscan salir del apuro y del ruido de la ciudad, y poder vivir esta
-            experiencia rural así como nosotros la disfrutamos.
+            Comenzamos pensando en nuestro espacio para proyectarlo a largo
+            plazo como un lugar de descanso para quienes buscan salir del apuro
+            y del ruido de la ciudad, y poder vivir esta experiencia rural así
+            como nosotros la disfrutamos.
           </p>
           <br />
           <p>

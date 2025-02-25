@@ -76,7 +76,7 @@ export const Pueblo = () => {
 
   return (
     <div className={styles.puebloContainer}>
-      <div className={styles.desktopBoxContainer}>
+      <div className={styles.desktopBoxContainerDos}>
         <header className={styles.subtitleContainerHistory}>
           <h2 className={styles.h2}>El Pueblo</h2>
           <img

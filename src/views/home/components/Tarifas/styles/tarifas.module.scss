@@ -992,16 +992,16 @@
     flex-flow: row;
     align-items: center;
     justify-content: flex-start;
-    width: 295px;
+    width: 354px;
   }
 
   .itemTarifaDia {
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
-    font-size: 16px;
+    font-family: $second-bold-typography;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    //font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
     width: 32%;
@@ -1028,13 +1028,12 @@
   .precioTarifa {
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 20px;
+    margin-right: 5%;
   }
 
   .boxTarifaPernocte {
@@ -1051,10 +1050,10 @@
   .itemTarifaPernocte {
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
-    font-size: 16px;
+    font-family: $second-bold-typography;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    //font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-left: 8px;
@@ -1084,15 +1083,14 @@
   }
 
   .descripcionTarifaPernocte {
-    display: flex; // Para que el texto y la línea estén en la misma fila
-    align-items: center; // Alineados verticalmente
-    gap: 8px; // Espacio entre el texto y la línea
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
-    font-size: 12px;
+    font-family: "DMSansSemiBold";
+    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.2px;
   }
@@ -1112,15 +1110,15 @@
       transparent 8px
     );
     margin-right: 8px;
+    margin-left: 5px;
   }
   .precioTarifaPernocte {
     color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: $main-typography;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
     letter-spacing: 0.2px;
   }
 
@@ -1130,10 +1128,9 @@
     font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
     letter-spacing: 0.2px;
-    margin-right: 4%;
+    margin-right: 5%;
   }
 
   .aclaracionPernocte {

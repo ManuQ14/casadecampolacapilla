@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles/galleryHome.module.scss";
 
 import line from "../../../../assets/icons/subrayOrange.svg";
-//import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 import closeButtonGray from "../../../../assets/icons/closeButtonGray.svg";
 import closeButtonGrayHover from "../../../../assets/icons/closeButtonHoverGray.svg";
 
@@ -150,7 +149,6 @@ export const Gallery = () => {
             onClick={closeModal}
             aria-label="Cerrar galería"
           >
-          
             <img
               src={closeHover ? closeButtonGrayHover : closeButtonGray}
               alt="Cerrar  foto"

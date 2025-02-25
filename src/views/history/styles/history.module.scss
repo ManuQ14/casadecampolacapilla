@@ -826,6 +826,7 @@
     margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
 
   .navigatonHeader {
@@ -890,7 +891,7 @@
     height: 650px;
     background-image: url(../../../assets//images/headerHistory.jpg);
     background-size: cover;
-    background-position: 90%;
+    background-position-y: 100%;
   }
 
   .coverHeader {
@@ -1076,16 +1077,16 @@
       gap: 8px;
 
       .dot {
-        width: 10px;
-        height: 10px;
+        width: 8px !important;
+        height: 8px;
         border-radius: 50%;
         background-color: #d9d9d98c;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &.activeDot {
-          background-color: $primario-principal;
-          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          background-color: $primario-acento;
+          width: 20px !important; // PUNTO ACTIVO MÁS ANCHO
           border-radius: 10px;
         }
       }
@@ -1229,6 +1230,7 @@
     margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
 
   .navigatonHeader {
@@ -1293,7 +1295,7 @@
     height: 650px;
     background-image: url(../../../assets//images/headerHistory.jpg);
     background-size: cover;
-    background-position: 90%;
+    background-position-y: 100%;
   }
 
   .coverHeader {
@@ -1368,7 +1370,7 @@
     align-items: center;
 
     justify-content: center;
-    width: 55%;
+    width: 60%;
 
     margin: auto;
     margin-top: 80px;
@@ -1379,10 +1381,8 @@
     display: flex;
     flex-flow: row-reverse;
     align-items: center;
-
     justify-content: center;
-    width: 55%;
-
+    width: 60%;
     margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -1413,7 +1413,7 @@
   }
 
   .textoSueñoContainer {
-    width: 92%;
+    width: 548px;
     height: auto;
     color: $dark;
     text-align: center;
@@ -1453,7 +1453,7 @@
 
     .imageWrapper {
       position: relative;
-      width: 100%;
+      width: 548px !important;
       height: 100%;
     }
 
@@ -1461,7 +1461,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 548px !important;
       height: 100%;
       object-fit: cover;
       opacity: 0;
@@ -1481,16 +1481,16 @@
       gap: 8px;
 
       .dot {
-        width: 10px;
-        height: 10px;
+        width: 8px !important;
+        height: 8px;
         border-radius: 50%;
         background-color: #d9d9d98c;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &.activeDot {
-          background-color: $primario-principal;
-          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          background-color: $primario-acento;
+          width: 20px !important; // PUNTO ACTIVO MÁS ANCHO
           border-radius: 10px;
         }
       }
@@ -1531,7 +1531,7 @@
   }
 
   .containerNotas {
-    width: 55%;
+    width: 60%;
     margin: auto;
     height: auto;
     display: flex;
@@ -1598,5 +1598,13 @@
     align-items: center;
     width: 548px;
     margin-right: 24px;
+  }
+
+  .desktopBoxContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 548px;
+    margin-left: 24px;
   }
 }

@@ -417,9 +417,8 @@
     position: fixed;
     top: 0;
     left: 0;
-
     background: transparent;
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background 0.3s ease;
     z-index: 1000000;
     //box-shadow: 1px solid gray;
   }
@@ -427,7 +426,7 @@
   .scrolled {
     background: rgba(255, 255, 255, 1);
     color: $dark !important;
-    backdrop-filter: blur(1.25px);
+    //backdrop-filter: blur(1.25px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   }
 

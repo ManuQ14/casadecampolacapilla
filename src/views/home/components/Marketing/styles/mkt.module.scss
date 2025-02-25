@@ -215,11 +215,11 @@
   //Inicio sección MKT
   .mktSection {
     width: 100vw;
-    height: 1000px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 80px;
   }
 
   .containerMktOne {
@@ -310,6 +310,10 @@
     font-family: $second-typography;
     font-size: 20px;
     line-height: 32px;
+  }
+
+  .helpBold{
+    font-family: $second-bold-typography; 
   }
 
   .fotoContainer {

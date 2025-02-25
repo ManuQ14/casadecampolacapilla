@@ -38,11 +38,13 @@ export const DesplegableBici = () => {
       >
         <div className={styles.indicationContainer}>
           <p>
-            Tomás el tren <strong>Once - Moreno</strong> y hacés transbordo al{" "}
-            <strong> Moreno - Mercedes.</strong> Desde allí, son 46 km siguiendo
-            las vías del tren por la Ruta Provincial 42, un camino de tierra que
-            atraviesa los pueblos de San Jacinto, Franklin y Rivas, hasta llegar
-            a Castilla.
+            Tomás el tren{" "}
+            <strong className={styles.helpBold}>Once - Moreno</strong> y hacés
+            transbordo al{" "}
+            <strong className={styles.helpBold}> Moreno - Mercedes.</strong>{" "}
+            Desde allí, son 46 km siguiendo las vías del tren por la Ruta
+            Provincial 42, un camino de tierra que atraviesa los pueblos de San
+            Jacinto, Franklin y Rivas, hasta llegar a Castilla.
           </p>
         </div>
       </div>

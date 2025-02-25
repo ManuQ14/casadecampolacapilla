@@ -40,9 +40,12 @@ export const Desplegables = () => {
         <div className={styles.indicationContainer}>
           <p>
             Si venís en tren, tomá el ramal{" "}
-            <strong>San Martín Retiro - Junín</strong> y bajá en la estación
-            Castilla, nosotros te pasamos a buscar por la estación y{" "}
-            <strong>
+            <strong className={styles.helpBold}>
+              San Martín Retiro - Junín
+            </strong>{" "}
+            y bajá en la estación Castilla, nosotros te pasamos a buscar por la
+            estación y{" "}
+            <strong className={styles.helpBold}>
               te llevamos al predio sin cargo, solo avisanos con anticipación.
             </strong>
           </p>
@@ -60,10 +63,11 @@ export const Desplegables = () => {
           </p>
           <br />
           <p>
-            El tren tiene un <strong>único horario por día </strong>, llega a
-            Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en el
-            predio hasta las 3 am, como opcional podes adicionar el servicio de
-            traslado hasta la estación
+            El tren tiene un{" "}
+            <strong className={styles.helpBold}>único horario por día </strong>,
+            llega a Castilla a las 21:53 y sale a las 3:30 am. Podés quedarte en
+            el predio hasta las 3 am, como opcional podes adicionar el servicio
+            de traslado hasta la estación
           </p>
         </div>
         <div className={styles.containerLink}>

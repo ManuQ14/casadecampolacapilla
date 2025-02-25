@@ -966,8 +966,8 @@
   }
 
   .fotoAbierta {
-    max-width: 100%;
-    max-height: calc(100vh - 96px);
+    max-width: 88vw;
+    max-height: 95vh;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -990,8 +990,8 @@
     z-index: 1;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -1320,8 +1320,8 @@
   }
 
   .fotoAbierta {
-    max-width: 100%;
-    max-height: calc(100vh - 96px);
+    max-width: 88vw;
+    max-height: 95vh;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -1344,8 +1344,8 @@
     z-index: 1;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
 

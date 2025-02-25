@@ -22,6 +22,11 @@ export const Header = () => {
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
 
+  const handleToHome = () => {
+    navigate("/inicio");
+    document.body.classList.remove("no-scroll");
+  };
+
   const handleToCamping = () => {
     navigate("/inicio#camping");
     document.body.classList.remove("no-scroll");
@@ -82,6 +87,7 @@ export const Header = () => {
                 src={scrolled ? LogoHeaderScrolled : logoHeader}
                 alt="Logo Capilla"
                 className={styles.imgLogoDesktop}
+                onClick={handleToHome}
               />
             </div>
             <div

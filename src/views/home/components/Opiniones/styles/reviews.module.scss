@@ -585,7 +585,7 @@
 
   .toggleInline {
     color: $primario-principal;
-    font-weight: 600;
+    font-family: $second-bold-typography;
     cursor: pointer;
     margin-left: 8px;
     display: inline-block;
@@ -602,16 +602,16 @@
     margin-top: 32px;
 
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 8px !important;
+      height: 8px;
       border-radius: 50%;
       background-color: #d9d9d98c;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
       &.activeDot {
-        background-color: $primario-principal;
-        width: 20px;
+        background-color: $primario-acento;
+        width: 20px !important;
         border-radius: 10px;
       }
     }

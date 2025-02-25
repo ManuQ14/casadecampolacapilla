@@ -1186,6 +1186,10 @@
     transition: all 1s ease-in-out;
   }
 
+  .helpBold{
+    font-family: $second-bold-typography; 
+  }
+
   .indicationContainerAuto {
     width: 536px;
     height: 144px;

@@ -28,7 +28,7 @@ export const Mkt = () => {
           <img src={lineGray} alt="linea subrayadora" className={styles.lineaSubrayadoraDos} />
           <p className={styles.astroExplication}>
             Lo que la convierte en el lugar perfecto para hacer{" "}
-            <b>astrofotografía</b> y disfrutar de las estrellas.
+            <strong className={styles.helpBold}>astrofotografía</strong> y disfrutar de las estrellas.
           </p>
         </div>
         <img
