@@ -43,6 +43,7 @@ export const Header = () => {
     }, 100);
   };
 
+
   const handleToServices = () => {
     navigate("/inicio#servicios");
     document.body.classList.remove("no-scroll");
@@ -148,7 +149,11 @@ export const Header = () => {
             aria-label="Cerrar menú"
           />
           <nav className={styles.menuItems}>
-            <img src={CapillaLogo} alt="Icono de La Capilla" />
+            <img
+              src={CapillaLogo}
+              alt="Icono de La Capilla"
+              onClick={handleToHome}
+            />
             <div className={styles.itemsNavigationContainer}>
               <div onClick={handleToCamping}>El Camping</div>
               <div onClick={handleToHistory}>Nuestra historia</div>
