@@ -9,7 +9,7 @@ import closeButtonGrayHover from "../../../../assets/icons/closeButtonHoverGray.
 
 import arrowLeft from "../../../../assets/icons/ArrowLeft.svg";
 import arrowRight from "../../../../assets/icons/arrowRigth.svg";
-import arrowLeftHover from "../../../../assets/icons/arrowLeftHover.svg";
+import arrowLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
 import arrowRightHover from "../../../../assets/icons/arrowRigthHover.svg";
 
 import foto1 from "../../../../assets/images/galleryHome/9.jpg";

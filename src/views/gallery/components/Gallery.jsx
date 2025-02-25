@@ -22,7 +22,7 @@ import foto16 from "../../../assets/images/galeria/16.jpg";
 
 import arrowLeft from "../../../assets/icons/ArrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
-import arrowLeftHover from "../../../assets/icons/arrowLeftHover.svg";
+import arrowLeftHover from "../../../assets/icons/ArrowLeftHover.svg";
 import arrorRightHover from "../../../assets/icons/arrowRigthHover.svg";
 import closeButtonGray from "../../../assets/icons/closeButtonGray.svg";
 import closeButtonGrayHover from "../../../assets/icons/closeButtonHoverGray.svg";
