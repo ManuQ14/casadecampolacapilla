@@ -248,6 +248,8 @@
 
   .labelComentario {
     margin-bottom: 8px;
+    font-size: 16px;
+    font-family: $main-typography;
   }
 
   .countsPersons {
@@ -264,11 +266,11 @@
     label {
       font-size: 16px;
       color: $dark;
-      font-size: 14px;
+      font-size: 16px;
       height: 16px;
       //margin-top: 16px;
       margin-bottom: 5px;
-      font-family: $second-bold-typography;
+      font-family: $main-typography;
     }
 
     input,
@@ -280,7 +282,7 @@
       font-size: 14px;
       font-family: $main-typography;
       padding: 8px;
-      height: 14px;
+      height: 18px;
       margin-bottom: 5px;
       border-radius: 5px;
       border: 1px solid $gray-a;
@@ -315,7 +317,7 @@
   .datePreview {
     display: flex;
     flex-flow: column;
-    height: 14px;
+    height: 18px;
     border-radius: 5px;
     padding: 8px;
     border-radius: 5px;
@@ -788,6 +790,8 @@
 
   .labelComentario {
     margin-bottom: 8px;
+    font-size: 16px;
+    font-family: $main-typography;
   }
 
   .inputGroup {
@@ -801,10 +805,10 @@
     label {
       font-size: 16px;
       color: $dark;
-      font-size: 14px;
+      font-size: 16px;
       height: 16px;
       margin-bottom: 5px;
-      font-family: $second-bold-typography;
+      font-family: $main-typography;
     }
 
     input,
@@ -815,7 +819,7 @@
       font-size: 14px;
       font-family: $main-typography !important;
       padding: 8px;
-      height: 14px;
+      height: 18px;
       margin-bottom: 5px;
       border-radius: 5px !important;
       border: 1px solid $gray-a;
@@ -851,7 +855,7 @@
   .datePreview {
     display: flex;
     flex-flow: column;
-    height: 14px;
+    height: 18px;
     border-radius: 5px;
     padding: 8px;
     border-radius: 5px;
@@ -1312,6 +1316,8 @@
 
   .labelComentario {
     margin-bottom: 8px;
+    font-size: 16px;
+    font-family: $main-typography;
   }
 
   .inputGroup {
@@ -1325,10 +1331,10 @@
     label {
       font-size: 16px;
       color: $dark;
-      font-size: 14px;
+      font-size: 16px;
       height: 16px;
       margin-bottom: 5px;
-      font-family: $second-bold-typography;
+      font-family: $main-typography;
     }
 
     input,
@@ -1339,7 +1345,7 @@
       font-size: 14px;
       font-family: $main-typography !important;
       padding: 8px;
-      height: 14px;
+      height: 18px;
       margin-bottom: 5px;
       border-radius: 5px !important;
       border: 1px solid $gray-a;
@@ -1376,7 +1382,7 @@
   .datePreview {
     display: flex;
     flex-flow: column;
-    height: 14px;
+    height: 18px;
     border-radius: 5px;
     padding: 8px;
     border-radius: 5px;
@@ -1844,6 +1850,8 @@
 
   .labelComentario {
     margin-bottom: 8px;
+    font-size: 16px;
+    font-family: $main-typography;
   }
 
   .inputGroup {
@@ -1857,10 +1865,10 @@
     label {
       font-size: 16px;
       color: $dark;
-      font-size: 14px;
+      font-size: 16px;
       height: 16px;
       margin-bottom: 5px;
-      font-family: $second-bold-typography;
+      font-family: $main-typography;
     }
 
     input,
@@ -1871,7 +1879,7 @@
       font-size: 14px;
       font-family: $main-typography !important;
       padding: 8px;
-      height: 14px;
+      height: 18px;
       margin-bottom: 5px;
       border-radius: 5px !important;
       border: 1px solid $gray-a;
@@ -1908,7 +1916,7 @@
   .datePreview {
     display: flex;
     flex-flow: column;
-    height: 14px;
+    height: 18px;
     border-radius: 5px;
     padding: 8px;
     border-radius: 5px;
