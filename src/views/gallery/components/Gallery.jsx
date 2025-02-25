@@ -20,9 +20,9 @@ import foto14 from "../../../assets/images/galeria/14.jpg";
 import foto15 from "../../../assets/images/galeria/15.jpg";
 import foto16 from "../../../assets/images/galeria/16.jpg";
 
-import arrorLeft from "../../../assets/icons/arrowLeft.svg";
+import arrowLeft from "../../../assets/icons/arrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
-import arrorLeftHover from "../../../assets/icons/arrowLeftHover.svg";
+import arrowLeftHover from "../../../assets/icons/arrowLeftHover.svg";
 import arrorRightHover from "../../../assets/icons/arrowRigthHover.svg";
 import closeButtonGray from "../../../assets/icons/closeButtonGray.svg";
 import closeButtonGrayHover from "../../../assets/icons/closeButtonHoverGray.svg";
@@ -125,7 +125,7 @@ export const Gallery = () => {
           {/* Botones de navegación en el modal */}
           <div className={styles.modalNavButtons}>
             <img
-              src={hoverLeft ? arrorLeftHover : arrorLeft}
+              src={hoverLeft ? arrowLeftHover : arrowLeft}
               alt="Anterior"
               className={styles.modalNavButton}
               onClick={(e) => {
