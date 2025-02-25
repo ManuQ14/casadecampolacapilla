@@ -7,7 +7,7 @@ import line from "../../../../assets/icons/subrayOrange.svg";
 import closeButtonGray from "../../../../assets/icons/closeButtonGray.svg";
 import closeButtonGrayHover from "../../../../assets/icons/closeButtonHoverGray.svg";
 
-import arrowLeft from "../../../../assets/icons/arrowLeft.svg";
+import arrowLeft from "../../../../assets/icons/ArrowLeft.svg";
 import arrowRight from "../../../../assets/icons/arrowRigth.svg";
 import arrowLeftHover from "../../../../assets/icons/arrowLeftHover.svg";
 import arrowRightHover from "../../../../assets/icons/arrowRigthHover.svg";
@@ -150,7 +150,7 @@ export const Gallery = () => {
             onClick={closeModal}
             aria-label="Cerrar galería"
           >
-            {/* <img src={closeButtonGray} alt="Cerrar" /> */}
+          
             <img
               src={closeHover ? closeButtonGrayHover : closeButtonGray}
               alt="Cerrar  foto"

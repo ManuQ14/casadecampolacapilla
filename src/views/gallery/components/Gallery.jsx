@@ -20,7 +20,7 @@ import foto14 from "../../../assets/images/galeria/14.jpg";
 import foto15 from "../../../assets/images/galeria/15.jpg";
 import foto16 from "../../../assets/images/galeria/16.jpg";
 
-import arrowLeft from "../../../assets/icons/arrowLeft.svg";
+import arrowLeft from "../../../assets/icons/ArrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
 import arrowLeftHover from "../../../assets/icons/arrowLeftHover.svg";
 import arrorRightHover from "../../../assets/icons/arrowRigthHover.svg";
