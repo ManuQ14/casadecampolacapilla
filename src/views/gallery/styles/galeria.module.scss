@@ -735,6 +735,7 @@
     margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
 
   .navigatonHeader {
@@ -1088,6 +1089,7 @@
     margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
 
   .navigatonHeader {
@@ -1133,8 +1135,6 @@
   .itemOption:hover {
     color: $primario-principal;
     transition: all 300ms !important;
-    font-weight: bold;
-    transform: scale(105%);
   }
 
   // Header Mobile

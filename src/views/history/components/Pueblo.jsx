@@ -105,7 +105,7 @@ export const Pueblo = () => {
           <br />
           <br />A pocos kilómetros, tenemos los pueblos vecinos de Rawson a 13
           km y Rivas a 15 km, pueblos que fueron fundados gracias a la llegada
-          del tren Pacífico
+          del tren Pacífico.
         </section>
       </div>
       <section

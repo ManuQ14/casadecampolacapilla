@@ -95,6 +95,10 @@
     margin-top: 32px;
   }
 
+  .helpBold {
+    font-family: $second-bold-typography;
+  }
+
   .fotoContainer {
     width: 100vw;
     height: 309px;
@@ -195,6 +199,10 @@
     letter-spacing: 0.1px;
     text-align: center;
     margin-top: 16px;
+  }
+
+  .helpBold {
+    font-family: $second-bold-typography;
   }
 
   .fotoContainer {
@@ -312,8 +320,8 @@
     line-height: 32px;
   }
 
-  .helpBold{
-    font-family: $second-bold-typography; 
+  .helpBold {
+    font-family: $second-bold-typography;
   }
 
   .fotoContainer {

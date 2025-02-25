@@ -330,6 +330,10 @@
     letter-spacing: 0.1px;
   }
 
+  .helpBold {
+    font-family: $second-bold-typography;
+  }
+
   .mapaLlegar {
     width: 92%;
     margin-bottom: 16px;
@@ -654,6 +658,10 @@
     letter-spacing: 0.1px;
   }
 
+  .helpBold {
+    font-family: $second-bold-typography;
+  }
+
   .mapaLlegar {
     width: 92%;
     margin-bottom: 16px;
@@ -809,6 +817,8 @@
 
   .trainSVG {
     margin-right: 16px;
+    width: 29px;
+    height: 29px;
   }
 
   .expandAcordeon {
@@ -1002,6 +1012,10 @@
     margin-right: auto;
     display: flex;
   }
+
+  .helpBold {
+    font-family: $second-bold-typography;
+  }
 }
 
 @media screen and (min-width: 1920px) and (max-width: 2000px) {
@@ -1150,6 +1164,8 @@
 
   .trainSVG {
     margin-right: 16px;
+    width: 29px;
+    height: 29px;
   }
 
   .expandAcordeon {
@@ -1186,8 +1202,8 @@
     transition: all 1s ease-in-out;
   }
 
-  .helpBold{
-    font-family: $second-bold-typography; 
+  .helpBold {
+    font-family: $second-bold-typography;
   }
 
   .indicationContainerAuto {

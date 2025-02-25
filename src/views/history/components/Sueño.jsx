@@ -111,7 +111,7 @@ export const Sueño = () => {
           <p>
             Hoy siendo ya cuatro, junto con nuestras hijitas Milena y Jazmin, te
             recibiremos con los brazos abiertos para tu experiencia sea
-            relajante y placentera
+            relajante y placentera.
           </p>
         </section>
       </div>
