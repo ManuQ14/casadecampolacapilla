@@ -68,7 +68,7 @@
     left: 0;
     width: 100vw;
     height: 103vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,8 +84,8 @@
     opacity: 0 !important;
     transition: all 0.3s ease;
     border-radius: 8px;
-    max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 48px);
+    max-width: calc(100vw);
+    max-height: calc(100vh);
   }
 
   .fadeIn {
@@ -100,7 +100,6 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     display: none; //
-    border-radius: 5px;
 
     &.active {
       opacity: 1;
@@ -224,7 +223,7 @@
     left: 0;
     width: 100vw;
     height: 105vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,10 +241,8 @@
     transform: scale(0);
     opacity: 0 !important;
     transition: all 0.3s ease;
-    border-radius: 8px;
-
-    max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 14%);
+    max-width: calc(100vw);
+    max-height: calc(100vh);
   }
 
   .fadeIn {
@@ -260,7 +257,6 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     display: none; //
-    border-radius: 5px;
 
     &.active {
       opacity: 1;
@@ -308,9 +304,26 @@
     border-radius: 10px;
   }
 
-  .modalNavButton {
-    display: none;
+  .modalNavButtons {
+    width: 100%;
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1100;
   }
+
+  .modalNavButton {
+    width: 30px;
+    height: 30px;
+  }
+
+
+
+
+
 }
 
 //Desktop
@@ -381,7 +394,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -416,7 +429,6 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     display: none; //
-    border-radius: 5px;
 
     &.active {
       opacity: 1;
@@ -435,8 +447,8 @@
     z-index: 1;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -502,7 +514,7 @@
     left: 0;
     width: 100vw;
     height: 125%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,8 +534,8 @@
     z-index: 1;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
 }

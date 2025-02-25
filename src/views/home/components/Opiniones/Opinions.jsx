@@ -4,10 +4,10 @@ import line from "../../../../assets/icons/subrayOrange.svg";
 import star from "../../../../assets/icons/reviews/star.svg";
 
 // Importa los SVGs para los botones
-import arrorLeft from "../../../../assets/icons/ArrowLeft.svg";
-import arrorRight from "../../../../assets/icons/ArrowRight.svg";
-import arrorLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
-import arrorRightHover from "../../../../assets/icons/ArrowRightHover.svg";
+import arrorLeft from "../../../../assets/icons/arrowLeftOrange.svg";
+import arrorRight from "../../../../assets/icons/arrowRigthOrange.svg";
+import arrorLeftHover from "../../../../assets/icons/arrowLeftHoverOrange.svg";
+import arrorRightHover from "../../../../assets/icons/arrowRigthHoverOrange.svg";
 
 const DEFAULT_TRUNCATE = 200;
 const DESKTOP_TRUNCATE = 400;

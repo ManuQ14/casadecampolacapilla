@@ -7,6 +7,9 @@ import subrayLine from "../../../assets/icons/subrayWhite.svg";
 import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
+import logoHeader from "../../../assets/icons/logoHome.png";
+import LogoHeaderScrolled from "../../../assets/icons/logoHomeScrolled.png";
+
 import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
 export const Header = () => {
@@ -23,8 +26,6 @@ export const Header = () => {
     navigate("/inicio#camping");
     document.body.classList.remove("no-scroll");
   };
-
-
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
@@ -83,7 +84,11 @@ export const Header = () => {
             className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
           >
             <div className={styles.logoDesktop}>
-              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+              <img
+                src={scrolled ? LogoHeaderScrolled : logoHeader}
+                alt="Logo Capilla"
+                className={styles.imgLogoDesktop}
+              />
             </div>
             <div
               className={`${styles.navigatonHeader} ${
@@ -93,7 +98,9 @@ export const Header = () => {
               <div onClick={handleToCamping} className={styles.itemOption}>
                 El Camping
               </div>
-              <div onClick={handleToHistory} className={styles.itemOption}>Nuestra historia</div>
+              <div onClick={handleToHistory} className={styles.itemOption}>
+                Nuestra historia
+              </div>
               <div onClick={handleToServices} className={styles.itemOption}>
                 Servicios
               </div>

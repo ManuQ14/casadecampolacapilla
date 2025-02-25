@@ -414,7 +414,7 @@
     height: 24px;
   }
 
-/*   .chrevronRight:hover{
+  /*   .chrevronRight:hover{
     margin-left: 24px;
     transition: all 300ms;
   } */
@@ -458,16 +458,16 @@
       gap: 8px;
 
       .dot {
-        width: 10px;
-        height: 10px;
+        width: 8px !important;
+        height: 8px;
         border-radius: 50%;
         background-color: #d9d9d98c;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &.activeDot {
-          background-color: #f16529;
-          width: 20px; // PUNTO ACTIVO MÁS ANCHO
+          background-color: $primario-acento;
+          width: 20px !important; // PUNTO ACTIVO MÁS ANCHO
           border-radius: 10px;
         }
       }

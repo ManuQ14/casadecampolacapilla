@@ -8,8 +8,8 @@ import videoCamping from "../../../../assets/videos/videoPortada.mp4";
 import openMenu from "../../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
-
-//import logoHeader from "../../../../assets/icons/logoHome.svg";
+import logoHeader from "../../../../assets/icons/logoHome.png";
+import LogoHeaderScrolled from "../../../../assets/icons/logoHomeScrolled.png";
 
 import CapillaLogo from "../../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
@@ -59,7 +59,6 @@ export const Header = () => {
     const handleScroll = () => {
       // Si el scroll vertical es mayor a 650px, activamos la clase
       if (window.scrollY > 50) {
-        
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -73,14 +72,17 @@ export const Header = () => {
 
   return (
     <>
-      
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
           <nav
             className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
           >
             <div className={styles.logoDesktop}>
-              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+              <img
+                src={scrolled ? LogoHeaderScrolled : logoHeader}
+                alt="Logo Capilla"
+                className={styles.imgLogoDesktop}
+              />
             </div>
             <div
               className={`${styles.navigatonHeader} ${
@@ -205,7 +207,6 @@ export const Header = () => {
                 Ubicación
               </div>
             </div>
-            
           </nav>
         </div>
         {/**Fin menu hamburguesa */}

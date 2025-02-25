@@ -5,6 +5,9 @@ import subrayLine from "../../../assets/icons/subrayWhite.svg";
 import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
 import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
+import logoHeader from "../../../assets/icons/logoHome.png";
+import LogoHeaderScrolled from "../../../assets/icons/logoHomeScrolled.png";
+
 import styles from "../styles/contact.module.scss";
 
 import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
@@ -18,6 +21,13 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.classList.toggle("no-scroll", !isMenuOpen);
   };
+
+  const handleToHome = () => {
+    navigate("/inicio");
+    document.body.classList.remove("no-scroll");
+  };
+
+
 
   const handleToCamping = () => {
     navigate("/inicio#camping");
@@ -81,7 +91,14 @@ export const Header = () => {
             className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
           >
             <div className={styles.logoDesktop}>
-              <img src="logo" alt="" className={styles.imgLogoDesktop} />
+              <img
+                src={scrolled ? LogoHeaderScrolled : logoHeader}
+                alt="Logo Capilla"
+                className={styles.imgLogoDesktop}
+                onClick={handleToHome}
+                onMouseEnter={()=> LogoHeaderScrolled}
+                onMouseLeave={()=> logoHeader}
+              />
             </div>
             <div
               className={`${styles.navigatonHeader} ${

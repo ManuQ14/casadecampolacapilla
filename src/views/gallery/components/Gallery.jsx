@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 
 import styles from "../styles/galeria.module.scss";
-import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
 //Import de fotos
 import foto1 from "../../../assets/images/galeria/1.jpg";
@@ -21,10 +20,12 @@ import foto14 from "../../../assets/images/galeria/14.jpg";
 import foto15 from "../../../assets/images/galeria/15.jpg";
 import foto16 from "../../../assets/images/galeria/16.jpg";
 
-import arrorLeft from "../../../assets/icons/ArrowLeft.svg";
-import arrorRight from "../../../assets/icons/ArrowRight.svg";
-import arrorLeftHover from "../../../assets/icons/ArrowLeftHover.svg";
-import arrorRightHover from "../../../assets/icons/ArrowRightHover.svg";
+import arrorLeft from "../../../assets/icons/arrowLeft.svg";
+import arrorRight from "../../../assets/icons/arrowRigth.svg";
+import arrorLeftHover from "../../../assets/icons/arrowLeftHover.svg";
+import arrorRightHover from "../../../assets/icons/arrowRigthHover.svg";
+import closeButtonGray from "../../../assets/icons/closeButtonGray.svg";
+import closeButtonGrayHover from "../../../assets/icons/closeButtonHoverGray.svg";
 
 const galeryPhotos = [
   { id: 1, src: foto1, alt: "vistas" },
@@ -54,6 +55,7 @@ export const Gallery = () => {
     fadeTransition: false,
   });
   const [startX, setStartX] = useState(null);
+  const [closeHover, setCloseHover] = useState(false);
 
   const openModal = useCallback((index) => {
     setModalState({ isOpen: true, currentIndex: index, fadeTransition: false });
@@ -150,7 +152,12 @@ export const Gallery = () => {
             onClick={closeModal}
             aria-label="Cerrar galería"
           >
-            <img src={closeButton} alt="Cerrar" />
+            <img
+              src={closeHover ? closeButtonGrayHover : closeButtonGray}
+              alt="Cerrar foto"
+              onMouseEnter={() => setCloseHover(true)}
+              onMouseLeave={() => setCloseHover(false)}
+            />
           </button>
           <div
             className={`${styles.modalContent} ${

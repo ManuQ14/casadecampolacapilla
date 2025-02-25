@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles/galleryHome.module.scss";
 
 import line from "../../../../assets/icons/subrayOrange.svg";
-import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
+//import closeButton from "../../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
+import closeButtonGray from "../../../../assets/icons/closeButtonGray.svg";
+import closeButtonGrayHover from "../../../../assets/icons/closeButtonHoverGray.svg";
 
-import arrorLeft from "../../../../assets/icons/ArrowLeft.svg";
-import arrorRight from "../../../../assets/icons/ArrowRight.svg";
-import arrorLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
-import arrorRightHover from "../../../../assets/icons/ArrowRightHover.svg";
+import arrorLeft from "../../../../assets/icons/arrowLeft.svg";
+import arrorRight from "../../../../assets/icons/arrowRigth.svg";
+import arrorLeftHover from "../../../../assets/icons/arrowLeftHover.svg";
+import arrorRightHover from "../../../../assets/icons/arrowRigthHover.svg";
 
 import foto1 from "../../../../assets/images/galleryHome/9.jpg";
 import foto2 from "../../../../assets/images/galleryHome/2.jpg";
@@ -40,6 +42,7 @@ export const Gallery = () => {
   const [startX, setStartX] = useState(null);
   const [hoverLeft, setHoverLeft] = useState(false);
   const [hoverRight, setHoverRight] = useState(false);
+  const [closeHover, setCloseHover] = useState(false);
 
   const navigate = useNavigate();
 
@@ -147,7 +150,13 @@ export const Gallery = () => {
             onClick={closeModal}
             aria-label="Cerrar galería"
           >
-            <img src={closeButton} alt="Cerrar" />
+            {/* <img src={closeButtonGray} alt="Cerrar" /> */}
+            <img
+              src={closeHover ? closeButtonGrayHover : closeButtonGray}
+              alt="Cerrar foto"
+              onMouseEnter={()=> setCloseHover(true)}
+              onMouseLeave={()=> setCloseHover(false)}
+            />
           </button>
           <div
             className={`${styles.modalContent} ${
@@ -198,3 +207,4 @@ export const Gallery = () => {
     </section>
   );
 };
+
