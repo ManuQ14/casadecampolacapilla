@@ -16,6 +16,7 @@
 
   .coverServices {
     display: flex;
+    width: 100%; //Prueba
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
@@ -51,7 +52,7 @@
     letter-spacing: 0.15px;
   }
 
-  .iconServiciesContainer {
+  /*   .iconServiciesContainer {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -59,6 +60,14 @@
     height: auto;
     width: 94%;
     margin-bottom: 16px;
+  } */
+
+  .iconServiciesContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
   }
 
   .serviceContainer {
@@ -79,6 +88,7 @@
   }
 
   .spanServicios {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -94,7 +104,7 @@
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.25px;
-    width: 175px;
+    //width: 175px;
     align-self: stretch;
   }
 
@@ -123,7 +133,7 @@
     background: linear-gradient(
       0deg,
       rgba(41, 46, 33, 0.69) 0%,
-      rgba(41, 46, 33, 0.69) 50%
+      rgba(41, 46, 33, 0.85) 50%
     );
   }
 
@@ -152,13 +162,21 @@
     letter-spacing: 0.15px;
   }
 
-  .iconServiciesContainer {
+/*   .iconServiciesContainer {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     height: auto;
     width: 68%;
+  } */
+
+  .iconServiciesContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
   }
 
   .serviceContainer {
@@ -193,7 +211,7 @@
     font-style: normal;
     line-height: 20px;
     letter-spacing: 0.25px;
-    width: 175px;
+    //width: 175px;
     align-self: stretch;
   }
 
@@ -259,7 +277,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    width: 80%;
+    width: 1165px;
     gap: 40px;
     margin-bottom: 16px;
   }
@@ -309,7 +327,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    width: 60%;
+    width: 1165px;
     gap: 24px;
   }
 }

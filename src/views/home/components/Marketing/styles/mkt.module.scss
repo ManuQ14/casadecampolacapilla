@@ -120,23 +120,21 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 80px;
+    margin-top: 80px;
   }
 
   .containerMktOne {
-    width: 90%;
-    display: flex;
-    flex-flow: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     align-items: center;
-    margin-top: 56px;
   }
 
   .containerMktTwo {
-    width: 90%;
     display: flex;
     flex-flow: row-reverse;
     align-items: center;
-    justify-content: space-between;
   }
 
   .subtitleContainerMkt {
