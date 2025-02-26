@@ -124,7 +124,7 @@ export const Header = () => {
             </div>
           </nav>
           <div className={styles.contentHeader}>
-            <h1 className={styles.h1History}>Reservar</h1>
+            <h1 className={styles.h1History}>Contacto</h1>
             <img src={subrayLine} alt="" />
           </div>
         </div>

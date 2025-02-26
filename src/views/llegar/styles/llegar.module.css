@@ -1,4 +1,5 @@
-@import url(../../../../../styles/_variables.scss);
+@charset "UTF-8";
+@import url(../../../styles/_variables.scss);
 @font-face {
   font-family: Cardo;
   src: url(./fonts/Cardo-Regular.ttf) format("truetype");
@@ -20,6 +21,142 @@
   src: url(./fonts/DMSans-Regular.ttf) format("truetype");
 }
 @media (max-width: 767px) {
+  .navBar {
+    display: none;
+  }
+  .modalNavButton {
+    display: none;
+  }
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcfaf6;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 328px;
+  }
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    height: 320px;
+    color: #e55d19;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: DMSansMedium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #e55d19;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -322,6 +459,144 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .navBar {
+    display: none;
+  }
+  .modalNavButton {
+    display: none;
+  }
+  .contactMainContainer {
+    display: flex;
+    flex-flow: column;
+  }
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcfaf6;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 328px;
+  }
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 320px;
+    color: #e55d19;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: DMSansMedium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #e55d19;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -611,6 +886,154 @@
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    z-index: 1000000;
+  }
+  .scrolled {
+    background: rgb(255, 255, 255);
+    color: #333333 !important;
+    -webkit-backdrop-filter: blur(1.25px);
+            backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .imgLogoDesktop {
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
+    position: absolute;
+    margin-top: 12px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #fcfaf6;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .itemOption {
+    transition: all 300ms;
+  }
+  .itemOption:hover {
+    color: #e55d19;
+    transition: all 300ms !important;
+  }
+  .burgerMenuButton {
+    display: none;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  .contactMainContainer {
+    display: flex;
+    flex-flow: row;
+    width: 1120px;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    height: 774px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -917,6 +1340,171 @@
   }
 }
 @media screen and (min-width: 1920px) and (max-width: 2000px) {
+  .mainLlegar {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .mapContainer {
+    margin-top: 80px;
+    width: 1120px;
+    height: 455px;
+  }
+  .mapaLocation2 {
+    width: 100%;
+    height: 100%;
+  }
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    z-index: 1000000;
+  }
+  .scrolled {
+    background: rgb(255, 255, 255);
+    color: #333333 !important;
+    -webkit-backdrop-filter: blur(1.25px);
+            backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .imgLogoDesktop {
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
+    position: absolute;
+    margin-top: 12px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #fcfaf6;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: #333333;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansRegular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+  .itemOption {
+    transition: all 300ms;
+  }
+  .itemOption:hover {
+    color: #e55d19;
+    transition: all 300ms !important;
+  }
+  .burgerMenuButton {
+    display: none;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  .contactMainContainer {
+    display: flex;
+    flex-flow: row;
+    width: 1120px;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    height: 774px;
+  }
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h1History {
+    color: #fcfaf6;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  h3 {
+    color: #c25308;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: DMSansSemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
   .llegarSection {
     width: 100vw;
     height: auto;

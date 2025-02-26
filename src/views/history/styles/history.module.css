@@ -236,6 +236,7 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
+    margin: auto;
     margin-bottom: 32px;
   }
   .carrouselCamping {
@@ -272,16 +273,16 @@
     gap: 8px;
   }
   .carrouselCamping .dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px !important;
+    height: 8px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #f16529;
-    width: 20px;
+    background-color: #ef8c5c;
+    width: 20px !important;
     border-radius: 10px;
   }
   .notaSection {
@@ -570,6 +571,7 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
+    margin: auto;
     margin-bottom: 32px;
   }
   .carrouselCamping {
@@ -607,16 +609,16 @@
     gap: 8px;
   }
   .carrouselCamping .dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px !important;
+    height: 8px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #e55d19;
-    width: 20px;
+    background-color: #ef8c5c;
+    width: 20px !important;
     border-radius: 10px;
   }
   .notaSection {
@@ -731,13 +733,14 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   }
   .imgLogoDesktop {
-    width: 66px;
-    height: 39px;
-    margin-left: 16px;
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
     position: absolute;
-    margin-top: 24px;
+    margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
   .navigatonHeader {
     display: flex;
@@ -779,8 +782,6 @@
   .itemOption:hover {
     color: #e55d19;
     transition: all 300ms !important;
-    font-weight: bold;
-    transform: scale(105%);
   }
   .menuHamburguesaButton {
     display: none;
@@ -794,7 +795,7 @@
     height: 650px;
     background-image: url(../../../assets//images/headerHistory.jpg);
     background-size: cover;
-    background-position: 90%;
+    background-position-y: 100%;
   }
   .coverHeader {
     position: relative;
@@ -856,9 +857,9 @@
   .unSueñoContainer {
     display: flex;
     flex-flow: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 74%;
+    width: 1120px;
     margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -866,9 +867,9 @@
   .puebloContainer {
     display: flex;
     flex-flow: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 74%;
+    width: 1120px;
     margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -896,7 +897,7 @@
     letter-spacing: 0.15px;
   }
   .textoSueñoContainer {
-    width: 92%;
+    width: 100%;
     height: auto;
     color: #333333;
     text-align: center;
@@ -910,7 +911,7 @@
     margin-bottom: 32px;
   }
   .textoPuebloContainer {
-    width: 92%;
+    width: 100%;
     height: auto;
     color: #333333;
     text-align: center;
@@ -922,6 +923,13 @@
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-bottom: 32px;
+  }
+  .desktopBoxContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 548px;
+    margin-left: 24px;
   }
   .carrouselCamping {
     position: relative;
@@ -958,16 +966,16 @@
     gap: 8px;
   }
   .carrouselCamping .dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px !important;
+    height: 8px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #e55d19;
-    width: 20px;
+    background-color: #ef8c5c;
+    width: 20px !important;
     border-radius: 10px;
   }
   .notaSection {
@@ -999,7 +1007,7 @@
     letter-spacing: 0.15px;
   }
   .containerNotas {
-    width: 74%;
+    width: 1120px;
     margin: auto;
     height: auto;
     display: flex;
@@ -1085,13 +1093,14 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   }
   .imgLogoDesktop {
-    width: 66px;
-    height: 39px;
-    margin-left: 16px;
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
     position: absolute;
-    margin-top: 24px;
+    margin-top: 12px;
     top: 0;
     left: 0;
+    cursor: pointer;
   }
   .navigatonHeader {
     display: flex;
@@ -1133,8 +1142,6 @@
   .itemOption:hover {
     color: #e55d19;
     transition: all 300ms !important;
-    font-weight: bold;
-    transform: scale(105%);
   }
   .menuHamburguesaButton {
     display: none;
@@ -1148,7 +1155,7 @@
     height: 650px;
     background-image: url(../../../assets//images/headerHistory.jpg);
     background-size: cover;
-    background-position: 90%;
+    background-position-y: 100%;
   }
   .coverHeader {
     position: relative;
@@ -1212,7 +1219,7 @@
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    width: 1120px;
     margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -1220,9 +1227,9 @@
   .puebloContainer {
     display: flex;
     flex-flow: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 55%;
+    width: 1120px;
     margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -1250,7 +1257,7 @@
     letter-spacing: 0.15px;
   }
   .textoSueñoContainer {
-    width: 92%;
+    width: 548px;
     height: auto;
     color: #333333;
     text-align: center;
@@ -1264,7 +1271,7 @@
     margin-bottom: 32px;
   }
   .textoPuebloContainer {
-    width: 92%;
+    width: 548px;
     height: auto;
     color: #333333;
     text-align: center;
@@ -1286,14 +1293,14 @@
   }
   .carrouselCamping .imageWrapper {
     position: relative;
-    width: 100%;
+    width: 548px !important;
     height: 100%;
   }
   .carrouselCamping .image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 548px !important;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1312,16 +1319,16 @@
     gap: 8px;
   }
   .carrouselCamping .dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px !important;
+    height: 8px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5490196078);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
   .carrouselCamping .dots .dot.activeDot {
-    background-color: #e55d19;
-    width: 20px;
+    background-color: #ef8c5c;
+    width: 20px !important;
     border-radius: 10px;
   }
   .notaSection {
@@ -1353,7 +1360,7 @@
     letter-spacing: 0.15px;
   }
   .containerNotas {
-    width: 55%;
+    width: 1120px;
     margin: auto;
     height: auto;
     display: flex;
@@ -1411,5 +1418,12 @@
     align-items: center;
     width: 548px;
     margin-right: 24px;
+  }
+  .desktopBoxContainerDos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 548px;
+    margin-left: 24px;
   }
 }/*# sourceMappingURL=history.module.css.map */

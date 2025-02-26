@@ -37,8 +37,8 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
-  const handleToGalery = () => {
-    navigate("/galeria");
+  const handleToComoLlegar = () => {
+    navigate("/como-llegar");
     document.body.classList.remove("no-scroll");
     setTimeout(() => {
       window.scrollTo({
@@ -102,8 +102,8 @@ export const Header = () => {
               <div onClick={handleToServices} className={styles.itemOption}>
                 Servicios
               </div>
-              <div onClick={handleToGalery} className={styles.itemOption}>
-                Galería
+              <div onClick={handleToComoLlegar} className={styles.itemOption}>
+                Cómo Llegar
               </div>
               <div onClick={handleToTarifas} className={styles.itemOption}>
                 Tarifas
@@ -150,7 +150,7 @@ export const Header = () => {
               <div onClick={handleToCamping}>El Camping</div>
               <div>Nuestra historia</div>
               <div onClick={handleToServices}>Servicios</div>
-              <div onClick={handleToGalery}>Galeria</div>
+              <div onClick={handleToComoLlegar}>Cómo Llegar</div>
               <div onClick={handleToTarifas}>Tarifas</div>
               <div onClick={handleToLlegar}>Ubicación</div>
             </div>

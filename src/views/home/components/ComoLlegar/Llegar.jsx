@@ -1,6 +1,4 @@
-import { Desplegables } from "./Desplegables";
-import { DesplegableAuto } from "./DesplegableAuto";
-import { DesplegableBici } from "./DesplegableBici";
+
 
 import styles from "./styles/llegar.module.scss";
 
@@ -53,10 +51,7 @@ export const Llegar = () => {
           <p className={styles.descriptionInfo}>11 5856-7591</p>
         </div>
       </div>
-      {/**Inicio desplegable tren */}
-      <Desplegables />
-      <DesplegableAuto />
-      <DesplegableBici />
+     
     </div>
   );
 };

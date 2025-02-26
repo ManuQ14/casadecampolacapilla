@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import biciIcon from "../../../../assets/icons/llegarIcons/biciIcon.svg";
-import expandAcordeon from "../../../../assets/icons/add.svg";
-import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
+import biciIcon from "../../../assets/icons/llegarIcons/biciIcon.svg";
+import expandAcordeon from "../../../assets/icons/add.svg";
+import closeAcordeon from "../../../assets/icons/closeAcordeon.svg";
 
-import styles from "./styles/llegar.module.scss";
+import styles from "../styles/llegar.module.scss";
 
 export const DesplegableBici = () => {
   const [isExpanded, setIsExpanded] = useState(false);

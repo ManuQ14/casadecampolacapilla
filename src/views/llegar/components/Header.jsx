@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
+import styles from "../styles/llegar.module.scss";
 import { useNavigate } from "react-router-dom";
-
-import styles from "../styles/galeria.module.scss";
-
-import subrayLine from "../../../assets/icons/subrayWhite.svg";
-import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
-import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 
 import logoHeader from "../../../assets/icons/logoHome.png";
 import LogoHeaderScrolled from "../../../assets/icons/logoHomeScrolled.png";
+
+import openMenu from "../../../assets/icons/iconsBurguerMenu/openMenu.svg";
+import closeMenu from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
+
+import subrayLine from "../../../assets/icons/subrayWhite.svg";
 
 import CapillaLogo from "../../../assets/icons/iconsBurguerMenu/LogoCapillaSVGMenuBurguer.svg";
 
@@ -35,14 +35,7 @@ export const Header = () => {
   const handleToHistory = () => {
     navigate("/nuestra-historia");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
   };
-
 
   const handleToServices = () => {
     navigate("/inicio#servicios");
@@ -78,10 +71,10 @@ export const Header = () => {
   }, []);
 
   return (
-    <div>
-      {/** Header Mobile */}
+    <section className={styles.comoLlegarSection}>
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
+          {/*  <img src={fotoHistory} className={styles.headerHistory} /> */}
           <nav
             className={`${styles.navBar} ${scrolled ? styles.scrolled : ""}`}
           >
@@ -91,6 +84,8 @@ export const Header = () => {
                 alt="Logo Capilla"
                 className={styles.imgLogoDesktop}
                 onClick={handleToHome}
+                onMouseEnter={() => LogoHeaderScrolled}
+                onMouseLeave={() => logoHeader}
               />
             </div>
             <div
@@ -101,9 +96,7 @@ export const Header = () => {
               <div onClick={handleToCamping} className={styles.itemOption}>
                 El Camping
               </div>
-              <div onClick={handleToHistory} className={styles.itemOption}>
-                Nuestra historia
-              </div>
+              <div className={styles.itemOption}>Nuestra historia</div>
               <div onClick={handleToServices} className={styles.itemOption}>
                 Servicios
               </div>
@@ -116,9 +109,8 @@ export const Header = () => {
               </div>
             </div>
           </nav>
-
           <div className={styles.contentHeader}>
-            <h1 className={styles.h1History}>Galería</h1>
+            <h1 className={styles.h1History}>Cómo Llegar</h1>
             <img src={subrayLine} alt="" />
           </div>
         </div>
@@ -128,7 +120,7 @@ export const Header = () => {
           alt="Abrir menú hamburguesa"
           onClick={toggleMenu}
           aria-label="Abrir menú hamburguesa"
-          className={styles.botonMenuHamburguesa}
+          className={styles.burgerMenuButton}
         />
         {/*Menu hamburguesa */}
         <div
@@ -144,22 +136,18 @@ export const Header = () => {
             aria-label="Cerrar menú"
           />
           <nav className={styles.menuItems}>
-            <img
-              src={CapillaLogo}
-              alt="Icono de La Capilla"
-              onClick={handleToHome}
-            />
+            <img src={CapillaLogo} alt="Icono de La Capilla" />
             <div className={styles.itemsNavigationContainer}>
               <div onClick={handleToCamping}>El Camping</div>
               <div onClick={handleToHistory}>Nuestra historia</div>
               <div onClick={handleToServices}>Servicios</div>
               <div onClick={handleToTarifas}>Tarifas</div>
-              <div onClick={handleToLlegar}>Ubicación</div>
+              <div onClick={handleToLlegar}>Ubicacion</div>
             </div>
           </nav>
         </div>
         {/**Fin menu hamburguesa */}
       </div>
-    </div>
+    </section>
   );
 };

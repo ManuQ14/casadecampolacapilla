@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import carmotor from "../../../../assets/icons/llegarIcons/carmotor.svg";
-import expandAcordeon from "../../../../assets/icons/add.svg";
-import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
+import carmotor from "../../../assets/icons/llegarIcons/carmotor.svg";
+import expandAcordeon from "../../../assets/icons/add.svg";
+import closeAcordeon from "../../../assets/icons/closeAcordeon.svg";
 
-import maps from "../../../../assets/images/comoLlegar/maps.jpg";
+import maps from "../../../assets/images/comoLlegar/maps.jpg";
 
-import styles from "./styles/llegar.module.scss";
+import styles from "../styles/llegar.module.scss";
 
 export const DesplegableAuto = () => {
   const [isExpanded, setIsExpanded] = useState(false);

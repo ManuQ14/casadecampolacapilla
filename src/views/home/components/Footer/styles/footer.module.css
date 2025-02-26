@@ -56,6 +56,7 @@
     margin-bottom: 32px;
   }
   .infoContainer {
+    width: 300px;
     display: flex;
     align-items: flex-start;
     color: #fcfaf6;
@@ -158,6 +159,7 @@
     margin-bottom: 16px;
   }
   .infoContainer {
+    width: 365px;
     display: flex;
     align-items: flex-start;
     color: #fcfaf6;

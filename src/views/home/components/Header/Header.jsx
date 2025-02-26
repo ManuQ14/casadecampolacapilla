@@ -32,6 +32,19 @@ export const Header = () => {
     }
   };
 
+  const handleToLlegar = () => {
+    navigate("/como-llegar");
+    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
+  };
+
+
+
   const handleToReserve = () => {
     navigate("/contacto");
     document.body.classList.remove("no-scroll");
@@ -108,10 +121,10 @@ export const Header = () => {
                 Servicios
               </div>
               <div
-                onClick={() => handleScrollToSection("galeria")}
+                onClick={() => handleToLlegar("como-llegar")}
                 className={styles.itemOption}
               >
-                Galería
+                Cómo Llegar
               </div>
               <div
                 onClick={() => handleScrollToSection("tarifas")}

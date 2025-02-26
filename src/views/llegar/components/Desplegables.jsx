@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import tren from "../../../../assets/icons/llegarIcons/train.svg";
-import expandAcordeon from "../../../../assets/icons/add.svg";
-import closeAcordeon from "../../../../assets/icons/closeAcordeon.svg";
-import chrevronRight from "../../../../assets/icons/chevronTwo.svg";
+import tren from "../../../assets/icons/llegarIcons/train.svg";
+import expandAcordeon from "../../../assets/icons/add.svg";
+import closeAcordeon from "../../../assets/icons/closeAcordeon.svg";
+import chrevronRight from "../../../assets/icons/chevronTwo.svg";
 
-import styles from "./styles/llegar.module.scss";
+import styles from "../styles/llegar.module.scss";
 
 export const Desplegables = () => {
   const [isExpanded, setIsExpanded] = useState(false);

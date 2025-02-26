@@ -31,6 +31,7 @@
   }
   .coverServices {
     display: flex;
+    width: 100%;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
@@ -59,7 +60,7 @@
     line-height: 32px;
     letter-spacing: 0.15px;
   }
-  .iconServiciesContainer {
+  /*   .iconServiciesContainer {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -67,6 +68,13 @@
     height: auto;
     width: 94%;
     margin-bottom: 16px;
+  } */
+  .iconServiciesContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
   }
   .serviceContainer {
     display: flex;
@@ -84,29 +92,29 @@
     margin-bottom: 8px;
   }
   .spanServicios {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-flow: column;
     width: 100%;
-    color: #fcfaf6;
+    color: #fad9cb;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 64px;
-    font-family: DMSansRegular;
+    height: 80px;
+    font-family: DMSansMedium;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.25px;
-    width: 175px;
     align-self: stretch;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .serviceSection {
     width: 100vw;
-    height: 918px;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -119,7 +127,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
-    background: linear-gradient(0deg, rgba(41, 46, 33, 0.69) 0%, rgba(41, 46, 33, 0.69) 50%);
+    background: linear-gradient(0deg, rgba(41, 46, 33, 0.69) 0%, rgba(41, 46, 33, 0.85) 50%);
   }
   .subtitleContainerServices {
     width: 100%;
@@ -144,13 +152,20 @@
     line-height: 32px;
     letter-spacing: 0.15px;
   }
+  /*   .iconServiciesContainer {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      height: auto;
+      width: 68%;
+    } */
   .iconServiciesContainer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    height: auto;
-    width: 68%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
   }
   .serviceContainer {
     display: flex;
@@ -176,21 +191,19 @@
     color: #fad9cb;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 64px;
+    height: 80px;
     font-family: DMSansMedium;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
+    line-height: 20px;
     letter-spacing: 0.25px;
-    width: 175px;
     align-self: stretch;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
   .serviceSection {
     width: 100vw;
-    height: auto;
+    height: 520px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -237,7 +250,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    width: 80%;
+    width: 1165px;
     gap: 40px;
     margin-bottom: 16px;
   }
@@ -266,11 +279,11 @@
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
     height: 64px;
-    font-family: DMSansMedium;
-    font-size: 14px;
+    font-family: DMSansRegular;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px;
+    line-height: 24px;
     letter-spacing: 0.25px;
     width: 175px;
     align-self: stretch;
@@ -283,7 +296,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    width: 60%;
+    width: 1165px;
     gap: 24px;
   }
 }/*# sourceMappingURL=services.module.css.map */

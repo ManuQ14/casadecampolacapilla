@@ -1,25 +1,164 @@
-@import url(../../../../../styles/_variables.scss);
-@font-face {
-  font-family: Cardo;
-  src: url(./fonts/Cardo-Regular.ttf) format("truetype");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: DMSansMedium;
-  src: url(./fonts/DMSans-Medium.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: DMSansSemiBold;
-  src: url(./fonts/DMSans-SemiBold.ttf) format("truetype");
-}
-@font-face {
-  font-family: DMSansRegular;
-  src: url(./fonts/DMSans-Regular.ttf) format("truetype");
-}
+// Importaciones
+@import url(../../../styles/_variables.scss);
+@import "../../../styles/variables";
+
 @media (max-width: 767px) {
+  .navBar {
+    display: none;
+  }
+
+  .modalNavButton {
+    display: none;
+  }
+  //Header history
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 328px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    height: 320px;
+    color: $primario-principal;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $main-typography;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $primario-principal;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    color: $primario-dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -29,6 +168,8 @@
     justify-content: flex-start;
     padding-top: 72px;
   }
+
+  //Inicio sección Como llegar
   .subtitleContainerLlegar {
     width: 100%;
     height: 48px;
@@ -38,19 +179,22 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+
     margin-bottom: 32px;
   }
+
   .h2 {
-    color: #333333;
+    color: $dark;
     text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Cardo;
+    font-family: $third-typography;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
+
   .trenBoxContainer {
     display: flex;
     flex-flow: column;
@@ -59,73 +203,89 @@
     height: 441px;
     width: 92%;
   }
+
   .iconTransporte {
     width: 46px;
     height: 47px;
     margin-bottom: 16px;
   }
+
   .boxText {
     width: 208px;
     width: 100%;
   }
+
   .descripcionLlegar {
     height: 192px;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: #333333;
+    color: $dark;
   }
+
   .mapaLocation {
     width: 92%;
     height: 336px;
     border: none;
     margin-bottom: 32px;
   }
+
+  //Acordeon Section
+
   .contenedorAcordeon {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 92%;
   }
+
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 92%;
     margin-top: 32px;
     margin-bottom: 32px;
   }
+
   .contenedorBici {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 92%;
     margin-bottom: 72px;
   }
+
   .accordionContent {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContent.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .accordionContentAuto {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContentAuto.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .titleContainer {
     width: 100%;
     display: flex;
@@ -135,15 +295,15 @@
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   }
+
   .trainSVG {
     margin-right: 16px;
     width: 29px;
     height: 29px;
   }
+
   .expandAcordeon {
     right: 4%;
     display: flex;
@@ -151,18 +311,19 @@
     cursor: pointer;
     transition: transform 1s ease;
     -webkit-tap-highlight-color: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-  .expandAcordeon:hover {
-    opacity: 0.8;
-  }
+
   .indicationContainer {
     display: flex;
     flex-flow: row wrap;
     width: 92%;
     text-align: center;
-    color: #333333;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -176,15 +337,17 @@
     margin: auto;
     margin-bottom: 16px;
     transition: all 1s ease-in-out;
+    //margin-left: 8px;
   }
+
   .indicationContainerAuto {
     display: flex;
     flex-flow: row wrap;
     width: 92%;
     text-align: center;
-    color: #333333;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -198,32 +361,36 @@
     margin-left: 8px;
     transition: all 1s ease-in-out;
   }
+
   .ubicationTitle {
-    color: #c25308;
+    color: $primario-dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }
+
   .linkCompraPasaje {
     text-decoration: underline !important;
-    color: #c25308 !important;
+    color: $primario-dark !important;
   }
+
   .containerLink {
     display: flex;
     width: 308px;
     margin: auto;
     margin-bottom: 16px;
   }
+
   .linkTarifasTren {
     width: 308px;
-    color: #c25308 !important;
+    color: $primario-dark !important;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -246,9 +413,11 @@
     flex-flow: row;
     align-items: center;
   }
+
   .chrevronRight {
     margin-top: 3px;
   }
+
   .autoBoxContainer {
     width: 92%;
     height: 255px;
@@ -258,6 +427,7 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
+
   .infoBoxContainer {
     display: flex;
     flex-flow: column;
@@ -267,6 +437,7 @@
     height: 288px;
     margin-bottom: 16px;
   }
+
   .itemInfoContainer {
     display: flex;
     flex-flow: column;
@@ -275,10 +446,12 @@
     height: auto;
     margin-bottom: 16px;
   }
+
   .iconInfo {
     height: 32px;
     margin-bottom: 8px;
   }
+
   .itemInfoContainerDos {
     display: flex;
     flex-flow: column;
@@ -287,32 +460,36 @@
     height: 64px;
     margin-bottom: 16px;
   }
+
   .descriptionInfo {
     height: auto;
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 114.286% */
     letter-spacing: 0.25px;
   }
+
   .descripcionLlegarAuto {
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
   }
+
   .helpBold {
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
   }
+
   .mapaLlegar {
     width: 92%;
     margin-bottom: 16px;
@@ -321,7 +498,169 @@
     display: flex;
   }
 }
+
+//Inicio modo tablet
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .navBar {
+    display: none;
+  }
+
+  .modalNavButton {
+    display: none;
+  }
+
+  .contactMainContainer {
+    display: flex;
+    flex-flow: column;
+  }
+  //Header history
+  // Manejo de menú hamburguesa
+  .burgerMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    transition: right 300ms ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+  }
+
+  .menuOpen {
+    right: 0 !important;
+    height: 103vh !important;
+    width: 100vw !important;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    width: 328px;
+  }
+
+  .itemsNavigationContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    //width: 170px;
+    height: 320px;
+    color: $primario-principal;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    text-decoration: none;
+    font-family: $main-typography;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: $primario-principal;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .mediaIconContainer {
+    width: 207px;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .iconMedia {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $primario-dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -330,6 +669,8 @@
     align-items: center;
     justify-content: center;
   }
+
+  //Inicio sección Como llegar
   .subtitleContainerLlegar {
     width: 100%;
     height: 48px;
@@ -339,19 +680,22 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+
     margin-bottom: 32px;
   }
+
   .h2 {
-    color: #333333;
+    color: $dark;
     text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Cardo;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
+
   .trenBoxContainer {
     display: flex;
     flex-flow: column;
@@ -360,75 +704,91 @@
     height: 441px;
     width: 92%;
   }
+
   .iconTransporte {
     width: 46px;
     height: 47px;
     margin-bottom: 16px;
   }
+
   .boxText {
     width: 208px;
     width: 100%;
   }
+
   .descripcionLlegar {
     height: 192px;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: #333333;
+    color: $dark;
   }
+
   .mapaLocation {
     width: 336px;
     height: 336px;
     border: none;
     margin-bottom: 16px;
   }
+
+  //Acordeon Section
+
   .contenedorAcordeon {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 90%;
     margin-top: 32px;
   }
+
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 90%;
     margin-top: 32px;
     margin-bottom: 16px;
   }
+
   .contenedorBici {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 90%;
     margin-bottom: 72px;
     margin-top: 16px;
   }
+
   .accordionContent {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContent.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .accordionContentAuto {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContentAuto.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .titleContainer {
     width: 100%;
     display: flex;
@@ -438,13 +798,13 @@
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   }
+
   .trainSVG {
     margin-right: 16px;
   }
+
   .expandAcordeon {
     right: 6%;
     display: flex;
@@ -452,16 +812,17 @@
     cursor: pointer;
     transition: transform 1s ease;
     -webkit-tap-highlight-color: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-  .expandAcordeon:hover {
-    opacity: 0.8;
-  }
+
   .indicationContainer {
     width: 92%;
     text-align: center;
-    color: #333333;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -476,14 +837,15 @@
     margin-bottom: 16px;
     transition: all 1s ease-in-out;
   }
+
   .indicationContainerAuto {
     display: flex;
     flex-flow: row wrap;
     width: 92%;
     text-align: center;
-    color: #333333;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -497,20 +859,23 @@
     margin-left: 8px;
     transition: all 1s ease-in-out;
   }
+
   .ubicationTitle {
-    color: #c25308 !important;
+    color: $primario-dark !important;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium !important;
+    font-family: $main-typography !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }
+
   .linkCompraPasaje {
     text-decoration: underline !important;
-    color: #c25308 !important;
+    color: $primario-dark !important;
   }
+
   .containerLink {
     display: flex;
     align-items: center;
@@ -518,11 +883,12 @@
     margin-bottom: 16px;
     margin-left: 28%;
   }
+
   .linkTarifasTren {
-    color: #c25308;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -535,9 +901,11 @@
     /*  margin: auto;
     margin-bottom: 16px; */
   }
+
   .chrevronRight {
     margin-top: 3px;
   }
+
   .autoBoxContainer {
     width: 92%;
     height: 255px;
@@ -547,6 +915,7 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
+
   .infoBoxContainer {
     display: flex;
     flex-flow: column;
@@ -556,6 +925,7 @@
     height: auto;
     margin-left: 16px;
   }
+
   .itemInfoContainer {
     display: flex;
     flex-flow: column;
@@ -564,10 +934,12 @@
     height: 112px;
     margin-bottom: 16px;
   }
+
   .iconInfo {
     height: 32px;
     margin-bottom: 8px;
   }
+
   .itemInfoContainerDos {
     display: flex;
     flex-flow: column;
@@ -576,32 +948,36 @@
     height: 64px;
     margin-bottom: 16px;
   }
+
   .descriptionInfo {
     height: 72px;
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 114.286% */
     letter-spacing: 0.25px;
   }
+
   .descripcionLlegarAuto {
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
   }
+
   .helpBold {
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
   }
+
   .mapaLlegar {
     width: 92%;
     margin-bottom: 16px;
@@ -610,7 +986,175 @@
     display: flex;
   }
 }
+
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
+  //Header history
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: transparent;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000000;
+    //box-shadow: 1px solid gray;
+  }
+
+  .scrolled {
+    background: rgba(255, 255, 255, 1);
+    color: $dark !important;
+    backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .imgLogoDesktop {
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
+    position: absolute;
+    margin-top: 12px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $background;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .itemOption {
+    transition: all 300ms;
+  }
+
+  .itemOption:hover {
+    color: $primario-principal;
+    transition: all 300ms !important;
+  }
+
+  // Manejo de menú hamburguesa
+  .burgerMenuButton {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+
+  .contactMainContainer {
+    display: flex;
+    flex-flow: row;
+    width: 1120px;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    height: 774px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $primario-dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -621,6 +1165,8 @@
     margin-bottom: 80px;
     padding-top: 72px;
   }
+
+  //Inicio sección Como llegar
   .subtitleContainerLlegar {
     width: 100%;
     height: 48px;
@@ -630,19 +1176,22 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+
     margin-bottom: 32px;
   }
+
   .h2 {
-    color: #333333;
+    color: $dark;
     text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Cardo;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
+
   .trenBoxContainer {
     display: flex;
     flex-flow: column;
@@ -651,61 +1200,74 @@
     height: 441px;
     width: 92%;
   }
+
   .iconTransporte {
     width: 46px;
     height: 47px;
     margin-bottom: 16px;
   }
+
   .boxText {
     width: 208px;
     width: 100%;
   }
+
   .descripcionLlegar {
     height: 192px;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: #333333;
+    color: $dark;
   }
+
   .mapaLocation {
     width: 548px;
     height: 336px;
     border: none;
     margin-bottom: 16px;
   }
+
+  //Acordeon Section
+
   .contenedorAcordeon {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 16px;
   }
+
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 32px;
   }
+
   .contenedorBici {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 32px;
     margin-bottom: 16px;
   }
+
   .accordionContent {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContent.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .accordionContentAuto {
     max-height: 0;
     overflow: hidden;
@@ -716,13 +1278,15 @@
     flex-flow: row;
     align-items: center;
     width: 1088px;
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContentAuto.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .titleContainer {
     width: 100%;
     display: flex;
@@ -731,15 +1295,15 @@
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   }
+
   .trainSVG {
     margin-right: 16px;
     width: 29px;
     height: 29px;
   }
+
   .expandAcordeon {
     right: 12%;
     display: flex;
@@ -747,15 +1311,17 @@
     cursor: pointer;
     transition: transform 1s ease;
     -webkit-tap-highlight-color: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-  .expandAcordeon:hover {
-    opacity: 0.8;
-  }
+
   .indicationContainer {
     width: 92%;
-    color: #333333;
+    //text-align: left;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -766,16 +1332,19 @@
     align-items: flex-start;
     justify-content: center;
     width: 92%;
+    //margin: auto;
     margin-left: 8px;
     margin-bottom: 16px;
     transition: all 1s ease-in-out;
   }
+
   .indicationContainerAuto {
     width: 536px;
     height: 144px;
-    color: #333333;
+    //text-align: left;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -789,30 +1358,34 @@
     margin-left: 8px;
     transition: all 1s ease-in-out;
   }
+
   .ubicationTitle {
-    color: #c25308 !important;
+    color: $primario-dark !important;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium !important;
+    font-family: $main-typography !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }
+
   .linkCompraPasaje {
     text-decoration: underline !important;
-    color: #c25308 !important;
+    color: $primario-dark !important;
   }
+
   .containerLink {
     display: flex;
     flex-flow: row;
     margin-bottom: 16px;
   }
+
   .linkTarifasTren {
-    color: #c25308;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -827,10 +1400,12 @@
     margin-left: 8px;
     transition: all 300ms !important;
   }
+
   .linkTarifasTren:hover {
     transition: all 300ms !important;
     margin-right: 4px !important;
   }
+
   .chrevronRight {
     margin-top: 3px;
     transition: all 300ms;
@@ -840,6 +1415,7 @@
     transition: all 300ms !important;
     margin-left: 8px !important;
   } */
+
   .autoBoxContainer {
     width: 92%;
     height: 255px;
@@ -849,6 +1425,7 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
+
   .infoBoxContainer {
     display: flex;
     flex-flow: column;
@@ -859,6 +1436,7 @@
     margin-left: 16px;
     margin-bottom: 16px;
   }
+
   .itemInfoContainer {
     display: flex;
     flex-flow: column;
@@ -869,10 +1447,12 @@
     margin-bottom: 16px;
     margin-top: 36px;
   }
+
   .iconInfo {
     height: 38px;
     margin-bottom: 8px;
   }
+
   .itemInfoContainerDos {
     display: flex;
     flex-flow: column;
@@ -881,29 +1461,32 @@
     height: 64px;
     margin-bottom: 16px;
   }
+
   .descriptionInfo {
     height: auto;
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 114.286% */
     letter-spacing: 0.25px;
   }
+
   .descripcionLlegarAuto {
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
   }
+
   .mapaLlegar {
     height: 475px;
     width: 348px;
@@ -912,11 +1495,200 @@
     margin-right: auto;
     display: flex;
   }
+
   .helpBold {
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
   }
 }
+
 @media screen and (min-width: 1920px) and (max-width: 2000px) {
+  .mainLlegar {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .mapContainer {
+    margin-top: 80px;
+    width: 1120px;
+    height: 455px;
+  }
+
+  .mapaLocation2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  //Header history
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 87px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: transparent;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000000;
+    //box-shadow: 1px solid gray;
+  }
+
+  .scrolled {
+    background: rgba(255, 255, 255, 1);
+    color: $dark !important;
+    backdrop-filter: blur(1.25px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .imgLogoDesktop {
+    width: 160px;
+    height: 60px;
+    margin-left: 160px;
+    position: absolute;
+    margin-top: 12px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  .navigatonHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $background;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .navigatonHeaderScrolled {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 608px;
+    color: $dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-typography;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 1ms !important;
+  }
+
+  .itemOption {
+    transition: all 300ms;
+  }
+
+  .itemOption:hover {
+    color: $primario-principal;
+    transition: all 300ms !important;
+  }
+
+  // Manejo de menú hamburguesa
+  .burgerMenuButton {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+
+  .contactMainContainer {
+    display: flex;
+    flex-flow: row;
+    width: 1120px;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    height: 774px;
+  }
+
+  // Header Mobile
+  .headerMobile {
+    position: relative;
+    width: 100vw;
+    height: 650px;
+    background-image: url(../../../assets/images/galeria/headerBackgroundGallery.jpeg);
+    background-size: cover;
+    background-position: 94%;
+  }
+
+  .coverHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  //contenido del header, h1, h3 y botón reservar
+  .contentHeader {
+    width: 328px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h1History {
+    color: $background;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $third-typography;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  h3 {
+    color: $primario-dark;
+    text-align: center;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  img[alt="Abrir menú hamburguesa"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 150;
+    cursor: pointer;
+  }
+
   .llegarSection {
     width: 100vw;
     height: auto;
@@ -927,6 +1699,8 @@
     margin-bottom: 80px;
     padding-top: 72px;
   }
+
+  //Inicio sección Como llegar
   .subtitleContainerLlegar {
     width: 100%;
     height: 48px;
@@ -936,19 +1710,22 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+
     margin-bottom: 32px;
   }
+
   .h2 {
-    color: #333333;
+    color: $dark;
     text-transform: uppercase;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Cardo;
+    font-family: $third-typography;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.15px;
   }
+
   .trenBoxContainer {
     display: flex;
     flex-flow: column;
@@ -957,61 +1734,74 @@
     height: 441px;
     width: 92%;
   }
+
   .iconTransporte {
     width: 46px;
     height: 47px;
     margin-bottom: 16px;
   }
+
   .boxText {
     width: 208px;
     width: 100%;
   }
+
   .descripcionLlegar {
     height: 192px;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.25px;
-    color: #333333;
+    color: $dark;
   }
+
   .mapaLocation {
     width: 548px;
     height: 336px;
     border: none;
     margin-bottom: 16px;
   }
+
+  //Acordeon Section
+
   .contenedorAcordeon {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 16px;
   }
+
   .contenedorAcordeonAuto {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 32px;
   }
+
   .contenedorBici {
-    border-bottom: 2px solid #c25308;
+    border-bottom: 2px solid $primario-dark;
     width: 1120px;
     margin-top: 32px;
     margin-bottom: 16px;
   }
+
   .accordionContent {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     opacity: 0;
     visibility: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContent.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .accordionContentAuto {
     max-height: 0;
     overflow: hidden;
@@ -1022,13 +1812,15 @@
     flex-flow: row;
     align-items: center;
     width: 1088px;
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.5s ease-in, opacity 0.5s ease-in,
+        visibility 0s linear 0s;
+    }
   }
-  .accordionContentAuto.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    visibility: visible;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear 0s;
-  }
+
   .titleContainer {
     width: 100%;
     display: flex;
@@ -1037,15 +1829,15 @@
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   }
+
   .trainSVG {
     margin-right: 16px;
     width: 29px;
     height: 29px;
   }
+
   .expandAcordeon {
     right: 21%;
     display: flex;
@@ -1053,15 +1845,17 @@
     cursor: pointer;
     transition: transform 1s ease;
     -webkit-tap-highlight-color: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-  .expandAcordeon:hover {
-    opacity: 0.8;
-  }
+
   .indicationContainer {
     width: 92%;
-    color: #333333;
+    //text-align: left;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1072,19 +1866,23 @@
     align-items: flex-start;
     justify-content: center;
     width: 92%;
+    //margin: auto;
     margin-left: 8px;
     margin-bottom: 16px;
     transition: all 1s ease-in-out;
   }
+
   .helpBold {
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
   }
+
   .indicationContainerAuto {
     width: 536px;
     height: 144px;
-    color: #333333;
+    //text-align: left;
+    color: $dark;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1098,30 +1896,34 @@
     margin-left: 8px;
     transition: all 1s ease-in-out;
   }
+
   .ubicationTitle {
-    color: #c25308 !important;
+    color: $primario-dark !important;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium !important;
+    font-family: $main-typography !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.1px;
   }
+
   .linkCompraPasaje {
     text-decoration: underline !important;
-    color: #c25308 !important;
+    color: $primario-dark !important;
   }
+
   .containerLink {
     display: flex;
     flex-flow: row;
     margin-bottom: 16px;
   }
+
   .linkTarifasTren {
-    color: #c25308;
+    color: $primario-dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansSemiBold;
+    font-family: $second-bold-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -1136,10 +1938,12 @@
     margin-left: 8px;
     transition: all 300ms !important;
   }
+
   .linkTarifasTren:hover {
     transition: all 300ms !important;
     margin-right: 4px !important;
   }
+
   .chrevronRight {
     margin-top: 3px;
     transition: all 300ms;
@@ -1149,6 +1953,7 @@
     transition: all 300ms !important;
     margin-left: 8px !important;
   } */
+
   .autoBoxContainer {
     width: 92%;
     height: 255px;
@@ -1158,6 +1963,7 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
+
   .infoBoxContainer {
     display: flex;
     flex-flow: column;
@@ -1168,6 +1974,7 @@
     margin-left: 16px;
     margin-bottom: 16px;
   }
+
   .itemInfoContainer {
     display: flex;
     flex-flow: column;
@@ -1178,10 +1985,12 @@
     margin-bottom: 16px;
     margin-top: 36px;
   }
+
   .iconInfo {
     height: 38px;
     margin-bottom: 8px;
   }
+
   .itemInfoContainerDos {
     display: flex;
     flex-flow: column;
@@ -1190,29 +1999,32 @@
     height: 64px;
     margin-bottom: 16px;
   }
+
   .descriptionInfo {
     height: auto;
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansRegular;
+    font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 114.286% */
     letter-spacing: 0.25px;
   }
+
   .descripcionLlegarAuto {
-    color: #333333;
+    color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: DMSansMedium;
+    font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.1px;
   }
+
   .mapaLlegar {
     height: 475px;
     width: 348px;
@@ -1221,4 +2033,4 @@
     margin-right: auto;
     display: flex;
   }
-}/*# sourceMappingURL=llegar.module.css.map */
+}
