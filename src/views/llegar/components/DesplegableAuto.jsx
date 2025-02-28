@@ -39,12 +39,13 @@ export const DesplegableAuto = () => {
         }`}
       >
         <div className={styles.indicationContainerAuto}>
-          Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta Carmen de
-          Areco. Ahí, girá a la izquierda por la Ruta 51. Luego de 20 km, doblá
-          nuevamente a la izquierda para tomar la Ruta 43. Manejás 8 km más y te
-          vas a encontrar con la entrada a Castilla; ahí girás a la derecha para
-          tomar la Ruta Provincial 42. A solo 1.000 metros te esperamos en
-          nuestra Casa de Campo.
+          Por asfalto: Desde Buenos Aires, tomá la Ruta 7 y recorré 142 km hasta
+          Carmen de Areco, luego de pasar la rotonda, continuar 3km más y ahí,
+          girá a la izquierda por la Ruta 51. Luego de 20 km, doblá nuevamente a
+          la izquierda para tomar la Ruta 43. Manejás 8 km más y te vas a
+          encontrar con la entrada a Castilla; ahí girás a la derecha para tomar
+          la Ruta Provincial 42. A solo 1.000 metros te esperamos en nuestra
+          Casa de Campo.
         </div>
         <img src={maps} alt="" className={styles.mapaLlegar} />
       </div>
