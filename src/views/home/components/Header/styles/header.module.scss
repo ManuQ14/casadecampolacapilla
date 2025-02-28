@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: space-between;
     width: 180px;
-    height: 320px;
+    height: 208px;
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -150,7 +150,7 @@
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    
+
     line-height: 24px;
     letter-spacing: 0.1px;
     margin-bottom: 24px;
@@ -242,8 +242,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    //width: 170px;
-    height: 320px;
+    height: 270px;
     color: $primario-principal;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -445,7 +444,7 @@
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    width: 608px;
+    width: 510px;
     color: $background;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -463,7 +462,7 @@
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    width: 608px;
+    width: 510px;
     color: $dark;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -483,8 +482,6 @@
   .itemOption:hover {
     color: $primario-principal;
     transition: all 300ms !important;
-    
-    
   }
 
   //contenido del header, h1, h3 y botón reservar
