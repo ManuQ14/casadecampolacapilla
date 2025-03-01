@@ -10,7 +10,7 @@ import { Fut } from "./components/Footer/Fut";
 
 import styles from "./components/Header/styles/header.module.scss";
 
-import wpIcon from "../../assets/icons/wpicon.svg";
+import wpIcon from "../../assets/icons/iconWhatsapp.svg";
 
 export const Home = () => {
   const WHATSAPP_NUMBER = "5491158567591";

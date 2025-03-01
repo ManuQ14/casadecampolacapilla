@@ -3,7 +3,7 @@ import { Form } from "./components/Form";
 import { Fut } from "../home/components/Footer/Fut";
 
 import styles from "./styles/contact.module.scss";
-import wpIcon from "../../assets/icons/wpicon.svg";
+import wpIcon from "../../assets/icons/iconWhatsapp.svg";
 
 export const Contact = () => {
   const WHATSAPP_NUMBER = "5491158567591";

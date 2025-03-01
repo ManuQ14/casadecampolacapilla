@@ -6,7 +6,7 @@ import { Fut } from "../home/components/Footer/Fut";
 
 import styles from "./styles/history.module.scss";
 
-import wpIcon from "../../assets/icons/wpicon.svg";
+import wpIcon from "../../assets/icons/iconWhatsapp.svg";
 
 export const Historia = () => {
   const WHATSAPP_NUMBER = "5491158567591";
