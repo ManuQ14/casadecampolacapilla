@@ -107,7 +107,7 @@
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 8px;
+    margin-right: 3%;
   }
 
   .boxTarifaPernocte {
@@ -217,7 +217,19 @@
     font-weight: 700;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
-    margin-right: 6%;
+    //margin-right: 1%;
+  }
+
+  .precioTarifaPernocteTres {
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 3%;
   }
 
   .aclaracionPernocte {
@@ -418,7 +430,7 @@
     font-style: normal;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 6%;
+    margin-right: 3%;
   }
 
   .boxTarifaPernocte {
@@ -511,6 +523,18 @@
     font-size: 16px;
     font-style: normal;
     line-height: 16px;
+    letter-spacing: 0.2px;
+    //margin-right: 3%;
+  }
+
+  .precioTarifaPernocteTres {
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
     margin-right: 3%;
   }
@@ -711,7 +735,7 @@
     font-style: normal;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 6%;
+    margin-right: 1%;
   }
 
   .boxTarifaPernocte {
@@ -743,7 +767,7 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-between;
-    width: 95%;
+    width: 96%;
     height: 64px;
     margin-left: 16px;
   }
@@ -805,7 +829,19 @@
     font-style: normal;
     line-height: 16px;
     letter-spacing: 0.2px;
-    margin-right: 4%;
+    //margin-right: 1%;
+  }
+
+  .precioTarifaPernocteTres {
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 1%;
   }
 
   .aclaracionPernocte {
@@ -909,7 +945,7 @@
   }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
+@media screen and (min-width: 1920px)  {
   //Inicio Tarifario
   .tarifaSection {
     width: 100vw;
@@ -983,7 +1019,7 @@
     //font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    width: 32%;
+    width: 34%;
     margin-left: 8px;
     margin-bottom: 2px;
   }
@@ -1012,7 +1048,7 @@
     font-style: normal;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-right: 5%;
+    margin-right: 1%;
   }
 
   .boxTarifaPernocte {
@@ -1044,7 +1080,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 99%;
+    width: 98%;
     height: 64px;
   }
 
@@ -1057,9 +1093,7 @@
     margin-left: 24px;
   }
 
-  .precioTarifaPernocte {
-    margin-right: 1%;
-  }
+
 
   .descripcionTarifaPernocte {
     display: flex;
@@ -1109,7 +1143,19 @@
     font-style: normal;
     line-height: 16px;
     letter-spacing: 0.2px;
-    margin-right: 5%;
+    //margin-right: 1%;
+  }
+
+  .precioTarifaPernocteTres {
+    color: $primario-dark;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: $second-bold-typography;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.2px;
+    margin-right: 1%;
   }
 
   .aclaracionPernocte {

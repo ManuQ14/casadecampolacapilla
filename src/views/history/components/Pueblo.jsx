@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
+
 import foto4 from "../../../assets/images/galleryHistory/4.jpg";
 import foto5 from "../../../assets/images/galleryHistory/5.jpg";
 import foto6 from "../../../assets/images/galleryHistory/6.jpg";

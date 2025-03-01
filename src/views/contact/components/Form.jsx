@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import styles from "../styles/contact.module.scss";
 import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 //Foto del fondo del formulario
-import bottomForm from "../../../assets/images/bottomContact.jpg";
+import bottomForm from "../../../assets/images/galeria/9.jpg";
 
 export const Form = () => {
   //const WHATSAPP_NUMBER = "5491158567591";

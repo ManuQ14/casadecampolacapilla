@@ -1,9 +1,9 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
-import foto1 from "../../../assets/images/galleryHistory/1.jpg";
-import foto2 from "../../../assets/images/galleryHistory/2.jpg";
-import foto3 from "../../../assets/images/galleryHistory/3.jpg";
+import foto1 from "../../../assets/images/galleryHistory/4.jpg";
+import foto2 from "../../../assets/images/galleryHistory/5.jpg";
+import foto3 from "../../../assets/images/galleryHistory/6.jpg";
 
 const CAROUSEL_INTERVAL = 5000;
 const SWIPE_THRESHOLD = 50;

@@ -11,14 +11,14 @@ import arrowRight from "../../../../assets/icons/arrowRigth.svg";
 import arrowLeftHover from "../../../../assets/icons/ArrowLeftHover.svg";
 import arrowRightHover from "../../../../assets/icons/arrowRigthHover.svg";
 
-import foto1 from "../../../../assets/images/galleryHome/9.jpg";
-import foto2 from "../../../../assets/images/galleryHome/2.jpg";
-import foto3 from "../../../../assets/images/galleryHome/3.jpg";
-import foto4 from "../../../../assets/images/galleryHome/4.jpg";
-import foto5 from "../../../../assets/images/galleryHome/5.jpg";
-import foto6 from "../../../../assets/images/galleryHome/6.jpg";
-import foto7 from "../../../../assets/images/galleryHome/7.jpg";
-import foto8 from "../../../../assets/images/galleryHome/8.jpg";
+import foto1 from "../../../../assets/images/galeria/1.jpg";
+import foto2 from "../../../../assets/images/galeria/2.jpg";
+import foto3 from "../../../../assets/images/galeria/3.jpg";
+import foto4 from "../../../../assets/images/galeria/4.jpg";
+import foto5 from "../../../../assets/images/galeria/5.jpg";
+import foto6 from "../../../../assets/images/galeria/6.jpg";
+import foto7 from "../../../../assets/images/galeria/7.jpg";
+import foto8 from "../../../../assets/images/galeria/8.jpg";
 
 const GALLERY_PHOTOS = [
   { id: 1, src: foto1, alt: "Vista de la casa" },

@@ -78,6 +78,7 @@ export const NavBar = () => {
             src={scrolled ? LogoHeaderScrolled : logoHeader}
             alt="Logo Capilla"
             className={styles.imgLogoDesktop}
+            onClick={handleToHome}
           />
         </div>
         <div

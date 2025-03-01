@@ -31,7 +31,7 @@ export const Camping = () => {
   };
 
   const startCarousel = () => {
-    intervalRef.current = setInterval(nextSlide, 5000); // Asigna el intervalo a la referencia
+    intervalRef.current = setInterval(nextSlide, 5000);
   };
 
   const stopCarousel = () => {

@@ -19,6 +19,34 @@ import foto13 from "../../../assets/images/galeria/13.jpg";
 import foto14 from "../../../assets/images/galeria/14.jpg";
 import foto15 from "../../../assets/images/galeria/15.jpg";
 import foto16 from "../../../assets/images/galeria/16.jpg";
+import foto17 from "../../../assets/images/galeria/17.jpg";
+import foto18 from "../../../assets/images/galeria/18.jpg";
+import foto19 from "../../../assets/images/galeria/19.jpg";
+import foto20 from "../../../assets/images/galeria/20.jpg";
+import foto21 from "../../../assets/images/galeria/21.jpg";
+import foto22 from "../../../assets/images/galeria/22.jpg";
+import foto23 from "../../../assets/images/galeria/23.jpg";
+import foto24 from "../../../assets/images/galeria/24.jpg";
+import foto25 from "../../../assets/images/galeria/25.jpg";
+import foto26 from "../../../assets/images/galeria/26.jpg";
+import foto27 from "../../../assets/images/galeria/27.jpg";
+import foto28 from "../../../assets/images/galeria/28.jpg";
+import foto29 from "../../../assets/images/galeria/29.jpg";
+import foto30 from "../../../assets/images/galeria/30.jpg";
+import foto31 from "../../../assets/images/galeria/31.jpg";
+import foto32 from "../../../assets/images/galeria/32.jpg";
+import foto33 from "../../../assets/images/galeria/33.jpg";
+import foto34 from "../../../assets/images/galeria/34.jpg";
+import foto35 from "../../../assets/images/galeria/35.jpg";
+import foto36 from "../../../assets/images/galeria/36.jpg";
+import foto37 from "../../../assets/images/galeria/37.jpg";
+import foto38 from "../../../assets/images/galeria/38.jpg";
+import foto39 from "../../../assets/images/galeria/39.jpg";
+import foto40 from "../../../assets/images/galeria/40.jpg";
+import foto41 from "../../../assets/images/galeria/41.jpg";
+import foto42 from "../../../assets/images/galeria/42.jpg";
+import foto43 from "../../../assets/images/galeria/43.jpg";
+import foto44 from "../../../assets/images/galeria/44.jpg";
 
 import arrowLeft from "../../../assets/icons/ArrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
@@ -44,6 +72,34 @@ const galeryPhotos = [
   { id: 14, src: foto14, alt: "vistas" },
   { id: 15, src: foto15, alt: "vistas" },
   { id: 16, src: foto16, alt: "vistas" },
+  { id: 17, src: foto17, alt: "vistas" },
+  { id: 18, src: foto18, alt: "vistas" },
+  { id: 19, src: foto19, alt: "vistas" },
+  { id: 20, src: foto20, alt: "vistas" },
+  { id: 21, src: foto21, alt: "vistas" },
+  { id: 22, src: foto22, alt: "vistas" },
+  { id: 23, src: foto23, alt: "vistas" },
+  { id: 24, src: foto24, alt: "vistas" },
+  { id: 25, src: foto25, alt: "vistas" },
+  { id: 26, src: foto26, alt: "vistas" },
+  { id: 27, src: foto27, alt: "vistas" },
+  { id: 28, src: foto28, alt: "vistas" },
+  { id: 29, src: foto29, alt: "vistas" },
+  { id: 30, src: foto30, alt: "vistas" },
+  { id: 31, src: foto31, alt: "vistas" },
+  { id: 32, src: foto32, alt: "vistas" },
+  { id: 33, src: foto33, alt: "vistas" },
+  { id: 34, src: foto34, alt: "vistas" },
+  { id: 35, src: foto35, alt: "vistas" },
+  { id: 36, src: foto36, alt: "vistas" },
+  { id: 37, src: foto37, alt: "vistas" },
+  { id: 38, src: foto38, alt: "vistas" },
+  { id: 39, src: foto39, alt: "vistas" },
+  { id: 40, src: foto40, alt: "vistas" },
+  { id: 41, src: foto41, alt: "vistas" },
+  { id: 42, src: foto42, alt: "vistas" },
+  { id: 43, src: foto43, alt: "vistas" },
+  { id: 44, src: foto44, alt: "vistas" },
 ];
 
 export const Gallery = () => {
