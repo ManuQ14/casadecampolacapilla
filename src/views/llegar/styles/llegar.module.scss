@@ -518,6 +518,15 @@
     margin-right: auto;
     display: flex;
   }
+
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
 }
 
 //Inicio modo tablet
@@ -1025,6 +1034,14 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+  }
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
   }
 }
 
@@ -1560,6 +1577,20 @@
   .helpBold {
     font-family: $second-bold-typography;
   }
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+  }
+
+  .wpIcon:hover {
+    transform: scale(105%);
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2009,11 +2040,6 @@
     margin-top: 3px;
     transition: all 300ms;
   }
-  /* 
-  .chrevronRight:hover{
-    transition: all 300ms !important;
-    margin-left: 8px !important;
-  } */
 
   .autoBoxContainer {
     width: 92%;
@@ -2093,5 +2119,19 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+  }
+
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  .wpIcon:hover {
+    transform: scale(105%);
   }
 }

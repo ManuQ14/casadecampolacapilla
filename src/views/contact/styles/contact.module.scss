@@ -544,6 +544,15 @@
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
   }
+
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
 }
 
 //Inicio sección tablet
@@ -1072,6 +1081,15 @@
     font-style: normal;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
   }
 }
 
@@ -1607,6 +1625,21 @@
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
   }
+
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+  }
+
+  .wpIcon:hover {
+    transform: scale(105%);
+  }
 }
 
 //Inicio sección notebook
@@ -2141,5 +2174,19 @@
     font-style: normal;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.2px;
+  }
+
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  .wpIcon:hover {
+    transform: scale(105%);
   }
 }

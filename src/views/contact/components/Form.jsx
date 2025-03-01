@@ -13,13 +13,12 @@ import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
 import bottomForm from "../../../assets/images/galeria/9.jpg";
 
 export const Form = () => {
-  //const WHATSAPP_NUMBER = "5491158567591";
-  const WHATSAPP_NUMBER = "5491136392349";
+  const WHATSAPP_NUMBER = "5491158567591";
 
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
-  //const [isFormCompleted, setIsFormCompleted] = useState(false);
+
   const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({

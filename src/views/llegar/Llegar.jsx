@@ -6,7 +6,15 @@ import { DesplegableAuto } from "./components/DesplegableAuto";
 import { DesplegableBici } from "./components/DesplegableBici";
 import { Fut } from "../home/components/Footer/Fut";
 
+import wpIcon from "../../assets/icons/wpicon.svg";
+
 export const Llegar = () => {
+  const WHATSAPP_NUMBER = "5491158567591";
+
+  const goToWhatsapp = () => {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=`;
+  };
+
   return (
     <>
       <Header />
@@ -23,6 +31,13 @@ export const Llegar = () => {
         </div>
       </div>
       <Fut />
+
+      <img
+        src={wpIcon}
+        alt="Icono wp"
+        className={styles.wpIcon}
+        onClick={() => window.open(goToWhatsapp(), "_blank")}
+      />
     </>
   );
 };

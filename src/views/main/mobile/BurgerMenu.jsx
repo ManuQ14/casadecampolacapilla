@@ -19,45 +19,33 @@ export const BurgerMenu = () => {
   const handleToHome = () => {
     navigate("/inicio");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   const handleToLlegar = () => {
     navigate("/como-llegar");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   const handleToReserve = () => {
     navigate("/contacto");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
     document.body.classList.remove("no-scroll");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 100);
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   return (

@@ -190,6 +190,15 @@
     cursor: pointer;
   }
   //Fin sección header + menu hamburguesa
+
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
 }
 
 //Inicio seccion tablet
@@ -376,6 +385,15 @@
     z-index: 150;
     cursor: pointer;
   }
+
+  .wpIcon {
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -559,5 +577,36 @@
 
   .burgerMenu {
     display: none;
+  }
+
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+  }
+
+  .wpIcon:hover {
+    transform: scale(105%);
+  }
+}
+
+@media screen and (min-width: 1920) {
+  .wpIcon {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: all 300ms;
+    .wpIcon:hover {
+      transform: scale(105%);
+    }
   }
 }
