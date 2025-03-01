@@ -1,13 +1,12 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
-import foto1 from "../../../assets/images/galleryHistory/4.jpg";
-import foto2 from "../../../assets/images/galleryHistory/5.jpg";
-import foto3 from "../../../assets/images/galleryHistory/6.jpg";
+import foto1 from "../../../assets/images/galleryHistory/1.jpg";
+
 
 const CAROUSEL_INTERVAL = 5000;
 const SWIPE_THRESHOLD = 50;
-const fotos = [foto1, foto2, foto3];
+const fotos = [foto1/* , foto2, foto3*/] ;
 
 export const Sueño = () => {
   const intervalRef = useRef(null);
@@ -132,12 +131,12 @@ export const Sueño = () => {
             />
           ))}
         </div>
-        <div className={styles.dots}>
+        <div className={styles.dots2}>
           {fotos.map((_, index) => (
             <span
               key={index}
-              className={`${styles.dot} ${
-                currentIndex === index ? styles.activeDot : ""
+              className={`${styles.dot2} ${
+                currentIndex === index ? styles.activeDot2 : ""
               }`}
               onClick={() => handleDotClick(index)}
             />

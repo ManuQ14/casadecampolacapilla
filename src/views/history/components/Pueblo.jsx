@@ -102,7 +102,7 @@ export const Pueblo = () => {
           Hoy, Castilla combina tradición y servicios esenciales: escuela,
           hospital, bomberos y la estación ferroviaria activa. Ofrece almacenes,
           panaderías, una forrajería-museo, y destacados artesanos que elaboran
-          productos de cuero, macramé ponchos, mates y muebles de diseño.
+          productos de cuero, macramé, ponchos, mates y muebles de diseño.
           <br />
           <br />A pocos kilómetros, tenemos los pueblos vecinos de Rawson a 13
           km y Rivas a 15 km, pueblos que fueron fundados gracias a la llegada

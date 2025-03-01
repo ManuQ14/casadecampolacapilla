@@ -276,6 +276,8 @@
 
       &.active {
         opacity: 1;
+        top: 0%;
+        height: 420px;
       }
     }
 
@@ -299,6 +301,17 @@
           background-color: $primario-acento;
           width: 20px !important;
           border-radius: 10px;
+        }
+      }
+    }
+
+    .dots2 {
+      display: none;
+
+      .dot2 {
+        display: none;
+        &.activeDot2 {
+          display: none;
         }
       }
     }
@@ -674,6 +687,9 @@
 
       &.active {
         opacity: 1;
+        height: 960px;
+
+        top: -20%;
       }
     }
 
@@ -697,6 +713,17 @@
           background-color: $primario-acento;
           width: 20px !important; // PUNTO ACTIVO MÁS ANCHO
           border-radius: 10px;
+        }
+      }
+    }
+
+    .dots2 {
+      display: none;
+
+      .dot2 {
+        display: none;
+        &.activeDot2 {
+          display: none;
         }
       }
     }
@@ -1115,6 +1142,17 @@
         }
       }
     }
+
+    .dots2 {
+      display: none;
+
+      .dot2 {
+        display: none;
+        &.activeDot2 {
+          display: none;
+        }
+      }
+    }
   }
 
   //Inicio sección notas
@@ -1527,6 +1565,17 @@
           background-color: $primario-acento;
           width: 20px !important; // PUNTO ACTIVO MÁS ANCHO
           border-radius: 10px;
+        }
+      }
+    }
+
+    .dots2 {
+      display: none;
+
+      .dot2 {
+        display: none;
+        &.activeDot2 {
+          display: none;
         }
       }
     }
