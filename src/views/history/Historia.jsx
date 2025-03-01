@@ -12,7 +12,7 @@ export const Historia = () => {
   const WHATSAPP_NUMBER = "5491158567591";
 
   const goToWhatsapp = () => {
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=`; 
   };
 
   return (
