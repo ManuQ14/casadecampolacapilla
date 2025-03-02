@@ -105,7 +105,7 @@
     margin-right: 4px;
   }
 
-  .titleFooter{
+  .titleFooter {
     text-transform: uppercase;
   }
 }
@@ -243,7 +243,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .footer {
     display: flex;
     flex-flow: row wrap;
@@ -254,7 +254,6 @@
     background-color: $primario-principal;
     color: white;
     margin-top: 56px;
-    padding-top: 76px;
   }
 
   .iconCapilla {
@@ -263,6 +262,7 @@
     margin-bottom: 32px;
     margin-left: 217px;
     margin-right: 190px;
+    margin-top: 76px;
   }
 
   .titleFooter {
@@ -276,6 +276,7 @@
     flex-flow: row;
     align-items: flex-start;
     width: 675px;
+    margin-top: 76px;
   }
 
   .contenedorNavegador {
@@ -383,7 +384,6 @@
     background-color: $primario-principal;
     color: white;
     margin-top: 56px;
-    padding-top: 76px;
   }
 
   .iconCapilla {
@@ -392,6 +392,7 @@
     margin-bottom: 32px;
     margin-left: 25%;
     margin-right: 190px;
+    margin-top: 76px;
   }
 
   .titleFooter {
@@ -405,6 +406,7 @@
     flex-flow: row;
     align-items: flex-start;
     width: 675px;
+    margin-top: 76px;
   }
 
   .contenedorNavegador {
