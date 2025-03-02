@@ -21,48 +21,63 @@ export const Fut = () => {
         width={140}
         className={styles.iconCapilla}
       />
-      <div className={styles.contenedorNavegador}>
-        <div className={styles.infoContainer}>
-          <img src={location} alt="Location icon" className={styles.iconFooters}/>
-          Calle 100 (RP42) Nro 98, Castilla, B6616, Provincia de Buenos Aires
+      <div className={styles.mainFooter}>
+        <div className={styles.contenedorNavegador}>
+          <p className={styles.titleFooter}>Contacto</p>
+          <div className={styles.infoContainer}>
+            <img
+              src={location}
+              alt="Location icon"
+              className={styles.iconFooters}
+            />
+            Calle 100 (RP42) Nro 98, Castilla, B6616, Provincia de Buenos Aires
+          </div>
+          <div className={styles.infoContainerDos}>
+            <img src={mail} alt="Mail Icon" className={styles.iconFooters} />{" "}
+            Casadecampolacapilla@gmail.com
+          </div>
+          <div className={styles.infoContainerDos}>
+            <img
+              src={whatsapp}
+              alt="Whatsapp icon"
+              className={styles.iconFooters}
+            />
+            11 5856-7591
+          </div>
         </div>
-        <div className={styles.infoContainerDos}>
-          <img src={mail} alt="Mail Icon" className={styles.iconFooters} /> Casadecampolacapilla@gmail.com
+        <div className={styles.mediaIconsContainer}>
+          <p className={styles.titleFooter}>Nuestras redes</p>
+          <div className={styles.iconsMediaContainer}>
+            <a
+              href="https://instagram.com/casadecampolacapilla"
+              target="_blanc"
+              rel="noreferrers"
+            >
+              <img src={instagramFooter} className={styles.iconMedia} />
+            </a>
+            <a
+              href="https://www.youtube.com/user/nikolunapra"
+              target="_blanc"
+              rel="noreferrers"
+            >
+              <img src={youtubeFooter} className={styles.iconMedia} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@casadecampolacapilla"
+              target="_blanc"
+              rel="noreferrers"
+            >
+              <img src={tiktokFootrr} className={styles.iconMedia} />
+            </a>
+            <a
+              href="https://www.facebook.com/casadecampolacapilla"
+              target="_blanc"
+              rel="noreferrers"
+            >
+              <img src={facebookFooter} className={styles.iconMedia} />
+            </a>
+          </div>
         </div>
-        <div className={styles.infoContainerDos}>
-          <img src={whatsapp} alt="Whatsapp icon" className={styles.iconFooters} />
-          11 5856-7591
-        </div>
-      </div>
-      <div className={styles.mediaIconsContainer}>
-        <a
-          href="https://instagram.com/casadecampolacapilla"
-          target="_blanc"
-          rel="noreferrers"
-        >
-          <img src={instagramFooter} className={styles.iconMedia} />
-        </a>
-        <a
-          href="https://www.youtube.com/user/nikolunapra"
-          target="_blanc"
-          rel="noreferrers"
-        >
-          <img src={youtubeFooter} className={styles.iconMedia} />
-        </a>
-        <a
-          href="https://www.tiktok.com/@casadecampolacapilla"
-          target="_blanc"
-          rel="noreferrers"
-        >
-          <img src={tiktokFootrr} className={styles.iconMedia} />
-        </a>
-        <a
-          href="https://www.facebook.com/casadecampolacapilla"
-          target="_blanc"
-          rel="noreferrers"
-        >
-          <img src={facebookFooter} className={styles.iconMedia} />
-        </a>
       </div>
       <p className={styles.textoCopyright}>
         Todos los derechos reservados. Creado por Camila Gallardo
