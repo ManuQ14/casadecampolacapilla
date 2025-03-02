@@ -247,7 +247,7 @@
 
   .boxTarifaDiaFinde {
     width: 95%;
-    height: 56px;
+    height: auto;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -945,7 +945,7 @@
   }
 }
 
-@media screen and (min-width: 1920px)  {
+@media screen and (min-width: 1920px) {
   //Inicio Tarifario
   .tarifaSection {
     width: 100vw;
@@ -1092,8 +1092,6 @@
     justify-content: space-between;
     margin-left: 24px;
   }
-
-
 
   .descripcionTarifaPernocte {
     display: flex;

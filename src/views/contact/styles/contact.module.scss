@@ -1560,9 +1560,8 @@
     height: 40px;
     margin: auto;
     margin-bottom: 0px;
-    border-radius: 10px;
 
-    padding: 12px 20px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -1573,7 +1572,7 @@
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    //font-weight: 700;
     line-height: normal;
     background-color: $primario-principal;
   }
@@ -1584,7 +1583,7 @@
     height: 40px;
     margin: auto;
     margin-bottom: 0px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -1595,8 +1594,9 @@
     font-family: $primario-principal;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+
     line-height: normal;
+    font-family: $main-typography;
     background-color: $gray-b;
   }
 
@@ -1881,8 +1881,16 @@
     flex-shrink: 0;
     align-self: stretch;
     font-family: $main-typography !important;
-
     resize: none !important;
+    appearance: none !important;
+  }
+
+  .textAreaComent:active {
+    border: 1px solid $primario-dark !important;
+  }
+
+  .textAreaComent:focus {
+    border: 1px solid $primario-dark !important;
   }
 
   .labelComentario {
@@ -1931,6 +1939,11 @@
       }
     }
 
+    textarea:focus {
+      outline: none !important;
+      border: 1px solid $primario-dark !important;
+    }
+
     /* Chrome, Safari, Edge, Opera */
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
@@ -1965,6 +1978,7 @@
     padding: 8px;
     border-radius: 5px;
     border: 1px solid $gray-a;
+    cursor: pointer;
   }
 
   .placeholderText {
@@ -1986,7 +2000,7 @@
 
   .datePickerModal {
     position: absolute !important;
-    top: calc(100% + 194px) !important;
+    top: 121.1% !important;
     width: 548px !important;
     height: 465px !important;
     background: white;
@@ -2113,9 +2127,7 @@
     height: 40px;
     margin: auto;
     margin-bottom: 0px;
-    border-radius: 10px;
-
-    padding: 12px 20px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -2126,7 +2138,7 @@
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+
     line-height: normal;
     background-color: $primario-principal;
     cursor: pointer;
@@ -2138,18 +2150,18 @@
     height: 40px;
     margin: auto;
     margin-bottom: 0px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 5px;
+    font-family: $main-typography;
     border: none;
     color: $gray-a;
     text-align: center;
     font-family: $primario-principal;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     background-color: $gray-b;
   }
@@ -2196,5 +2208,10 @@
   }
   .wpIcon:hover {
     transform: scale(105%);
+  }
+
+  textarea:focus {
+    outline: none !important;
+    border: 1px solid $primario-dark !important;
   }
 }

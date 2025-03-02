@@ -26,8 +26,6 @@ export const Header = () => {
     <>
       <div className={styles.headerMobile}>
         <div className={styles.coverHeader}>
-
-          
           <NavBar />
 
           <video
@@ -51,7 +49,6 @@ export const Header = () => {
         </div>
 
         <BurgerMenu />
-        
       </div>
     </>
   );
