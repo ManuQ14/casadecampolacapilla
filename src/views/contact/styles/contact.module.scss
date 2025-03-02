@@ -1011,7 +1011,8 @@
 
   .submitButton {
     display: flex;
-    width: 100%;
+    width: 200px;
+    margin: auto;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
@@ -1023,14 +1024,15 @@
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+
     line-height: normal;
     background-color: $primario-principal;
   }
 
   .submitButtonOff {
     display: flex;
-    width: 100%;
+    width: 200px;
+    margin: auto;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
@@ -1042,7 +1044,7 @@
     font-family: $primario-principal;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-family: $main-typography;
     line-height: normal;
     background-color: $gray-b;
   }
