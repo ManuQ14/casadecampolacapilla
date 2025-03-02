@@ -139,25 +139,25 @@ input {
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: center;
     width: 100%;
     border: none;
     color: #4b4a4a;
     transition: all 300ms !important;
-    margin-bottom: 32px;
+    margin: auto;
   }
 
   .react-datepicker__month-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    margin-bottom: 32px;
-    height: 250px;
+    justify-content: center;
+    width: 430px;
+    height: 353px;
     align-items: flex-start;
   }
 
   .react-datepicker__month {
     margin: 0;
-    width: 100%;
     align-items: center;
     display: flex;
     flex-flow: column;
@@ -167,8 +167,8 @@ input {
     display: flex;
     flex-flow: row;
     align-items: center;
-    height: 32px;
-    /* justify-content: space-around; */
+    height: 46px;
+    width: 97%;
   }
 
   .react-datepicker__day {
@@ -180,6 +180,7 @@ input {
     text-transform: capitalize;
     font-family: "DMSansMedium";
     font-size: 16px;
+    margin-bottom: 16px !important;
   }
 
   .react-datepicker {
@@ -227,10 +228,6 @@ input {
     border-bottom: none;
   }
 
-  .react-datepicker__navigation {
-    top: 15px;
-  }
-
   .react-datepicker__day-name {
     color: #c25308;
     font-weight: 500;
@@ -240,6 +237,10 @@ input {
   .react-datepicker__day--outside-month {
     background-color: transparent !important;
     color: #d1d1d1;
+  }
+
+  .react-datepicker__navigation--next {
+    right: 5%;
   }
 }
 
@@ -275,16 +276,15 @@ input {
     border: none;
     color: #4b4a4a;
     transition: all 300ms !important;
-    margin-bottom: 32px;
   }
 
   .react-datepicker__month-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-bottom: 32px;
+
+    flex-flow: column;
+    justify-content: flex-start;
     width: 430px;
-    height: 337px;
+    height: 353px;
     align-items: flex-start;
   }
 
@@ -301,7 +301,7 @@ input {
     flex-flow: row;
     align-items: center;
     height: 46px;
-    /* justify-content: space-around; */
+    width: 97%;
   }
 
   .react-datepicker__day {
@@ -313,6 +313,7 @@ input {
     text-transform: capitalize;
     font-family: "DMSansMedium";
     font-size: 16px;
+    margin-bottom: 16px !important;
   }
 
   .react-datepicker {
@@ -360,18 +361,6 @@ input {
     border-bottom: none;
   }
 
-  .react-datepicker__navigation {
-    top: 15px;
-  }
-
-  .react-datepicker__navigation--previous {
-    left: 15%;
-  }
-
-  .react-datepicker__navigation--next {
-    right: 15%;
-  }
-
   .react-datepicker__day-name {
     color: #c25308;
     font-weight: 500;
@@ -381,6 +370,10 @@ input {
   .react-datepicker__day--outside-month {
     background-color: transparent !important;
     color: #d1d1d1;
+  }
+
+  .react-datepicker__navigation--next {
+    right: 5%;
   }
 }
 
@@ -415,16 +408,15 @@ input {
     border: none;
     color: #4b4a4a;
     transition: all 300ms !important;
-    margin-bottom: 32px;
   }
 
   .react-datepicker__month-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-bottom: 32px;
+
+    flex-flow: column;
+    justify-content: flex-start;
     width: 430px;
-    height: 337px;
+    height: 353px;
     align-items: flex-start;
   }
 
@@ -441,7 +433,7 @@ input {
     flex-flow: row;
     align-items: center;
     height: 46px;
-    /* justify-content: space-around; */
+    width: 97%;
   }
 
   .react-datepicker__day {
@@ -453,6 +445,7 @@ input {
     text-transform: capitalize;
     font-family: "DMSansMedium";
     font-size: 16px;
+    margin-bottom: 16px !important;
   }
 
   .react-datepicker {
@@ -500,18 +493,6 @@ input {
     border-bottom: none;
   }
 
-  .react-datepicker__navigation {
-    top: 3px;
-  }
-
-  .react-datepicker__navigation--previous {
-    left: 30%;
-  }
-
-  .react-datepicker__navigation--next {
-    right: 30%;
-  }
-
   .react-datepicker__day-name {
     color: #c25308;
     font-weight: 500;
@@ -521,5 +502,9 @@ input {
   .react-datepicker__day--outside-month {
     background-color: transparent !important;
     color: #d1d1d1;
+  }
+
+  .react-datepicker__navigation--next {
+    right: 5%;
   }
 }

@@ -370,7 +370,7 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid $gray-a;
+    box-shadow: 0px 4px 10px rgba(26, 26, 26, 0.24);
     transition: all 300ms !important;
     color: $dark;
     padding-top: 15px;
@@ -890,23 +890,20 @@
   }
 
   .datePickerModal {
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 65vh;
+    position: absolute !important;
+    top: calc(100% + 41px) !important;
+    width: 90% !important;
+    height: 465px !important;
     background: white;
-    border-radius: 5px 5px 0 0;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    transform: translateY(100%);
-    transition: all 300ms !important;
+    border-radius: 5px;
+    //transform: translateY(-10px);
+    transition: opacity 0.3sease, transform 0.3sease;
+  }
 
-    &.modalOpen {
-      transform: translateY(0);
-      bottom: 0;
-      transition: all 300ms !important;
-    }
+  .datePickerModal.modalOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .datePickerContent {
@@ -918,7 +915,7 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid $gray-a;
+    box-shadow: 0px 4px 10px rgba(26, 26, 26, 0.24);
     transition: all 300ms !important;
     color: $dark;
     padding-top: 15px;
@@ -960,18 +957,16 @@
       }
     }
   }
-
   .applyButton {
-    width: 50%;
-    padding: 12px;
-    //margin-top: 20px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    height: 40px;
     background-color: $primario-principal;
     color: white;
     border: none;
-    border-radius: 5px;
     font-family: $main-typography;
     font-size: 16px;
-    cursor: pointer;
   }
 
   .closeButtonDates {
@@ -984,7 +979,7 @@
 
   .datePickerHeader {
     height: 40px !important;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   .selectDates {
@@ -1378,6 +1373,13 @@
       }
     }
 
+    /* Chrome, Safari, Edge, Opera */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     .countsPersons {
       height: 36px;
       width: 100%;
@@ -1397,6 +1399,10 @@
     color: #ff4444;
   }
 
+  .dateGroup {
+    position: relative;
+  }
+
   .datePreview {
     display: flex;
     flex-flow: column;
@@ -1405,6 +1411,7 @@
     padding: 8px;
     border-radius: 5px;
     border: 1px solid $gray-a;
+    cursor: pointer;
   }
 
   .placeholderText {
@@ -1425,23 +1432,20 @@
   }
 
   .datePickerModal {
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 65vh;
+    position: absolute !important;
+    top: calc(100% + 199px) !important;
+    width: 548px !important;
+    height: 465px !important;
     background: white;
-    border-radius: 5px 5px 0 0;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    transform: translateY(100%);
-    transition: all 300ms !important;
+    border-radius: 5px;
+    //transform: translateY(-10px);
+    transition: opacity 0.3sease, transform 0.3sease;
+  }
 
-    &.modalOpen {
-      transform: translateY(0);
-      bottom: 0;
-      transition: all 300ms !important;
-    }
+  .datePickerModal.modalOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .datePickerContent {
@@ -1453,7 +1457,7 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid #9e9e9e;
+    box-shadow: 0px 4px 10px rgba(26, 26, 26, 0.24);
     transition: all 300ms !important;
     color: $dark;
     padding-top: 15px;
@@ -1498,9 +1502,9 @@
 
   .applyButton {
     width: 200px;
-    border-radius: 10px;
-    padding: 12px;
-
+    border-radius: 5px;
+    padding: 10px 10px;
+    height: 40px;
     background-color: $primario-principal;
     color: white;
     border: none;
@@ -1520,7 +1524,7 @@
 
   .datePickerHeader {
     height: 40px !important;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   .selectDates {
@@ -1927,6 +1931,13 @@
       }
     }
 
+    /* Chrome, Safari, Edge, Opera */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     .countsPersons {
       height: 36px;
       width: 100%;
@@ -1974,23 +1985,20 @@
   }
 
   .datePickerModal {
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 65vh;
+    position: absolute !important;
+    top: calc(100% + 194px) !important;
+    width: 548px !important;
+    height: 465px !important;
     background: white;
-    border-radius: 5px 5px 0 0;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    transform: translateY(100%);
-    transition: all 300ms !important;
+    border-radius: 5px;
+    //transform: translateY(-10px);
+    transition: opacity 0.3sease, transform 0.3sease;
+  }
 
-    &.modalOpen {
-      transform: translateY(0);
-      bottom: 0;
-      transition: all 300ms !important;
-    }
+  .datePickerModal.modalOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .datePickerContent {
@@ -2002,7 +2010,7 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid #9e9e9e;
+    box-shadow: 0px 4px 10px rgba(26, 26, 26, 0.24);
     transition: all 300ms !important;
     color: $dark;
     padding-top: 15px;
@@ -2047,9 +2055,9 @@
 
   .applyButton {
     width: 200px;
-    border-radius: 10px;
-    padding: 12px;
-
+    border-radius: 5px;
+    padding: 10px 10px;
+    height: 40px;
     background-color: $primario-principal;
     color: white;
     border: none;
@@ -2069,7 +2077,7 @@
 
   .datePickerHeader {
     height: 40px !important;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   .selectDates {

@@ -126,7 +126,7 @@ export const Sueño = () => {
               src={foto}
               alt={`Imagen ${index + 1}`}
               className={`${styles.image} ${
-                currentIndex === index ? styles.active : ""
+                currentIndex === index ? styles.activeDos : ""
               }`}
             />
           ))}

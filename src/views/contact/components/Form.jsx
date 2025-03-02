@@ -1,4 +1,4 @@
-import { useState, /* useEffect */ useMemo } from "react";
+import { useState, useMemo } from "react";
 
 //Imports del datepicker
 import DatePicker from "react-datepicker";
@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 //fin imports datepicker
 
 import styles from "../styles/contact.module.scss";
-import closeButton from "../../../assets/icons/iconsBurguerMenu/closeMenu.svg";
+
 //Foto del fondo del formulario
 import bottomForm from "../../../assets/images/galeria/9.jpg";
 
@@ -276,8 +276,8 @@ export const Form = () => {
             <div className={styles.inputGroup}>
               <label className={styles.labelDatePicker}>
                 Fechas de estadía{" "}
-                {/* <span className={styles.required}>*</span> */}
               </label>
+
               <div className={styles.datePreview} onClick={handleDateClick}>
                 {startDate && endDate ? (
                   <span className={styles.spanFechas}>
@@ -308,15 +308,6 @@ export const Form = () => {
             >
               <div className={styles.datePickerContent}>
                 <div className={styles.datePickerHeader}>
-                  <img
-                    src={closeButton}
-                    className={styles.closeButtonDates}
-                    onClick={() => setIsDatePickerOpen(false)}
-                    alt="Botón de cerrar"
-                    role="button"
-                    aria-label="Cerrar selector de fechas"
-                    tabIndex={0}
-                  />
                   <h3 className={styles.selectDates}>Seleccionar fechas</h3>
                 </div>
                 <DatePicker
