@@ -16,8 +16,8 @@ export const Tarifas = () => {
   };
 
   return (
-    <div className={styles.tarifaSection} id="tarifas">
-      <div className={styles.subtitleContainerTarifa}>
+    <div className={`${styles.tarifaSection} hidden`} id="tarifas">
+      <div className={`${styles.subtitleContainerTarifa} hidden`}>
         <h2 className={styles.h2}>Tarifas</h2>
         <img src={line} alt="linea subrayadora" />
       </div>
@@ -25,7 +25,7 @@ export const Tarifas = () => {
       {/*Contenedor de todas las tarifas */}
       <div className={styles.tarifasContainer}>
         {/**Rectangulo de tarifa por pasar el día */}
-        <div className={styles.boxTarifaDia}>
+        <div className={`${styles.boxTarifaDia} hidden2`}>
           <div className={styles.helpBox}>
             <div className={styles.itemTarifaDia}>Pasar el día</div>
 
@@ -37,7 +37,7 @@ export const Tarifas = () => {
         </div>
 
         {/*Rectángulo de tarifa de acampe con pernocte */}
-        <div className={styles.boxTarifaPernocte}>
+        <div className={`${styles.boxTarifaPernocte} hidden3`}>
           {/**Subtitle acampe con pernocte */}
           <div className={styles.itemTarifaPernocte}>
             Acampe por día con pernocte
@@ -76,7 +76,7 @@ export const Tarifas = () => {
           </p>
         </div>
         {/*Contenedor Promo finde */}
-        <div className={styles.boxTarifaDiaFinde}>
+        <div className={`${styles.boxTarifaDiaFinde} hidden4`}>
           <div>
             <div className={styles.itemTarifaPernocte}>Promo finde</div>
             <div className={styles.aclaracionPernocte}>
@@ -87,7 +87,7 @@ export const Tarifas = () => {
         </div>
 
         {/*Contenedor Rodantes, motorhome y trailers */}
-        <div className={styles.boxTarifaDiaFinde}>
+        <div className={`${styles.boxTarifaDiaFinde} hidden5`}>
           <div>
             <div className={styles.itemTarifaPernocte}>
               Rodantes, motorhome, trailers
@@ -98,12 +98,12 @@ export const Tarifas = () => {
           </div>
           <div className={styles.precioTarifaPernocteTres}>$3500</div>
         </div>
-        <div className={styles.referenciaPrecio}>
+        <div className={`${styles.referenciaPrecio} hidden4`}>
           *Todos los precios de acampe son por persona
         </div>
       </div>
       {/**Tildes de beneficios */}
-      <div className={styles.boxBeneficiosTarifas}>
+      <div className={`${styles.boxBeneficiosTarifas} hidden4`}>
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
           <div className={styles.beneficio}>No se cobra carpa</div>
@@ -124,7 +124,10 @@ export const Tarifas = () => {
           </div>
         </div>
       </div>
-      <div onClick={handleToReserve} className={styles.reserveButtonTarifa}>
+      <div
+        onClick={handleToReserve}
+        className={`${styles.reserveButtonTarifa} hidden3`}
+      >
         Hacenos tu consulta
       </div>
     </div>

@@ -16,7 +16,7 @@ export const DesplegableAuto = () => {
   };
 
   return (
-    <div className={styles.contenedorAcordeonAuto}>
+    <div className={`${styles.contenedorAcordeonAuto} hidden3`}>
       <div className={styles.titleContainer} onClick={toggleAccordion}>
         <img
           src={carmotor}

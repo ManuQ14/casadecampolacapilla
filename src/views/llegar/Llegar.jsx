@@ -19,7 +19,7 @@ export const Llegar = () => {
     <>
       <Header />
       {/**Inicio desplegable tren */}
-      <div className={styles.mainLlegar}>
+      <div className={`${styles.mainLlegar} hidden5`}>
         <Desplegables />
         <DesplegableAuto />
         <DesplegableBici />

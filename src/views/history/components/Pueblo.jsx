@@ -77,7 +77,7 @@ export const Pueblo = () => {
 
   return (
     <div className={styles.puebloContainer}>
-      <div className={styles.desktopBoxContainerDos}>
+      <div className={`${styles.desktopBoxContainerDos} hidden3`}>
         <header className={styles.subtitleContainerHistory}>
           <h2 className={styles.h2}>El Pueblo</h2>
           <img
@@ -110,7 +110,7 @@ export const Pueblo = () => {
         </section>
       </div>
       <section
-        className={styles.carrouselCamping}
+        className={`${styles.carrouselCamping} hidden`}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

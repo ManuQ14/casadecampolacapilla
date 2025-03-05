@@ -40,9 +40,12 @@ export const Header = () => {
           </video>
 
           <div className={styles.contentHeader}>
-            <h1>Casa de Campo La Capilla</h1>
-            <h3>Experiencia de acampe rural, vivila...</h3>
-            <div onClick={handleToReserve} className={styles.reserveButton}>
+            <h1 className="hidden">Casa de Campo La Capilla</h1>
+            <h3 className="hidden2">Experiencia de acampe rural, vivila...</h3>
+            <div
+              onClick={handleToReserve}
+              className={`${styles.reserveButton} hidden3`}
+            >
               Hacenos tu consulta
             </div>
           </div>

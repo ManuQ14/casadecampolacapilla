@@ -8,7 +8,7 @@ export const Mkt = () => {
   return (
     <div className={styles.mktSection}>
       <div className={styles.containerMktOne}>
-        <div className={styles.subtitleContainerMkt}>
+        <div className={`${styles.subtitleContainerMkt} hiddenHorizontalA`}>
           <h2 className={styles.h2Mkt}>
             Disfrutá de los más lindos atardeceres
           </h2>
@@ -17,24 +17,29 @@ export const Mkt = () => {
         <img
           src={fotoMkt1}
           alt="Atardeceres en castilla"
-          className={styles.fotoContainer}
+          className={`${styles.fotoContainer} hiddenHorizontalB`}
         />
       </div>
       <div className={styles.containerMktTwo}>
-        <div className={styles.subtitleContainerMkt2}>
+        <div className={`${styles.subtitleContainerMkt2} hiddenHorizontalB`}>
           <h2 className={styles.h2Mkt2}>
             ¿Sabías que Castilla tiene casi cero contaminación lumínica?
           </h2>
-          <img src={lineGray} alt="linea subrayadora" className={styles.lineaSubrayadoraDos} />
+          <img
+            src={lineGray}
+            alt="linea subrayadora"
+            className={styles.lineaSubrayadoraDos}
+          />
           <p className={styles.astroExplication}>
             Lo que la convierte en el lugar perfecto para hacer{" "}
-            <strong className={styles.helpBold}>astrofotografía</strong> y disfrutar de las estrellas.
+            <strong className={styles.helpBold}>astrofotografía</strong> y
+            disfrutar de las estrellas.
           </p>
         </div>
         <img
           src={fotoMkt2}
           alt="Astrofotografía"
-          className={styles.fotoContainer2}
+          className={`${styles.fotoContainer2} hiddenHorizontalA`}
         />
       </div>
     </div>

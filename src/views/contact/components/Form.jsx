@@ -197,7 +197,7 @@ export const Form = () => {
 
   return (
     <div className={styles.contactMainContainer}>
-      <section className={styles.formContainer}>
+      <section className={`${styles.formContainer} hidden3`}>
         <div className={styles.textoIntroductorio}>
           Envianos tu consulta y nos vamos a poner en contacto a la brevedad
         </div>
@@ -410,7 +410,7 @@ export const Form = () => {
       <img
         src={bottomForm}
         alt="Foto de fin del formulario"
-        className={styles.bottomFormImage}
+        className={`${styles.bottomFormImage} hidden`}
       />
     </div>
   );

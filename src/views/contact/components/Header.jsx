@@ -14,8 +14,12 @@ export const Header = () => {
           <NavBar />
 
           <div className={styles.contentHeader}>
-            <h1 className={styles.h1History}>Contacto</h1>
-            <img src={subrayLine} alt="" />
+            <h1 className={`${styles.h1History} hidden`}>Contacto</h1>
+            <img
+              src={subrayLine}
+              alt="linea subrayadora de titulo"
+              className="hidden"
+            />
           </div>
         </div>
 

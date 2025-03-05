@@ -1,5 +1,5 @@
-import { useNavigate, useLocation } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useNavigate /* useLocation */ } from "react-router-dom";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 import styles from "./styles/camping.module.scss";
 
@@ -15,85 +15,84 @@ import foto5 from "../../../../assets/images/initialCarousel/5.jpg";
 
 const fotosCarrousel = [foto1, foto2, foto3, foto4, foto5];
 
-export const Camping = () => {
-  const navigate = useNavigate();
-  const intervalRef = useRef(null); // useRef para manejar el intervalo sin perder la referencia
+const CAROUSEL_INTERVAL = 5000;
+const SWIPE_THRESHOLD = 50;
 
+export const Camping = () => {
+  const intervalRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startX, setStartX] = useState(null);
+  const navigate = useNavigate();
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosCarrousel.length);
+  }, []);
+
+  const startCarousel = useCallback(() => {
+    intervalRef.current = setInterval(nextSlide, CAROUSEL_INTERVAL);
+  }, [nextSlide]);
+
+  const stopCarousel = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    startCarousel();
+    return stopCarousel;
+  }, [startCarousel, stopCarousel]);
+
+  const handleDotClick = useCallback(
+    (index) => {
+      stopCarousel();
+      setCurrentIndex(index);
+      startCarousel();
+    },
+    [stopCarousel, startCarousel]
+  );
+
+  const handleTouchStart = useCallback(
+    (e) => {
+      stopCarousel();
+      setStartX(e.touches[0].clientX);
+    },
+    [stopCarousel]
+  );
+
+  const handleTouchEnd = useCallback(
+    (e) => {
+      if (startX === null) return;
+
+      const difference = e.changedTouches[0].clientX - startX;
+
+      if (Math.abs(difference) > SWIPE_THRESHOLD) {
+        setCurrentIndex((prevIndex) => {
+          if (difference > 0) {
+            return prevIndex === 0 ? fotosCarrousel.length - 1 : prevIndex - 1;
+          }
+          return prevIndex === fotosCarrousel.length - 1 ? 0 : prevIndex + 1;
+        });
+      }
+
+      setStartX(null);
+      startCarousel();
+    },
+    [startX, startCarousel]
+  );
 
   const handleToHistory = () => {
     navigate("/nuestra-historia");
-    document.body.classList.remove("no-scroll");
     window.scrollTo({
       top: 0,
     });
   };
 
-  const startCarousel = () => {
-    intervalRef.current = setInterval(nextSlide, 5000);
-  };
-
-  const stopCarousel = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Limpia el intervalo
-      intervalRef.current = null;
-    }
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % fotosCarrousel.length);
-  };
-
-  const handleDotClick = (index) => {
-    stopCarousel(); // Detiene el carrusel al hacer clic
-    setCurrentIndex(index);
-    startCarousel(); // Reinicia el intervalo después de interactuar
-  };
-
-  const handleTouchStart = (e) => {
-    stopCarousel(); // Detiene el carrusel cuando empieza el touch
-    setStartX(e.touches[0].clientX); // Guarda la posición inicial
-  };
-
-  const handleTouchEnd = (e) => {
-    if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const difference = endX - startX;
-
-    if (difference > 50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? fotosCarrousel.length - 1 : prevIndex - 1
-      );
-    } else if (difference < -50) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === fotosCarrousel.length - 1 ? 0 : prevIndex + 1
-      );
-    }
-    setStartX(null);
-    startCarousel(); // Reinicia el intervalo después del touch
-  };
-
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      const scrollToSection = () => {
-        const section = document.querySelector(location.hash);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      };
-
-      // Espera un tiempo corto para asegurar la carga completa
-      setTimeout(scrollToSection, 300);
-    }
-  }, [location]);
-
   return (
     <div className={styles.campingSection} id="camping">
       {/**Version mobile y tablet */}
-      <div className={styles.contenedorCampingDesktop}>
+      <div className={`${styles.contenedorCampingDesktop} hidden3`}>
         <div className={styles.subtitleContainer}>
           <h2 className={styles.h2}>El camping</h2>
           <img
@@ -131,7 +130,7 @@ export const Camping = () => {
 
       {/**Inicio carrousel */}
       <div
-        className={styles.carrouselCamping}
+        className={`${styles.carrouselCamping} hidden`}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

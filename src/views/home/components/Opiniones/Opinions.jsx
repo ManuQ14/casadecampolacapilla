@@ -118,7 +118,7 @@ export const Opinions = () => {
   };
 
   return (
-    <div className={styles.sectionOpiniones}>
+    <div className={`${styles.sectionOpiniones} hidden`}>
       <div className={styles.subtitleContainerOpiniones}>
         <h2 className={styles.h2}>EXPERIENCIAS DE NUESTROS VISITANTES</h2>
         <img
@@ -130,7 +130,7 @@ export const Opinions = () => {
 
       {/* Botones de navegación visibles solo en desktop */}
       {isDesktop && (
-        <div className={styles.desktopNavButtons}>
+        <div className={`${styles.desktopNavButtons}`}>
           <img
             src={hoverLeft ? arrorLeftHover : arrorLeft}
             alt="Anterior"
@@ -151,7 +151,7 @@ export const Opinions = () => {
       )}
 
       <div
-        className={styles.carouselContainer}
+        className={`${styles.carouselContainer} hidden2`}
         ref={carouselRef}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -197,7 +197,7 @@ export const Opinions = () => {
         </div>
       </div>
 
-      <div className={styles.dots}>
+      <div className={`${styles.dots} `}>
         {reviews.map((_, index) => (
           <span
             key={index}

@@ -49,8 +49,7 @@ const servicios = [
   {
     id: 6,
     icon: comidas,
-    description:
-      "Preparación de comidas, desayunos y bebidas",
+    description: "Preparación de comidas, desayunos y bebidas",
     alt: "comidas",
   },
   {
@@ -62,7 +61,8 @@ const servicios = [
   {
     id: 8,
     icon: asador,
-    description: "Asador y fogonero. Se incluyen accesorios como disco de arado, estacas a la cruz, espeto, etc...",
+    description:
+      "Asador y fogonero. Se incluyen accesorios como disco de arado, estacas a la cruz, espeto, etc...",
     alt: "Asador",
   },
   {
@@ -82,9 +82,9 @@ const servicios = [
 
 export const Services = () => {
   return (
-    <div className={styles.serviceSection} id="servicios">
+    <div className={`${styles.serviceSection} hidden3`} id="servicios">
       <div className={styles.coverServices}>
-        <div className={styles.subtitleContainerServices}>
+        <div className={`${styles.subtitleContainerServices} hidden`}>
           <h2 className={styles.h2Servicios}>Servicios</h2>
           <img
             src={line}
@@ -92,7 +92,7 @@ export const Services = () => {
             className={styles.lineServicios}
           />
         </div>
-        <div className={styles.iconServiciesContainer}>
+        <div className={`${styles.iconServiciesContainer} hidden`}>
           {servicios.map((servicio) => (
             <div className={styles.serviceContainer} key={servicio.id}>
               <div className={styles.contenedorIcon}>
@@ -102,7 +102,9 @@ export const Services = () => {
                   className={styles.iconService}
                 />
               </div>
-              <span className={styles.spanServicios}>{servicio.description}</span>
+              <span className={styles.spanServicios}>
+                {servicio.description}
+              </span>
             </div>
           ))}
         </div>

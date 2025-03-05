@@ -23,7 +23,8 @@ const PRESS_NOTES = [
   },
   {
     id: 3,
-    titulo: '"Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires"',
+    titulo:
+      '"Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires"',
     foto: "https://img.youtube.com/vi/HC0dSwjEu94/hqdefault.jpg",
     url: "https://www.youtube.com/watch?v=HC0dSwjEu94&ab_channel=TelediarioDigital",
     altText: "Vista de la localidad de Castilla",
@@ -56,7 +57,7 @@ const PRESS_NOTES = [
 export const Notas = () => {
   return (
     <section className={styles.notaSection}>
-      <header className={styles.subtitleContainerNotas}>
+      <header className={`${styles.subtitleContainerNotas} hidden`}>
         <h2 className={styles.h2Notas}>Notas periodísticas y entrevistas</h2>
         <img
           src={subrayLine}
@@ -65,9 +66,12 @@ export const Notas = () => {
         />
       </header>
 
-      <div className={styles.containerNotas}>
+      <div className={`${styles.containerNotas} `}>
         {PRESS_NOTES.map((nota) => (
-          <article key={nota.id} className={styles.boxContainerNota}>
+          <article
+            key={nota.id}
+            className={`${styles.boxContainerNota} hidden`}
+          >
             <a
               href={nota.url}
               className={styles.linkTituloNotaContainer}
@@ -82,8 +86,8 @@ export const Notas = () => {
                 loading="lazy"
               />
               <div className={styles.containerLinkTitle}>
-              <h3 className={styles.tituloNota}>{nota.titulo}</h3>
-              <img src={openLink} alt="" className={styles.iconLink} />
+                <h3 className={styles.tituloNota}>{nota.titulo}</h3>
+                <img src={openLink} alt="" className={styles.iconLink} />
               </div>
             </a>
           </article>

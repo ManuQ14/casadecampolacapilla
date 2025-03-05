@@ -15,7 +15,7 @@ export const Desplegables = () => {
   };
 
   return (
-    <div className={styles.contenedorAcordeon}>
+    <div className={`${styles.contenedorAcordeon} hidden2`}>
       <div className={styles.titleContainer} onClick={toggleAccordion}>
         <img
           src={tren}

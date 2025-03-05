@@ -116,7 +116,7 @@ export const Gallery = () => {
   );
 
   return (
-    <section className={styles.gallerySection} id="galeria">
+    <section className={`${styles.gallerySection} hidden3`} id="galeria">
       {modalState.isOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           {/* Botones de navegación en el modal */}
@@ -178,14 +178,14 @@ export const Gallery = () => {
         </div>
       )}
 
-      <header className={styles.subtitleContainer}>
+      <header className={`${styles.subtitleContainer} hidden`}>
         <h2 className={styles.h2}>Galería</h2>
         <img src={line} alt="línea decorativa" />
       </header>
 
-      <div className={styles.gallery}>
+      <div className={`${styles.gallery} hidden`}>
         {GALLERY_PHOTOS.map((photo, index) => (
-          <div key={photo.id} className={styles.imageWrapper}>
+          <div key={photo.id} className={`${styles.imageWrapper} hidden3`}>
             <img
               src={photo.src}
               alt={photo.alt}

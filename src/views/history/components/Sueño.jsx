@@ -3,10 +3,9 @@ import styles from "../styles/history.module.scss";
 import subrayLine from "../../../assets/icons/subrayOrange.svg";
 import foto1 from "../../../assets/images/galleryHistory/1.jpg";
 
-
 const CAROUSEL_INTERVAL = 5000;
 const SWIPE_THRESHOLD = 50;
-const fotos = [foto1/* , foto2, foto3*/] ;
+const fotos = [foto1 /* , foto2, foto3*/];
 
 export const Sueño = () => {
   const intervalRef = useRef(null);
@@ -73,7 +72,7 @@ export const Sueño = () => {
 
   return (
     <div className={styles.unSueñoContainer}>
-      <div className={styles.desktopBoxContainer}>
+      <div className={`${styles.desktopBoxContainer} hidden3`}>
         <header className={styles.subtitleContainerHistory}>
           <h2 className={styles.h2}>Un Sueño</h2>
           <img
@@ -115,7 +114,7 @@ export const Sueño = () => {
         </section>
       </div>
       <section
-        className={styles.carrouselCamping}
+        className={`${styles.carrouselCamping} hidden`}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

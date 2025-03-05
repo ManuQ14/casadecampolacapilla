@@ -246,7 +246,7 @@ export const Gallery = () => {
 
       <div className={styles.gallery}>
         {galeryPhotos.map((photo, index) => (
-          <div key={photo.id} className={styles.imageWrapper}>
+          <div key={photo.id} className={`${styles.imageWrapper} hidden3`}>
             <img
               src={photo.src}
               alt={photo.alt}
