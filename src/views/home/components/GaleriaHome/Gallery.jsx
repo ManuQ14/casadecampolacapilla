@@ -116,7 +116,7 @@ export const Gallery = () => {
   );
 
   return (
-    <section className={`${styles.gallerySection} hidden3`} id="galeria">
+    <section className={`${styles.gallerySection}`} id="galeria">
       {modalState.isOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           {/* Botones de navegación en el modal */}
@@ -200,7 +200,7 @@ export const Gallery = () => {
         className={styles.goToGalleryContainer}
         onClick={hanldeToMainGallery}
       >
-        <span className={styles.goToGallery}>Ver galería</span>
+        <span className={`${styles.goToGallery} hidden`}>Ver galería</span>
       </button>
     </section>
   );

@@ -6,7 +6,7 @@ import fotoMkt2 from "../../../../assets/images/mkt/fotoMkt2.jpg";
 
 export const Mkt = () => {
   return (
-    <div className={styles.mktSection}>
+    <div className={`${styles.mktSection}`}>
       <div className={styles.containerMktOne}>
         <div className={`${styles.subtitleContainerMkt} hiddenHorizontalA`}>
           <h2 className={styles.h2Mkt}>

@@ -314,7 +314,7 @@
     padding-left: 16px;
     height: 62px;
     align-items: center;
-    cursor: pointer;
+    //cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
   }
@@ -846,7 +846,7 @@
     padding-left: 16px;
     height: 62px;
     align-items: center;
-    cursor: pointer;
+    //cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
   }
@@ -856,7 +856,7 @@
   }
 
   .expandAcordeon {
-    right: 6%;
+    right: 2%;
     display: flex;
     position: absolute;
     cursor: pointer;
@@ -1383,7 +1383,7 @@
   }
 
   .expandAcordeon {
-    right: 12%;
+    right: 2%;
     display: flex;
     position: absolute;
     cursor: pointer;
@@ -1931,7 +1931,7 @@
   }
 
   .expandAcordeon {
-    right: 21%;
+    right: 2%;
     display: flex;
     position: absolute;
     cursor: pointer;

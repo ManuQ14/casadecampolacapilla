@@ -259,7 +259,7 @@
   .inputGroup {
     display: flex;
     flex-direction: column;
-    height: 74px;
+    height: auto;
     justify-content: flex-start;
     margin-bottom: 8px;
 
@@ -304,7 +304,7 @@
     }
 
     textarea {
-      height: 313px;
+      height: 160px;
       resize: none;
       font-family: $main-typography !important;
     }
@@ -807,7 +807,7 @@
   .inputGroup {
     display: flex;
     flex-direction: column;
-    height: 74px;
+    height: auto;
     justify-content: flex-start;
     margin-bottom: 8px;
     border-radius: 5px !important;
@@ -850,11 +850,9 @@
     }
 
     textarea {
-      height: 313px;
-      resize: none;
+      height: 160px;
+      resize: none !important;
       font-family: $main-typography !important;
-      /* border-radius: 5px !important;
-      background-color: transparent !important; */
     }
   }
 
@@ -891,12 +889,13 @@
 
   .datePickerModal {
     position: absolute !important;
-    top: calc(100% + 41px) !important;
+    top: calc(100.5%) !important;
     width: 90% !important;
-    height: 465px !important;
+    height: 460px !important;
     background: white;
     border-radius: 5px;
-    //transform: translateY(-10px);
+    z-index: 1000;
+
     transition: opacity 0.3sease, transform 0.3sease;
   }
 
@@ -1087,6 +1086,20 @@
     width: 50px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .datePickerModal {
+    position: absolute !important;
+    top: 75.5% !important;
+    width: 90% !important;
+    height: 460px !important;
+    background: white;
+    border-radius: 5px;
+    z-index: 1000;
+
+    transition: opacity 0.3sease, transform 0.3sease;
   }
 }
 
@@ -1388,7 +1401,7 @@
     }
 
     textarea {
-      height: 313px;
+      height: 160px;
       resize: none;
       font-family: $main-typography !important;
       resize: none !important;
@@ -1959,12 +1972,10 @@
     }
 
     textarea {
-      height: 313px;
+      height: 160px;
       resize: none;
       font-family: $main-typography !important;
       resize: none !important;
-      /* border-radius: 5px !important;
-      background-color: transparent !important; */
     }
   }
 
@@ -2002,7 +2013,7 @@
 
   .datePickerModal {
     position: absolute !important;
-    top: 121.1% !important;
+    top: calc(121.1%) !important;
     width: 548px !important;
     height: 465px !important;
     background: white;

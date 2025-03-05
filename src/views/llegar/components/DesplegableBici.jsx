@@ -14,8 +14,11 @@ export const DesplegableBici = () => {
   };
 
   return (
-    <div className={`${styles.contenedorBici} hidden4`}>
-      <div className={styles.titleContainer} onClick={toggleAccordion}>
+    <div className={`${styles.contenedorBici} hidden5 `}>
+      <div
+        className={`${styles.titleContainer} `}
+        onClick={toggleAccordion}
+      >
         <img
           src={biciIcon}
           alt="Icono de tren"

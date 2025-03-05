@@ -15,7 +15,7 @@ input {
   overflow: hidden !important;
 }
 
-/* .hidden {
+.hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -54,12 +54,14 @@ input {
   opacity: 0;
   transform: translateX(-50%);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  overflow-x: hidden !important;
 }
 
 .hiddenHorizontalB {
   opacity: 0;
   transform: translateX(50%);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  overflow-x: hidden !important;
 }
 
 .showHorizontalOne {
@@ -70,10 +72,7 @@ input {
 .showHorizontalTwo {
   opacity: 1;
   transform: translateX(0);
-} */
-
-
-
+}
 
 @media (max-width: 767px) {
   .react-datepicker {

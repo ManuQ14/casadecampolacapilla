@@ -15,19 +15,19 @@ export const Desplegables = () => {
   };
 
   return (
-    <div className={`${styles.contenedorAcordeon} hidden2`}>
-      <div className={styles.titleContainer} onClick={toggleAccordion}>
+    <div className={`${styles.contenedorAcordeon} hidden `}>
+      <div className={`${styles.titleContainer} `} onClick={toggleAccordion}>
         <img
           src={tren}
           alt="Icono de tren"
           width={25}
-          className={styles.trainSVG}
+          className={`${styles.trainSVG} `}
         />
-        <div className={styles.ubicationTitle}>Cómo llegar en tren</div>
+        <div className={`${styles.ubicationTitle} `}>Cómo llegar en tren</div>
         <img
           src={isExpanded ? closeAcordeon : expandAcordeon}
           alt={isExpanded ? "Cerrar información" : "Expandir información"}
-          className={styles.expandAcordeon}
+          className={`${styles.expandAcordeon} `}
           onClick={toggleAccordion}
         />
       </div>

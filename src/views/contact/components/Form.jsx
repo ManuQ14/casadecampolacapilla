@@ -197,13 +197,13 @@ export const Form = () => {
 
   return (
     <div className={styles.contactMainContainer}>
-      <section className={`${styles.formContainer} hidden3`}>
-        <div className={styles.textoIntroductorio}>
+      <section className={`${styles.formContainer}`}>
+        <div className={`${styles.textoIntroductorio} hidden3`}>
           Envianos tu consulta y nos vamos a poner en contacto a la brevedad
         </div>
         <form onSubmit={handleSubmit} className={styles.form}>
           {/**nombre */}
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} hidden3`}>
             <label htmlFor="fullName">
               Nombre y apellido <span className={styles.required}>*</span>
             </label>
@@ -228,7 +228,7 @@ export const Form = () => {
           </div>
 
           {/**correo */}
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} hidden3`}>
             <label htmlFor="email">
               Correo electrónico <span className={styles.required}>*</span>
             </label>
@@ -250,7 +250,7 @@ export const Form = () => {
           </div>
 
           {/**Telefono */}
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} hidden3`}>
             <label htmlFor="phone">
               Número de teléfono <span className={styles.required}>*</span>
             </label>
@@ -273,7 +273,7 @@ export const Form = () => {
           </div>
           {/**Selector de fechas */}
           <div className={styles.dateGroup}>
-            <div className={styles.inputGroup}>
+            <div className={`${styles.inputGroup} hidden3`}>
               <label className={styles.labelDatePicker}>
                 Fechas de estadía{" "}
               </label>
@@ -337,7 +337,7 @@ export const Form = () => {
           )}
           {/**Fin de selector de fechas */}
           <div className={styles.guestsGroup}>
-            <div className={styles.inputGroup}>
+            <div className={`${styles.inputGroup} hidden3`}>
               <label htmlFor="adults">Adultos</label>
               <select
                 id="adults"
@@ -354,7 +354,7 @@ export const Form = () => {
               </select>
             </div>
 
-            <div className={styles.inputGroup}>
+            <div className={`${styles.inputGroup} hidden3`}>
               <label htmlFor="children">Menores</label>
               <select
                 id="children"
@@ -372,7 +372,7 @@ export const Form = () => {
             </div>
           </div>
 
-          <div className={styles.inputGroupTextArea}>
+          <div className={`${styles.inputGroup} hidden3`}>
             <label htmlFor="comment" className={styles.labelComentario}>
               Comentario <span className={styles.required}>*</span>
             </label>
@@ -394,9 +394,9 @@ export const Form = () => {
           <input
             type="submit"
             value="Enviar"
-            className={
-              isFormCompleted ? styles.submitButton : styles.submitButtonOff
-            }
+            className={`
+              ${ isFormCompleted ? styles.submitButton : styles.submitButtonOff
+             } hidden5`}
             disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-label={
@@ -410,7 +410,7 @@ export const Form = () => {
       <img
         src={bottomForm}
         alt="Foto de fin del formulario"
-        className={`${styles.bottomFormImage} hidden`}
+        className={`${styles.bottomFormImage} hidden5`}
       />
     </div>
   );
