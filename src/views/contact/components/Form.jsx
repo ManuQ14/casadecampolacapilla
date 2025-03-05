@@ -323,6 +323,7 @@ export const Form = () => {
                   shouldCloseOnSelect={false}
                   calendarClassName={styles.reactDatepicker}
                   minDate={new Date()}
+                  onClickOutside={() => setIsDatePickerOpen(false)}
                   //required
                 />
                 <button
@@ -395,8 +396,9 @@ export const Form = () => {
             type="submit"
             value="Enviar"
             className={`
-              ${ isFormCompleted ? styles.submitButton : styles.submitButtonOff
-             } hidden5`}
+              ${
+                isFormCompleted ? styles.submitButton : styles.submitButtonOff
+              } hidden5`}
             disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-label={

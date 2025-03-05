@@ -233,13 +233,7 @@ export const Gallery = () => {
                 onTouchEnd={handleSwipe}
               />
             ))}
-            {/* <button
-              className={styles.closeButton}
-              onClick={closeModal}
-              aria-label="Cerrar galería"
-            >
-              <img src={closeButton} alt="Cerrar" />
-            </button> */}
+        
           </div>
         </div>
       )}
