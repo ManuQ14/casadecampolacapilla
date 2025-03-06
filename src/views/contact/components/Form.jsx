@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 //Imports del datepicker
 import DatePicker from "react-datepicker";
@@ -190,10 +190,17 @@ export const Form = () => {
 
   const isFormCompleted = useMemo(() => {
     const requiredFields = ["fullName", "email", "phone", "comment"];
-    return requiredFields.every((field) => formData[field].trim() !== "") /* &&
-      startDate &&
-      endDate */;
-  }, [formData /* , startDate, endDate */]);
+    return requiredFields.every((field) => formData[field].trim() !== "");
+  }, [formData]);
+
+  const [showSubmit, setShowSubmit] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSubmit(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className={styles.contactMainContainer}>
@@ -396,9 +403,9 @@ export const Form = () => {
             type="submit"
             value="Enviar"
             className={`
-              ${
-                isFormCompleted ? styles.submitButton : styles.submitButtonOff
-              } hidden5`}
+              ${isFormCompleted ? styles.submitButton : styles.submitButtonOff}
+              ${showSubmit ? "" : "hidden"}
+            `}
             disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-disabled={!isFormCompleted || Object.keys(errors).length > 0}
             aria-label={
