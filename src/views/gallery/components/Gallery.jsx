@@ -47,6 +47,7 @@ import foto41 from "../../../assets/images/galeria/41.jpg";
 import foto42 from "../../../assets/images/galeria/42.jpg";
 import foto43 from "../../../assets/images/galeria/43.jpg";
 import foto44 from "../../../assets/images/galeria/44.jpg";
+import foto45 from "../../../assets/images/galeria/45.jpg";
 
 import arrowLeft from "../../../assets/icons/ArrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
@@ -100,6 +101,7 @@ const galeryPhotos = [
   { id: 42, src: foto42, alt: "vistas" },
   { id: 43, src: foto43, alt: "vistas" },
   { id: 44, src: foto44, alt: "vistas" },
+  { id: 45, src: foto45, alt: "vistas" },
 ];
 
 export const Gallery = () => {
@@ -233,7 +235,6 @@ export const Gallery = () => {
                 onTouchEnd={handleSwipe}
               />
             ))}
-        
           </div>
         </div>
       )}

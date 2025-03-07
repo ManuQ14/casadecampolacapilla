@@ -501,6 +501,7 @@
     width: 734px;
     overflow: hidden;
     height: auto;
+    transform: translateY(-56px) !important;
   }
 
   .carousel {
@@ -622,7 +623,7 @@
     width: 78%;
     top: 50%;
     left: 0;
-    transform: translateY(250%);
+    transform: translateY(120%);
     padding: 0 2rem;
     z-index: 10;
   }
@@ -738,6 +739,7 @@
     width: 734px;
     overflow: hidden;
     height: auto;
+    transform: translateY(-56px) !important;
   }
 
   .carousel {
@@ -859,7 +861,7 @@
     width: 59%;
     top: 50%;
     left: 0;
-    transform: translateY(250%);
+    transform: translateY(120%);
     padding: 0 2rem;
     z-index: 10;
   }
