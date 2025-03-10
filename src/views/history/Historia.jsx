@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 import { Header } from "./components/Header";
 import { Sueño } from "./components/Sueño";
 import { Pueblo } from "./components/Pueblo";
@@ -17,6 +19,29 @@ export const Historia = () => {
 
   return (
     <>
+     <Helmet>
+        <meta
+          name="description"
+          content="Casa de Campo La Capilla - Experiencia de Acampe Rural"
+        />
+        <link
+          rel="canonical"
+          href="https://casadecampolacapilla.com.ar/nuestra-historia"
+        />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Casa de Campo La Capilla" />
+        <meta property="og:description" content="Casa de Campo La Capilla" />
+        <meta
+          property="og:url"
+          content="https://www.casadecampolacapilla.com.ar"
+        />
+        <meta property="og:site_name" content="Casa de Campo La Capilla" />
+        <meta
+          property="og:image"
+          content="https://casadecampolacapilla.com.ar/assets/logoHomeScrolled-DUxcL_Rd.png"
+        />
+      </Helmet>
       <Header />
       <Sueño />
       <Pueblo />
