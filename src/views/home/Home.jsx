@@ -63,7 +63,7 @@ export const Home = () => {
         />
         <meta
           name="keywords"
-          content="Casa de Campo, Casa de Campo La Capilla, La Capilla, Castilla, Experiencia de Acampe Rural, Tranquilidad, Vivila, Camping, Acampe, Acampe Rural, Rural"
+                content="Casa de Campo, Casa de Campo La Capilla, La Capilla, Castilla, Experiencia de Acampe Rural, Tranquilidad, Vivila, Camping, Acampe, Acampe Rural, Rural, Camping, Campings en Buenos Aires"
         />
 
         {/*Twitter Cards */}
