@@ -25,27 +25,66 @@ export const Home = () => {
   return (
     <>
       <Helmet>
+        {/*OG Meta Tags */}
         <meta
           name="description"
-          content="Casa de Campo La Capilla - Experiencia de Acampe Rural"
+          content="Inicio - Sitio Web de La Casa de Campo La Capilla"
         />
         <link
           rel="canonical"
-          href="https://casadecampolacapilla.com.ar/inicio"
+          href="https://www.casadecampolacapilla.com.ar/inicio"
         />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Casa de Campo La Capilla" />
-        <meta property="og:description" content="Casa de Campo La Capilla" />
+        <meta property="og:title" content="Inicio - Casa de Campo La Capilla" />
+        <meta
+          property="og:description"
+          content="Inicio - Sitio web de La Casa de Campo La Capilla"
+        />
         <meta
           property="og:url"
-          content="https://www.casadecampolacapilla.com.ar"
+          content="https://www.casadecampolacapilla.com.ar/inicio"
         />
-        <meta property="og:site_name" content="Casa de Campo La Capilla" />
+        <meta
+          property="og:site_name"
+          content="Casa de Campo La Capilla - Experiencia de Acampe Rural"
+        />
         <meta
           property="og:image"
-          content="https://casadecampolacapilla.com.ar/assets/logoHomeScrolled-DUxcL_Rd.png"
+          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
         />
+        <meta
+          property="og:image:url"
+          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+        />
+        <meta
+          name="keywords"
+          content="Casa de Campo, Casa de Campo La Capilla, La Capilla, Castilla, Experiencia de Acampe Rural, Tranquilidad, Vivila, Camping, Acampe, Acampe Rural, Rural"
+        />
+
+        {/*Twitter Cards */}
+        <meta
+          name="twitter:title"
+          content="Inicio - Casa de Campo La Capilla"
+        />
+        <meta
+          name="twitter:url"
+          content="https://www.casadecampolacapilla.com.ar/inicio"
+        />
+        <meta
+          name="twitter:description"
+          content="Inicio - Sitio Web Casa de Campo La Capilla"
+        />
+        <meta
+          name="twitter:image"
+          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <title>Inicio - Casa de Campo La Capilla</title>
       </Helmet>
 
       <Header />
