@@ -47,15 +47,15 @@ export const Galeria = () => {
         />
         <meta
           property="og:image"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           property="og:image:url"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           name="keywords"
@@ -77,7 +77,7 @@ export const Galeria = () => {
         />
         <meta
           name="twitter:image"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <title>Galería - Casa de Campo La Capilla</title>

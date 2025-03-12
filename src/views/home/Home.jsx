@@ -51,15 +51,15 @@ export const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           property="og:image:url"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta
           name="keywords"
@@ -81,7 +81,7 @@ export const Home = () => {
         />
         <meta
           name="twitter:image"
-          content="https://casadecampolacapilla.com.ar/assets/CapillaLogo-DzawUU35.svg"
+          content="https://casadecampolacapilla.com.ar/favicon.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <title>Inicio - Casa de Campo La Capilla</title>
