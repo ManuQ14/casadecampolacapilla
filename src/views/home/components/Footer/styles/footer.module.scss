@@ -193,7 +193,7 @@
     color: #fff;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: $second-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -329,7 +329,7 @@
     color: #fff;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: $second-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -373,6 +373,7 @@
 
   .textoCopyright {
     margin-left: 40%;
+    font-family:  $second-typography;
   }
 }
 
@@ -460,7 +461,7 @@
     color: #fff;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: Lato;
+    font-family: $second-typography;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -506,3 +507,11 @@
     margin-left: 40%;
   }
 }
+
+
+.linkToBehance{
+  text-decoration: none;
+  font-family: $second-typography;
+  color: white !important;
+}
+

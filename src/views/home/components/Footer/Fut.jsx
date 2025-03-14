@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./styles/footer.module.scss";
 
 //imports svgs e iconos
@@ -80,7 +82,16 @@ export const Fut = () => {
         </div>
       </div>
       <p className={styles.textoCopyright}>
-        Todos los derechos reservados. Creado por Camila Gallardo
+        Todos los derechos reservados. Creado por{" "}
+        <Link
+          className={styles.linkToBehance}
+          to="https://www.behance.net/camigallardo"
+          target="_blank"
+          styles="text-decoration: none;"
+        >
+          {" "}
+          Camila Gallardo
+        </Link>
       </p>
     </footer>
   );
