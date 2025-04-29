@@ -55,28 +55,28 @@ export const Fut = () => {
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={instagramFooter} className={styles.iconMedia} />
+              <img src={instagramFooter} className={styles.iconMedia} alt="instagram icon"/>
             </a>
             <a
               href="https://www.youtube.com/user/nikolunapra"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={youtubeFooter} className={styles.iconMedia} />
+              <img src={youtubeFooter} className={styles.iconMedia} alt="youtube icon"/>
             </a>
             <a
               href="https://www.tiktok.com/@casadecampolacapilla"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={tiktokFootrr} className={styles.iconMedia} />
+              <img src={tiktokFootrr} className={styles.iconMedia} alt="tiktok icon" />
             </a>
             <a
               href="https://www.facebook.com/casadecampolacapilla"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={facebookFooter} className={styles.iconMedia} />
+              <img src={facebookFooter} className={styles.iconMedia}  alt="facebook icon"/>
             </a>
           </div>
         </div>
