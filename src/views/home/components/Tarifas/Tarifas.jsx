@@ -59,7 +59,7 @@ export const Tarifas = () => {
                 De 4 a 15 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$5200</div>
+              <div className={styles.precioTarifaPernocteDos}>$6000</div>
             </div>
 
             {/**Tarifa 3 */}
@@ -68,7 +68,7 @@ export const Tarifas = () => {
                 Mayores de 16 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$7200</div>
+              <div className={styles.precioTarifaPernocteDos}>$8500</div>
             </div>
           </div>
           <p className={styles.aclaracionPernocte}>
@@ -83,7 +83,7 @@ export const Tarifas = () => {
               (Desde las 9hs del sábado hasta las 20hs del domingo)
             </div>
           </div>
-          <div className={styles.precioTarifaPernocteTres}>$9600</div>
+          <div className={styles.precioTarifaPernocteTres}>$12500</div>
         </div>
 
         {/*Contenedor Rodantes, motorhome y trailers */}
@@ -96,7 +96,7 @@ export const Tarifas = () => {
               (Adicional por única vez)
             </div>
           </div>
-          <div className={styles.precioTarifaPernocteTres}>$4500</div>
+          <div className={styles.precioTarifaPernocteTres}>$6500</div>
         </div>
         <div className={`${styles.referenciaPrecio} hidden4`}>
           *Todos los precios de acampe son por persona
