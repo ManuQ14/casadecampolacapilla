@@ -33,7 +33,7 @@ export const Tarifas = () => {
               (desde las 9 hasta las 20hs)
             </p>
           </div>
-          <div className={styles.precioTarifa}>$5000</div>
+          <div className={styles.precioTarifa}>$5500</div>
         </div>
 
         {/*Rectángulo de tarifa de acampe con pernocte */}
@@ -59,7 +59,7 @@ export const Tarifas = () => {
                 De 4 a 15 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$6000</div>
+              <div className={styles.precioTarifaPernocteDos}>$6500</div>
             </div>
 
             {/**Tarifa 3 */}
@@ -68,7 +68,7 @@ export const Tarifas = () => {
                 Mayores de 16 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$8500</div>
+              <div className={styles.precioTarifaPernocteDos}>$8800</div>
             </div>
           </div>
           <p className={styles.aclaracionPernocte}>
@@ -96,7 +96,7 @@ export const Tarifas = () => {
               (Adicional por única vez)
             </div>
           </div>
-          <div className={styles.precioTarifaPernocteTres}>$6500</div>
+          <div className={styles.precioTarifaPernocteTres}>$7500</div>
         </div>
         <div className={`${styles.referenciaPrecio} hidden4`}>
           *Todos los precios de acampe son por persona
