@@ -13,6 +13,9 @@ import foto3 from "../../../../assets/images/initialCarousel/3.jpg";
 import foto4 from "../../../../assets/images/initialCarousel/4.jpg";
 import foto5 from "../../../../assets/images/initialCarousel/5.jpg";
 
+
+
+
 const fotosCarrousel = [foto1, foto2, foto3, foto4, foto5];
 
 const CAROUSEL_INTERVAL = 5000;

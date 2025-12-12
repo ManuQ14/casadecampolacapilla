@@ -16,9 +16,9 @@ const PRESS_NOTES = [
   },
   {
     id: 2,
-    titulo: '"Primer video de La Casa Viajera"',
-    foto: "https://img.youtube.com/vi/QXtA2QT3_nQ/hqdefault.jpg",
-    url: "https://www.youtube.com/watch?v=QXtA2QT3_nQ&ab_channel=LACASAVIAJERA",
+    titulo: '"La pareja que cambió su vida porteña para dormir en el campo en una capilla abandonada..."',
+    foto: "https://www.infobae.com/resizer/v2/36EJNIFRXRHY7EPIPUF22J4YBI.jpeg?auth=3045ea579ad77df2f6a0402ec407309e95ab931a17f1d5ed6e145b36e2f6b618&smart=true&width=992&height=772&quality=85",
+    url: "https://www.infobae.com/sociedad/2023/07/03/la-pareja-que-cambio-su-vida-portena-para-dormir-en-el-campo-en-una-capilla-abandonada-y-en-un-gallinero/",
     altText: "Captura del primer video de La Casa Viajera",
   },
   {
