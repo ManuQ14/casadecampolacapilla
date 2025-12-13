@@ -52,6 +52,7 @@ import foto46 from "../../../assets/images/galeria/46.jpg";
 import foto47 from "../../../assets/images/galeria/47.jpg";
 import foto48 from "../../../assets/images/galeria/48.jpg";
 import foto49 from "../../../assets/images/galeria/49.jpg";
+import foto50 from "../../../assets/images/galeria/50.jpg";
 
 import arrowLeft from "../../../assets/icons/ArrowLeft.svg";
 import arrorRight from "../../../assets/icons/arrowRigth.svg";
@@ -110,6 +111,7 @@ const galeryPhotos = [
   { id: 47, src: foto47, alt: "vistas" },
   { id: 48, src: foto48, alt: "vistas" },
   { id: 49, src: foto49, alt: "vistas" },
+  { id: 50, src: foto50, alt: "vistas" },
 ];
 
 export const Gallery = () => {
