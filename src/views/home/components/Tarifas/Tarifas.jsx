@@ -33,7 +33,7 @@ export const Tarifas = () => {
               (desde las 9 hasta las 20hs)
             </p>
           </div>
-          <div className={styles.precioTarifa}>$5500</div>
+          <div className={styles.precioTarifa}>$6800</div>
         </div>
 
         {/*Rectángulo de tarifa de acampe con pernocte */}
@@ -59,7 +59,7 @@ export const Tarifas = () => {
                 De 4 a 15 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$6500</div>
+              <div className={styles.precioTarifaPernocteDos}>$7800</div>
             </div>
 
             {/**Tarifa 3 */}
@@ -68,7 +68,7 @@ export const Tarifas = () => {
                 Mayores de 16 años
               </span>
               <span className={styles.lineFlex}></span>
-              <div className={styles.precioTarifaPernocteDos}>$8800</div>
+              <div className={styles.precioTarifaPernocteDos}>$9600</div>
             </div>
           </div>
           <p className={styles.aclaracionPernocte}>
@@ -83,7 +83,7 @@ export const Tarifas = () => {
               (Desde las 9hs del sábado hasta las 20hs del domingo)
             </div>
           </div>
-          <div className={styles.precioTarifaPernocteTres}>$12500</div>
+          <div className={styles.precioTarifaPernocteTres}>$14500</div>
         </div>
 
         {/*Contenedor Rodantes, motorhome y trailers */}
@@ -96,7 +96,7 @@ export const Tarifas = () => {
               (Adicional por única vez)
             </div>
           </div>
-          <div className={styles.precioTarifaPernocteTres}>$7500</div>
+          <div className={styles.precioTarifaPernocteTres}>$9500</div>
         </div>
         <div className={`${styles.referenciaPrecio} hidden4`}>
           *Todos los precios de acampe son por persona
@@ -121,6 +121,12 @@ export const Tarifas = () => {
           <div className={styles.beneficio}>
             Todas las opciones incluyen el uso de los servicios que ofrece el
             camping
+          </div>
+        </div>
+        <div className={styles.boxBeneficio}>
+          <img className={styles.tilde} src={tilde} />
+          <div className={styles.beneficio}>
+            No te olvides de adquirir nuestro pasaporte de descuentos exclusivos
           </div>
         </div>
       </div>
