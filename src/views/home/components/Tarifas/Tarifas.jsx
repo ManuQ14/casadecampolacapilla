@@ -106,7 +106,7 @@ export const Tarifas = () => {
       <div className={`${styles.boxBeneficiosTarifas} hidden4`}>
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
-          <div className={styles.beneficio}>No se cobra carpa</div>
+          <div className={styles.beneficio}>No se cobra espacio por carpas</div>
         </div>
         {/**Beneficio 1 */}
         <div className={styles.boxBeneficio}>

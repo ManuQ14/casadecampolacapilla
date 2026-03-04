@@ -55,14 +55,14 @@ export const Fut = () => {
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={instagramFooter} className={styles.iconMedia} alt="instagram icon"/>
+              <img src={instagramFooter} className={styles.iconMedia} alt="instagram icon" />
             </a>
             <a
               href="https://www.youtube.com/user/nikolunapra"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={youtubeFooter} className={styles.iconMedia} alt="youtube icon"/>
+              <img src={youtubeFooter} className={styles.iconMedia} alt="youtube icon" />
             </a>
             <a
               href="https://www.tiktok.com/@casadecampolacapilla"
@@ -76,13 +76,22 @@ export const Fut = () => {
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={facebookFooter} className={styles.iconMedia}  alt="facebook icon"/>
+              <img src={facebookFooter} className={styles.iconMedia} alt="facebook icon" />
             </a>
           </div>
         </div>
       </div>
       <p className={styles.textoCopyright}>
         Todos los derechos reservados. Creado por{" "}
+        <Link
+          className={styles.linkToBehance}
+          to="https://www.instagram.com/maanuquintana"
+          target="_blank"
+          styles="text-decoration: none;"
+        >
+          {" "}
+          Manuel Quintana -
+        </Link>
         <Link
           className={styles.linkToBehance}
           to="https://www.behance.net/camigallardo"

@@ -4,10 +4,19 @@ import subrayLine from "../../../assets/icons/subrayOrange.svg";
 import openLink from "../../../assets/icons/openLink.svg";
 import foto4 from "../../../assets/images/fotoNotas/fotoNota4.jpeg";
 import foto5 from "../../../assets/images/fotoNotas/fotoNota5.jpeg";
+import foto7 from "../../../assets/images/fotoNotas/fotoNota7.jpg";
 
 const PRESS_NOTES = [
   {
-    id: 1,
+    id: 7,
+    titulo:
+      'Un motor fundamental en el renacimiento de Castilla fue el emprendimiento "Casa de Campo La Capilla"',
+    foto: foto7,
+    url: "https://www.eldestapeweb.com/sociedad/escapadas/que-hacer-en-castilla-el-pequeno-pueblo-que-queda-a-dos-horas-de-caba-20263413542",
+    altText: "Foto del molino del Camping, Casa de Campo La Capilla",
+  },
+  {
+    id: 6,
     titulo:
       '"Duermen en un antiguo Gallinero mientras construyen un complejo turístico"',
     foto: "https://img.youtube.com/vi/WGwosA9222c/hqdefault.jpg",
@@ -15,14 +24,14 @@ const PRESS_NOTES = [
     altText: "Foto del antiguo Gallinero convertido en alojamiento",
   },
   {
-    id: 2,
+    id: 5,
     titulo: '"La pareja que cambió su vida porteña para dormir en el campo en una capilla abandonada..."',
     foto: "https://www.infobae.com/resizer/v2/36EJNIFRXRHY7EPIPUF22J4YBI.jpeg?auth=3045ea579ad77df2f6a0402ec407309e95ab931a17f1d5ed6e145b36e2f6b618&smart=true&width=992&height=772&quality=85",
     url: "https://www.infobae.com/sociedad/2023/07/03/la-pareja-que-cambio-su-vida-portena-para-dormir-en-el-campo-en-una-capilla-abandonada-y-en-un-gallinero/",
     altText: "Captura del primer video de La Casa Viajera",
   },
   {
-    id: 3,
+    id: 4,
     titulo:
       '"Castilla: Localidad de Chacabuco de la Provincia de Buenos Aires"',
     foto: "https://img.youtube.com/vi/HC0dSwjEu94/hqdefault.jpg",
@@ -30,7 +39,7 @@ const PRESS_NOTES = [
     altText: "Vista de la localidad de Castilla",
   },
   {
-    id: 4,
+    id: 3,
     titulo:
       '"En tren, micro o auto, destinos muy cerquita de Caba para despejarse, comer rico, descans..."',
     foto: foto4,
@@ -38,14 +47,14 @@ const PRESS_NOTES = [
     altText: "Imagen de destinos cercanos a CABA",
   },
   {
-    id: 5,
+    id: 2,
     titulo: '"Nota periodística Radio Eclipse 104.3"',
     foto: foto5,
     url: "https://www.facebook.com/share/v/18VHDzssJv/",
     altText: "Imagen de la entrevista en Radio Eclipse",
   },
   {
-    id: 6,
+    id: 1,
     titulo:
       '"Cumpliendo sus sueños, la historia de Niko y Naty y la importancia de cicloturismo para el pueblito"',
     foto: "https://img.youtube.com/vi/IAqsgr2MLD8/hqdefault.jpg",
