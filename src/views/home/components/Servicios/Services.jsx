@@ -12,6 +12,7 @@ import pileta from "../../../../assets/icons/servicesIcons/Pileta.svg";
 import comidas from "../../../../assets/icons/servicesIcons/Comidas.svg";
 import juegos from "../../../../assets/icons/servicesIcons/Juegos.svg";
 import mesas from "../../../../assets/icons/servicesIcons/Mesas.svg";
+import bicicleta from "../../../../assets/icons/servicesIcons/Bicicleta.svg";
 
 // Array de servicios
 const servicios = [
@@ -77,6 +78,12 @@ const servicios = [
     icon: mesas,
     description: "Mesas al aire libre",
     alt: "Mesas",
+  },
+  {
+    id: 11,
+    icon: bicicleta,
+    description: "Alquiler de bicicletas",
+    alt: "Bicicletas",
   },
 ];
 

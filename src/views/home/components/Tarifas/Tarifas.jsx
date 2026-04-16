@@ -104,10 +104,7 @@ export const Tarifas = () => {
       </div>
       {/**Tildes de beneficios */}
       <div className={`${styles.boxBeneficiosTarifas} hidden4`}>
-        <div className={styles.boxBeneficio}>
-          <img className={styles.tilde} src={tilde} />
-          <div className={styles.beneficio}>No se cobra espacio por carpas</div>
-        </div>
+
         {/**Beneficio 1 */}
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
@@ -120,13 +117,13 @@ export const Tarifas = () => {
           <img className={styles.tilde} src={tilde} />
           <div className={styles.beneficio}>
             Todas las opciones incluyen el uso de los servicios que ofrece el
-            camping
+            camping, inclusive espacio para carpas
           </div>
         </div>
         <div className={styles.boxBeneficio}>
           <img className={styles.tilde} src={tilde} />
           <div className={styles.beneficio}>
-            No te olvides de adquirir nuestro pasaporte de descuentos exclusivos
+            Recordá adquirir nuestro pasaporte de descuentos exclusivos
           </div>
         </div>
       </div>

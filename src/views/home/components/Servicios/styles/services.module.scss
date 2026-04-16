@@ -5,21 +5,27 @@
   //Inicio Servicios
   .serviceSection {
     width: 100vw;
+    min-height: 100vh;
     height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     background-image: url(../../../../../assets/images/backgroundServices.jpg);
     background-position: center;
-    //justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .coverServices {
     display: flex;
-    width: 100%; //Prueba
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    flex-grow: 1;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 32px;
     background: linear-gradient(
       0deg,
       rgba(41, 46, 33, 0.69) 0%,
@@ -66,7 +72,6 @@
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     gap: 8px;
   }
 
@@ -76,6 +81,11 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 20px;
+
+    /* Centra el último elemento si la cantidad total es impar */
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
   }
 
   .contenedorIcon {
@@ -97,7 +107,8 @@
     color: $primario-light;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     font-family: $main-typography;
     font-size: 14px;
     font-style: normal;
@@ -117,19 +128,26 @@
   .serviceSection {
     width: 100vw;
     height: auto;
+    min-height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     background-image: url(../../../../../assets/images/backgroundServices.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .coverServices {
     display: flex;
     height: 100%;
+    min-height: 100%;
+    flex-grow: 1;
+    width: 100%;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 32px;
     background: linear-gradient(
       0deg,
       rgba(41, 46, 33, 0.69) 0%,
@@ -175,7 +193,6 @@
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     gap: 8px;
   }
 
@@ -185,6 +202,11 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 20px;
+
+    /* Centra el último elemento si la cantidad total es impar */
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
   }
 
   .contenedorIcon {
@@ -205,7 +227,8 @@
     color: $primario-light;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     font-family: $main-typography;
     font-size: 16px;
     font-style: normal;
@@ -222,7 +245,8 @@
   //Inicio Servicios
   .serviceSection {
     width: 100vw;
-    height: 520px;
+    height: auto;
+    min-height: 520px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -235,10 +259,13 @@
   .coverServices {
     display: flex;
     height: 100%;
+    min-height: 100%;
+    flex-grow: 1;
     width: 100%;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 32px;
     background: linear-gradient(
       0deg,
       rgba(41, 46, 33, 0.69) 0%,
@@ -275,7 +302,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: auto;
     width: 1165px;
     gap: 40px;
@@ -308,7 +335,8 @@
     color: $primario-light;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    height: 64px;
+    min-height: 64px;
+    height: auto;
     font-family: $second-typography;
     font-size: 16px;
     font-style: normal;
@@ -325,7 +353,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: auto;
     width: 1165px;
     gap: 24px;

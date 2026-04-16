@@ -1,5 +1,5 @@
 //Import de helmet
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import { Header } from "./components/Header/Header";
 import { Camping } from "./components/Camping/Camping";
