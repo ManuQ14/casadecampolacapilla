@@ -90,7 +90,7 @@ export const Tarifas = () => {
         <div className={`${styles.boxTarifaDiaFinde} hidden5`}>
           <div>
             <div className={styles.itemTarifaPernocte}>
-              Rodantes, motorhome, trailers
+              Rodantes, motorhome, trailers, campers
             </div>
             <div className={styles.aclaracionPernocte}>
               (Adicional por única vez)
