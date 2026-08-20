@@ -13,6 +13,7 @@ import facebookFooter from "../../../../assets/icons/footer/facebookFooter.svg";
 import whatsapp from "../../../../assets/icons/footer/wpp.svg";
 import mail from "../../../../assets/icons/footer/mail.svg";
 import location from "../../../../assets/icons/footer/maps.svg";
+import mqLogo from "../../../../assets/icons/mq-logo.svg";
 
 export const Fut = () => {
   return (
@@ -85,10 +86,11 @@ export const Fut = () => {
         Todos los derechos reservados. Creado por{" "}
         <Link
           className={styles.linkToBehance}
-          to="https://www.instagram.com/maanuquintana"
+          to="https://manuquintana.dev"
           target="_blank"
           styles="text-decoration: none;"
         >
+          <img src={mqLogo} alt="" className={styles.logoMQ} />
           {" "}
           Manuel Quintana -
         </Link>
