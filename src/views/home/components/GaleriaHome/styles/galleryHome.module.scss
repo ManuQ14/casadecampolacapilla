@@ -331,7 +331,7 @@
 }
 
 //Desktop
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) {
   .gallerySection {
     width: 100vw;
     height: auto;
@@ -508,38 +508,5 @@
     color: $primario-dark;
     border: 2px solid $primario-dark;
     transition: all 300ms;
-  }
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  .modalOverlay {
-    position: fixed;
-    top: -115px;
-    left: 0;
-    width: 100vw;
-    height: 125%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000000;
-    opacity: 1;
-    transition: opacity 0.3sease;
-  }
-
-  .closeButton {
-    position: absolute;
-    top: 122px;
-    right: 9px;
-    background: none;
-    border: none;
-
-    cursor: pointer;
-    z-index: 1;
-
-    img {
-      width: 40px;
-      height: 40px;
-    }
   }
 }

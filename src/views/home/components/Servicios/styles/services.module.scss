@@ -241,7 +241,7 @@
   //fin sección servicios
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) {
   //Inicio Servicios
   .serviceSection {
     width: 100vw;
@@ -305,7 +305,7 @@
     justify-content: center;
     height: auto;
     width: 1165px;
-    gap: 40px;
+    gap: 24px;
     margin-bottom: 16px;
   }
 
@@ -345,17 +345,5 @@
     letter-spacing: 0.25px;
     width: 175px;
     align-self: stretch;
-  }
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  .iconServiciesContainer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 1165px;
-    gap: 24px;
   }
 }
