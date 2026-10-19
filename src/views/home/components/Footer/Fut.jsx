@@ -45,7 +45,7 @@ export const Fut = () => {
               alt="Whatsapp icon"
               className={styles.iconFooters}
             />
-            11 5856-7591
+            11 3336-2469
           </div>
         </div>
         <div className={styles.mediaIconsContainer}>
@@ -56,28 +56,44 @@ export const Fut = () => {
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={instagramFooter} className={styles.iconMedia} alt="instagram icon" />
+              <img
+                src={instagramFooter}
+                className={styles.iconMedia}
+                alt="instagram icon"
+              />
             </a>
             <a
               href="https://www.youtube.com/user/nikolunapra"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={youtubeFooter} className={styles.iconMedia} alt="youtube icon" />
+              <img
+                src={youtubeFooter}
+                className={styles.iconMedia}
+                alt="youtube icon"
+              />
             </a>
             <a
               href="https://www.tiktok.com/@casadecampolacapilla"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={tiktokFootrr} className={styles.iconMedia} alt="tiktok icon" />
+              <img
+                src={tiktokFootrr}
+                className={styles.iconMedia}
+                alt="tiktok icon"
+              />
             </a>
             <a
               href="https://www.facebook.com/casadecampolacapilla"
               target="_blanc"
               rel="noreferrers"
             >
-              <img src={facebookFooter} className={styles.iconMedia} alt="facebook icon" />
+              <img
+                src={facebookFooter}
+                className={styles.iconMedia}
+                alt="facebook icon"
+              />
             </a>
           </div>
         </div>
@@ -90,9 +106,8 @@ export const Fut = () => {
           target="_blank"
           styles="text-decoration: none;"
         >
-          <img src={mqLogo} alt="" className={styles.logoMQ} />
-          {" "}
-          Manuel Quintana -
+          <img src={mqLogo} alt="" className={styles.logoMQ} /> Manuel Quintana
+          -
         </Link>
         <Link
           className={styles.linkToBehance}
