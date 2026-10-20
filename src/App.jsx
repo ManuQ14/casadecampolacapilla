@@ -1,4 +1,5 @@
 import { BrowserRouter, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { Routing } from "./routes/Routing";
 import ScrollAnimation from "./views/main/ScrollAnimation";
 
@@ -17,6 +18,7 @@ function Main() {
     <>
       <Routing />
       <ScrollAnimation key={location.pathname} />
+      <Analytics />
     </>
   );
 }
