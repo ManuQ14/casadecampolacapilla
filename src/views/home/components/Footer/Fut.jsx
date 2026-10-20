@@ -45,7 +45,7 @@ export const Fut = () => {
               alt="Whatsapp icon"
               className={styles.iconFooters}
             />
-            11 3336-2469
+            11 5856-7591
           </div>
         </div>
         <div className={styles.mediaIconsContainer}>
